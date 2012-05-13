@@ -7,8 +7,8 @@ ProjectName            :=test_hamlib
 ConfigurationName      :=Release
 IntermediateDirectory  :=./Release
 OutDir                 := $(IntermediateDirectory)
-WorkspacePath          := "C:\Users\wittend\Projects\dvui"
-ProjectPath            := "C:\Users\wittend\Projects\dvui\hamlib-3.0\test_hamlib"
+WorkspacePath          := "C:\Users\wittend\Projects\Radio\fdmdv2"
+ProjectPath            := "C:\Users\wittend\Projects\Radio\fdmdv2\hamlib-3.0\test_hamlib"
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
@@ -35,7 +35,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
-ObjectsFileList        :="C:\Users\wittend\Projects\dvui\hamlib-3.0\test_hamlib\test_hamlib.txt"
+ObjectsFileList        :="C:\Users\wittend\Projects\Radio\fdmdv2\hamlib-3.0\test_hamlib\test_hamlib.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 CmpOptions             := -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no) $(Preprocessors)
@@ -80,12 +80,12 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main$(DependSuffix)
-	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/Users/wittend/Projects/dvui/hamlib-3.0/test_hamlib/main.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/main$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/Users/wittend/Projects/Radio/fdmdv2/hamlib-3.0/test_hamlib/main.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/main$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main$(DependSuffix): main.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main$(ObjectSuffix) -MF$(IntermediateDirectory)/main$(DependSuffix) -MM "C:/Users/wittend/Projects/dvui/hamlib-3.0/test_hamlib/main.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main$(ObjectSuffix) -MF$(IntermediateDirectory)/main$(DependSuffix) -MM "C:/Users/wittend/Projects/Radio/fdmdv2/hamlib-3.0/test_hamlib/main.cpp"
 
 $(IntermediateDirectory)/main$(PreprocessSuffix): main.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main$(PreprocessSuffix) "C:/Users/wittend/Projects/dvui/hamlib-3.0/test_hamlib/main.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main$(PreprocessSuffix) "C:/Users/wittend/Projects/Radio/fdmdv2/hamlib-3.0/test_hamlib/main.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
@@ -98,6 +98,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/main$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) "C:\Users\wittend\Projects\dvui\.build-release\test_hamlib"
+	$(RM) "C:\Users\wittend\Projects\Radio\fdmdv2\.build-release\test_hamlib"
 
 

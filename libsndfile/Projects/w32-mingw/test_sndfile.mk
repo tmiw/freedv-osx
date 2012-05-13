@@ -7,13 +7,13 @@ ProjectName            :=test_sndfile
 ConfigurationName      :=Release
 IntermediateDirectory  :=./Release
 OutDir                 := $(IntermediateDirectory)
-WorkspacePath          := "C:\Users\wittend\Projects\dvui"
-ProjectPath            := "C:\Users\wittend\Projects\libsndfile\Projects\w32-mingw"
+WorkspacePath          := "C:\Users\wittend\Projects\Radio\fdmdv2"
+ProjectPath            := "C:\Users\wittend\Projects\Radio\fdmdv2\libsndfile\Projects\w32-mingw"
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=5/6/2012
+Date                   :=5/13/2012
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=g++
 ArchiveTool            :=ar rcus
@@ -35,7 +35,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
-ObjectsFileList        :="C:\Users\wittend\Projects\libsndfile\Projects\w32-mingw\test_sndfile.txt"
+ObjectsFileList        :="C:\Users\wittend\Projects\Radio\fdmdv2\libsndfile\Projects\w32-mingw\test_sndfile.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 CmpOptions             := -O2 -Wall $(Preprocessors)
@@ -80,12 +80,12 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main$(DependSuffix)
-	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/Users/wittend/Projects/libsndfile/Projects/w32-mingw/main.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/main$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/Users/wittend/Projects/Radio/fdmdv2/libsndfile/Projects/w32-mingw/main.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/main$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main$(DependSuffix): main.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main$(ObjectSuffix) -MF$(IntermediateDirectory)/main$(DependSuffix) -MM "C:/Users/wittend/Projects/libsndfile/Projects/w32-mingw/main.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main$(ObjectSuffix) -MF$(IntermediateDirectory)/main$(DependSuffix) -MM "C:/Users/wittend/Projects/Radio/fdmdv2/libsndfile/Projects/w32-mingw/main.cpp"
 
 $(IntermediateDirectory)/main$(PreprocessSuffix): main.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main$(PreprocessSuffix) "C:/Users/wittend/Projects/libsndfile/Projects/w32-mingw/main.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main$(PreprocessSuffix) "C:/Users/wittend/Projects/Radio/fdmdv2/libsndfile/Projects/w32-mingw/main.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
@@ -98,6 +98,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/main$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) "C:\Users\wittend\Projects\dvui\.build-release\test_sndfile"
+	$(RM) "C:\Users\wittend\Projects\Radio\fdmdv2\.build-release\test_sndfile"
 
 
