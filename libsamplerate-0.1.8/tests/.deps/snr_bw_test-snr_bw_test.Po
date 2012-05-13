@@ -1,0 +1,30 @@
+snr_bw_test-snr_bw_test.o: snr_bw_test.c ../src/config.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stddef.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stdarg.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdlib.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/string.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/math.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/time.h
+
+../src/config.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stddef.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stdarg.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdlib.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/string.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/math.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/time.h:
