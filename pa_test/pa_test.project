@@ -99,4 +99,7 @@
       </Completion>
     </Configuration>
   </Settings>
+  <VirtualDirectory Name="include">
+    <File Name="pa_class.h"/>
+  </VirtualDirectory>
 </CodeLite_Project>
