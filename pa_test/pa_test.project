@@ -10,6 +10,9 @@
   <VirtualDirectory Name="src">
     <File Name="pa_class.cpp"/>
   </VirtualDirectory>
+  <VirtualDirectory Name="include">
+    <File Name="pa_class.h"/>
+  </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="">
@@ -23,6 +26,8 @@
     <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <IncludePath Value="."/>
+        <IncludePath Value="."/>
+        <IncludePath Value="extern/include"/>
         <IncludePath Value="../../../portaudio/include"/>
       </Compiler>
       <Linker Options="" Required="yes">
@@ -62,7 +67,7 @@
     <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <IncludePath Value="."/>
-        <IncludePath Value="../../../portaudio/include"/>
+        <IncludePath Value="extern/include"/>
       </Compiler>
       <Linker Options="" Required="yes">
         <Library Value="portaudio"/>
@@ -99,7 +104,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="include">
-    <File Name="pa_class.h"/>
-  </VirtualDirectory>
 </CodeLite_Project>
