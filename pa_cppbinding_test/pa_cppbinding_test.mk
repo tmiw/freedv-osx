@@ -41,11 +41,11 @@ MakeDirCommand         :=makedir
 CmpOptions             := -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no) $(Preprocessors)
 C_CmpOptions           := -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no) $(Preprocessors)
 LinkOptions            :=  -mwindows -s $(shell wx-config --debug=no --libs --unicode=yes)
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)./ $(IncludeSwitch)../extern/include/ $(IncludeSwitch)../pa_cpp_binding/ 
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)./ $(IncludeSwitch)C:/bin/MinGW/msys/1.0/local/include $(IncludeSwitch)./portaudiocpp 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := 
-LibPath                := $(LibraryPathSwitch). 
+Libs                   := $(LibrarySwitch)portaudiocpp.la $(LibrarySwitch)portaudio.la 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch). $(LibraryPathSwitch)../../extern/lib/ 
 
 
 ##

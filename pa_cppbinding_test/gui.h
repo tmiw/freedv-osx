@@ -22,11 +22,11 @@
 #include <wx/settings.h>
 #include <wx/stattext.h>
 #include <wx/combobox.h>
+#include <wx/sizer.h>
 #include <wx/gauge.h>
 #include <wx/slider.h>
 #include <wx/tglbtn.h>
 #include <wx/button.h>
-#include <wx/sizer.h>
 #include <wx/panel.h>
 #include <wx/statusbr.h>
 #include <wx/frame.h>
@@ -44,10 +44,10 @@ class MainFrameBase : public wxFrame
 	protected:
 		wxMenuBar* m_menuBar;
 		wxMenu* m_menuFile;
-		wxPanel* m_panel1;
+		wxPanel* m_audioInfo;
 		wxStaticText* m_staticText1;
-		wxComboBox* m_comboBox1;
-		wxComboBox* m_comboBox2;
+		wxComboBox* m_comboBoxLeft;
+		wxComboBox* m_comboBoxRight;
 		wxStaticText* m_staticText2;
 		wxGauge* m_gauge1;
 		wxSlider* m_slider1;

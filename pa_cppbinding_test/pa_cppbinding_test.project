@@ -2,7 +2,7 @@
 <CodeLite_Project Name="pa_cppbinding_test" InternalType="GUI">
   <Plugins>
     <Plugin Name="qmake">
-      <![CDATA[00010001N0007Release000000000000]]>
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
     </Plugin>
   </Plugins>
   <Description/>
@@ -14,26 +14,28 @@
   <VirtualDirectory Name="include">
     <File Name="gui.h"/>
     <File Name="main.h"/>
-    <File Name="../pa_cpp_binding/AsioDeviceAdapter.hxx"/>
-    <File Name="../pa_cpp_binding/AutoSystem.hxx"/>
-    <File Name="../pa_cpp_binding/BlockingStream.hxx"/>
-    <File Name="../pa_cpp_binding/CallbackInterface.hxx"/>
-    <File Name="../pa_cpp_binding/CallbackStream.hxx"/>
-    <File Name="../pa_cpp_binding/CFunCallbackStream.hxx"/>
-    <File Name="../pa_cpp_binding/CppFunCallbackStream.hxx"/>
-    <File Name="../pa_cpp_binding/Device.hxx"/>
-    <File Name="../pa_cpp_binding/DirectionSpecificStreamParameters.hxx"/>
-    <File Name="../pa_cpp_binding/Exception.hxx"/>
-    <File Name="../pa_cpp_binding/HostApi.hxx"/>
-    <File Name="../pa_cpp_binding/InterfaceCallbackStream.hxx"/>
-    <File Name="../pa_cpp_binding/MemFunCallbackStream.hxx"/>
-    <File Name="../pa_cpp_binding/PortAudioCpp.hxx"/>
-    <File Name="../pa_cpp_binding/SampleDataFormat.hxx"/>
-    <File Name="../pa_cpp_binding/Stream.hxx"/>
-    <File Name="../pa_cpp_binding/StreamParameters.hxx"/>
-    <File Name="../pa_cpp_binding/System.hxx"/>
-    <File Name="../pa_cpp_binding/SystemDeviceIterator.hxx"/>
-    <File Name="../pa_cpp_binding/SystemHostApiIterator.hxx"/>
+    <VirtualDirectory Name="cpp_binding">
+      <File Name="../extern/include/portaudiocpp/AsioDeviceAdapter.hxx"/>
+      <File Name="../extern/include/portaudiocpp/AutoSystem.hxx"/>
+      <File Name="../extern/include/portaudiocpp/BlockingStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/CallbackInterface.hxx"/>
+      <File Name="../extern/include/portaudiocpp/CallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/CFunCallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/CppFunCallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/Device.hxx"/>
+      <File Name="../extern/include/portaudiocpp/DirectionSpecificStreamParameters.hxx"/>
+      <File Name="../extern/include/portaudiocpp/Exception.hxx"/>
+      <File Name="../extern/include/portaudiocpp/HostApi.hxx"/>
+      <File Name="../extern/include/portaudiocpp/InterfaceCallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/MemFunCallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/PortAudioCpp.hxx"/>
+      <File Name="../extern/include/portaudiocpp/SampleDataFormat.hxx"/>
+      <File Name="../extern/include/portaudiocpp/Stream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/StreamParameters.hxx"/>
+      <File Name="../extern/include/portaudiocpp/System.hxx"/>
+      <File Name="../extern/include/portaudiocpp/SystemDeviceIterator.hxx"/>
+      <File Name="../extern/include/portaudiocpp/SystemHostApiIterator.hxx"/>
+    </VirtualDirectory>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="gui.fbp"/>
@@ -52,7 +54,11 @@
       <Compiler Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" C_Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <Preprocessor Value="__WX__"/>
       </Compiler>
-      <Linker Options="-mwindows;$(shell wx-config --debug=yes --libs --unicode=yes)" Required="yes"/>
+      <Linker Options="-mwindows;$(shell wx-config --debug=yes --libs --unicode=yes)" Required="yes">
+        <LibraryPath Value="../extern/lib"/>
+        <Library Value="libportaudio.dll"/>
+        <Library Value="libportaudiocpp.dll.a"/>
+      </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
@@ -87,11 +93,16 @@
     <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" C_Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <IncludePath Value="./"/>
-        <IncludePath Value="../extern/include/"/>
-        <IncludePath Value="../pa_cpp_binding/"/>
+        <IncludePath Value="C:/bin/MinGW/msys/1.0/local/include"/>
+        <IncludePath Value="./portaudiocpp"/>
         <Preprocessor Value="__WX__"/>
       </Compiler>
-      <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes"/>
+      <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes">
+        <LibraryPath Value="."/>
+        <LibraryPath Value="../../extern/lib/"/>
+        <Library Value="libportaudiocpp.la"/>
+        <Library Value="libportaudio.la"/>
+      </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
