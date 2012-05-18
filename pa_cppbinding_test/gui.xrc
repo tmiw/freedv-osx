@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="MainFrameBase">
+		<style>wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+		<title>Test PortAudio CPP Binding </title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="m_menuBar">
+			<label>MainMenu</label>
+			<object class="wxMenu" name="m_menuFile">
+				<label>_File</label>
+				<object class="wxMenuItem" name="menuFileExit">
+					<label>E_xit\tAlt+X</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxPanel" name="m_audioInfo">
+			<style>wxTAB_TRAVERSAL</style>
+			<object class="wxFlexGridSizer">
+				<rows>4</rows>
+				<cols>4</cols>
+				<vgap>1</vgap>
+				<hgap>1</hgap>
+				<growablecols>3</growablecols>
+				<growablerows>3</growablerows>
+				<object class="spacer">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<size>0,0</size>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxALL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxStaticText" name="m_staticText1">
+						<style>wxALIGN_RIGHT</style>
+						<label>Input, Output:</label>
+						<wrap>-1</wrap>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxEXPAND|wxFIXED_MINSIZE</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<minsize>65,65</minsize>
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxComboBox" name="m_comboBoxLeft">
+								<style>wxCB_SIMPLE</style>
+								<tooltip>Input Audio Interface</tooltip>
+								<value></value>
+								<content />
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<minsize>65,65</minsize>
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxComboBox" name="m_comboBoxRight">
+								<style>wxCB_SIMPLE</style>
+								<tooltip>Output Audio Interface</tooltip>
+								<value></value>
+								<content />
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="spacer">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<size>0,0</size>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxStaticText" name="m_staticText2">
+						<style>wxALIGN_RIGHT</style>
+						<label>Behavor:</label>
+						<wrap>-1</wrap>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxALL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxGauge" name="m_gauge1">
+						<style>wxGA_HORIZONTAL|wxGA_SMOOTH</style>
+						<range>100</range>
+						<value>0</value>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxALL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxSlider" name="m_slider1">
+						<style>wxSL_AUTOTICKS|wxSL_HORIZONTAL|wxSL_SELRANGE|wxSL_TOP</style>
+						<value>50</value>
+						<min>0</min>
+						<max>100</max>
+					</object>
+				</object>
+				<object class="spacer">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<size>0,0</size>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxALL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxStaticText" name="m_staticText5">
+						<label></label>
+						<wrap>-1</wrap>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxALL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxToggleButton" name="m_toggleBtn2">
+						<label>On / Off</label>
+						<checked>1</checked>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxALL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxToggleButton" name="m_toggleBtn3">
+						<label>On / Off</label>
+						<checked>1</checked>
+					</object>
+				</object>
+				<object class="spacer">
+					<option>1</option>
+					<flag></flag>
+					<border>5</border>
+					<size>0,0</size>
+				</object>
+				<object class="spacer">
+					<option>1</option>
+					<flag></flag>
+					<border>5</border>
+					<size>0,0</size>
+				</object>
+				<object class="spacer">
+					<option>1</option>
+					<flag></flag>
+					<border>5</border>
+					<size>0,0</size>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxALIGN_BOTTOM|wxALIGN_RIGHT|wxALL</flag>
+					<border>5</border>
+					<object class="wxButton" name="m_button1">
+						<label>Exit</label>
+						<default>1</default>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="m_statusBar">
+			<style>wxST_SIZEGRIP</style>
+			<fields>1</fields>
+		</object>
+	</object>
+</resource>
