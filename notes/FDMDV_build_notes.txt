@@ -1,0 +1,90 @@
+# ===========================================================
+# Build notes for portaudio
+# ===========================================================
+
+For building FDMDV2:
+using PortAudio November 21, 2011, SVN rev 1788 
+On Windows
+Built with MinGW/MSYS.
+
+Ignore this bit for now:  
+# ===========================================================
+# Config commandline:
+# ./configure --enable-cxx --with-winapi=directx  --with-dxdir="/p/Radio/fdmdv2/extern"
+# 
+# I configured my "C:/Users/wittend/Projects/dx7sdk" to appear as /p in the MSys 
+# environment.  This required editing the MSys /etc/fstab file (actually in my 
+# C:\bin\MinGW\msys\1.0\etc folder) to contain: 
+# 
+# C:/bin/MinGW/   /mingw
+# C:/Users/wittend/Projects	/p
+# 
+# Also, MSys does not seem to like paths like:
+# "C:\Program Files\Microsoft DirectX SDK (August 2010)\" 
+# so I had to move it to my "C:/Users/wittend/Projects/dx7sdk".
+# ===========================================================
+
+Finally gave up on Dsound for now. Used this instead:
+
+./configure --enable-cxx
+
+configure output:
+
+Configuration summary:
+
+  Target ...................... i686-pc-mingw32
+  C++ bindings ................ yes
+  Debug output ................ no
+
+  WMME ........................ yes
+  DSound ...................... no
+  ASIO ........................ no
+  WASAPI ...................... no
+  WDMKS ....................... no
+
+#---------------------------------------------------------------------------------------------------------  
+Here is some info from the portaudio Wiki about building with Microsoft compilers that may be helpful:
+# -----------------------------------------------------------
+6) Select "all configurations" in the "Configurations" combo box above. Select "All Platforms" in the "Platforms" combo box.
+7) Now set a few options:
+
+C/C++ -> Optimization -> Omit frame pointers = Yes
+C/C++ -> Code Generation -> Runtime library = /MT
+Optional: C/C++ -> Code Generation -> Floating point model = fast
+
+NOTE: For most users it is not necessary to explicitly set the structure member alignment; the default should work fine. 
+However some languages require, for example, 4-byte alignment. If you are having problems with portaudio.h structure 
+members not being properly read or written to, it may be necessary to explicitly set this value by going to 
+C/C++ -> Code Generation -> Struct member alignment and setting it to an appropriate value (four is a common value). 
+If your compiler is configurable, you should ensure that it is set to use the same structure member alignment value 
+as used for the PortAudio build.
+
+Preprocessor Definitions:
+# -----------------------------------------------------------
+Since the preprocessor definitions are different for each configuration and platform, you'll need to edit these 
+individually for each configuration/platform combination that you want to modify using the "Configurations" and 
+"Platforms" combo boxes.
+
+8) To suppress PortAudio runtime debug console output, go to Project -> Properties -> Configuration Properties
+ -> C/C++ -> Preprocessor. In the field 'Preprocessor Definitions', find PA_ENABLE_DEBUG_OUTPUT and remove it. 
+The console will not output debug messages.
+9) Also in the preprocessor definitions you need to explicitly define the audio APIs you wish to use. For 
+Windows the available API definitions are:
+
+PA_USE_ASIO[[BR]] PA_USE_DS (DirectSound)[[BR]] PA_USE_WMME (MME)[[BR]] PA_USE_WASAPI[[BR]] PA_USE_WDMKS[[BR]] PA_USE_SKELETON
+For each of these, the value of 0 indicates that support for this API should not be included. The value 1 indicates 
+that support for this API should be included.
+
+Building:
+# -----------------------------------------------------------
+As when setting Preprocessor definitions, building is a per-configuration per-platform process. Follow these 
+instructions for each configuration/platform combination that you're interested in.
+10) From the Build menu click Build -> Build solution. For 32-bit compilations, the dll file created by this 
+process (portaudio_x86.dll) can be found in the directory build\msvc\Win32\Release. For 64-bit compilations, 
+the dll file is called portaudio_x64.dll, and is found in the directory build\msvc\x64\Release.
+11) Now, any project which requires portaudio can be linked with portaudio_x86.lib (or _x64) and include the
+relevant headers (portaudio.h, and/or pa_asio.h , pa_x86_plain_converters.h) You may want to add/remove some 
+DLL entry points. Right now those 6 entries are not from portaudio.h:
+(from portaudio.def) 
+#---------------------------------------------------------------------------------------------------------  
+
