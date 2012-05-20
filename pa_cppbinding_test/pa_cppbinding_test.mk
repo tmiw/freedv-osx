@@ -44,8 +44,8 @@ LinkOptions            :=  -mwindows -s $(shell wx-config --debug=no --libs --un
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)./ $(IncludeSwitch)C:/bin/MinGW/msys/1.0/local/include $(IncludeSwitch)./portaudiocpp 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)portaudiocpp.la $(LibrarySwitch)portaudio.la 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch). $(LibraryPathSwitch)../../extern/lib/ 
+Libs                   := $(LibrarySwitch)portaudiocpp $(LibrarySwitch)portaudio 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch). 
 
 
 ##

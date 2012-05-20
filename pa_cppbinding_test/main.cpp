@@ -51,6 +51,31 @@ void MainFrame::OnExitClick(wxCommandEvent& event)
     Destroy();
 }
 
+void MainFrame::OnComboLeft( wxCommandEvent& event )
+{
+    event.Skip();
+}
+
+void MainFrame::OnComboRight( wxCommandEvent& event )
+{
+    event.Skip();
+}
+
+void MainFrame::OnScroll( wxScrollEvent& event )
+{
+    event.Skip();
+}
+
+void MainFrame::OnTogLeft( wxCommandEvent& event )
+{
+    event.Skip();
+}
+
+void MainFrame::OnTogRight( wxCommandEvent& event )
+{
+    event.Skip();
+}
+
 void MainFrame::printSupportedStandardSampleRates(
         const portaudio::DirectionSpecificStreamParameters &inputParameters,
         const portaudio::DirectionSpecificStreamParameters &outputParameters)
@@ -164,7 +189,7 @@ int MainFrame::populateAudioInfo()
             std::cout << "Default high input latency  = " << (*i).defaultHighInputLatency() << std::endl; // 8.3
             std::cout << "Default high output latency = " << (*i).defaultHighOutputLatency() << std::endl; // 8.3
 
-#ifdef WIN32
+#ifdef WIN32_ASIO
             // ASIO specific latency information:
             if ((*i).hostApi().typeId() == paASIO)
             {
@@ -183,7 +208,7 @@ int MainFrame::populateAudioInfo()
                     std::cout << "ASIO buffer granularity     = " << asioDevice.granularity() << std::endl;
                 }
             }
-#endif // WIN32
+#endif // WIN32_ASIO
 
             std::cout << "Default sample rate         = " << (*i).defaultSampleRate() << std::endl; // 8.2
 

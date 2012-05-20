@@ -55,6 +55,11 @@ class MainFrame : public MainFrameBase
                 const portaudio::DirectionSpecificStreamParameters &inputParameters,
                 const portaudio::DirectionSpecificStreamParameters &outputParameters);
         int populateAudioInfo();
+        void OnComboLeft( wxCommandEvent& event );
+        void OnComboRight( wxCommandEvent& event );
+        void OnScroll( wxScrollEvent& event );
+        void OnTogLeft( wxCommandEvent& event );
+        void OnTogRight( wxCommandEvent& event );
 };
 
 #endif //__main__

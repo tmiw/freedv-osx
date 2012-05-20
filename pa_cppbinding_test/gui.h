@@ -20,7 +20,6 @@
 #include <wx/font.h>
 #include <wx/colour.h>
 #include <wx/settings.h>
-#include <wx/stattext.h>
 #include <wx/combobox.h>
 #include <wx/sizer.h>
 #include <wx/gauge.h>
@@ -45,15 +44,12 @@ class MainFrameBase : public wxFrame
 		wxMenuBar* m_menuBar;
 		wxMenu* m_menuFile;
 		wxPanel* m_audioInfo;
-		wxStaticText* m_staticText1;
 		wxComboBox* m_comboBoxLeft;
 		wxComboBox* m_comboBoxRight;
-		wxStaticText* m_staticText2;
 		wxGauge* m_gauge1;
 		wxSlider* m_slider1;
-		wxStaticText* m_staticText5;
-		wxToggleButton* m_toggleBtn2;
 		wxToggleButton* m_toggleBtn3;
+		wxToggleButton* m_toggleBtn2;
 		wxButton* m_button1;
 		wxStatusBar* m_statusBar;
 		
@@ -63,13 +59,13 @@ class MainFrameBase : public wxFrame
 		virtual void OnComboLeft( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnComboRight( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnScroll( wxScrollEvent& event ) { event.Skip(); }
-		virtual void OnTogLeft( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnTogRight( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnTogLeft( wxCommandEvent& event ) { event.Skip(); }
 		
 	
 	public:
 		
-		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Test PortAudio CPP Binding "), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 500,300 ), long style = wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
+		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Test PortAudio CPP Binding "), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 577,365 ), long style = wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
 		
 		~MainFrameBase();
 	
