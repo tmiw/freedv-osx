@@ -51,15 +51,16 @@ class MainFrame : public MainFrameBase
         // protected event handlers
         virtual void OnCloseFrame(wxCloseEvent& event);
         virtual void OnExitClick(wxCommandEvent& event);
-        void printSupportedStandardSampleRates(
+        void populateStandardSampleRates(
+                wxListBox* target,
                 const portaudio::DirectionSpecificStreamParameters &inputParameters,
                 const portaudio::DirectionSpecificStreamParameters &outputParameters);
         int populateAudioInfo();
         void OnComboLeft( wxCommandEvent& event );
         void OnComboRight( wxCommandEvent& event );
         void OnScroll( wxScrollEvent& event );
-        void OnTogLeft( wxCommandEvent& event );
-        void OnTogRight( wxCommandEvent& event );
+        void OnBtnLeft( wxCommandEvent& event );
+        void OnBtnRight( wxCommandEvent& event );
 };
 
 #endif //__main__

@@ -99,8 +99,8 @@
       </Compiler>
       <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes">
         <LibraryPath Value="."/>
-        <Library Value="libportaudiocpp"/>
-        <Library Value="libportaudio"/>
+        <Library Value="libportaudiocpp-0"/>
+        <Library Value="libportaudio-2"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
@@ -134,4 +134,6 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

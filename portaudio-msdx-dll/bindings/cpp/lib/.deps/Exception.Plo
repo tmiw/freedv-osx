@@ -1,0 +1,19 @@
+Exception.lo: ../source/portaudiocpp/Exception.cxx \
+ ../include/portaudiocpp/Exception.hxx \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/exception \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/c++config.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/os_defines.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/cpu_defines.h \
+ ../../../include/portaudio.h
+
+../include/portaudiocpp/Exception.hxx:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/exception:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/c++config.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/os_defines.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/cpu_defines.h:
+
+../../../include/portaudio.h:

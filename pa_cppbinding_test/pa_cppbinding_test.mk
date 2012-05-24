@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=5/17/2012
+Date                   :=5/23/2012
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=g++
 ArchiveTool            :=ar rcus
@@ -44,7 +44,7 @@ LinkOptions            :=  -mwindows -s $(shell wx-config --debug=no --libs --un
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)./ $(IncludeSwitch)C:/bin/MinGW/msys/1.0/local/include $(IncludeSwitch)./portaudiocpp 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)portaudiocpp $(LibrarySwitch)portaudio 
+Libs                   := $(LibrarySwitch)portaudiocpp-0 $(LibrarySwitch)portaudio-2 
 LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch). 
 
 

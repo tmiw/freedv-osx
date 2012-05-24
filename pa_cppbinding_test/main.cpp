@@ -66,17 +66,19 @@ void MainFrame::OnScroll( wxScrollEvent& event )
     event.Skip();
 }
 
-void MainFrame::OnTogLeft( wxCommandEvent& event )
+void MainFrame::OnBtnLeft( wxCommandEvent& event )
+{
+    populateAudioInfo();
+    event.Skip();
+}
+
+void MainFrame::OnBtnRight( wxCommandEvent& event )
 {
     event.Skip();
 }
 
-void MainFrame::OnTogRight( wxCommandEvent& event )
-{
-    event.Skip();
-}
-
-void MainFrame::printSupportedStandardSampleRates(
+void MainFrame::populateStandardSampleRates(
+        wxListBox* target,
         const portaudio::DirectionSpecificStreamParameters &inputParameters,
         const portaudio::DirectionSpecificStreamParameters &outputParameters)
 {
@@ -98,96 +100,125 @@ void MainFrame::printSupportedStandardSampleRates(
                                             }; // negative terminated list
 
     int printCount = 0;
+    wxString tStr;
 
     for (int i = 0; STANDARD_SAMPLE_RATES[i] > 0; ++i)
     {
         portaudio::StreamParameters tmp = portaudio::StreamParameters(inputParameters, outputParameters, STANDARD_SAMPLE_RATES[i], 0, paNoFlag);
         if (tmp.isSupported())
         {
+            tStr.Printf("%8.2f", STANDARD_SAMPLE_RATES[i]);
             if (printCount == 0)
             {
-                std::cout << "    " << STANDARD_SAMPLE_RATES[i]; // 8.2
+                target->InsertItems(1, &tStr, 0);
                 printCount = 1;
             }
             else if (printCount == 4)
             {
-                std::cout << "," << std::endl;
-                std::cout << "    " << STANDARD_SAMPLE_RATES[i]; // 8.2
+                target->InsertItems(1, &tStr, 0);
                 printCount = 1;
             }
             else
             {
-                std::cout << ", " << STANDARD_SAMPLE_RATES[i]; // 8.2
-                ++printCount;
+                target->InsertItems(1, &tStr, 0);
+                 ++printCount;
             }
         }
     }
     if (printCount == 0)
     {
-        std::cout << "None" << std::endl;
+        //std::cout << "None" << std::endl;
+        tStr = "None\n";
+        target->InsertItems(1, &tStr, 0);
     }
-    else
+
+/*
+   else
     {
         std::cout << std::endl;
     }
+*/
 }
 
 int MainFrame::populateAudioInfo()
 {
-
+    wxString tStr;
+    wxString ttStr;
     try
     {
         portaudio::AutoSystem autoSys;
         portaudio::System &sys = portaudio::System::instance();
 
-        std::cout << "PortAudio version number = " << sys.version() << std::endl;
-        std::cout << "PortAudio version text = '" << sys.versionText() << "'" << std::endl;
+        tStr.Printf("PortAudio version number: %i\n", sys.version());
+        m_textTopRight->AppendText(tStr);
+
+        tStr.Printf("PortAudio version number: %s\n", sys.versionText());
+        m_textTopRight->AppendText(tStr);
 
         int numDevices = sys.deviceCount();
-        std::cout << "Number of devices = " << numDevices << std::endl;
+        tStr.Printf("Number of devices: %i\n\n", numDevices);
+        m_textTopRight->AppendText(tStr);
 
         for (portaudio::System::DeviceIterator i = sys.devicesBegin(); i != sys.devicesEnd(); ++i)
         {
-            std::cout << "--------------------------------------- device #" << (*i).index() << std::endl;
+            tStr.Printf("---------- device #: %i ----------\n", (*i).index());
+            m_textTopRight->AppendText(tStr);
 
-            // Mark global and API specific default devices:
             bool defaultDisplayed = false;
 
             if ((*i).isSystemDefaultInputDevice())
             {
-                std::cout << "[ Default Input";
+                tStr.Printf("[ System Default Input %s", (*i).hostApi().name());
+                m_textTopRight->AppendText(tStr);
                 defaultDisplayed = true;
             }
             else if ((*i).isHostApiDefaultInputDevice())
             {
-                std::cout << "[ Default " << (*i).hostApi().name() << " Input";
+                tStr.Printf("[ HostApi Default %s Input", (*i).hostApi().name());
+                m_textTopRight->AppendText(tStr);
                 defaultDisplayed = true;
             }
             if ((*i).isSystemDefaultOutputDevice())
             {
-                std::cout << (defaultDisplayed ? "," : "[");
-                std::cout << " Default Output";
+                tStr.Printf(defaultDisplayed ? "," : "[");
+                m_textTopRight->AppendText(tStr);
+                tStr = (" System Default Output");
+                m_textTopRight->AppendText(tStr);
                 defaultDisplayed = true;
             }
             else if ((*i).isHostApiDefaultOutputDevice())
             {
-                std::cout << (defaultDisplayed ? "," : "[");
-                std::cout << " Default " << (*i).hostApi().name() << " Output";
+                tStr.Printf(defaultDisplayed ? "," : "[");
+                m_textTopRight->AppendText(tStr);
+                tStr.Printf(" HostApi Default %s Output", (*i).hostApi().name());
+                m_textTopRight->AppendText(tStr);
                 defaultDisplayed = true;
             }
+
             if (defaultDisplayed)
             {
-                std::cout << " ]" << std::endl;
+               tStr  =  " ]\n";
+                m_textTopRight->AppendText(tStr);
             }
-            // Print device info:
-            std::cout << "Name                        = " << (*i).name() << std::endl;
-            std::cout << "Host API                    = " << (*i).hostApi().name() << std::endl;
-            std::cout << "Max inputs = " << (*i).maxInputChannels() << ", Max outputs = " << (*i).maxOutputChannels() << std::endl;
 
-            std::cout << "Default low input latency   = " << (*i).defaultLowInputLatency() << std::endl; // 8.3
-            std::cout << "Default low output latency  = " << (*i).defaultLowOutputLatency() << std::endl; // 8.3
-            std::cout << "Default high input latency  = " << (*i).defaultHighInputLatency() << std::endl; // 8.3
-            std::cout << "Default high output latency = " << (*i).defaultHighOutputLatency() << std::endl; // 8.3
+            ttStr.Printf("Name                        : %s\n", (*i).name());
+            tStr  += ttStr;
+            ttStr.Printf("Host API                    : %s\n", (*i).hostApi().name());
+            tStr  += ttStr;
+            ttStr.Printf("Max inputs                  : %i\n", (*i).maxInputChannels());
+            tStr  += ttStr;
+            ttStr.Printf("Max outputs                 : %i\n\n", (*i).maxOutputChannels());
+            tStr  += ttStr;
+
+            ttStr.Printf("Default low input latency   : %8.3f\n", (*i).defaultLowInputLatency());
+            tStr  += ttStr;
+            ttStr.Printf("Default low output latency  : %8.3f\n", (*i).defaultLowOutputLatency());
+            tStr  += ttStr;
+            ttStr.Printf("Default high input latency  : %8.3f\n", (*i).defaultHighInputLatency());
+            tStr  += ttStr;
+            ttStr.Printf("Default high output latency : %8.3f\n\n", (*i).defaultHighOutputLatency());
+            tStr  += ttStr;
+            m_textTopRight->AppendText(tStr);
 
 #ifdef WIN32_ASIO
             // ASIO specific latency information:
@@ -195,62 +226,74 @@ int MainFrame::populateAudioInfo()
             {
                 portaudio::AsioDeviceAdapter asioDevice((*i));
 
-                std::cout << "ASIO minimum buffer size    = " << asioDevice.minBufferSize() << std::endl;
-                std::cout << "ASIO maximum buffer size    = " << asioDevice.maxBufferSize() << std::endl;
-                std::cout << "ASIO preferred buffer size  = " << asioDevice.preferredBufferSize() << std::endl;
+                //std::cout << "ASIO minimum buffer size    = " << asioDevice.minBufferSize() << std::endl;
+                //std::cout << "ASIO maximum buffer size    = " << asioDevice.maxBufferSize() << std::endl;
+                //std::cout << "ASIO preferred buffer size  = " << asioDevice.preferredBufferSize() << std::endl;
 
                 if (asioDevice.granularity() == -1)
                 {
-                    std::cout << "ASIO buffer granularity     = power of 2" << std::endl;
+                    //std::cout << "ASIO buffer granularity     = power of 2" << std::endl;
                 }
                 else
                 {
-                    std::cout << "ASIO buffer granularity     = " << asioDevice.granularity() << std::endl;
+                    //std::cout << "ASIO buffer granularity     = " << asioDevice.granularity() << std::endl;
                 }
             }
 #endif // WIN32_ASIO
 
-            std::cout << "Default sample rate         = " << (*i).defaultSampleRate() << std::endl; // 8.2
+            tStr.Printf("Default sample rate         : %8.2f\n", (*i).defaultSampleRate());
+            m_textTopRight->AppendText(tStr);
 
             // Poll for standard sample rates:
             portaudio::DirectionSpecificStreamParameters inputParameters((*i), (*i).maxInputChannels(), portaudio::INT16, true, 0.0, NULL);
             portaudio::DirectionSpecificStreamParameters outputParameters((*i), (*i).maxOutputChannels(), portaudio::INT16, true, 0.0, NULL);
             if (inputParameters.numChannels() > 0)
             {
-                std::cout << "Supported standard sample rates" << std::endl;
-                std::cout << " for half-duplex 16 bit " << inputParameters.numChannels() << " channel input = " << std::endl;
-                printSupportedStandardSampleRates(inputParameters, portaudio::DirectionSpecificStreamParameters::null());
+                tStr = "Supported standard Input sample rates\n";
+                m_listBoxTopLeft->InsertItems(1, &tStr, 0);
+                tStr.Printf("   for half-duplex 16 bit %i channel input = ", inputParameters.numChannels());
+                m_listBoxTopLeft->InsertItems(1, &tStr, 0);
+                populateStandardSampleRates(m_listBoxTopLeft, inputParameters, portaudio::DirectionSpecificStreamParameters::null());
             }
             if (outputParameters.numChannels() > 0)
             {
-                std::cout << "Supported standard sample rates" << std::endl;
-                std::cout << " for half-duplex 16 bit " << outputParameters.numChannels() << " channel output = " << std::endl;
-                printSupportedStandardSampleRates(portaudio::DirectionSpecificStreamParameters::null(), outputParameters);
+                tStr = "Supported standard Output sample rates\n";
+                m_listBoxMidLeft->InsertItems(1, &tStr, 0);
+                tStr.Printf("   for half-duplex 16 bit %i channel output = ", outputParameters.numChannels());
+                m_listBoxMidLeft->InsertItems(1, &tStr, 0);
+                populateStandardSampleRates(m_listBoxMidLeft, portaudio::DirectionSpecificStreamParameters::null(), outputParameters);
             }
             if (inputParameters.numChannels() > 0 && outputParameters.numChannels() > 0)
             {
-                std::cout << "Supported standard sample rates" << std::endl;
-                std::cout << " for full-duplex 16 bit " << inputParameters.numChannels() << " channel input, " << outputParameters.numChannels() << " channel output = " << std::endl;
-                printSupportedStandardSampleRates(inputParameters, outputParameters);
+                tStr = "Supported full-duplex sample rates\n";
+                m_listBoxMidRight->InsertItems(1, &tStr, 0);
+                tStr.Printf("   for full-duplex 16 bit %i channel input, %i", inputParameters.numChannels(), outputParameters.numChannels());
+                m_listBoxMidRight->InsertItems(1, &tStr, 0);
+                populateStandardSampleRates(m_listBoxMidRight, inputParameters, outputParameters);
             }
+            tStr.Printf("---------------------------------\n");
+            m_textTopRight->AppendText(tStr);
         }
-        std::cout << "----------------------------------------------" << std::endl;
     }
     catch (const portaudio::PaException &e)
     {
-        std::cout << "A PortAudio error occured: " << e.paErrorText() << std::endl;
+        tStr.Printf("A PortAudio error occured: %s\n",  e.paErrorText());
+        m_textTopRight->AppendText(tStr);
     }
     catch (const portaudio::PaCppException &e)
     {
-        std::cout << "A PortAudioCpp error occured: " << e.what() << std::endl;
+        tStr.Printf("A PortAudioCpp error occured: %s\n", e.what());
+        m_textTopRight->AppendText(tStr);
     }
     catch (const std::exception &e)
     {
-        std::cout << "A generic exception occured: " << e.what() << std::endl;
+        tStr.Printf("A generic exception occured: %s\n", e.what());
+        m_textTopRight->AppendText(tStr);
     }
     catch (...)
     {
-        std::cout << "An unknown exception occured." << std::endl;
+        tStr.Printf("An unknown exception occured.\n");
+        m_textTopRight->AppendText(tStr);
     }
     return 0;
 }

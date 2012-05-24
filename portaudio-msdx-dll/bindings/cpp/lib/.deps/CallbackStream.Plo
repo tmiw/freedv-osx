@@ -1,0 +1,9 @@
+CallbackStream.lo: ../source/portaudiocpp/CallbackStream.cxx \
+ ../include/portaudiocpp/CallbackStream.hxx ../../../include/portaudio.h \
+ ../include/portaudiocpp/Stream.hxx
+
+../include/portaudiocpp/CallbackStream.hxx:
+
+../../../include/portaudio.h:
+
+../include/portaudiocpp/Stream.hxx:

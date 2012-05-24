@@ -20,7 +20,7 @@ _ = gettext.gettext
 class MainFrameBase ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"Test PortAudio CPP Binding "), pos = wx.DefaultPosition, size = wx.Size( 577,365 ), style = wx.DEFAULT_FRAME_STYLE|wx.RESIZE_BORDER|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"Test PortAudio CPP Binding "), pos = wx.DefaultPosition, size = wx.Size( 651,445 ), style = wx.DEFAULT_FRAME_STYLE|wx.RESIZE_BORDER|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		
@@ -40,64 +40,76 @@ class MainFrameBase ( wx.Frame ):
 		
 		bSizer17 = wx.BoxSizer( wx.VERTICAL )
 		
-		bSizer15 = wx.BoxSizer( wx.VERTICAL )
+		bSizer151 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		sbSizerLeft = wx.StaticBoxSizer( wx.StaticBox( self.m_audioInfo, wx.ID_ANY, _(u"label") ), wx.VERTICAL )
+		
+		m_listBoxTopLeftChoices = []
+		self.m_listBoxTopLeft = wx.ListBox( self.m_audioInfo, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_listBoxTopLeftChoices, 0 )
+		sbSizerLeft.Add( self.m_listBoxTopLeft, 1, wx.ALIGN_CENTER|wx.ALL|wx.EXPAND, 3 )
+		
+		
+		bSizer151.Add( sbSizerLeft, 1, wx.EXPAND, 1 )
+		
+		sbSizerRight = wx.StaticBoxSizer( wx.StaticBox( self.m_audioInfo, wx.ID_ANY, _(u"label") ), wx.VERTICAL )
+		
+		self.m_textTopRight = wx.TextCtrl( self.m_audioInfo, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.HSCROLL|wx.TE_DONTWRAP|wx.TE_MULTILINE )
+		self.m_textTopRight.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_INACTIVEBORDER ) )
+		
+		sbSizerRight.Add( self.m_textTopRight, 1, wx.ALIGN_CENTER|wx.ALL|wx.EXPAND, 3 )
+		
+		
+		bSizer151.Add( sbSizerRight, 1, wx.EXPAND, 1 )
+		
+		
+		bSizer17.Add( bSizer151, 1, wx.EXPAND, 5 )
+		
+		bSizer15 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		bSizer9 = wx.BoxSizer( wx.VERTICAL )
 		
-		bSizer7 = wx.BoxSizer( wx.HORIZONTAL )
-		
-		bSizer2 = wx.BoxSizer( wx.HORIZONTAL )
-		
-		bSizer2.SetMinSize( wx.Size( 65,65 ) ) 
-		m_comboBoxLeftChoices = []
-		self.m_comboBoxLeft = wx.ComboBox( self.m_audioInfo, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, m_comboBoxLeftChoices, 0 )
-		self.m_comboBoxLeft.SetToolTipString( _(u"Input Audio Interface") )
-		self.m_comboBoxLeft.SetMinSize( wx.Size( 65,65 ) )
-		
-		bSizer2.Add( self.m_comboBoxLeft, 1, wx.ALL|wx.EXPAND, 5 )
+		m_listBoxMidLeftChoices = []
+		self.m_listBoxMidLeft = wx.ListBox( self.m_audioInfo, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_listBoxMidLeftChoices, 0 )
+		bSizer9.Add( self.m_listBoxMidLeft, 1, wx.ALIGN_CENTER|wx.ALL|wx.EXPAND, 5 )
 		
 		
-		bSizer7.Add( bSizer2, 1, wx.EXPAND, 5 )
+		bSizer15.Add( bSizer9, 1, wx.ALIGN_CENTER_VERTICAL|wx.EXPAND, 1 )
 		
-		bSizer3 = wx.BoxSizer( wx.HORIZONTAL )
+		bSizer18 = wx.BoxSizer( wx.VERTICAL )
 		
-		bSizer3.SetMinSize( wx.Size( 65,65 ) ) 
-		m_comboBoxRightChoices = []
-		self.m_comboBoxRight = wx.ComboBox( self.m_audioInfo, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, m_comboBoxRightChoices, 0 )
-		self.m_comboBoxRight.SetToolTipString( _(u"Output Audio Interface") )
-		self.m_comboBoxRight.SetMinSize( wx.Size( 65,35 ) )
-		
-		bSizer3.Add( self.m_comboBoxRight, 1, wx.ALL|wx.EXPAND, 5 )
+		m_listBoxMidRightChoices = []
+		self.m_listBoxMidRight = wx.ListBox( self.m_audioInfo, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_listBoxMidRightChoices, 0 )
+		bSizer18.Add( self.m_listBoxMidRight, 1, wx.ALIGN_CENTER|wx.ALL|wx.EXPAND, 5 )
 		
 		
-		bSizer7.Add( bSizer3, 1, wx.EXPAND, 5 )
+		bSizer15.Add( bSizer18, 1, wx.EXPAND, 5 )
 		
 		
-		bSizer9.Add( bSizer7, 1, wx.EXPAND, 5 )
+		bSizer17.Add( bSizer15, 1, wx.EXPAND, 1 )
+		
+		bSizer91 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		bSizer71 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		m_listBoxBottomLeftChoices = []
+		self.m_listBoxBottomLeft = wx.ListBox( self.m_audioInfo, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_listBoxBottomLeftChoices, 0 )
+		bSizer71.Add( self.m_listBoxBottomLeft, 1, wx.ALIGN_CENTER|wx.ALL|wx.EXPAND, 5 )
 		
 		
-		bSizer15.Add( bSizer9, 0, wx.ALIGN_CENTER_VERTICAL|wx.EXPAND, 5 )
+		bSizer91.Add( bSizer71, 1, wx.EXPAND, 5 )
 		
-		bSizer10 = wx.BoxSizer( wx.HORIZONTAL )
+		bSizer31 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		bSizer5 = wx.BoxSizer( wx.HORIZONTAL )
-		
-		self.m_gauge1 = wx.Gauge( self.m_audioInfo, wx.ID_ANY, 100, wx.DefaultPosition, wx.DefaultSize, wx.GA_HORIZONTAL|wx.GA_SMOOTH )
-		bSizer5.Add( self.m_gauge1, 1, wx.ALL, 5 )
-		
-		
-		bSizer10.Add( bSizer5, 1, wx.EXPAND, 5 )
-		
-		bSizer6 = wx.BoxSizer( wx.HORIZONTAL )
-		
-		self.m_slider1 = wx.Slider( self.m_audioInfo, wx.ID_ANY, 50, 0, 100, wx.DefaultPosition, wx.DefaultSize, wx.SL_AUTOTICKS|wx.SL_HORIZONTAL|wx.SL_SELRANGE|wx.SL_TOP )
-		bSizer6.Add( self.m_slider1, 1, wx.ALIGN_CENTER|wx.ALL|wx.EXPAND, 5 )
+		bSizer31.SetMinSize( wx.Size( 65,65 ) ) 
+		m_listBoxBottomRightChoices = []
+		self.m_listBoxBottomRight = wx.ListBox( self.m_audioInfo, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_listBoxBottomRightChoices, 0 )
+		bSizer31.Add( self.m_listBoxBottomRight, 1, wx.ALIGN_CENTER|wx.ALL|wx.EXPAND, 5 )
 		
 		
-		bSizer10.Add( bSizer6, 1, wx.EXPAND, 5 )
+		bSizer91.Add( bSizer31, 1, wx.EXPAND, 5 )
 		
 		
-		bSizer15.Add( bSizer10, 1, wx.EXPAND, 5 )
+		bSizer17.Add( bSizer91, 1, wx.EXPAND, 1 )
 		
 		bSizer14 = wx.BoxSizer( wx.HORIZONTAL )
 		
@@ -105,44 +117,40 @@ class MainFrameBase ( wx.Frame ):
 		
 		bSizer12 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_toggleBtn3 = wx.ToggleButton( self.m_audioInfo, wx.ID_ANY, _(u"On / Off"), wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_toggleBtn3, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_RIGHT|wx.ALL, 5 )
+		self.m_btnLeft = wx.Button( self.m_audioInfo, wx.ID_ANY, _(u"Ok"), wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer12.Add( self.m_btnLeft, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_RIGHT|wx.ALL, 1 )
 		
 		
-		bSizer13.Add( bSizer12, 1, 0, 5 )
+		bSizer13.Add( bSizer12, 1, 0, 1 )
 		
 		bSizer11 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_toggleBtn2 = wx.ToggleButton( self.m_audioInfo, wx.ID_ANY, _(u"On / Off"), wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_toggleBtn2.SetValue( True ) 
-		bSizer11.Add( self.m_toggleBtn2, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_LEFT|wx.ALL, 5 )
+		self.m_btnRight = wx.Button( self.m_audioInfo, wx.ID_ANY, _(u"On / Off"), wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer11.Add( self.m_btnRight, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_LEFT|wx.ALL, 1 )
 		
 		
-		bSizer13.Add( bSizer11, 1, 0, 5 )
+		bSizer13.Add( bSizer11, 1, 0, 1 )
 		
 		
-		bSizer14.Add( bSizer13, 1, wx.ALIGN_BOTTOM|wx.ALIGN_RIGHT, 5 )
+		bSizer14.Add( bSizer13, 1, wx.ALIGN_BOTTOM|wx.ALIGN_RIGHT, 1 )
 		
 		
-		bSizer15.Add( bSizer14, 0, wx.EXPAND, 5 )
-		
-		
-		bSizer17.Add( bSizer15, 1, wx.EXPAND, 5 )
+		bSizer17.Add( bSizer14, 0, wx.EXPAND, 5 )
 		
 		bSizer16 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.m_button1 = wx.Button( self.m_audioInfo, wx.ID_ANY, _(u"Exit"), wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_button1.SetDefault() 
-		bSizer16.Add( self.m_button1, 0, 0, 5 )
+		bSizer16.Add( self.m_button1, 0, 0, 1 )
 		
 		
-		bSizer17.Add( bSizer16, 0, wx.ALIGN_BOTTOM|wx.ALIGN_RIGHT, 5 )
+		bSizer17.Add( bSizer16, 0, wx.ALIGN_BOTTOM|wx.ALIGN_RIGHT, 1 )
 		
 		
 		self.m_audioInfo.SetSizer( bSizer17 )
 		self.m_audioInfo.Layout()
 		bSizer17.Fit( self.m_audioInfo )
-		mainSizer.Add( self.m_audioInfo, 1, wx.EXPAND, 0 )
+		mainSizer.Add( self.m_audioInfo, 1, wx.ALIGN_CENTER|wx.EXPAND, 1 )
 		
 		
 		self.SetSizer( mainSizer )
@@ -154,11 +162,18 @@ class MainFrameBase ( wx.Frame ):
 		# Connect Events
 		self.Bind( wx.EVT_CLOSE, self.OnCloseFrame )
 		self.Bind( wx.EVT_MENU, self.OnExitClick, id = self.menuFileExit.GetId() )
-		self.m_comboBoxLeft.Bind( wx.EVT_COMBOBOX, self.OnComboLeft )
-		self.m_comboBoxRight.Bind( wx.EVT_COMBOBOX, self.OnComboRight )
-		self.m_slider1.Bind( wx.EVT_SCROLL, self.OnScroll )
-		self.m_toggleBtn3.Bind( wx.EVT_TOGGLEBUTTON, self.OnTogRight )
-		self.m_toggleBtn2.Bind( wx.EVT_TOGGLEBUTTON, self.OnTogLeft )
+		self.m_listBoxTopLeft.Bind( wx.EVT_LISTBOX, self.OnListBoxTopLeftBox )
+		self.m_listBoxTopLeft.Bind( wx.EVT_LISTBOX_DCLICK, self.OnListBoxTopLeftDClick )
+		self.m_listBoxMidLeft.Bind( wx.EVT_LISTBOX, self.OnListMidLeftBoxClick )
+		self.m_listBoxMidLeft.Bind( wx.EVT_LISTBOX_DCLICK, self.OnListMidLeftBoxDClick )
+		self.m_listBoxMidRight.Bind( wx.EVT_LISTBOX, self.OnListMidRightBoxClick )
+		self.m_listBoxMidRight.Bind( wx.EVT_LISTBOX_DCLICK, self.OnListMidRightBoxDClick )
+		self.m_listBoxBottomLeft.Bind( wx.EVT_LISTBOX, self.OnListBoxBottomLeftClick )
+		self.m_listBoxBottomLeft.Bind( wx.EVT_LISTBOX_DCLICK, self.OnListBoxBottomLeftDClick )
+		self.m_listBoxBottomRight.Bind( wx.EVT_LISTBOX, self.OnListBoxBottomRIghtClick )
+		self.m_listBoxBottomRight.Bind( wx.EVT_LISTBOX_DCLICK, self.OnListBoxBottomRIghtDClick )
+		self.m_btnLeft.Bind( wx.EVT_BUTTON, self.OnBtnLeft )
+		self.m_btnRight.Bind( wx.EVT_BUTTON, self.OnBtnRight )
 		self.m_button1.Bind( wx.EVT_BUTTON, self.OnExitClick )
 	
 	def __del__( self ):
@@ -172,19 +187,40 @@ class MainFrameBase ( wx.Frame ):
 	def OnExitClick( self, event ):
 		event.Skip()
 	
-	def OnComboLeft( self, event ):
+	def OnListBoxTopLeftBox( self, event ):
 		event.Skip()
 	
-	def OnComboRight( self, event ):
+	def OnListBoxTopLeftDClick( self, event ):
 		event.Skip()
 	
-	def OnScroll( self, event ):
+	def OnListMidLeftBoxClick( self, event ):
 		event.Skip()
 	
-	def OnTogRight( self, event ):
+	def OnListMidLeftBoxDClick( self, event ):
 		event.Skip()
 	
-	def OnTogLeft( self, event ):
+	def OnListMidRightBoxClick( self, event ):
+		event.Skip()
+	
+	def OnListMidRightBoxDClick( self, event ):
+		event.Skip()
+	
+	def OnListBoxBottomLeftClick( self, event ):
+		event.Skip()
+	
+	def OnListBoxBottomLeftDClick( self, event ):
+		event.Skip()
+	
+	def OnListBoxBottomRIghtClick( self, event ):
+		event.Skip()
+	
+	def OnListBoxBottomRIghtDClick( self, event ):
+		event.Skip()
+	
+	def OnBtnLeft( self, event ):
+		event.Skip()
+	
+	def OnBtnRight( self, event ):
 		event.Skip()
 	
 	

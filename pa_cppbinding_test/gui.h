@@ -20,11 +20,10 @@
 #include <wx/font.h>
 #include <wx/colour.h>
 #include <wx/settings.h>
-#include <wx/combobox.h>
+#include <wx/listbox.h>
 #include <wx/sizer.h>
-#include <wx/gauge.h>
-#include <wx/slider.h>
-#include <wx/tglbtn.h>
+#include <wx/statbox.h>
+#include <wx/textctrl.h>
 #include <wx/button.h>
 #include <wx/panel.h>
 #include <wx/statusbr.h>
@@ -44,28 +43,37 @@ class MainFrameBase : public wxFrame
 		wxMenuBar* m_menuBar;
 		wxMenu* m_menuFile;
 		wxPanel* m_audioInfo;
-		wxComboBox* m_comboBoxLeft;
-		wxComboBox* m_comboBoxRight;
-		wxGauge* m_gauge1;
-		wxSlider* m_slider1;
-		wxToggleButton* m_toggleBtn3;
-		wxToggleButton* m_toggleBtn2;
+		wxListBox* m_listBoxTopLeft;
+		wxTextCtrl* m_textTopRight;
+		wxListBox* m_listBoxMidLeft;
+		wxListBox* m_listBoxMidRight;
+		wxListBox* m_listBoxBottomLeft;
+		wxListBox* m_listBoxBottomRight;
+		wxButton* m_btnLeft;
+		wxButton* m_btnRight;
 		wxButton* m_button1;
 		wxStatusBar* m_statusBar;
 		
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnCloseFrame( wxCloseEvent& event ) { event.Skip(); }
 		virtual void OnExitClick( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnComboLeft( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnComboRight( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnScroll( wxScrollEvent& event ) { event.Skip(); }
-		virtual void OnTogRight( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnTogLeft( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListBoxTopLeftBox( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListBoxTopLeftDClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListMidLeftBoxClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListMidLeftBoxDClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListMidRightBoxClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListMidRightBoxDClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListBoxBottomLeftClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListBoxBottomLeftDClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListBoxBottomRIghtClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnListBoxBottomRIghtDClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnBtnLeft( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnBtnRight( wxCommandEvent& event ) { event.Skip(); }
 		
 	
 	public:
 		
-		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Test PortAudio CPP Binding "), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 577,365 ), long style = wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
+		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Test PortAudio CPP Binding "), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 651,445 ), long style = wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
 		
 		~MainFrameBase();
 	
