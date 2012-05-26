@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\codec2-dev\src\codebookdt.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\codebookge.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\codebookjnd.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\codebookjvm.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\codebookres.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\codebookvq.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\codec2.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="fdmdv2-dll.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\fft.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\interp.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\kiss_fft.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\lpc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\lsp.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\nlp.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\pack.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\phase.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\postfilter.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\quantise.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\sine.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\codec2-dev\src\_kiss_fft_guts.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\codec2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\defines.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="fdmdv2-dll.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\fdmdv_internal.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\fft.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\kiss_fft.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\lpc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\lsp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\nlp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\phase.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\postfilter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\quantise.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\test_bits.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\sine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{83ea5743-71bf-4094-8368-4795ef4f1655}</UniqueIdentifier>
+      <Extensions>*.c??</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{c6d950f4-866c-4953-9c3c-dcbef8f5b282}</UniqueIdentifier>
+      <Extensions>*.h</Extensions>
+    </Filter>
+  </ItemGroup>
+</Project>
