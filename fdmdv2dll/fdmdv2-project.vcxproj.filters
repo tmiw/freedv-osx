@@ -25,9 +25,6 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="fdmdv2-dll.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\codec2-dev\src\fft.c">
       <Filter>src</Filter>
     </ClCompile>
@@ -62,6 +59,15 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\codebook.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\codec2-dev\src\codebookd.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="fdmdv2-dll.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,6 +122,12 @@
     </ClInclude>
     <ClInclude Include="..\..\codec2-dev\src\sine.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\comp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\codec2-dev\src\rn.h">
+      <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -18,6 +18,7 @@
     [1] http://n1su.com/fdmdv/FDMDV_Docs_Rel_1_4b.pdf
 
 \*---------------------------------------------------------------------------*/
+#include "kiss_fft.h"
 
 /*
   Copyright (C) 2012 David Rowe
@@ -48,17 +49,18 @@
 #define WIN32PROJECT_API __declspec(dllimport)
 #endif
 
+/*
 // This class is exported from the win32-project.dll
 class WIN32PROJECT_API Cwin32project 
 {
 public:
     Cwin32project(void);
-    // TODO: add your methods here.
 };
 
 extern WIN32PROJECT_API int nwin32project;
 
 WIN32PROJECT_API int fnwin32project(void);
+*/
 
 #ifndef __FDMDV__
 #define __FDMDV__
@@ -68,6 +70,9 @@ extern "C" {
 #endif
 
 #include "comp.h"
+
+WIN32PROJECT_API void fft(float x[], int n, int isign);
+
 
 #define FDMDV_BITS_PER_FRAME          28  /* 20ms frames, 1400 bit/s                                        */
 #define FDMDV_NOM_SAMPLES_PER_FRAME  160  /* modulator output samples/frame and nominal demod samples/frame */

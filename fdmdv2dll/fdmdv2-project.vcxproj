@@ -65,6 +65,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;WIN32PROJECT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\codec2-dev\src</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4305;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -78,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\codec2-dev\src\codec2.h" />
+    <ClInclude Include="..\..\codec2-dev\src\comp.h" />
     <ClInclude Include="..\..\codec2-dev\src\defines.h" />
     <ClInclude Include="..\..\codec2-dev\src\fdmdv_internal.h" />
     <ClInclude Include="..\..\codec2-dev\src\fft.h" />
@@ -88,6 +91,7 @@
     <ClInclude Include="..\..\codec2-dev\src\phase.h" />
     <ClInclude Include="..\..\codec2-dev\src\postfilter.h" />
     <ClInclude Include="..\..\codec2-dev\src\quantise.h" />
+    <ClInclude Include="..\..\codec2-dev\src\rn.h" />
     <ClInclude Include="..\..\codec2-dev\src\sine.h" />
     <ClInclude Include="..\..\codec2-dev\src\test_bits.h" />
     <ClInclude Include="..\..\codec2-dev\src\_kiss_fft_guts.h" />
@@ -96,6 +100,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\codec2-dev\src\codebook.c" />
+    <ClCompile Include="..\..\codec2-dev\src\codebookd.c" />
     <ClCompile Include="..\..\codec2-dev\src\codebookdt.c" />
     <ClCompile Include="..\..\codec2-dev\src\codebookge.c" />
     <ClCompile Include="..\..\codec2-dev\src\codebookjnd.c" />
