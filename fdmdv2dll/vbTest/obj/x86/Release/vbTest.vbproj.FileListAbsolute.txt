@@ -1,0 +1,11 @@
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\bin\Release\vbTest.exe
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\bin\Release\vbTest.pdb
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\bin\Release\vbTest.xml
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\obj\x86\Release\vbTest.Form1.resources
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\obj\x86\Release\vbTest.Resources.resources
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\obj\x86\Release\vbTest.exe
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\obj\x86\Release\vbTest.xml
+C:\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\vbTest\obj\x86\Release\vbTest.pdb
