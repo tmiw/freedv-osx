@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Declare Sub fdmdv2-dll Lib "\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\Release\fdmdv2-dll.dll" (ByVal Client As String, ByVal Dll As String)
+'Declare Sub fdmdv2-dll Lib "\Users\wittend\Projects\Radio\fdmdv2\fdmdv2dll\Release\fdmdv2-dll.dll" (ByVal Client As String, ByVal Dll As String)
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
