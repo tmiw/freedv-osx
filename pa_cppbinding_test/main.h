@@ -61,6 +61,16 @@ class MainFrame : public MainFrameBase
         void OnScroll( wxScrollEvent& event );
         void OnBtnLeft( wxCommandEvent& event );
         void OnBtnRight( wxCommandEvent& event );
+        void OnListBoxTopLeftBox( wxCommandEvent& event );
+        void OnListBoxTopLeftDClick( wxCommandEvent& event );
+        void OnListMidLeftBoxClick( wxCommandEvent& event );
+        void OnListMidLeftBoxDClick( wxCommandEvent& event );
+        void OnListMidRightBoxClick( wxCommandEvent& event );
+        void OnListMidRightBoxDClick( wxCommandEvent& event );
+        void OnListBoxBottomLeftClick( wxCommandEvent& event );
+        void OnListBoxBottomLeftDClick( wxCommandEvent& event );
+        void OnListBoxBottomRIghtClick( wxCommandEvent& event );
+        void OnListBoxBottomRIghtDClick( wxCommandEvent& event );
 };
 
 #endif //__main__

@@ -298,4 +298,54 @@ int MainFrame::populateAudioInfo()
     return 0;
 }
 
+void MainFrame::OnListBoxTopLeftBox( wxCommandEvent& event )
+{
+    //wxMessageBox(wxT("Got OnListBoxTopLeftBox()"), wxT("Interface Test"), wxOK);
+}
+
+void MainFrame::OnListBoxTopLeftDClick( wxCommandEvent& event )
+{
+    wxMessageBox(wxT("Got OnListBoxTopLeftDClick()"), wxT("Interface Test"), wxOK);
+}
+
+void MainFrame::OnListMidLeftBoxClick( wxCommandEvent& event )
+{
+//    wxMessageBox(wxT("Got OnListMidLeftBoxClick()"), wxT("Interface Test"), wxOK);
+}
+
+void MainFrame::OnListMidLeftBoxDClick( wxCommandEvent& event )
+{
+    wxMessageBox(wxT("Got OnListMidLeftBoxDClick()"), wxT("Interface Test"), wxOK);
+}
+
+void MainFrame::OnListMidRightBoxClick( wxCommandEvent& event )
+{
+//    wxMessageBox(wxT("Got OnListMidRightBoxClick()"), wxT("Interface Test"), wxOK);
+}
+
+void MainFrame::OnListMidRightBoxDClick( wxCommandEvent& event )
+{
+    wxMessageBox(wxT("Got OnListMidRightBoxDClick()"), wxT("Interface Test"), wxOK);
+}
+
+void MainFrame::OnListBoxBottomLeftClick( wxCommandEvent& event )
+{
+//    wxMessageBox(wxT("Got OnListBoxBottomLeftClick()"), wxT("Interface Test"), wxOK);
+}
+
+void MainFrame::OnListBoxBottomLeftDClick( wxCommandEvent& event )
+{
+    wxMessageBox(wxT("Got OnListBoxBottomLeftDClick()"), wxT("Interface Test"), wxOK);
+}
+
+void MainFrame::OnListBoxBottomRIghtClick( wxCommandEvent& event )
+{
+//    wxMessageBox(wxT("Got OnListBoxBottomRIghtClick()"), wxT("Interface Test"), wxOK);
+}
+
+void MainFrame::OnListBoxBottomRIghtDClick( wxCommandEvent& event )
+{
+    wxMessageBox(wxT("Got OnListBoxBottomRIghtDClick()"), wxT("Interface Test"), wxOK);
+}
+
 
