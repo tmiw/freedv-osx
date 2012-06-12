@@ -20,18 +20,18 @@ class PortAudioWrap
         ~PortAudioWrap();
 
     private:
-        PaStream                    *stream;
-        PaStreamParameters          inputBuffer;
-        PaStreamParameters          outputBuffer;
-        void                        *userData;
-        int                         samplerate;
-        unsigned long               framesPerBuffer;
-        PaStreamCallbackFlags       statusFlags;
-        PaStreamCallback            *streamCallback;
-        PaStreamFinishedCallback    *streamFinishedCallback;
-        const PaStreamCallbackTimeInfo* timeInfo;
-        PaDeviceIndex               inputDevice;
-        PaDeviceIndex               outputDevice;
+        PaStream                        *stream;
+        PaStreamParameters              inputBuffer;
+        PaStreamParameters              outputBuffer;
+        void                            *userData;
+        int                             samplerate;
+        unsigned long                   framesPerBuffer;
+        PaStreamCallbackFlags           statusFlags;
+        PaStreamCallback                *streamCallback;
+        PaStreamFinishedCallback        *streamFinishedCallback;
+        const PaStreamCallbackTimeInfo  *timeInfo;
+        PaDeviceIndex                   inputDevice;
+        PaDeviceIndex                   outputDevice;
 
     public:
 

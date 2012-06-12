@@ -100,32 +100,32 @@ PaDeviceIndex PortAudioWrap::getDefaultOutputDevice()
 
 PaError PortAudioWrap::setInputChannelCount(int count)
 {
-    if(!isActive())
-    {
+//    if(!isActive())
+//    {
         inputBuffer.channelCount = count;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 PaError PortAudioWrap::setInputSampleFormat(PaSampleFormat format)
 {
-    if(!isActive())
-    {
+//    if(!isActive())
+//    {
         inputBuffer.sampleFormat = format;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 PaError PortAudioWrap::setInputLatency(PaTime latency)
 {
-    if(!isActive())
-    {
+//    if(!isActive())
+//    {
         inputBuffer.suggestedLatency = latency;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 void PortAudioWrap::setInputHostApiStreamInfo(void *info)
@@ -140,32 +140,32 @@ PaTime  PortAudioWrap::getInputDefaultLowLatency()
 
 PaError PortAudioWrap::setOutputChannelCount(int count)
 {
-    if(!isActive())
-    {
+//    if(!isActive())
+//    {
         outputBuffer.channelCount = count;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 PaError PortAudioWrap::setOutputSampleFormat(PaSampleFormat format)
 {
-    if(!isActive())
-    {
+//    if(!isActive())
+//    {
         outputBuffer.sampleFormat = format;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 PaError PortAudioWrap::setOutputLatency(PaTime latency)
 {
-    if(!isOpen())
-    {
+//    if(!isOpen())
+//   {
         outputBuffer.suggestedLatency = latency;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 void PortAudioWrap::setOutputHostApiStreamInfo(void *info)
@@ -180,62 +180,62 @@ PaTime  PortAudioWrap::getOutputDefaultLowLatency()
 
 PaError PortAudioWrap::setFramesPerBuffer(unsigned long size)
 {
-    if(!isOpen())
-    {
+//    if(!isOpen())
+//    {
         framesPerBuffer = size;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 PaError PortAudioWrap::setSampleRate(unsigned long rate)
 {
-    if(!isOpen())
-    {
+//    if(!isOpen())
+//    {
         samplerate = rate;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 PaError PortAudioWrap::setStreamFlags(PaStreamFlags flags)
 {
-    if(!isOpen())
-    {
+//    if(!isOpen())
+//    {
         statusFlags = flags;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 PaError PortAudioWrap::setInputDevice(PaDeviceIndex flags)
 {
-    if(!isOpen())
-    {
+//    if(!isOpen())
+//    {
         inputDevice = flags;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 PaError PortAudioWrap::setOutputDevice(PaDeviceIndex flags)
 {
-    if(!isOpen())
-    {
+//    if(!isOpen())
+//    {
         outputDevice = flags;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 PaError PortAudioWrap::setCallback(PaStreamCallback *callback)
 {
-    if(!isOpen())
-    {
+//    if(!isOpen())
+//    {
         streamCallback = callback;
         return paNoError;
-    }
-    return paStreamIsNotStopped;
+//    }
+//    return paStreamIsNotStopped;
 }
 
 

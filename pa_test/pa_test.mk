@@ -7,13 +7,13 @@ ProjectName            :=pa_test
 ConfigurationName      :=Debug
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
-WorkspacePath          := "C:\Users\wittend\Projects\audio\portaudio_test\paEcho"
-ProjectPath            := "C:\Users\wittend\Projects\audio\portaudio_test\paEcho\pa_test"
+WorkspacePath          := "C:\Users\wittend\Projects\Radio\fdmdv2"
+ProjectPath            := "C:\Users\wittend\Projects\Radio\fdmdv2\pa_test"
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=5/15/2012
+Date                   :=6/12/2012
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=g++
 ArchiveTool            :=ar rcus
@@ -35,13 +35,13 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
-ObjectsFileList        :="C:\Users\wittend\Projects\audio\portaudio_test\paEcho\pa_test\pa_test.txt"
+ObjectsFileList        :="C:\Users\wittend\Projects\Radio\fdmdv2\pa_test\pa_test.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 CmpOptions             := -g -O0 -Wall $(Preprocessors)
 C_CmpOptions           := -g -O0 -Wall $(Preprocessors)
 LinkOptions            :=  
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)../../../portaudio/include 
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)../extern/include $(IncludeSwitch)../../../portaudio/include 
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)portaudio 
@@ -80,12 +80,12 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/pa_class$(ObjectSuffix): pa_class.cpp $(IntermediateDirectory)/pa_class$(DependSuffix)
-	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/Users/wittend/Projects/audio/portaudio_test/paEcho/pa_test/pa_class.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/pa_class$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/Users/wittend/Projects/Radio/fdmdv2/pa_test/pa_class.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/pa_class$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/pa_class$(DependSuffix): pa_class.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/pa_class$(ObjectSuffix) -MF$(IntermediateDirectory)/pa_class$(DependSuffix) -MM "C:/Users/wittend/Projects/audio/portaudio_test/paEcho/pa_test/pa_class.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/pa_class$(ObjectSuffix) -MF$(IntermediateDirectory)/pa_class$(DependSuffix) -MM "C:/Users/wittend/Projects/Radio/fdmdv2/pa_test/pa_class.cpp"
 
 $(IntermediateDirectory)/pa_class$(PreprocessSuffix): pa_class.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/pa_class$(PreprocessSuffix) "C:/Users/wittend/Projects/audio/portaudio_test/paEcho/pa_test/pa_class.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/pa_class$(PreprocessSuffix) "C:/Users/wittend/Projects/Radio/fdmdv2/pa_test/pa_class.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
@@ -98,6 +98,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/pa_class$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) "C:\Users\wittend\Projects\audio\portaudio_test\paEcho\.build-debug\pa_test"
+	$(RM) "C:\Users\wittend\Projects\Radio\fdmdv2\.build-debug\pa_test"
 
 

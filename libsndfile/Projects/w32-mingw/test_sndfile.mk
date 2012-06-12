@@ -2,10 +2,10 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Release
+## Debug
 ProjectName            :=test_sndfile
-ConfigurationName      :=Release
-IntermediateDirectory  :=./Release
+ConfigurationName      :=Debug
+IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 WorkspacePath          := "C:\Users\wittend\Projects\Radio\fdmdv2"
 ProjectPath            := "C:\Users\wittend\Projects\Radio\fdmdv2\libsndfile\Projects\w32-mingw"
@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=5/24/2012
+Date                   :=6/12/2012
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=g++
 ArchiveTool            :=ar rcus
@@ -38,8 +38,8 @@ PreprocessOnlySwitch   :=-E
 ObjectsFileList        :="C:\Users\wittend\Projects\Radio\fdmdv2\libsndfile\Projects\w32-mingw\test_sndfile.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
-CmpOptions             := -O2 -Wall $(Preprocessors)
-C_CmpOptions           := -O2 -Wall $(Preprocessors)
+CmpOptions             := -g -O0 -Wall $(Preprocessors)
+C_CmpOptions           := -g -O0 -Wall $(Preprocessors)
 LinkOptions            :=  
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). 
 IncludePCH             := 
@@ -71,7 +71,7 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 $(IntermediateDirectory)/.d:
-	@$(MakeDirCommand) "./Release"
+	@$(MakeDirCommand) "./Debug"
 
 PreBuild:
 
@@ -98,6 +98,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/main$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) "C:\Users\wittend\Projects\Radio\fdmdv2\.build-release\test_sndfile"
+	$(RM) "C:\Users\wittend\Projects\Radio\fdmdv2\.build-debug\test_sndfile"
 
 

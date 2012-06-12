@@ -13,6 +13,8 @@
   <VirtualDirectory Name="include">
     <File Name="pa_class.h"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="">
@@ -26,8 +28,7 @@
     <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <IncludePath Value="."/>
-        <IncludePath Value="."/>
-        <IncludePath Value="extern/include"/>
+        <IncludePath Value="../extern/include"/>
         <IncludePath Value="../../../portaudio/include"/>
       </Compiler>
       <Linker Options="" Required="yes">
@@ -58,7 +59,7 @@
         <CustomPostBuild/>
         <CustomPreBuild/>
       </AdditionalRules>
-      <Completion>
+      <Completion EnableCpp11="no">
         <ClangCmpFlags/>
         <ClangPP/>
         <SearchPaths/>
@@ -97,13 +98,11 @@
         <CustomPostBuild/>
         <CustomPreBuild/>
       </AdditionalRules>
-      <Completion>
+      <Completion EnableCpp11="no">
         <ClangCmpFlags/>
         <ClangPP/>
         <SearchPaths/>
       </Completion>
     </Configuration>
   </Settings>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
 </CodeLite_Project>

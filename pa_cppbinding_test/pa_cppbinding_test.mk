@@ -2,10 +2,10 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Release
+## Debug
 ProjectName            :=pa_cppbinding_test
-ConfigurationName      :=Release
-IntermediateDirectory  :=./Release
+ConfigurationName      :=Debug
+IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 WorkspacePath          := "C:\Users\wittend\Projects\Radio\fdmdv2"
 ProjectPath            := "C:\Users\wittend\Projects\Radio\fdmdv2\pa_cppbinding_test"
@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=5/29/2012
+Date                   :=6/12/2012
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=g++
 ArchiveTool            :=ar rcus
@@ -38,13 +38,13 @@ PreprocessOnlySwitch   :=-E
 ObjectsFileList        :="C:\Users\wittend\Projects\Radio\fdmdv2\pa_cppbinding_test\pa_cppbinding_test.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
-CmpOptions             := -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no) $(Preprocessors)
-C_CmpOptions           := -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no) $(Preprocessors)
-LinkOptions            :=  -mwindows -s $(shell wx-config --debug=no --libs --unicode=yes)
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)./ $(IncludeSwitch)C:/bin/MinGW/msys/1.0/local/include $(IncludeSwitch)./portaudiocpp 
+CmpOptions             := -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes) $(Preprocessors)
+C_CmpOptions           := -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes) $(Preprocessors)
+LinkOptions            :=  -mwindows $(shell wx-config --debug=yes --libs --unicode=yes)
+IncludePath            :=  $(IncludeSwitch). 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)portaudiocpp-0 $(LibrarySwitch)portaudio-2 
+Libs                   := $(LibrarySwitch)portaudiocpp.la $(LibrarySwitch)portaudio.la 
 LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch). 
 
 
@@ -71,7 +71,7 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 $(IntermediateDirectory)/.d:
-	@$(MakeDirCommand) "./Release"
+	@$(MakeDirCommand) "./Debug"
 
 PreBuild:
 
@@ -109,6 +109,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/main$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) "C:\Users\wittend\Projects\Radio\fdmdv2\.build-release\pa_cppbinding_test"
+	$(RM) "C:\Users\wittend\Projects\Radio\fdmdv2\.build-debug\pa_cppbinding_test"
 
 
