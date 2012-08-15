@@ -76,10 +76,30 @@ MainFrame::MainFrame(wxWindow *parent) : MainFrameBase(parent)
     }
     m_notebook1->SetSelection(0);
     showAPIInfo();
-    populateParams(m_listCtrlRxInDevices,  AUDIO_IN);
-    populateParams(m_listCtrlRxOutDevices, AUDIO_OUT);
-    populateParams(m_listCtrlTxInDevices,  AUDIO_IN);
-    populateParams(m_listCtrlTxOutDevices, AUDIO_OUT);
+    m_RxInDevices.m_listDevices   = m_listCtrlRxInDevices;
+    m_RxInDevices.direction       = AUDIO_IN;
+    m_RxInDevices.m_textDevice    = m_textCtrlRxIn;
+    m_RxInDevices.m_cbSampleRate  = m_cbSampleRateRxIn;
+
+    m_RxOutDevices.m_listDevices  = m_listCtrlRxOutDevices;
+    m_RxOutDevices.direction      = AUDIO_OUT;
+    m_RxOutDevices.m_textDevice   = m_textRxOut;
+    m_RxOutDevices.m_cbSampleRate = m_cbSampleRateRxOut;
+
+    m_TxInDevices.m_listDevices   = m_listCtrlTxInDevices;
+    m_TxInDevices.direction       = AUDIO_IN;
+    m_TxInDevices.m_textDevice    = m_textCtrlTxIn;
+    m_TxInDevices.m_cbSampleRate  = m_cbSampleRateTxIn;
+
+    m_TxOutDevices.m_listDevices  = m_listCtrlTxOutDevices;
+    m_TxOutDevices.direction      = AUDIO_OUT;
+    m_TxOutDevices.m_textDevice   = m_textCtrTxOut;
+    m_TxOutDevices.m_cbSampleRate = m_cbSampleRateTxOut;
+
+    populateParams(m_RxInDevices);
+    populateParams(m_RxOutDevices);
+    populateParams(m_TxInDevices);
+    populateParams(m_TxOutDevices);
 }
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=
@@ -219,10 +239,10 @@ void MainFrame::OnRefreshClick(wxCommandEvent& event)
 {
     m_notebook1->SetSelection(0);
     showAPIInfo();
-    populateParams(m_listCtrlRxInDevices,  AUDIO_IN);
-    populateParams(m_listCtrlRxOutDevices, AUDIO_OUT);
-    populateParams(m_listCtrlTxInDevices,  AUDIO_IN);
-    populateParams(m_listCtrlTxOutDevices, AUDIO_OUT);
+    populateParams(m_RxInDevices);
+    populateParams(m_RxOutDevices);
+    populateParams(m_TxInDevices);
+    populateParams(m_TxOutDevices);
 }
 
 //-------------------------------------------------------------------------
@@ -253,14 +273,20 @@ void MainFrame::showAPIInfo()
 //-------------------------------------------------------------------------
 // populateParams()
 //-------------------------------------------------------------------------
-void MainFrame::populateParams(wxListCtrl* ctrl, int in_out)
+void MainFrame::populateParams(AudioInfoDisplay ai)    //wxListCtrl* ctrl, int in_out)
 {
-    int         numDevices       = 0;
-    int         defaultDisplayed = false;
     const       PaDeviceInfo *deviceInfo = NULL;
+    int         j                        = 0;
+    wxListCtrl* ctrl                     = ai.m_listDevices;
+    int         in_out                   = ai.direction;
+    //wxTextCtrl* txtCtrl                  = ai.m_textDevice;
+    //wxComboBox* cb                       = ai.m_cbSampleRate;
+    long        idx;
+    int         defaultDisplayed;
+    int         numDevices;
     wxListItem  listItem;
     wxString    buf;
-    int         j = 0;
+    int         devn;
 
     numDevices = Pa_GetDeviceCount();
 
@@ -272,146 +298,132 @@ void MainFrame::populateParams(wxListCtrl* ctrl, int in_out)
 
     listItem.SetAlign(wxLIST_FORMAT_CENTRE);
     listItem.SetText(wxT("Sel"));
-    ctrl->InsertColumn(0, listItem);
-    ctrl->SetColumnWidth(0, 45);
+    idx = ctrl->InsertColumn(0, listItem);
+    ctrl->SetColumnWidth(0, 37);
 
     listItem.SetAlign(wxLIST_FORMAT_CENTRE);
     listItem.SetText(wxT("Dflt"));
-    ctrl->InsertColumn(1, listItem);
-    ctrl->SetColumnWidth(1, 45);
+    idx = ctrl->InsertColumn(1, listItem);
+    ctrl->SetColumnWidth(1, 37);
 
     listItem.SetAlign(wxLIST_FORMAT_LEFT);
     listItem.SetText(wxT("Device"));
-    ctrl->InsertColumn(2, listItem);
-    ctrl->SetColumnWidth(2, 220);
+    idx = ctrl->InsertColumn(2, listItem);
+    ctrl->SetColumnWidth(2, 190);
 
     listItem.SetAlign(wxLIST_FORMAT_LEFT);
     listItem.SetText(wxT("API"));
-    ctrl->InsertColumn(3, listItem);
-    ctrl->SetColumnWidth(3, 200);
+    idx = ctrl->InsertColumn(3, listItem);
+    ctrl->SetColumnWidth(3, 190);
 
     if(in_out == AUDIO_IN)
     {
         listItem.SetAlign(wxLIST_FORMAT_CENTRE);
         listItem.SetText(wxT("# Inputs"));
-        ctrl->InsertColumn(4, listItem);
-        ctrl->SetColumnWidth(4, 85);
-
-        listItem.SetAlign(wxLIST_FORMAT_CENTRE);
-        listItem.SetText(wxT("Min Latency"));
-        ctrl->InsertColumn(5, listItem);
-        ctrl->SetColumnWidth(5, 120);
-
-        listItem.SetAlign(wxLIST_FORMAT_CENTRE);
-        listItem.SetText(wxT("Max Latency"));
-        ctrl->InsertColumn(6, listItem);
-        ctrl->SetColumnWidth(6, 120);
-        for(int i = 0; i < numDevices; i++ )
-        {
-            buf.Printf(wxT(""));
-            deviceInfo = Pa_GetDeviceInfo(i);
-            if(deviceInfo->maxInputChannels > 0)
-            {
-                ctrl->InsertItem(j, ICON_CHECK);
-                defaultDisplayed = 0;
-                if(i == Pa_GetDefaultInputDevice())
-                {
-                    // Default Output
-                    ctrl->SetItem(j, 1, buf, ICON_INARROW);
-                    defaultDisplayed = true;
-                }
-                else if(i == Pa_GetHostApiInfo(deviceInfo->hostApi)->defaultInputDevice)
-                {
-                    ctrl->SetItem(j, 1, buf, ICON_OUTARROW);
-                    defaultDisplayed = true;
-                }
-                if(!defaultDisplayed)
-                {
-                    ctrl->SetItem(j, 1, buf, ICON_TRANSPARENT);
-                }
-                ctrl->SetItemData(j, 1);
-
-                buf.Printf(wxT("%s"), deviceInfo->name);
-                ctrl->SetItem(j, 2, buf);
-
-                buf.Printf(wxT("%s"), Pa_GetHostApiInfo(deviceInfo->hostApi)->name);
-                ctrl->SetItem(j, 3, buf);
-
-                buf.Printf(wxT("%i"), deviceInfo->maxInputChannels);
-                ctrl->SetItem(j, 4, buf);
-
-                buf.Printf(wxT("%8.4f"), deviceInfo->defaultLowInputLatency);
-                ctrl->SetItem(j, 5, buf);
-
-                buf.Printf(wxT("%8.4f"), deviceInfo->defaultHighInputLatency);
-                ctrl->SetItem(j, 6, buf);
-                j++;
-            }
-        }
+        idx = ctrl->InsertColumn(4, listItem);
+        ctrl->SetColumnWidth(4, 75);
     }
     else if(in_out == AUDIO_OUT)
     {
         listItem.SetAlign(wxLIST_FORMAT_CENTRE);
         listItem.SetText(wxT("# Outputs"));
-        ctrl->InsertColumn(4, listItem);
-        ctrl->SetColumnWidth(4, 85);
+        idx = ctrl->InsertColumn(4, listItem);
+        ctrl->SetColumnWidth(4, 75);
+    }
 
-        listItem.SetAlign(wxLIST_FORMAT_CENTRE);
-        listItem.SetText(wxT("Min Latency"));
-        ctrl->InsertColumn(5, listItem);
-        ctrl->SetColumnWidth(5, 120);
+    listItem.SetAlign(wxLIST_FORMAT_CENTRE);
+    listItem.SetText(wxT("Min Latency"));
+    ctrl->InsertColumn(5, listItem);
+    ctrl->SetColumnWidth(5, 100);
 
-        listItem.SetAlign(wxLIST_FORMAT_CENTRE);
-        listItem.SetText(wxT("Max Latency"));
-        ctrl->InsertColumn(6, listItem);
-        ctrl->SetColumnWidth(6, 120);
-        for(int i = 0; i < numDevices; i++)
+    listItem.SetAlign(wxLIST_FORMAT_CENTRE);
+    listItem.SetText(wxT("Max Latency"));
+    ctrl->InsertColumn(6, listItem);
+    ctrl->SetColumnWidth(6, 100);
+
+     for(devn = 0; devn < numDevices; devn++)
+    {
+        buf.Printf(wxT(""));
+        deviceInfo = Pa_GetDeviceInfo(devn);
+        if(in_out == AUDIO_IN)
         {
-            buf.Printf(wxT(""));
-            deviceInfo = Pa_GetDeviceInfo(i);
-            defaultDisplayed = 0;
-            if(deviceInfo->maxOutputChannels > 0)
+            if(deviceInfo->maxInputChannels > 0)
             {
-                ctrl->InsertItem(j, ICON_CHECK);
-                if(i == Pa_GetDefaultOutputDevice())
+                idx = ctrl->InsertItem(j, ICON_TRANSPARENT);
+                defaultDisplayed = false;
+                if(devn == Pa_GetDefaultInputDevice())
                 {
-                    // Default Output
-                    ctrl->SetItem(j, 1, buf, ICON_OUTARROW);
+                    buf.Printf("->>");
+                    ctrl->SetItem(idx, 1, buf);
                     defaultDisplayed = true;
                 }
-                else if(i == Pa_GetHostApiInfo(deviceInfo->hostApi)->defaultOutputDevice)
+                else if(devn == Pa_GetHostApiInfo(deviceInfo->hostApi)->defaultInputDevice)
                 {
-                    ctrl->SetItem(j, 1, buf, ICON_OUTARROW);
+                    buf.Printf("-->");
+                    ctrl->SetItem(idx, 1, buf);
                     defaultDisplayed = true;
                 }
-
-                if(!defaultDisplayed)
+                else
                 {
-                    ctrl->SetItem(j, 1, buf, ICON_TRANSPARENT);
+                    buf.Printf("---");
+                    ctrl->SetItem(idx, 1, buf);
                 }
-                ctrl->SetItemData(j, 1);
-
                 buf.Printf(wxT("%s"), deviceInfo->name);
-                ctrl->SetItem(j, 2, buf);
+                ctrl->SetItem(idx, 2, buf);
 
                 buf.Printf(wxT("%s"), Pa_GetHostApiInfo(deviceInfo->hostApi)->name);
-                ctrl->SetItem(j, 3, buf);
+                ctrl->SetItem(idx, 3, buf);
 
-                buf.Printf(wxT("%i"), deviceInfo->maxOutputChannels);
-                ctrl->SetItem(j, 4, buf);
+                buf.Printf(wxT("%i"), deviceInfo->maxInputChannels);
+                ctrl->SetItem(idx, 4, buf);
 
-                buf.Printf(wxT("%8.4f"), deviceInfo->defaultLowOutputLatency);
-                ctrl->SetItem(j, 5, buf);
+                buf.Printf(wxT("%8.4f"), deviceInfo->defaultLowInputLatency);
+                ctrl->SetItem(idx, 5, buf);
 
-                buf.Printf(wxT("%8.4f"), deviceInfo->defaultHighOutputLatency);
-                ctrl->SetItem(j, 6, buf);
-                j++;
+                buf.Printf(wxT("%8.4f"), deviceInfo->defaultHighInputLatency);
+                ctrl->SetItem(idx, 6, buf);
             }
         }
-    }
-    else
-    {
-        // Dun, do what?
+        else if(in_out == AUDIO_OUT)
+        {
+            if(deviceInfo->maxOutputChannels > 0)
+            {
+                idx = ctrl->InsertItem(j, ICON_TRANSPARENT);
+                defaultDisplayed = false;
+                if(devn == Pa_GetDefaultOutputDevice())
+                {
+                    buf.Printf("<<-");
+                    ctrl->SetItem(idx, 1, buf);
+                    defaultDisplayed = true;
+                }
+                else if(devn == Pa_GetHostApiInfo(deviceInfo->hostApi)->defaultOutputDevice)
+                {
+                    buf.Printf("<--");
+                    ctrl->SetItem(idx, 1, buf);
+                    defaultDisplayed = true;
+                }
+                else
+                {
+                    buf.Printf("---");
+                    ctrl->SetItem(idx, 1, buf);
+                }
+                buf.Printf(wxT("%s"), deviceInfo->name);
+                ctrl->SetItem(idx, 2, buf);
+
+                buf.Printf(wxT("%s"), Pa_GetHostApiInfo(deviceInfo->hostApi)->name);
+                ctrl->SetItem(idx, 3, buf);
+
+                buf.Printf(wxT("%i"), deviceInfo->maxOutputChannels);
+                ctrl->SetItem(idx, 4, buf);
+
+                buf.Printf(wxT("%8.4f"), deviceInfo->defaultLowOutputLatency);
+                ctrl->SetItem(idx, 5, buf);
+
+                buf.Printf(wxT("%8.4f"), deviceInfo->defaultHighOutputLatency);
+                ctrl->SetItem(idx, 6, buf);
+            }
+        }
+        j++;
     }
 }
 

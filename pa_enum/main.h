@@ -59,11 +59,22 @@
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=
 // application class declaration
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=
-
 class MainApp : public wxApp
 {
     public:
         virtual bool OnInit();
+};
+
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=
+// AudioInfoDisplay
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=
+class AudioInfoDisplay
+{
+    public:
+        wxListCtrl*     m_listDevices;
+        int             direction;
+        wxTextCtrl*     m_textDevice;
+        wxComboBox*     m_cbSampleRate;
 };
 
 // declare global static function wxGetApp()
@@ -90,9 +101,12 @@ class MainFrame : public MainFrameBase
         void OnExitClick( wxCommandEvent& event );
         void OnRefreshClick( wxCommandEvent& event );
         void DisplaySupportedSampleRates(const PaStreamParameters *inputParameters, const PaStreamParameters *outputParameters);
-        void populateParams(wxListCtrl* ctrl, int in_out);
+        void populateParams(AudioInfoDisplay);
         void showAPIInfo();
+        AudioInfoDisplay m_RxInDevices;
+        AudioInfoDisplay m_RxOutDevices;
+        AudioInfoDisplay m_TxInDevices;
+        AudioInfoDisplay m_TxOutDevices;
 };
-
 
 #endif //__main__

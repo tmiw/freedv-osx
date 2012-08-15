@@ -20,18 +20,9 @@ _ = gettext.gettext
 class MainFrameBase ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"PortAudio Device Enumeration"), pos = wx.DefaultPosition, size = wx.Size( 869,417 ), style = wx.CLOSE_BOX|wx.DEFAULT_FRAME_STYLE|wx.RESIZE_BORDER|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"PortAudio Device Enumeration"), pos = wx.DefaultPosition, size = wx.Size( 790,400 ), style = wx.CLOSE_BOX|wx.DEFAULT_FRAME_STYLE|wx.RESIZE_BORDER|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
-		
-		self.m_menuBar = wx.MenuBar( 0 )
-		self.m_menuFile = wx.Menu()
-		self.menuFileExit = wx.MenuItem( self.m_menuFile, wx.ID_EXIT, _(u"E&xit")+ u"\t" + u"Alt+X", wx.EmptyString, wx.ITEM_NORMAL )
-		self.m_menuFile.AppendItem( self.menuFileExit )
-		
-		self.m_menuBar.Append( self.m_menuFile, _(u"&File") ) 
-		
-		self.SetMenuBar( self.m_menuBar )
 		
 		mainSizer = wx.BoxSizer( wx.VERTICAL )
 		
@@ -47,7 +38,7 @@ class MainFrameBase ( wx.Frame ):
 		sbSizer2 = wx.StaticBoxSizer( wx.StaticBox( self.m_panelRx, wx.ID_ANY, _(u"Rx Radio Device") ), wx.VERTICAL )
 		
 		self.m_listCtrlRxInDevices = wx.ListCtrl( self.m_panelRx, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_HRULES|wx.LC_REPORT|wx.LC_VRULES )
-		sbSizer2.Add( self.m_listCtrlRxInDevices, 1, wx.ALL|wx.EXPAND, 2 )
+		sbSizer2.Add( self.m_listCtrlRxInDevices, 1, wx.ALL|wx.EXPAND, 1 )
 		
 		bSizer811 = wx.BoxSizer( wx.HORIZONTAL )
 		
@@ -56,7 +47,7 @@ class MainFrameBase ( wx.Frame ):
 		bSizer811.Add( self.m_staticText51, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_RIGHT|wx.ALL, 5 )
 		
 		self.m_textCtrlRxIn = wx.TextCtrl( self.m_panelRx, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer811.Add( self.m_textCtrlRxIn, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		bSizer811.Add( self.m_textCtrlRxIn, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 1 )
 		
 		self.m_staticText6 = wx.StaticText( self.m_panelRx, wx.ID_ANY, _(u"Sample Rate:"), wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText6.Wrap( -1 )
@@ -64,7 +55,7 @@ class MainFrameBase ( wx.Frame ):
 		
 		m_cbSampleRateRxInChoices = []
 		self.m_cbSampleRateRxIn = wx.ComboBox( self.m_panelRx, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, m_cbSampleRateRxInChoices, wx.CB_DROPDOWN )
-		bSizer811.Add( self.m_cbSampleRateRxIn, 0, wx.ALL, 5 )
+		bSizer811.Add( self.m_cbSampleRateRxIn, 0, wx.ALL, 1 )
 		
 		
 		sbSizer2.Add( bSizer811, 0, wx.EXPAND, 5 )
@@ -75,7 +66,7 @@ class MainFrameBase ( wx.Frame ):
 		sbSizer3 = wx.StaticBoxSizer( wx.StaticBox( self.m_panelRx, wx.ID_ANY, _(u"Rx Speaker Stream") ), wx.VERTICAL )
 		
 		self.m_listCtrlRxOutDevices = wx.ListCtrl( self.m_panelRx, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_HRULES|wx.LC_REPORT|wx.LC_VRULES )
-		sbSizer3.Add( self.m_listCtrlRxOutDevices, 1, wx.ALL|wx.EXPAND, 2 )
+		sbSizer3.Add( self.m_listCtrlRxOutDevices, 1, wx.ALL|wx.EXPAND, 1 )
 		
 		bSizer81 = wx.BoxSizer( wx.HORIZONTAL )
 		
@@ -84,7 +75,7 @@ class MainFrameBase ( wx.Frame ):
 		bSizer81.Add( self.m_staticText9, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5 )
 		
 		self.m_textRxOut = wx.TextCtrl( self.m_panelRx, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer81.Add( self.m_textRxOut, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		bSizer81.Add( self.m_textRxOut, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 1 )
 		
 		self.m_staticText10 = wx.StaticText( self.m_panelRx, wx.ID_ANY, _(u"Sample Rate:"), wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText10.Wrap( -1 )
@@ -92,7 +83,7 @@ class MainFrameBase ( wx.Frame ):
 		
 		m_cbSampleRateRxOutChoices = []
 		self.m_cbSampleRateRxOut = wx.ComboBox( self.m_panelRx, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, m_cbSampleRateRxOutChoices, wx.CB_DROPDOWN )
-		bSizer81.Add( self.m_cbSampleRateRxOut, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5 )
+		bSizer81.Add( self.m_cbSampleRateRxOut, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 1 )
 		
 		
 		sbSizer3.Add( bSizer81, 0, wx.EXPAND, 2 )
@@ -116,7 +107,7 @@ class MainFrameBase ( wx.Frame ):
 		sbSizer22 = wx.StaticBoxSizer( wx.StaticBox( self.m_panelTx, wx.ID_ANY, _(u"Tx Microphone Stream") ), wx.VERTICAL )
 		
 		self.m_listCtrlTxInDevices = wx.ListCtrl( self.m_panelTx, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_HRULES|wx.LC_REPORT|wx.LC_VRULES )
-		sbSizer22.Add( self.m_listCtrlTxInDevices, 1, wx.ALL|wx.EXPAND, 2 )
+		sbSizer22.Add( self.m_listCtrlTxInDevices, 1, wx.ALL|wx.EXPAND, 1 )
 		
 		bSizer83 = wx.BoxSizer( wx.HORIZONTAL )
 		
@@ -125,7 +116,7 @@ class MainFrameBase ( wx.Frame ):
 		bSizer83.Add( self.m_staticText12, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_RIGHT|wx.ALL, 5 )
 		
 		self.m_textCtrlTxIn = wx.TextCtrl( self.m_panelTx, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer83.Add( self.m_textCtrlTxIn, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		bSizer83.Add( self.m_textCtrlTxIn, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 1 )
 		
 		self.m_staticText11 = wx.StaticText( self.m_panelTx, wx.ID_ANY, _(u"Sample Rate:"), wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText11.Wrap( -1 )
@@ -133,7 +124,7 @@ class MainFrameBase ( wx.Frame ):
 		
 		m_cbSampleRateTxInChoices = []
 		self.m_cbSampleRateTxIn = wx.ComboBox( self.m_panelTx, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, m_cbSampleRateTxInChoices, wx.CB_DROPDOWN )
-		bSizer83.Add( self.m_cbSampleRateTxIn, 0, wx.ALL, 5 )
+		bSizer83.Add( self.m_cbSampleRateTxIn, 0, wx.ALL, 1 )
 		
 		
 		sbSizer22.Add( bSizer83, 0, wx.EXPAND, 2 )
@@ -153,7 +144,7 @@ class MainFrameBase ( wx.Frame ):
 		bSizer82.Add( self.m_staticText81, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5 )
 		
 		self.m_textCtrTxOut = wx.TextCtrl( self.m_panelTx, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer82.Add( self.m_textCtrTxOut, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		bSizer82.Add( self.m_textCtrTxOut, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 1 )
 		
 		self.m_staticText71 = wx.StaticText( self.m_panelTx, wx.ID_ANY, _(u"Sample Rate:"), wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText71.Wrap( -1 )
@@ -161,7 +152,7 @@ class MainFrameBase ( wx.Frame ):
 		
 		m_cbSampleRateTxOutChoices = []
 		self.m_cbSampleRateTxOut = wx.ComboBox( self.m_panelTx, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, m_cbSampleRateTxOutChoices, wx.CB_DROPDOWN )
-		bSizer82.Add( self.m_cbSampleRateTxOut, 0, wx.ALL, 5 )
+		bSizer82.Add( self.m_cbSampleRateTxOut, 0, wx.ALL, 1 )
 		
 		
 		sbSizer21.Add( bSizer82, 0, wx.EXPAND, 2 )
@@ -294,7 +285,6 @@ class MainFrameBase ( wx.Frame ):
 		# Connect Events
 		self.Bind( wx.EVT_ACTIVATE_APP, self.OnActivateApp )
 		self.Bind( wx.EVT_CLOSE, self.OnCloseFrame )
-		self.Bind( wx.EVT_MENU, self.OnExitClick, id = self.menuFileExit.GetId() )
 		self.m_listCtrlRxInDevices.Bind( wx.EVT_LIST_ITEM_SELECTED, self.OnRxInDeviceSelect )
 		self.m_listCtrlRxOutDevices.Bind( wx.EVT_LIST_ITEM_SELECTED, self.OnRxOutDeviceSelect )
 		self.m_listCtrlTxInDevices.Bind( wx.EVT_LIST_ITEM_SELECTED, self.OnTxInDeviceSelect )
@@ -313,9 +303,6 @@ class MainFrameBase ( wx.Frame ):
 		event.Skip()
 	
 	def OnCloseFrame( self, event ):
-		event.Skip()
-	
-	def OnExitClick( self, event ):
 		event.Skip()
 	
 	def OnRxInDeviceSelect( self, event ):

@@ -13,16 +13,6 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 	
-	m_menuBar = new wxMenuBar( 0 );
-	m_menuFile = new wxMenu();
-	wxMenuItem* menuFileExit;
-	menuFileExit = new wxMenuItem( m_menuFile, wxID_EXIT, wxString( _("E&xit") ) + wxT('\t') + wxT("Alt+X"), wxEmptyString, wxITEM_NORMAL );
-	m_menuFile->Append( menuFileExit );
-	
-	m_menuBar->Append( m_menuFile, _("&File") ); 
-	
-	this->SetMenuBar( m_menuBar );
-	
 	wxBoxSizer* mainSizer;
 	mainSizer = new wxBoxSizer( wxVERTICAL );
 	
@@ -42,7 +32,7 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	sbSizer2 = new wxStaticBoxSizer( new wxStaticBox( m_panelRx, wxID_ANY, _("Rx Radio Device") ), wxVERTICAL );
 	
 	m_listCtrlRxInDevices = new wxListCtrl( m_panelRx, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLC_HRULES|wxLC_REPORT|wxLC_VRULES );
-	sbSizer2->Add( m_listCtrlRxInDevices, 1, wxALL|wxEXPAND, 2 );
+	sbSizer2->Add( m_listCtrlRxInDevices, 1, wxALL|wxEXPAND, 1 );
 	
 	wxBoxSizer* bSizer811;
 	bSizer811 = new wxBoxSizer( wxHORIZONTAL );
@@ -52,14 +42,14 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	bSizer811->Add( m_staticText51, 0, wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL, 5 );
 	
 	m_textCtrlRxIn = new wxTextCtrl( m_panelRx, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
-	bSizer811->Add( m_textCtrlRxIn, 1, wxALIGN_CENTER_VERTICAL|wxALL, 2 );
+	bSizer811->Add( m_textCtrlRxIn, 1, wxALIGN_CENTER_VERTICAL|wxALL, 1 );
 	
 	m_staticText6 = new wxStaticText( m_panelRx, wxID_ANY, _("Sample Rate:"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText6->Wrap( -1 );
 	bSizer811->Add( m_staticText6, 0, wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL, 5 );
 	
 	m_cbSampleRateRxIn = new wxComboBox( m_panelRx, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_DROPDOWN ); 
-	bSizer811->Add( m_cbSampleRateRxIn, 0, wxALL, 5 );
+	bSizer811->Add( m_cbSampleRateRxIn, 0, wxALL, 1 );
 	
 	
 	sbSizer2->Add( bSizer811, 0, wxEXPAND, 5 );
@@ -71,7 +61,7 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	sbSizer3 = new wxStaticBoxSizer( new wxStaticBox( m_panelRx, wxID_ANY, _("Rx Speaker Stream") ), wxVERTICAL );
 	
 	m_listCtrlRxOutDevices = new wxListCtrl( m_panelRx, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLC_HRULES|wxLC_REPORT|wxLC_VRULES );
-	sbSizer3->Add( m_listCtrlRxOutDevices, 1, wxALL|wxEXPAND, 2 );
+	sbSizer3->Add( m_listCtrlRxOutDevices, 1, wxALL|wxEXPAND, 1 );
 	
 	wxBoxSizer* bSizer81;
 	bSizer81 = new wxBoxSizer( wxHORIZONTAL );
@@ -81,14 +71,14 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	bSizer81->Add( m_staticText9, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 	
 	m_textRxOut = new wxTextCtrl( m_panelRx, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
-	bSizer81->Add( m_textRxOut, 1, wxALIGN_CENTER_VERTICAL|wxALL, 2 );
+	bSizer81->Add( m_textRxOut, 1, wxALIGN_CENTER_VERTICAL|wxALL, 1 );
 	
 	m_staticText10 = new wxStaticText( m_panelRx, wxID_ANY, _("Sample Rate:"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText10->Wrap( -1 );
 	bSizer81->Add( m_staticText10, 0, wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL, 5 );
 	
 	m_cbSampleRateRxOut = new wxComboBox( m_panelRx, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_DROPDOWN ); 
-	bSizer81->Add( m_cbSampleRateRxOut, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
+	bSizer81->Add( m_cbSampleRateRxOut, 0, wxALIGN_CENTER_VERTICAL|wxALL, 1 );
 	
 	
 	sbSizer3->Add( bSizer81, 0, wxEXPAND, 2 );
@@ -115,7 +105,7 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	sbSizer22 = new wxStaticBoxSizer( new wxStaticBox( m_panelTx, wxID_ANY, _("Tx Microphone Stream") ), wxVERTICAL );
 	
 	m_listCtrlTxInDevices = new wxListCtrl( m_panelTx, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLC_HRULES|wxLC_REPORT|wxLC_VRULES );
-	sbSizer22->Add( m_listCtrlTxInDevices, 1, wxALL|wxEXPAND, 2 );
+	sbSizer22->Add( m_listCtrlTxInDevices, 1, wxALL|wxEXPAND, 1 );
 	
 	wxBoxSizer* bSizer83;
 	bSizer83 = new wxBoxSizer( wxHORIZONTAL );
@@ -125,14 +115,14 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	bSizer83->Add( m_staticText12, 0, wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL, 5 );
 	
 	m_textCtrlTxIn = new wxTextCtrl( m_panelTx, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
-	bSizer83->Add( m_textCtrlTxIn, 1, wxALIGN_CENTER_VERTICAL|wxALL, 2 );
+	bSizer83->Add( m_textCtrlTxIn, 1, wxALIGN_CENTER_VERTICAL|wxALL, 1 );
 	
 	m_staticText11 = new wxStaticText( m_panelTx, wxID_ANY, _("Sample Rate:"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText11->Wrap( -1 );
 	bSizer83->Add( m_staticText11, 0, wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL, 5 );
 	
 	m_cbSampleRateTxIn = new wxComboBox( m_panelTx, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_DROPDOWN ); 
-	bSizer83->Add( m_cbSampleRateTxIn, 0, wxALL, 5 );
+	bSizer83->Add( m_cbSampleRateTxIn, 0, wxALL, 1 );
 	
 	
 	sbSizer22->Add( bSizer83, 0, wxEXPAND, 2 );
@@ -154,14 +144,14 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	bSizer82->Add( m_staticText81, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 	
 	m_textCtrTxOut = new wxTextCtrl( m_panelTx, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
-	bSizer82->Add( m_textCtrTxOut, 1, wxALIGN_CENTER_VERTICAL|wxALL, 2 );
+	bSizer82->Add( m_textCtrTxOut, 1, wxALIGN_CENTER_VERTICAL|wxALL, 1 );
 	
 	m_staticText71 = new wxStaticText( m_panelTx, wxID_ANY, _("Sample Rate:"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText71->Wrap( -1 );
 	bSizer82->Add( m_staticText71, 0, wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL, 5 );
 	
 	m_cbSampleRateTxOut = new wxComboBox( m_panelTx, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_DROPDOWN ); 
-	bSizer82->Add( m_cbSampleRateTxOut, 0, wxALL, 5 );
+	bSizer82->Add( m_cbSampleRateTxOut, 0, wxALL, 1 );
 	
 	
 	sbSizer21->Add( bSizer82, 0, wxEXPAND, 2 );
@@ -304,7 +294,6 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	// Connect Events
 	this->Connect( wxEVT_ACTIVATE_APP, wxActivateEventHandler( MainFrameBase::OnActivateApp ) );
 	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( MainFrameBase::OnCloseFrame ) );
-	this->Connect( menuFileExit->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnExitClick ) );
 	m_listCtrlRxInDevices->Connect( wxEVT_COMMAND_LIST_ITEM_SELECTED, wxListEventHandler( MainFrameBase::OnRxInDeviceSelect ), NULL, this );
 	m_listCtrlRxOutDevices->Connect( wxEVT_COMMAND_LIST_ITEM_SELECTED, wxListEventHandler( MainFrameBase::OnRxOutDeviceSelect ), NULL, this );
 	m_listCtrlTxInDevices->Connect( wxEVT_COMMAND_LIST_ITEM_SELECTED, wxListEventHandler( MainFrameBase::OnTxInDeviceSelect ), NULL, this );
@@ -320,7 +309,6 @@ MainFrameBase::~MainFrameBase()
 	// Disconnect Events
 	this->Disconnect( wxEVT_ACTIVATE_APP, wxActivateEventHandler( MainFrameBase::OnActivateApp ) );
 	this->Disconnect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( MainFrameBase::OnCloseFrame ) );
-	this->Disconnect( wxID_EXIT, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnExitClick ) );
 	m_listCtrlRxInDevices->Disconnect( wxEVT_COMMAND_LIST_ITEM_SELECTED, wxListEventHandler( MainFrameBase::OnRxInDeviceSelect ), NULL, this );
 	m_listCtrlRxOutDevices->Disconnect( wxEVT_COMMAND_LIST_ITEM_SELECTED, wxListEventHandler( MainFrameBase::OnRxOutDeviceSelect ), NULL, this );
 	m_listCtrlTxInDevices->Disconnect( wxEVT_COMMAND_LIST_ITEM_SELECTED, wxListEventHandler( MainFrameBase::OnTxInDeviceSelect ), NULL, this );

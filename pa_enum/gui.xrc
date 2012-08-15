@@ -2,20 +2,10 @@
 <resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
 	<object class="wxFrame" name="MainFrameBase">
 		<style>wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL</style>
-		<size>869,417</size>
+		<size>790,400</size>
 		<title>PortAudio Device Enumeration</title>
 		<centered>1</centered>
 		<aui_managed>0</aui_managed>
-		<object class="wxMenuBar" name="m_menuBar">
-			<label>MainMenu</label>
-			<object class="wxMenu" name="m_menuFile">
-				<label>_File</label>
-				<object class="wxMenuItem" name="menuFileExit">
-					<label>E_xit\tAlt+X</label>
-					<help></help>
-				</object>
-			</object>
-		</object>
 		<object class="wxBoxSizer">
 			<orient>wxVERTICAL</orient>
 			<object class="sizeritem">
@@ -58,7 +48,7 @@
 															<object class="sizeritem">
 																<option>1</option>
 																<flag>wxALL|wxEXPAND</flag>
-																<border>2</border>
+																<border>1</border>
 																<object class="wxListCtrl" name="m_listCtrlRxInDevices">
 																	<style>wxLC_HRULES|wxLC_REPORT|wxLC_VRULES</style>
 																</object>
@@ -81,7 +71,7 @@
 																	<object class="sizeritem">
 																		<option>1</option>
 																		<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
-																		<border>2</border>
+																		<border>1</border>
 																		<object class="wxTextCtrl" name="m_textCtrlRxIn">
 																			<value></value>
 																			<maxlength>0</maxlength>
@@ -99,7 +89,7 @@
 																	<object class="sizeritem">
 																		<option>0</option>
 																		<flag>wxALL</flag>
-																		<border>5</border>
+																		<border>1</border>
 																		<object class="wxComboBox" name="m_cbSampleRateRxIn">
 																			<style>wxCB_DROPDOWN</style>
 																			<value></value>
@@ -120,7 +110,7 @@
 															<object class="sizeritem">
 																<option>1</option>
 																<flag>wxALL|wxEXPAND</flag>
-																<border>2</border>
+																<border>1</border>
 																<object class="wxListCtrl" name="m_listCtrlRxOutDevices">
 																	<style>wxLC_HRULES|wxLC_REPORT|wxLC_VRULES</style>
 																</object>
@@ -143,7 +133,7 @@
 																	<object class="sizeritem">
 																		<option>1</option>
 																		<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
-																		<border>2</border>
+																		<border>1</border>
 																		<object class="wxTextCtrl" name="m_textRxOut">
 																			<value></value>
 																			<maxlength>0</maxlength>
@@ -161,7 +151,7 @@
 																	<object class="sizeritem">
 																		<option>0</option>
 																		<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
-																		<border>5</border>
+																		<border>1</border>
 																		<object class="wxComboBox" name="m_cbSampleRateRxOut">
 																			<style>wxCB_DROPDOWN</style>
 																			<value></value>
@@ -203,7 +193,7 @@
 															<object class="sizeritem">
 																<option>1</option>
 																<flag>wxALL|wxEXPAND</flag>
-																<border>2</border>
+																<border>1</border>
 																<object class="wxListCtrl" name="m_listCtrlTxInDevices">
 																	<style>wxLC_HRULES|wxLC_REPORT|wxLC_VRULES</style>
 																</object>
@@ -226,7 +216,7 @@
 																	<object class="sizeritem">
 																		<option>1</option>
 																		<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
-																		<border>2</border>
+																		<border>1</border>
 																		<object class="wxTextCtrl" name="m_textCtrlTxIn">
 																			<value></value>
 																			<maxlength>0</maxlength>
@@ -244,7 +234,7 @@
 																	<object class="sizeritem">
 																		<option>0</option>
 																		<flag>wxALL</flag>
-																		<border>5</border>
+																		<border>1</border>
 																		<object class="wxComboBox" name="m_cbSampleRateTxIn">
 																			<style>wxCB_DROPDOWN</style>
 																			<value></value>
@@ -288,7 +278,7 @@
 																	<object class="sizeritem">
 																		<option>1</option>
 																		<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
-																		<border>2</border>
+																		<border>1</border>
 																		<object class="wxTextCtrl" name="m_textCtrTxOut">
 																			<value></value>
 																			<maxlength>0</maxlength>
@@ -306,7 +296,7 @@
 																	<object class="sizeritem">
 																		<option>0</option>
 																		<flag>wxALL</flag>
-																		<border>5</border>
+																		<border>1</border>
 																		<object class="wxComboBox" name="m_cbSampleRateTxOut">
 																			<style>wxCB_DROPDOWN</style>
 																			<value></value>
