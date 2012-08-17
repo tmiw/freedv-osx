@@ -1,7 +1,0 @@
-CallbackInterface.lo: ../source/portaudiocpp/CallbackInterface.cxx \
- ../include/portaudiocpp/CallbackInterface.hxx \
- ../../../include/portaudio.h
-
-../include/portaudiocpp/CallbackInterface.hxx:
-
-../../../include/portaudio.h:
