@@ -1,0 +1,30 @@
+Stream.lo: ../source/portaudiocpp/Stream.cxx \
+ ../include/portaudiocpp/Stream.hxx ../../../include/portaudio.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/cstddef \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/c++config.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/os_defines.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/cpu_defines.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stddef.h \
+ ../include/portaudiocpp/Exception.hxx \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/exception \
+ ../include/portaudiocpp/System.hxx
+
+../include/portaudiocpp/Stream.hxx:
+
+../../../include/portaudio.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/cstddef:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/c++config.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/os_defines.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/mingw32/bits/cpu_defines.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stddef.h:
+
+../include/portaudiocpp/Exception.hxx:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/exception:
+
+../include/portaudiocpp/System.hxx:

@@ -1,0 +1,24 @@
+downsample_test.o: downsample_test.c \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stddef.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stdarg.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h \
+ c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdlib.h \
+ ../src/samplerate.h util.h
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stddef.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stdarg.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h:
+
+c:\bin\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdlib.h:
+
+../src/samplerate.h:
+
+util.h:
