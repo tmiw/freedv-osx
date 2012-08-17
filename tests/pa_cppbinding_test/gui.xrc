@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="MainFrameBase">
+		<style>wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL</style>
+		<size>651,445</size>
+		<title>Test PortAudio CPP Binding </title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="m_menuBar">
+			<label>MainMenu</label>
+			<object class="wxMenu" name="m_menuFile">
+				<label>_File</label>
+				<object class="wxMenuItem" name="menuFileExit">
+					<label>E_xit\tAlt+X</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxPanel" name="m_audioInfo">
+			<style>wxTAB_TRAVERSAL</style>
+			<object class="wxBoxSizer">
+				<orient>wxVERTICAL</orient>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>1</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>label</label>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+									<border>3</border>
+									<object class="wxListBox" name="m_listBoxTopLeft">
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>1</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>label</label>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+									<border>3</border>
+									<object class="wxTextCtrl" name="m_textTopRight">
+										<style>wxHSCROLL|wxTE_DONTWRAP|wxTE_MULTILINE</style>
+										<bg>#f4f7fc</bg>
+										<value></value>
+										<maxlength>0</maxlength>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>1</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxEXPAND</flag>
+							<border>1</border>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxListBox" name="m_listBoxMidLeft">
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxListBox" name="m_listBoxMidRight">
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>1</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxListBox" name="m_listBoxBottomLeft">
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<minsize>65,65</minsize>
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxListBox" name="m_listBoxBottomRight">
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALIGN_BOTTOM|wxALIGN_RIGHT</flag>
+							<border>1</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag></flag>
+									<border>1</border>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxALL</flag>
+											<border>1</border>
+											<object class="wxButton" name="m_btnLeft">
+												<label>Ok</label>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag></flag>
+									<border>1</border>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_LEFT|wxALL</flag>
+											<border>1</border>
+											<object class="wxButton" name="m_btnRight">
+												<label>On / Off</label>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxALIGN_BOTTOM|wxALIGN_RIGHT</flag>
+					<border>1</border>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag></flag>
+							<border>1</border>
+							<object class="wxButton" name="m_button1">
+								<label>Exit</label>
+								<default>1</default>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="m_statusBar">
+			<style>wxST_SIZEGRIP</style>
+			<fields>1</fields>
+		</object>
+	</object>
+</resource>
