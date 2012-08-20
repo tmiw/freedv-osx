@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="fdmdv2" InternalType="GUI">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="../src/dlg_about.cpp"/>
+    <File Name="../src/dlg_audio.cpp"/>
+    <File Name="../src/dlg_comports.cpp"/>
+    <File Name="../src/dlg_options.cpp"/>
+    <File Name="../src/fdmdv2_main.cpp"/>
+    <File Name="../src/fdmdv2_plot.cpp"/>
+    <File Name="../src/paclass.cpp"/>
+    <File Name="../src/topFrame.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="include">
+    <File Name="../src/dlg_about.h"/>
+    <File Name="../src/dlg_audio.h"/>
+    <File Name="../src/dlg_comports.h"/>
+    <File Name="../src/dlg_options.h"/>
+    <File Name="../src/fdmdv2_main.h"/>
+    <File Name="../src/fdmdv2_plot.h"/>
+    <File Name="../src/paclass.h"/>
+    <File Name="../src/topFrame.h"/>
+    <File Name="../extern/include/rig.h"/>
+    <File Name="../extern/include/rig_dll.h"/>
+    <File Name="../extern/include/riglist.h"/>
+    <File Name="../extern/include/samplerate.h"/>
+    <VirtualDirectory Name="portaudio_cpp">
+      <File Name="../extern/include/portaudiocpp/AsioDeviceAdapter.hxx"/>
+      <File Name="../extern/include/portaudiocpp/AutoSystem.hxx"/>
+      <File Name="../extern/include/portaudiocpp/BlockingStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/CallbackInterface.hxx"/>
+      <File Name="../extern/include/portaudiocpp/CallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/CFunCallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/CppFunCallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/Device.hxx"/>
+      <File Name="../extern/include/portaudiocpp/DirectionSpecificStreamParameters.hxx"/>
+      <File Name="../extern/include/portaudiocpp/Exception.hxx"/>
+      <File Name="../extern/include/portaudiocpp/HostApi.hxx"/>
+      <File Name="../extern/include/portaudiocpp/InterfaceCallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/MemFunCallbackStream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/PortAudioCpp.hxx"/>
+      <File Name="../extern/include/portaudiocpp/SampleDataFormat.hxx"/>
+      <File Name="../extern/include/portaudiocpp/Stream.hxx"/>
+      <File Name="../extern/include/portaudiocpp/StreamParameters.hxx"/>
+      <File Name="../extern/include/portaudiocpp/System.hxx"/>
+      <File Name="../extern/include/portaudiocpp/SystemDeviceIterator.hxx"/>
+      <File Name="../extern/include/portaudiocpp/SystemHostApiIterator.hxx"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="resources">
+    <File Name="../src/FDMDV2.fbp"/>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" C_Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="/bin/MinGW/msys/1.0/local/include"/>
+        <IncludePath Value="../../codec2-dev/src"/>
+        <IncludePath Value="../3rdparty/portaudio/include"/>
+        <IncludePath Value="../3rdparty/portaudio/bindings/cpp/include"/>
+        <IncludePath Value="../3rdparty/libsndfile/include"/>
+        <IncludePath Value="../3rdparty/libsamplerate-0.1.8/src"/>
+        <Preprocessor Value="__WX__"/>
+      </Compiler>
+      <Linker Options="-mwindows;$(shell wx-config --debug=yes --libs --unicode=yes)" Required="yes">
+        <LibraryPath Value="/bin/MinGW/msys/1.0/local/lib"/>
+        <LibraryPath Value="../extern/lib"/>
+        <Library Value="libsndfile-1.dll"/>
+        <Library Value="libcodec2.a"/>
+        <Library Value="libportaudio.a"/>
+        <Library Value="libportaudiocpp.a"/>
+      </Linker>
+      <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no">
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" C_Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="/bin/MinGW/msys/1.0/local/include"/>
+        <IncludePath Value="../../codec2-dev/src"/>
+        <IncludePath Value="../3rdparty/portaudio/include"/>
+        <IncludePath Value="../3rdparty/portaudio/bindings/cpp/include"/>
+        <IncludePath Value="../3rdparty/libsndfile/include"/>
+        <IncludePath Value="../3rdparty/libsamplerate-0.1.8/src"/>
+        <Preprocessor Value="__WX__"/>
+      </Compiler>
+      <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes">
+        <LibraryPath Value="/bin/MinGW/msys/1.0/local/lib"/>
+        <LibraryPath Value="../extern/lib"/>
+        <Library Value="libsndfile-1.dll"/>
+        <Library Value="libcodec2.a"/>
+        <Library Value="libportaudio.a"/>
+        <Library Value="libportaudiocpp.a"/>
+      </Linker>
+      <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no">
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>
