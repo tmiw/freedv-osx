@@ -14,8 +14,12 @@
     <File Name="../src/dlg_options.cpp"/>
     <File Name="../src/fdmdv2_main.cpp"/>
     <File Name="../src/fdmdv2_plot.cpp"/>
-    <File Name="../src/paclass.cpp"/>
     <File Name="../src/topFrame.cpp"/>
+    <File Name="../src/fdmdv2_plot_scatter.cpp"/>
+    <File Name="../src/fdmdv2_plot_waterfall.cpp"/>
+    <File Name="../src/fdmdv2_plot_spectrum.cpp"/>
+    <File Name="../src/fdmdv2_scalar.cpp"/>
+    <File Name="../src/fdmdv2_pa_wrapper.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_about.h"/>
@@ -24,7 +28,6 @@
     <File Name="../src/dlg_options.h"/>
     <File Name="../src/fdmdv2_main.h"/>
     <File Name="../src/fdmdv2_plot.h"/>
-    <File Name="../src/paclass.h"/>
     <File Name="../src/topFrame.h"/>
     <File Name="../extern/include/rig.h"/>
     <File Name="../extern/include/rig_dll.h"/>
@@ -52,6 +55,11 @@
       <File Name="../extern/include/portaudiocpp/SystemDeviceIterator.hxx"/>
       <File Name="../extern/include/portaudiocpp/SystemHostApiIterator.hxx"/>
     </VirtualDirectory>
+    <File Name="../src/fdmdv2_plot_scatter.h"/>
+    <File Name="../src/fdmdv2_plot_waterfall.h"/>
+    <File Name="../src/fdmdv2_plot_spectrum.h"/>
+    <File Name="../src/fdmdv2_scalar.h"/>
+    <File Name="../src/fdmdv2_pa_wrapper.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>

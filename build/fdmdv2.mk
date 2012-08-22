@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=OFA-Staff
-Date                   :=8/20/2012
+Date                   :=8/22/2012
 CodeLitePath           :="C:\bin\CodeLite"
 LinkerName             :=g++
 ArchiveTool            :=ar rcus
@@ -56,7 +56,8 @@ WXWIN:=C:\bin\wxWidgets-2.9.4
 PATH:=$(WXWIN)\lib\gcc_dll;$(PATH)
 WXCFG:=gcc_dll\mswu
 UNIT_TEST_PP_SRC_DIR:=C:\bin\UnitTest++-1.3
-Objects=$(IntermediateDirectory)/src_dlg_about$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_audio$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_options$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_paclass$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) 
+Objects=$(IntermediateDirectory)/src_dlg_about$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_audio$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_options$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) \
+	$(IntermediateDirectory)/src_fdmdv2_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -127,14 +128,6 @@ $(IntermediateDirectory)/src_fdmdv2_plot$(DependSuffix): ../src/fdmdv2_plot.cpp
 $(IntermediateDirectory)/src_fdmdv2_plot$(PreprocessSuffix): ../src/fdmdv2_plot.cpp
 	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_plot$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot.cpp"
 
-$(IntermediateDirectory)/src_paclass$(ObjectSuffix): ../src/paclass.cpp $(IntermediateDirectory)/src_paclass$(DependSuffix)
-	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/src/paclass.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_paclass$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_paclass$(DependSuffix): ../src/paclass.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_paclass$(ObjectSuffix) -MF$(IntermediateDirectory)/src_paclass$(DependSuffix) -MM "C:/bin/Projects/Radio/fdmdv2/src/paclass.cpp"
-
-$(IntermediateDirectory)/src_paclass$(PreprocessSuffix): ../src/paclass.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_paclass$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/paclass.cpp"
-
 $(IntermediateDirectory)/src_topFrame$(ObjectSuffix): ../src/topFrame.cpp $(IntermediateDirectory)/src_topFrame$(DependSuffix)
 	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/src/topFrame.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_topFrame$(DependSuffix): ../src/topFrame.cpp
@@ -142,6 +135,46 @@ $(IntermediateDirectory)/src_topFrame$(DependSuffix): ../src/topFrame.cpp
 
 $(IntermediateDirectory)/src_topFrame$(PreprocessSuffix): ../src/topFrame.cpp
 	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_topFrame$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/topFrame.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix): ../src/fdmdv2_plot_scatter.cpp $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_scatter.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_fdmdv2_plot_scatter$(DependSuffix): ../src/fdmdv2_plot_scatter.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) -MF$(IntermediateDirectory)/src_fdmdv2_plot_scatter$(DependSuffix) -MM "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_scatter.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_plot_scatter$(PreprocessSuffix): ../src/fdmdv2_plot_scatter.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_scatter.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(ObjectSuffix): ../src/fdmdv2_plot_waterfall.cpp $(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_waterfall.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(DependSuffix): ../src/fdmdv2_plot_waterfall.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(ObjectSuffix) -MF$(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(DependSuffix) -MM "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_waterfall.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(PreprocessSuffix): ../src/fdmdv2_plot_waterfall.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_waterfall.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix): ../src/fdmdv2_plot_spectrum.cpp $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_spectrum.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(DependSuffix): ../src/fdmdv2_plot_spectrum.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) -MF$(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(DependSuffix) -MM "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_spectrum.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(PreprocessSuffix): ../src/fdmdv2_plot_spectrum.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_spectrum.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_scalar$(ObjectSuffix): ../src/fdmdv2_scalar.cpp $(IntermediateDirectory)/src_fdmdv2_scalar$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_scalar.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_fdmdv2_scalar$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_fdmdv2_scalar$(DependSuffix): ../src/fdmdv2_scalar.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_fdmdv2_scalar$(ObjectSuffix) -MF$(IntermediateDirectory)/src_fdmdv2_scalar$(DependSuffix) -MM "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_scalar.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_scalar$(PreprocessSuffix): ../src/fdmdv2_scalar.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_scalar$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_scalar.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix): ../src/fdmdv2_pa_wrapper.cpp $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_pa_wrapper.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(DependSuffix): ../src/fdmdv2_pa_wrapper.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) -MF$(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(DependSuffix) -MM "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_pa_wrapper.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(PreprocessSuffix): ../src/fdmdv2_pa_wrapper.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_pa_wrapper.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
@@ -167,12 +200,24 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/src_paclass$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/src_paclass$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/src_paclass$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_topFrame$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_topFrame$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_scalar$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_scalar$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_scalar$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
 	$(RM) "C:\bin\Projects\Radio\fdmdv2\build\.build-release\fdmdv2"
