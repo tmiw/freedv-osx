@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=OFA-Staff
-Date                   :=8/22/2012
+Date                   :=8/24/2012
 CodeLitePath           :="C:\bin\CodeLite"
 LinkerName             :=g++
 ArchiveTool            :=ar rcus
@@ -57,7 +57,7 @@ PATH:=$(WXWIN)\lib\gcc_dll;$(PATH)
 WXCFG:=gcc_dll\mswu
 UNIT_TEST_PP_SRC_DIR:=C:\bin\UnitTest++-1.3
 Objects=$(IntermediateDirectory)/src_dlg_about$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_audio$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_options$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) \
-	$(IntermediateDirectory)/src_fdmdv2_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) 
+	$(IntermediateDirectory)/src_fdmdv2_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_process_audio$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -176,6 +176,14 @@ $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(DependSuffix): ../src/fdmdv2_pa_
 $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(PreprocessSuffix): ../src/fdmdv2_pa_wrapper.cpp
 	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_pa_wrapper.cpp"
 
+$(IntermediateDirectory)/src_fdmdv2_process_audio$(ObjectSuffix): ../src/fdmdv2_process_audio.cpp $(IntermediateDirectory)/src_fdmdv2_process_audio$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_process_audio.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_fdmdv2_process_audio$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_fdmdv2_process_audio$(DependSuffix): ../src/fdmdv2_process_audio.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_fdmdv2_process_audio$(ObjectSuffix) -MF$(IntermediateDirectory)/src_fdmdv2_process_audio$(DependSuffix) -MM "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_process_audio.cpp"
+
+$(IntermediateDirectory)/src_fdmdv2_process_audio$(PreprocessSuffix): ../src/fdmdv2_process_audio.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_process_audio$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_process_audio.cpp"
+
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##
@@ -218,6 +226,9 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_process_audio$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_process_audio$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_fdmdv2_process_audio$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
 	$(RM) "C:\bin\Projects\Radio\fdmdv2\build\.build-release\fdmdv2"

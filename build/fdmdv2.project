@@ -20,6 +20,7 @@
     <File Name="../src/fdmdv2_plot_spectrum.cpp"/>
     <File Name="../src/fdmdv2_scalar.cpp"/>
     <File Name="../src/fdmdv2_pa_wrapper.cpp"/>
+    <File Name="../src/fdmdv2_process_audio.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_about.h"/>
@@ -60,6 +61,7 @@
     <File Name="../src/fdmdv2_plot_spectrum.h"/>
     <File Name="../src/fdmdv2_scalar.h"/>
     <File Name="../src/fdmdv2_pa_wrapper.h"/>
+    <File Name="../src/comp.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>
