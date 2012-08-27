@@ -18,9 +18,9 @@
     <File Name="../src/fdmdv2_plot_scatter.cpp"/>
     <File Name="../src/fdmdv2_plot_waterfall.cpp"/>
     <File Name="../src/fdmdv2_plot_spectrum.cpp"/>
-    <File Name="../src/fdmdv2_scalar.cpp"/>
     <File Name="../src/fdmdv2_pa_wrapper.cpp"/>
     <File Name="../src/fdmdv2_process_audio.cpp"/>
+    <File Name="../src/fdmdv2_plot_scalar.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_about.h"/>
@@ -59,9 +59,12 @@
     <File Name="../src/fdmdv2_plot_scatter.h"/>
     <File Name="../src/fdmdv2_plot_waterfall.h"/>
     <File Name="../src/fdmdv2_plot_spectrum.h"/>
-    <File Name="../src/fdmdv2_scalar.h"/>
     <File Name="../src/fdmdv2_pa_wrapper.h"/>
     <File Name="../src/comp.h"/>
+    <File Name="../src/fdmdv2_plot_scalar.h"/>
+    <File Name="../../codec2-dev/src/codec2.h"/>
+    <File Name="../../codec2-dev/src/fdmdv.h"/>
+    <File Name="../src/fdmdv2_defines.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>
