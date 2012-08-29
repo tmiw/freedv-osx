@@ -2,10 +2,10 @@
 <CodeLite_Workspace Name="fdmdv2" Database="./fdmdv2.tags">
   <Project Name="fdmdv2" Path="fdmdv2.project" Active="Yes"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="no">
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Project Name="fdmdv2" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Project Name="fdmdv2" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
