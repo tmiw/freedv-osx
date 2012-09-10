@@ -1,0 +1,223 @@
+.TH "TopFrame" 3 "Mon Sep 10 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TopFrame \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <topFrame\&.h>\fP
+.PP
+Inherits wxFrame\&.
+.PP
+Inherited by \fBfdmdv2TopFrame\fP, and \fBMainFrame\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTopFrame\fP (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &title=_('FDMDV2'), const wxPoint &pos=wxDefaultPosition, const wxSize &size=wxSize(761, 500), long style=wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "wxAuiNotebook * \fBm_auiNbookCtrl\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBtopFrame_OnClose\fP (wxCloseEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBtopFrame_OnPaint\fP (wxPaintEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBtopFrame_OnSize\fP (wxSizeEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBtopFrame_OnUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnOpen\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnOpenUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnSave\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnSaveUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnClose\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCloseUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnExit\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCopy\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCopyUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCut\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCutUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnPaste\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnPasteUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnToolsAudio\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnToolsAudioUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnToolsComCfg\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnToolsComCfgUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnToolsOptions\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnToolsOptionsUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCaptureRxStream\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCaptureTxStream\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnPlayAudioFile\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnHelpCheckUpdates\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnHelpCheckUpdatesUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnHelpAbout\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnTogBtnRxID\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnTogBtnTxID\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCmdSliderScroll\fP (wxScrollEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnSliderScrollBottom\fP (wxScrollEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCmdSliderScrollChanged\fP (wxScrollEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnSliderScrollTop\fP (wxScrollEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCheckSQClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnTogBtnOnOff\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnTogBtnSplitClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnTogBtnAnalogClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnTogBtnALCClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnTogBtnTXClick\fP (wxCommandEvent &event)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "wxMenuBar * \fBm_menubarMain\fP"
+.br
+.ti -1c
+.RI "wxMenu * \fBfile\fP"
+.br
+.ti -1c
+.RI "wxMenu * \fBedit\fP"
+.br
+.ti -1c
+.RI "wxMenu * \fBtools\fP"
+.br
+.ti -1c
+.RI "wxMenu * \fBhelp\fP"
+.br
+.ti -1c
+.RI "wxGauge * \fBm_gaugeSNR\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textSNR\fP"
+.br
+.ti -1c
+.RI "wxGauge * \fBm_gaugeLevel\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_txtCtrl\fP"
+.br
+.ti -1c
+.RI "wxToggleButton * \fBm_togRxID\fP"
+.br
+.ti -1c
+.RI "wxToggleButton * \fBm_togTxID\fP"
+.br
+.ti -1c
+.RI "wxSlider * \fBm_sliderSQ\fP"
+.br
+.ti -1c
+.RI "wxCheckBox * \fBm_ckboxSQ\fP"
+.br
+.ti -1c
+.RI "wxToggleButton * \fBm_togBtnOnOff\fP"
+.br
+.ti -1c
+.RI "wxToggleButton * \fBm_togBtnSplit\fP"
+.br
+.ti -1c
+.RI "wxToggleButton * \fBm_togBtnAnalog\fP"
+.br
+.ti -1c
+.RI "wxToggleButton * \fBm_togBtnALC\fP"
+.br
+.ti -1c
+.RI "wxToggleButton * \fBm_btnTogTX\fP"
+.br
+.ti -1c
+.RI "wxStatusBar * \fBm_statusBar1\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBTopFrame\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

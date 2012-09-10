@@ -1,0 +1,246 @@
+.TH "MainFrame" 3 "Mon Sep 10 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MainFrame \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBTopFrame\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMainFrame\fP (wxWindow *parent)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPlotPanel\fP * \fBm_panelDefaultA\fP"
+.br
+.ti -1c
+.RI "\fBPlotPanel\fP * \fBm_panelDefaultB\fP"
+.br
+.ti -1c
+.RI "\fBPlotSpectrum\fP * \fBm_panelSpectrum\fP"
+.br
+.ti -1c
+.RI "\fBPlotWaterfall\fP * \fBm_panelWaterfall\fP"
+.br
+.ti -1c
+.RI "\fBPlotScatter\fP * \fBm_panelScatter\fP"
+.br
+.ti -1c
+.RI "\fBPlotScalar\fP * \fBm_panelScalar\fP"
+.br
+.ti -1c
+.RI "bool \fBm_SquelchActive\fP"
+.br
+.ti -1c
+.RI "bool \fBm_RxRunning\fP"
+.br
+.ti -1c
+.RI "bool \fBm_TxRunning\fP"
+.br
+.ti -1c
+.RI "CODEC2 * \fBm_RXCodec2\fP"
+.br
+.ti -1c
+.RI "CODEC2 * \fBm_TXCodec2\fP"
+.br
+.ti -1c
+.RI "\fBPortAudioWrap\fP * \fBm_rxPa\fP"
+.br
+.ti -1c
+.RI "\fBPortAudioWrap\fP * \fBm_txPa\fP"
+.br
+.ti -1c
+.RI "PaDeviceIndex \fBm_rxDevIn\fP"
+.br
+.ti -1c
+.RI "PaDeviceIndex \fBm_rxDevOut\fP"
+.br
+.ti -1c
+.RI "PaDeviceIndex \fBm_txDevIn\fP"
+.br
+.ti -1c
+.RI "PaDeviceIndex \fBm_txDevOut\fP"
+.br
+.ti -1c
+.RI "PaError \fBm_rxErr\fP"
+.br
+.ti -1c
+.RI "PaError \fBm_txErr\fP"
+.br
+.ti -1c
+.RI "wxSound * \fBm_sound\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBOnCloseFrame\fP (wxCloseEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnExitClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBstartTxStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBstartRxStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBstopTxStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBstopRxStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBabortTxStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBabortRxStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBOnOpen\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnOpenUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnSave\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnSaveUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnClose\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCloseUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnExit\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCopy\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCopyUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCut\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCutUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnPaste\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnPasteUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnToolsAudio\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnToolsAudioUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnToolsComCfg\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnToolsComCfgUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnToolsOptions\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnToolsOptionsUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCaptureRxStream\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCaptureTxStream\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnPlayAudioFile\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnHelpCheckUpdates\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnHelpCheckUpdatesUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnHelpAbout\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCmdSliderScroll\fP (wxScrollEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnSliderScrollBottom\fP (wxScrollEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCmdSliderScrollChanged\fP (wxScrollEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnSliderScrollTop\fP (wxScrollEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnCheckSQClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnSplitClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnAnalogClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnALCClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnRxID\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnTxID\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnTXClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnOnOff\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnPaint\fP (wxPaintEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnClose\fP (wxCloseEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnSize\fP (wxSizeEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "wxString \fBLoadUserImage\fP (wxImage &image)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "wxCriticalSection \fBm_pThreadCS\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

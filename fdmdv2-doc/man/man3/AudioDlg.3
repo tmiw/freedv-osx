@@ -1,0 +1,63 @@
+.TH "AudioDlg" 3 "Mon Sep 10 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AudioDlg \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBDlgAudio\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAudioDlg\fP (wxWindow *parent)"
+.br
+.ti -1c
+.RI "void \fBOnRxInputSelect\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTxOutputSelect\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnVoiceInputSelect\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnVoiceOutputSelect\fP (wxCommandEvent &event)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnCancel\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnOK\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnClose\fP (wxCloseEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnInitDialog\fP (wxInitDialogEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnApply\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBpopulateStandardSampleRates\fP (wxComboBox *target, const portaudio::DirectionSpecificStreamParameters &inputParameters, const portaudio::DirectionSpecificStreamParameters &outputParameters)"
+.br
+.ti -1c
+.RI "int \fBpopulateAudioInfo\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AudioDlg::AudioDlg (wxWindow *parent)"
+Constructor 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

@@ -1,0 +1,6 @@
+<map id="PlotPanel" name="PlotPanel">
+<area shape="rect" id="node5" href="$class_plot_scalar.html" title="PlotScalar" alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node7" href="$class_plot_scatter.html" title="PlotScatter" alt="" coords="113,155,199,181"/>
+<area shape="rect" id="node9" href="$class_plot_spectrum.html" title="PlotSpectrum" alt="" coords="224,155,325,181"/>
+<area shape="rect" id="node11" href="$class_plot_waterfall.html" title="PlotWaterfall" alt="" coords="349,155,445,181"/>
+</map>

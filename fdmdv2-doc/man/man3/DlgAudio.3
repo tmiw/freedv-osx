@@ -1,0 +1,153 @@
+.TH "DlgAudio" 3 "Mon Sep 10 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DlgAudio \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <topFrame\&.h>\fP
+.PP
+Inherits wxDialog\&.
+.PP
+Inherited by \fBAudioDlg\fP, and \fBfdmdv2DlgAudio\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDlgAudio\fP (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &title=_('Audio Options'), const wxPoint &pos=wxDefaultPosition, const wxSize &size=wxSize(555, 419), long style=wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBOnClose\fP (wxCloseEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnInitDialog\fP (wxInitDialogEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnRxInputSelect\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnTxOutputSelect\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnVoiceInputSelect\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnVoiceOutputSelect\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnApply\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCancel\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnOK\fP (wxCommandEvent &event)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "wxNotebook * \fBm_nbAudioOptions\fP"
+.br
+.ti -1c
+.RI "wxPanel * \fBm_panelDevices\fP"
+.br
+.ti -1c
+.RI "wxRadioButton * \fBm_radioBtnPortAudio\fP"
+.br
+.ti -1c
+.RI "wxStaticText * \fBm_staticText151\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textNumChOut\fP"
+.br
+.ti -1c
+.RI "wxStaticText * \fBm_staticText141\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textNumChIn\fP"
+.br
+.ti -1c
+.RI "wxStaticText * \fBm_staticText14\fP"
+.br
+.ti -1c
+.RI "wxComboBox * \fBm_comboAudioCodec\fP"
+.br
+.ti -1c
+.RI "wxStaticText * \fBm_staticText15\fP"
+.br
+.ti -1c
+.RI "wxComboBox * \fBm_comboCodecTx\fP"
+.br
+.ti -1c
+.RI "wxStaticText * \fBm_staticText16\fP"
+.br
+.ti -1c
+.RI "wxComboBox * \fBm_comboRadioRx\fP"
+.br
+.ti -1c
+.RI "wxStaticText * \fBm_staticText17\fP"
+.br
+.ti -1c
+.RI "wxComboBox * \fBm_comboCodecSpkr\fP"
+.br
+.ti -1c
+.RI "wxRadioButton * \fBm_radioBtnFileOnly\fP"
+.br
+.ti -1c
+.RI "wxPanel * \fBm_panelSettings\fP"
+.br
+.ti -1c
+.RI "wxListBox * \fBm_lbRxInput\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textRxInput\fP"
+.br
+.ti -1c
+.RI "wxListBox * \fBm_lbTxOutput\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textCtrl15\fP"
+.br
+.ti -1c
+.RI "wxListBox * \fBm_lbVoiceInput\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textVoiceInput\fP"
+.br
+.ti -1c
+.RI "wxListBox * \fBm_lbVoiceOutput\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textVoiceOutput\fP"
+.br
+.ti -1c
+.RI "wxPanel * \fBm_panelRightChannel\fP"
+.br
+.ti -1c
+.RI "wxStdDialogButtonSizer * \fBm_sdbSizer3\fP"
+.br
+.ti -1c
+.RI "wxButton * \fBm_sdbSizer3OK\fP"
+.br
+.ti -1c
+.RI "wxButton * \fBm_sdbSizer3Apply\fP"
+.br
+.ti -1c
+.RI "wxButton * \fBm_sdbSizer3Cancel\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBDlgAudio\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

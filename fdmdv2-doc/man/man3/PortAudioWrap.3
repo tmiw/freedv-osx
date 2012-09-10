@@ -1,0 +1,185 @@
+.TH "PortAudioWrap" 3 "Mon Sep 10 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PortAudioWrap \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBper_frame_rx_processing\fP (short output_buf[], int *n_output_buf, int codec_bits[], short input_buf[], int *n_input_buf, int *nin, int *state, struct CODEC2 *c2)"
+.br
+.ti -1c
+.RI "PaDeviceIndex \fBgetDefaultInputDevice\fP ()"
+.br
+.ti -1c
+.RI "PaDeviceIndex \fBgetDefaultOutputDevice\fP ()"
+.br
+.ti -1c
+.RI "PaStreamParameters * \fBgetDeviceInfo\fP (PaDeviceIndex idx)"
+.br
+.ti -1c
+.RI "PaError \fBsetFramesPerBuffer\fP (unsigned long size)"
+.br
+.ti -1c
+.RI "PaError \fBsetSampleRate\fP (unsigned long size)"
+.br
+.ti -1c
+.RI "PaError \fBsetStreamFlags\fP (PaStreamFlags flags)"
+.br
+.ti -1c
+.RI "PaError \fBsetCallback\fP (PaStreamCallback *streamCallback)"
+.br
+.ti -1c
+.RI "PaError \fBsetStreamCallback\fP (PaStream *stream, PaStreamCallback *callback)"
+.br
+.ti -1c
+.RI "PaError \fBsetStreamFinishedCallback\fP (PaStream *stream, PaStreamFinishedCallback *streamFinishedCallback)"
+.br
+.ti -1c
+.RI "PaError \fBstreamOpen\fP ()"
+.br
+.ti -1c
+.RI "PaError \fBsetInputDevice\fP (PaDeviceIndex dev)"
+.br
+.ti -1c
+.RI "PaError \fBsetInputChannelCount\fP (int count)"
+.br
+.ti -1c
+.RI "int \fBgetInputChannelCount\fP ()"
+.br
+.ti -1c
+.RI "PaError \fBsetInputSampleFormat\fP (PaSampleFormat format)"
+.br
+.ti -1c
+.RI "PaError \fBsetInputSampleRate\fP (PaSampleFormat format)"
+.br
+.ti -1c
+.RI "PaError \fBsetInputLatency\fP (PaTime latency)"
+.br
+.ti -1c
+.RI "void \fBsetInputHostApiStreamInfo\fP (void *info=NULL)"
+.br
+.ti -1c
+.RI "PaTime \fBgetInputDefaultLowLatency\fP ()"
+.br
+.ti -1c
+.RI "const char * \fBgetDeviceName\fP (PaDeviceIndex dev)"
+.br
+.ti -1c
+.RI "PaError \fBsetOutputDevice\fP (PaDeviceIndex dev)"
+.br
+.ti -1c
+.RI "PaError \fBsetOutputChannelCount\fP (int count)"
+.br
+.ti -1c
+.RI "const int \fBgetOutputChannelCount\fP ()"
+.br
+.ti -1c
+.RI "PaError \fBsetOutputSampleFormat\fP (PaSampleFormat format)"
+.br
+.ti -1c
+.RI "PaError \fBsetOutputLatency\fP (PaTime latency)"
+.br
+.ti -1c
+.RI "PaError \fBstreamStart\fP ()"
+.br
+.ti -1c
+.RI "PaError \fBstreamClose\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetOutputHostApiStreamInfo\fP (void *info=NULL)"
+.br
+.ti -1c
+.RI "PaTime \fBgetOutputDefaultLowLatency\fP ()"
+.br
+.ti -1c
+.RI "void \fBaverageData\fP (float mag_dB[])"
+.br
+.ti -1c
+.RI "void \fBsetFdmdvState\fP (FDMDV *fdmdv_state)"
+.br
+.ti -1c
+.RI "void \fBsetInputBuffer\fP (const PaStreamParameters &inputBuffer)"
+.br
+.ti -1c
+.RI "void \fBsetOutputBuffer\fP (const PaStreamParameters &outputBuffer)"
+.br
+.ti -1c
+.RI "void \fBsetSamplerate\fP (int samplerate)"
+.br
+.ti -1c
+.RI "void \fBsetStatusFlags\fP (const PaStreamCallbackFlags &statusFlags)"
+.br
+.ti -1c
+.RI "void \fBsetStream\fP (PaStream *stream)"
+.br
+.ti -1c
+.RI "void \fBsetStreamFinishedCallback\fP (PaStreamFinishedCallback *streamFinishedCallback)"
+.br
+.ti -1c
+.RI "void \fBsetTimeInfo\fP (PaStreamCallbackTimeInfo *timeInfo)"
+.br
+.ti -1c
+.RI "void \fBsetUserData\fP (void *userData)"
+.br
+.ti -1c
+.RI "FDMDV * \fBgetFdmdvState\fP ()"
+.br
+.ti -1c
+.RI "unsigned long \fBgetFramesPerBuffer\fP () const "
+.br
+.ti -1c
+.RI "const PaStreamParameters & \fBgetInputBuffer\fP () const "
+.br
+.ti -1c
+.RI "const PaStreamParameters & \fBgetOutputBuffer\fP () const "
+.br
+.ti -1c
+.RI "int \fBgetSamplerate\fP () const "
+.br
+.ti -1c
+.RI "const PaStreamCallbackFlags & \fBgetStatusFlags\fP () const "
+.br
+.ti -1c
+.RI "PaStream * \fBgetStream\fP ()"
+.br
+.ti -1c
+.RI "void * \fBgetUserData\fP ()"
+.br
+.ti -1c
+.RI "void \fBterminate\fP ()"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "void \fBabort\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisOpen\fP () const "
+.br
+.ti -1c
+.RI "bool \fBisStopped\fP () const "
+.br
+.ti -1c
+.RI "bool \fBisActive\fP () const "
+.br
+.ti -1c
+.RI "void \fBloadData\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBm_av_mag\fP [FDMDV_NSPEC]"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

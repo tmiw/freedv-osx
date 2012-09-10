@@ -1,0 +1,52 @@
+.TH "PlotScatter" 3 "Mon Sep 10 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PlotScatter \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBPlotPanel\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlotScatter\fP (wxFrame *parent)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdraw\fP (wxAutoBufferedPaintDC &dc)"
+.br
+.ti -1c
+.RI "void \fBadd_new_samples\fP (\fBCOMP\fP samples[])"
+.br
+.ti -1c
+.RI "void \fBOnPaint\fP (wxPaintEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnSize\fP (wxSizeEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnShow\fP (wxShowEvent &event)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCOMP\fP \fBm_mem\fP [SCATTER_MEM]"
+.br
+.ti -1c
+.RI "\fBCOMP\fP \fBm_new_samples\fP [FDMDV_NSYM]"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

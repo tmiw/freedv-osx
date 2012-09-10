@@ -1,0 +1,67 @@
+.TH "PlotScalar" 3 "Mon Sep 10 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PlotScalar \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBPlotPanel\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlotScalar\fP (wxFrame *parent, int x_max_, int y_max_)"
+.br
+.ti -1c
+.RI "void \fBadd_new_sample\fP (float sample)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBclip\fP (int y1)"
+.br
+.ti -1c
+.RI "void \fBdraw\fP (wxAutoBufferedPaintDC &dc)"
+.br
+.ti -1c
+.RI "void \fBOnPaint\fP (wxPaintEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnSize\fP (wxSizeEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnShow\fP (wxShowEvent &event)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_x_max\fP"
+.br
+.ti -1c
+.RI "int \fBm_y_max\fP"
+.br
+.ti -1c
+.RI "float * \fBm_mem\fP"
+.br
+.ti -1c
+.RI "float \fBm_new_sample\fP"
+.br
+.ti -1c
+.RI "int \fBm_index\fP"
+.br
+.ti -1c
+.RI "int \fBm_step\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

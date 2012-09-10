@@ -1,0 +1,163 @@
+.TH "PlotPanel" 3 "Mon Sep 10 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PlotPanel \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits wxPanel\&.
+.PP
+Inherited by \fBPlotScalar\fP, \fBPlotScatter\fP, \fBPlotSpectrum\fP, and \fBPlotWaterfall\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlotPanel\fP (wxFrame *parent)"
+.br
+.ti -1c
+.RI "void \fBOnMouseMove\fP (wxMouseEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnMouseDown\fP (wxMouseEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnMouseUp\fP (wxMouseEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnMouseWheelMoved\fP (wxMouseEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnClose\fP (wxCloseEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnSize\fP (wxSizeEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnErase\fP (wxEraseEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnPaint\fP (wxPaintEvent &event)"
+.br
+.ti -1c
+.RI "void \fBpaintEvent\fP (wxPaintEvent &evt)"
+.br
+.ti -1c
+.RI "virtual void \fBdraw\fP (wxAutoBufferedPaintDC &dc)"
+.br
+.ti -1c
+.RI "virtual void \fBdrawGraticule\fP (wxAutoBufferedPaintDC &dc)"
+.br
+.ti -1c
+.RI "virtual double \fBSetZoomFactor\fP (double zf)"
+.br
+.ti -1c
+.RI "virtual double \fBGetZoomFactor\fP (double zf)"
+.br
+.ti -1c
+.RI "virtual void \fBOnShow\fP (wxShowEvent &event)"
+.br
+.ti -1c
+.RI "virtual double \fBGetLabelSize\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBSetLabelSize\fP (double size)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "wxPen \fBm_penShortDash\fP"
+.br
+.ti -1c
+.RI "wxPen \fBm_penDotDash\fP"
+.br
+.ti -1c
+.RI "wxPen \fBm_penSolid\fP"
+.br
+.ti -1c
+.RI "wxRect \fBm_rectCtrl\fP"
+.br
+.ti -1c
+.RI "wxRect \fBm_rectGrid\fP"
+.br
+.ti -1c
+.RI "wxRect \fBm_rectPlot\fP"
+.br
+.ti -1c
+.RI "\fBMainFrame\fP * \fBm_pTopFrame\fP"
+.br
+.ti -1c
+.RI "wxAuiNotebook * \fBm_pNoteBook\fP"
+.br
+.ti -1c
+.RI "double \fBm_label_size\fP"
+.br
+.ti -1c
+.RI "wxSize \fBm_Bufsz\fP"
+.br
+.ti -1c
+.RI "bool \fBm_newdata\fP"
+.br
+.ti -1c
+.RI "wxBitmap * \fBm_bmp\fP"
+.br
+.ti -1c
+.RI "wxNativePixelData * \fBm_pBmp\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_x\fP"
+.br
+.ti -1c
+.RI "int \fBm_y\fP"
+.br
+.ti -1c
+.RI "int \fBm_w\fP"
+.br
+.ti -1c
+.RI "int \fBm_h\fP"
+.br
+.ti -1c
+.RI "int \fBm_left\fP"
+.br
+.ti -1c
+.RI "int \fBm_top\fP"
+.br
+.ti -1c
+.RI "int \fBm_prev_w\fP"
+.br
+.ti -1c
+.RI "int \fBm_prev_h\fP"
+.br
+.ti -1c
+.RI "int \fBm_prev_x\fP"
+.br
+.ti -1c
+.RI "int \fBm_prev_y\fP"
+.br
+.ti -1c
+.RI "bool \fBm_use_bitmap\fP"
+.br
+.ti -1c
+.RI "bool \fBm_clip\fP"
+.br
+.ti -1c
+.RI "bool \fBm_rubberBand\fP"
+.br
+.ti -1c
+.RI "bool \fBm_mouseDown\fP"
+.br
+.ti -1c
+.RI "double \fBm_zoomFactor\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.
