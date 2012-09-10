@@ -19,7 +19,6 @@
     <File Name="../src/fdmdv2_plot_waterfall.cpp"/>
     <File Name="../src/fdmdv2_plot_spectrum.cpp"/>
     <File Name="../src/fdmdv2_pa_wrapper.cpp"/>
-    <File Name="../src/fdmdv2_process_audio.cpp"/>
     <File Name="../src/fdmdv2_plot_scalar.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
