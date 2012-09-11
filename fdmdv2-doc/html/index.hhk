@@ -787,10 +787,12 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a82b97e0f3c4e530d5700b2c2dbac42bf"><param name="Name" value="OnToolsOptions"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ac7ceb1e047f2f3b0c26c0b42a110fe99"><param name="Name" value="OnToolsOptionsUI"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a4757c5d7d0e9b2c98dc34336f1dce49e"><param name="Name" value="OnUpdateUI"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a45e054e7f42f10088a699821a169d295"><param name="Name" value="rxCallback"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ad17245c1c9c295fc216fc6615f31e0a5"><param name="Name" value="startRxStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#af01eb2c59f1a9bcee0b956f8a72004c0"><param name="Name" value="startTxStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a91b813d6f6fc4c3777e332b018999a8d"><param name="Name" value="stopRxStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a9c5b263953c6703f0e721ba5694391f4"><param name="Name" value="stopTxStream"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#afca7a385e843876355c50833e5ea4edb"><param name="Name" value="txCallback"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_my_frame.html"><param name="Name" value="MyFrame"></OBJECT>
   <UL>
@@ -1361,6 +1363,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a73b644da1b76cd3c6b1900218fcb4873"><param name="Name" value="terminate"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_c_o_m_p.html#aab5da66c35473e59242b301dafdfaf7e"><param name="Name" value="real"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a45e054e7f42f10088a699821a169d295"><param name="Name" value="rxCallback"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a7b455cc4397b90c6d381c26073e51b2a"><param name="Name" value="setCallback"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a65d6263d05a44f6696a3eb93a669e862"><param name="Name" value="setFdmdvState"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a34ec7a96cbe5859f4a6aba6cb4b508cf"><param name="Name" value="setFramesPerBuffer"></OBJECT>
@@ -1665,6 +1668,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_top_frame.html#ab41da1d8b60a477e0c2b8aa7ce584a54"><param name="Name" value="TopFrame"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classtop_frame_1_1_top_frame.html#aed3ffbcf897fa6ef9af91fa7d0f528c5"><param name="Name" value="topFrame::TopFrame"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#afca7a385e843876355c50833e5ea4edb"><param name="Name" value="txCallback"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_my_frame.html#af5512a4d5fbaddd8d2afcd3b748258fb"><param name="Name" value="wxDECLARE_EVENT_TABLE"></OBJECT>
 </UL>
 </BODY>
