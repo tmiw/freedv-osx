@@ -1,10 +1,10 @@
 <map id="PlotSpectrum" name="PlotSpectrum">
 <area shape="rect" id="node6" href="$class_main_frame.html" title="MainFrame" alt="" coords="198,187,284,213"/>
-<area shape="rect" id="node2" href="$class_plot_panel.html" title="PlotPanel" alt="" coords="281,291,359,317"/>
-<area shape="rect" id="node12" href="$class_plot_scalar.html" title="PlotScalar" alt="" coords="5,395,88,421"/>
-<area shape="rect" id="node18" href="$class_plot_scatter.html" title="PlotScatter" alt="" coords="329,395,415,421"/>
-<area shape="rect" id="node23" href="$class_plot_waterfall.html" title="PlotWaterfall" alt="" coords="160,395,256,421"/>
+<area shape="rect" id="node2" href="$class_plot_panel.html" title="PlotPanel" alt="" coords="281,277,359,304"/>
+<area shape="rect" id="node12" href="$class_plot_scalar.html" title="PlotScalar" alt="" coords="5,381,88,408"/>
+<area shape="rect" id="node18" href="$class_plot_scatter.html" title="PlotScatter" alt="" coords="329,381,415,408"/>
+<area shape="rect" id="node23" href="$class_plot_waterfall.html" title="PlotWaterfall" alt="" coords="160,381,256,408"/>
 <area shape="rect" id="node8" href="$class_top_frame.html" title="TopFrame" alt="" coords="135,83,215,109"/>
 <area shape="rect" id="node15" href="$class_port_audio_wrap.html" title="PortAudioWrap" alt="" coords="239,83,349,109"/>
-<area shape="rect" id="node21" href="$struct_c_o_m_p.html" title="COMP" alt="" coords="384,291,445,317"/>
+<area shape="rect" id="node21" href="$struct_c_o_m_p.html" title="COMP" alt="" coords="384,277,445,304"/>
 </map>
