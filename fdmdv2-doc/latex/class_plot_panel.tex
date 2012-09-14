@@ -52,10 +52,10 @@ Collaboration diagram for Plot\-Panel\-:\nopagebreak
 \hypertarget{class_plot_panel_a042c9df2ebe0c245d9fb5f3aa63595bc}{void {\bfseries paint\-Event} (wx\-Paint\-Event \&evt)}\label{class_plot_panel_a042c9df2ebe0c245d9fb5f3aa63595bc}
 
 \item 
-\hypertarget{class_plot_panel_a5f35a9628a035ef904fb056f5ebcc3c3}{virtual void {\bfseries draw} (wx\-Auto\-Buffered\-Paint\-D\-C \&dc)}\label{class_plot_panel_a5f35a9628a035ef904fb056f5ebcc3c3}
+\hypertarget{class_plot_panel_a974601747a67a4637a3a133cefe70c13}{virtual void {\bfseries draw} (wx\-Auto\-Buffered\-Paint\-D\-C \&pdc)}\label{class_plot_panel_a974601747a67a4637a3a133cefe70c13}
 
 \item 
-\hypertarget{class_plot_panel_ac9a8cc0d4ab016dc22195b813643c675}{virtual void {\bfseries draw\-Graticule} (wx\-Auto\-Buffered\-Paint\-D\-C \&dc)}\label{class_plot_panel_ac9a8cc0d4ab016dc22195b813643c675}
+\hypertarget{class_plot_panel_a5444b418c756380e5e08f86a34615be3}{virtual void {\bfseries draw\-Graticule} (wx\-Auto\-Buffered\-Paint\-D\-C \&pdc)}\label{class_plot_panel_a5444b418c756380e5e08f86a34615be3}
 
 \item 
 \hypertarget{class_plot_panel_a8e8722d1f4c02f166f7acd6905ea4009}{virtual double {\bfseries Set\-Zoom\-Factor} (double zf)}\label{class_plot_panel_a8e8722d1f4c02f166f7acd6905ea4009}
@@ -85,13 +85,16 @@ Collaboration diagram for Plot\-Panel\-:\nopagebreak
 \hypertarget{class_plot_panel_a229628c08bb7d0fa16589dbf83d635d1}{wx\-Pen {\bfseries m\-\_\-pen\-Solid}}\label{class_plot_panel_a229628c08bb7d0fa16589dbf83d635d1}
 
 \item 
-\hypertarget{class_plot_panel_ad1cfa169df1cfa5ef798b57d2619d742}{wx\-Rect {\bfseries m\-\_\-rect\-Ctrl}}\label{class_plot_panel_ad1cfa169df1cfa5ef798b57d2619d742}
+\hypertarget{class_plot_panel_aef7e50cc8a27b9434d17d7d8c245606c}{wx\-Rect {\bfseries m\-\_\-r\-Ctrl\-Prev}}\label{class_plot_panel_aef7e50cc8a27b9434d17d7d8c245606c}
 
 \item 
-\hypertarget{class_plot_panel_a467e202bbd0fa3ef1997fa2b322e349d}{wx\-Rect {\bfseries m\-\_\-rect\-Grid}}\label{class_plot_panel_a467e202bbd0fa3ef1997fa2b322e349d}
+\hypertarget{class_plot_panel_a2c10cfe6bcd979613cec037a71ba2c94}{wx\-Rect {\bfseries m\-\_\-r\-Ctrl}}\label{class_plot_panel_a2c10cfe6bcd979613cec037a71ba2c94}
 
 \item 
-\hypertarget{class_plot_panel_afcee74e089f5a50659bb534db80532d9}{wx\-Rect {\bfseries m\-\_\-rect\-Plot}}\label{class_plot_panel_afcee74e089f5a50659bb534db80532d9}
+\hypertarget{class_plot_panel_ae8d79eab28220ea1fa8ffcbfd70bc84a}{wx\-Rect {\bfseries m\-\_\-r\-Grid}}\label{class_plot_panel_ae8d79eab28220ea1fa8ffcbfd70bc84a}
+
+\item 
+\hypertarget{class_plot_panel_aa4d6249f2f09d03682b8fa704be04548}{wx\-Rect {\bfseries m\-\_\-r\-Plot}}\label{class_plot_panel_aa4d6249f2f09d03682b8fa704be04548}
 
 \item 
 \hypertarget{class_plot_panel_ad28637582a93843082fc7b1d8d80c807}{\hyperlink{class_main_frame}{Main\-Frame} $\ast$ {\bfseries m\-\_\-p\-Top\-Frame}}\label{class_plot_panel_ad28637582a93843082fc7b1d8d80c807}
@@ -124,12 +127,6 @@ Collaboration diagram for Plot\-Panel\-:\nopagebreak
 \hypertarget{class_plot_panel_a822981fef8ff50da327b3dbca9fd2777}{int {\bfseries m\-\_\-y}}\label{class_plot_panel_a822981fef8ff50da327b3dbca9fd2777}
 
 \item 
-\hypertarget{class_plot_panel_ae78b6e7fc3e44bea81809813d753125c}{int {\bfseries m\-\_\-w}}\label{class_plot_panel_ae78b6e7fc3e44bea81809813d753125c}
-
-\item 
-\hypertarget{class_plot_panel_adcc3cec53897df2c9e99a980938092c1}{int {\bfseries m\-\_\-h}}\label{class_plot_panel_adcc3cec53897df2c9e99a980938092c1}
-
-\item 
 \hypertarget{class_plot_panel_ab41676a2e46c2e801bc639c274a7d5f5}{int {\bfseries m\-\_\-left}}\label{class_plot_panel_ab41676a2e46c2e801bc639c274a7d5f5}
 
 \item 
@@ -158,6 +155,9 @@ Collaboration diagram for Plot\-Panel\-:\nopagebreak
 
 \item 
 \hypertarget{class_plot_panel_acebe9485868374626f03516e3508b592}{bool {\bfseries m\-\_\-mouse\-Down}}\label{class_plot_panel_acebe9485868374626f03516e3508b592}
+
+\item 
+\hypertarget{class_plot_panel_a1bb0714da68ee75a51a4ebb9e9ea3cad}{bool {\bfseries m\-\_\-first\-Pass}}\label{class_plot_panel_a1bb0714da68ee75a51a4ebb9e9ea3cad}
 
 \item 
 \hypertarget{class_plot_panel_ae2f4907a8e4ed958ef4995e99b1f7148}{double {\bfseries m\-\_\-zoom\-Factor}}\label{class_plot_panel_ae2f4907a8e4ed958ef4995e99b1f7148}

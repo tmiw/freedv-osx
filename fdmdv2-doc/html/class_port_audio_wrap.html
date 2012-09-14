@@ -55,9 +55,9 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4af13f96f4f8639148668c89942b3365"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4af13f96f4f8639148668c89942b3365"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>per_frame_rx_processing</b> (short output_buf[], int *n_output_buf, int codec_bits[], short input_buf[], int *n_input_buf, int *nin, int *state, struct CODEC2 *c2)</td></tr>
-<tr class="separator:a4af13f96f4f8639148668c89942b3365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987405b6ca5fbecb33ac69ddfe843659"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a987405b6ca5fbecb33ac69ddfe843659"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>averageData</b> (float mag_dB[])</td></tr>
+<tr class="separator:a987405b6ca5fbecb33ac69ddfe843659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a122bf5de62e7f1fb1bfed6801e063c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a122bf5de62e7f1fb1bfed6801e063c"></a>
 PaDeviceIndex&#160;</td><td class="memItemRight" valign="bottom"><b>getDefaultInputDevice</b> ()</td></tr>
 <tr class="separator:a2a122bf5de62e7f1fb1bfed6801e063c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -76,18 +76,18 @@ PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setSampleRate</b> 
 <tr class="memitem:a47fe0dd437c0a4693824966e7100255a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47fe0dd437c0a4693824966e7100255a"></a>
 PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setStreamFlags</b> (PaStreamFlags flags)</td></tr>
 <tr class="separator:a47fe0dd437c0a4693824966e7100255a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b455cc4397b90c6d381c26073e51b2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b455cc4397b90c6d381c26073e51b2a"></a>
-PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setCallback</b> (PaStreamCallback *streamCallback)</td></tr>
-<tr class="separator:a7b455cc4397b90c6d381c26073e51b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a40702f7b56abb4b6927fb6493db92e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a40702f7b56abb4b6927fb6493db92e"></a>
+PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setCallback</b> (PaStreamCallback *m_pStreamCallback)</td></tr>
+<tr class="separator:a2a40702f7b56abb4b6927fb6493db92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf02f262bcd9f85c33fea7da0e4cd841"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf02f262bcd9f85c33fea7da0e4cd841"></a>
 PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setStreamCallback</b> (PaStream *stream, PaStreamCallback *callback)</td></tr>
 <tr class="separator:adf02f262bcd9f85c33fea7da0e4cd841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a163f9ff1095444793a25f1e90442b32c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a163f9ff1095444793a25f1e90442b32c"></a>
-PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setStreamFinishedCallback</b> (PaStream *stream, PaStreamFinishedCallback *streamFinishedCallback)</td></tr>
-<tr class="separator:a163f9ff1095444793a25f1e90442b32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9fa5c4e8bd989d3ff722c76a381f33f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9fa5c4e8bd989d3ff722c76a381f33f"></a>
-PaError&#160;</td><td class="memItemRight" valign="bottom"><b>streamOpen</b> ()</td></tr>
-<tr class="separator:ae9fa5c4e8bd989d3ff722c76a381f33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e2c0e5700cacd09a330cd6573cff7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85e2c0e5700cacd09a330cd6573cff7d"></a>
+PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setStreamFinishedCallback</b> (PaStream *stream, PaStreamFinishedCallback *m_pStreamFinishedCallback)</td></tr>
+<tr class="separator:a85e2c0e5700cacd09a330cd6573cff7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a132273a300efd015cf3d66ee5b250216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a132273a300efd015cf3d66ee5b250216"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setInputBuffer</b> (const PaStreamParameters &amp;inputBuffer)</td></tr>
+<tr class="separator:a132273a300efd015cf3d66ee5b250216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf1e9b6f6b6e09df0b926c7995963575"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf1e9b6f6b6e09df0b926c7995963575"></a>
 PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setInputDevice</b> (PaDeviceIndex dev)</td></tr>
 <tr class="separator:abf1e9b6f6b6e09df0b926c7995963575"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,51 +130,24 @@ PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputSampleFor
 <tr class="memitem:a619ad8a126e30b328468a57c8047f2f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a619ad8a126e30b328468a57c8047f2f8"></a>
 PaError&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputLatency</b> (PaTime latency)</td></tr>
 <tr class="separator:a619ad8a126e30b328468a57c8047f2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a879e58affa1895a9fd737b44e72b609e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a879e58affa1895a9fd737b44e72b609e"></a>
-PaError&#160;</td><td class="memItemRight" valign="bottom"><b>streamStart</b> ()</td></tr>
-<tr class="separator:a879e58affa1895a9fd737b44e72b609e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f900dbb4003a1e01341e4f9f95c72e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f900dbb4003a1e01341e4f9f95c72e8"></a>
-PaError&#160;</td><td class="memItemRight" valign="bottom"><b>streamClose</b> ()</td></tr>
-<tr class="separator:a7f900dbb4003a1e01341e4f9f95c72e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7d9fc6cda5c61cda105e6d9bba9215c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7d9fc6cda5c61cda105e6d9bba9215c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputHostApiStreamInfo</b> (void *info=NULL)</td></tr>
 <tr class="separator:ab7d9fc6cda5c61cda105e6d9bba9215c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1014d8750069b7dc914e6f836da79660"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1014d8750069b7dc914e6f836da79660"></a>
 PaTime&#160;</td><td class="memItemRight" valign="bottom"><b>getOutputDefaultLowLatency</b> ()</td></tr>
 <tr class="separator:a1014d8750069b7dc914e6f836da79660"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a987405b6ca5fbecb33ac69ddfe843659"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a987405b6ca5fbecb33ac69ddfe843659"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>averageData</b> (float mag_dB[])</td></tr>
-<tr class="separator:a987405b6ca5fbecb33ac69ddfe843659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65d6263d05a44f6696a3eb93a669e862"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65d6263d05a44f6696a3eb93a669e862"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setFdmdvState</b> (FDMDV *fdmdv_state)</td></tr>
 <tr class="separator:a65d6263d05a44f6696a3eb93a669e862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a132273a300efd015cf3d66ee5b250216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a132273a300efd015cf3d66ee5b250216"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setInputBuffer</b> (const PaStreamParameters &amp;inputBuffer)</td></tr>
-<tr class="separator:a132273a300efd015cf3d66ee5b250216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2284b3598963428bd5970b69a2ec0370"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2284b3598963428bd5970b69a2ec0370"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputBuffer</b> (const PaStreamParameters &amp;outputBuffer)</td></tr>
 <tr class="separator:a2284b3598963428bd5970b69a2ec0370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20f5cf508b5e13bd29632acb1af52d26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20f5cf508b5e13bd29632acb1af52d26"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSamplerate</b> (int samplerate)</td></tr>
-<tr class="separator:a20f5cf508b5e13bd29632acb1af52d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2c8ee53c0f11504777d1dc41747b453"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2c8ee53c0f11504777d1dc41747b453"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setStatusFlags</b> (const PaStreamCallbackFlags &amp;statusFlags)</td></tr>
-<tr class="separator:ad2c8ee53c0f11504777d1dc41747b453"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f18f16ddf796eba036e11694b25a2a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f18f16ddf796eba036e11694b25a2a4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (PaStream *stream)</td></tr>
-<tr class="separator:a8f18f16ddf796eba036e11694b25a2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13581d19c503fc1a837078c31d80df11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13581d19c503fc1a837078c31d80df11"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setStreamFinishedCallback</b> (PaStreamFinishedCallback *streamFinishedCallback)</td></tr>
-<tr class="separator:a13581d19c503fc1a837078c31d80df11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d2bb7132714099aa2a0390f11a57ce6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d2bb7132714099aa2a0390f11a57ce6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeInfo</b> (PaStreamCallbackTimeInfo *timeInfo)</td></tr>
 <tr class="separator:a4d2bb7132714099aa2a0390f11a57ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bac5a36a40fd1f86df5c1f94e964ac4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bac5a36a40fd1f86df5c1f94e964ac4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setUserData</b> (void *userData)</td></tr>
 <tr class="separator:a2bac5a36a40fd1f86df5c1f94e964ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66693a413ee2158cc331253a1035f915"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66693a413ee2158cc331253a1035f915"></a>
-FDMDV *&#160;</td><td class="memItemRight" valign="bottom"><b>getFdmdvState</b> ()</td></tr>
-<tr class="separator:a66693a413ee2158cc331253a1035f915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2ea7c12d674b8bf882a5a5ffdff7acb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2ea7c12d674b8bf882a5a5ffdff7acb"></a>
 unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>getFramesPerBuffer</b> () const </td></tr>
 <tr class="separator:ad2ea7c12d674b8bf882a5a5ffdff7acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,18 +157,33 @@ const PaStreamParameters &amp;&#160;</td><td class="memItemRight" valign="bottom
 <tr class="memitem:abb0273b674c970ee96594dd61f7abfc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb0273b674c970ee96594dd61f7abfc9"></a>
 const PaStreamParameters &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getOutputBuffer</b> () const </td></tr>
 <tr class="separator:abb0273b674c970ee96594dd61f7abfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2007046aefb3754994b3fe883b237177"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2007046aefb3754994b3fe883b237177"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getSamplerate</b> () const </td></tr>
-<tr class="separator:a2007046aefb3754994b3fe883b237177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43a6d5f7562fde40166872b77a7804ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43a6d5f7562fde40166872b77a7804ea"></a>
 const PaStreamCallbackFlags &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getStatusFlags</b> () const </td></tr>
 <tr class="separator:a43a6d5f7562fde40166872b77a7804ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66693a413ee2158cc331253a1035f915"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66693a413ee2158cc331253a1035f915"></a>
+FDMDV *&#160;</td><td class="memItemRight" valign="bottom"><b>getFdmdvState</b> ()</td></tr>
+<tr class="separator:a66693a413ee2158cc331253a1035f915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2007046aefb3754994b3fe883b237177"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2007046aefb3754994b3fe883b237177"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getSamplerate</b> () const </td></tr>
+<tr class="separator:a2007046aefb3754994b3fe883b237177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33fed4f960c963aff711932ee84e9a1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33fed4f960c963aff711932ee84e9a1e"></a>
 PaStream *&#160;</td><td class="memItemRight" valign="bottom"><b>getStream</b> ()</td></tr>
 <tr class="separator:a33fed4f960c963aff711932ee84e9a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07fdd881924d8b7b31b0ed309a8d56cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07fdd881924d8b7b31b0ed309a8d56cb"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>getUserData</b> ()</td></tr>
 <tr class="separator:a07fdd881924d8b7b31b0ed309a8d56cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5fd9f501e93f712e46b0d805b57493"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd5fd9f501e93f712e46b0d805b57493"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getDataAvail</b> ()</td></tr>
+<tr class="separator:afd5fd9f501e93f712e46b0d805b57493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879e58affa1895a9fd737b44e72b609e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a879e58affa1895a9fd737b44e72b609e"></a>
+PaError&#160;</td><td class="memItemRight" valign="bottom"><b>streamStart</b> ()</td></tr>
+<tr class="separator:a879e58affa1895a9fd737b44e72b609e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f900dbb4003a1e01341e4f9f95c72e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f900dbb4003a1e01341e4f9f95c72e8"></a>
+PaError&#160;</td><td class="memItemRight" valign="bottom"><b>streamClose</b> ()</td></tr>
+<tr class="separator:a7f900dbb4003a1e01341e4f9f95c72e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9fa5c4e8bd989d3ff722c76a381f33f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9fa5c4e8bd989d3ff722c76a381f33f"></a>
+PaError&#160;</td><td class="memItemRight" valign="bottom"><b>streamOpen</b> ()</td></tr>
+<tr class="separator:ae9fa5c4e8bd989d3ff722c76a381f33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b644da1b76cd3c6b1900218fcb4873"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73b644da1b76cd3c6b1900218fcb4873"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>terminate</b> ()</td></tr>
 <tr class="separator:a73b644da1b76cd3c6b1900218fcb4873"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,7 +219,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>m_av_mag</b> [FDMDV_
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 11 2012 14:31:49 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 14 2012 18:21:32 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

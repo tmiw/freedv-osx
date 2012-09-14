@@ -1,4 +1,4 @@
-.TH "MainFrame" 3 "Tue Sep 11 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "MainFrame" 3 "Fri Sep 14 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,6 +13,9 @@ Inherits \fBTopFrame\fP\&.
 .in +1c
 .ti -1c
 .RI "\fBMainFrame\fP (wxWindow *parent)"
+.br
+.ti -1c
+.RI "void \fBper_frame_rx_processing\fP (short output_buf[], int *n_output_buf, int codec_bits[], short input_buf[], int *n_input_buf, int *nin, int *state, struct CODEC2 *c2)"
 .br
 .in -1c
 .SS "Static Public Member Functions"
@@ -85,6 +88,12 @@ Inherits \fBTopFrame\fP\&.
 .ti -1c
 .RI "wxSound * \fBm_sound\fP"
 .br
+.ti -1c
+.RI "struct FDMDV * \fBm_pFDMDV_state\fP"
+.br
+.ti -1c
+.RI "wxTimer \fBm_plotTimer\fP"
+.br
 .in -1c
 .SS "Protected Member Functions"
 
@@ -94,6 +103,9 @@ Inherits \fBTopFrame\fP\&.
 .br
 .ti -1c
 .RI "virtual void \fBOnExitClick\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBaverageData\fP (float mag_dB[])"
 .br
 .ti -1c
 .RI "void \fBstartTxStream\fP ()"
@@ -235,6 +247,9 @@ Inherits \fBTopFrame\fP\&.
 .br
 .ti -1c
 .RI "void \fBOnUpdateUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTimer\fP (wxTimerEvent &evt)"
 .br
 .ti -1c
 .RI "wxString \fBLoadUserImage\fP (wxImage &image)"

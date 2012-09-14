@@ -1,4 +1,4 @@
-.TH "PlotPanel" 3 "Tue Sep 11 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "PlotPanel" 3 "Fri Sep 14 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -44,10 +44,10 @@ Inherited by \fBPlotScalar\fP, \fBPlotScatter\fP, \fBPlotSpectrum\fP, and \fBPlo
 .RI "void \fBpaintEvent\fP (wxPaintEvent &evt)"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (wxAutoBufferedPaintDC &dc)"
+.RI "virtual void \fBdraw\fP (wxAutoBufferedPaintDC &pdc)"
 .br
 .ti -1c
-.RI "virtual void \fBdrawGraticule\fP (wxAutoBufferedPaintDC &dc)"
+.RI "virtual void \fBdrawGraticule\fP (wxAutoBufferedPaintDC &pdc)"
 .br
 .ti -1c
 .RI "virtual double \fBSetZoomFactor\fP (double zf)"
@@ -78,13 +78,16 @@ Inherited by \fBPlotScalar\fP, \fBPlotScatter\fP, \fBPlotSpectrum\fP, and \fBPlo
 .RI "wxPen \fBm_penSolid\fP"
 .br
 .ti -1c
-.RI "wxRect \fBm_rectCtrl\fP"
+.RI "wxRect \fBm_rCtrlPrev\fP"
 .br
 .ti -1c
-.RI "wxRect \fBm_rectGrid\fP"
+.RI "wxRect \fBm_rCtrl\fP"
 .br
 .ti -1c
-.RI "wxRect \fBm_rectPlot\fP"
+.RI "wxRect \fBm_rGrid\fP"
+.br
+.ti -1c
+.RI "wxRect \fBm_rPlot\fP"
 .br
 .ti -1c
 .RI "\fBMainFrame\fP * \fBm_pTopFrame\fP"
@@ -118,12 +121,6 @@ Inherited by \fBPlotScalar\fP, \fBPlotScatter\fP, \fBPlotSpectrum\fP, and \fBPlo
 .RI "int \fBm_y\fP"
 .br
 .ti -1c
-.RI "int \fBm_w\fP"
-.br
-.ti -1c
-.RI "int \fBm_h\fP"
-.br
-.ti -1c
 .RI "int \fBm_left\fP"
 .br
 .ti -1c
@@ -152,6 +149,9 @@ Inherited by \fBPlotScalar\fP, \fBPlotScatter\fP, \fBPlotSpectrum\fP, and \fBPlo
 .br
 .ti -1c
 .RI "bool \fBm_mouseDown\fP"
+.br
+.ti -1c
+.RI "bool \fBm_firstPass\fP"
 .br
 .ti -1c
 .RI "double \fBm_zoomFactor\fP"

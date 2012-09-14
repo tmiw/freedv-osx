@@ -29,12 +29,11 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_audio_dlg.html#ad1acb1d52175795d265d7adcafc10316"><param name="Name" value="populateAudioInfo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_audio_dlg.html#a194ed3fb219d7a93824884015e625fe8"><param name="Name" value="populateStandardSampleRates"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_audio_stream.html"><param name="Name" value="AudioStream"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a31585b905eee875973b106f4e79c263f"><param name="Name" value="averageData"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_audio_stream.html#a1e253941ff189daa6ae1ebdd4658b943"><param name="Name" value="AudioStream"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_audio_stream.html#a1abd5e1c5f7fe05fc66c52603818fc5f"><param name="Name" value="generate"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a31585b905eee875973b106f4e79c263f"><param name="Name" value="MainFrame"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a987405b6ca5fbecb33ac69ddfe843659"><param name="Name" value="PortAudioWrap"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a987405b6ca5fbecb33ac69ddfe843659"><param name="Name" value="averageData"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_scalar.html#ad2c5214849ba51b85c61e5ed1949b28e"><param name="Name" value="clip"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_c_o_m_p.html"><param name="Name" value="COMP"></OBJECT>
   <UL>
@@ -132,23 +131,24 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_options.html#aad6cf9d439aced63416da6dc04f326d7"><param name="Name" value="OnClose"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_options.html#ab293c5e4e64e5d2de1b9d1ee67e3a448"><param name="Name" value="OnInitDialog"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a5f35a9628a035ef904fb056f5ebcc3c3"><param name="Name" value="draw"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a974601747a67a4637a3a133cefe70c13"><param name="Name" value="draw"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a5f35a9628a035ef904fb056f5ebcc3c3"><param name="Name" value="PlotPanel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a974601747a67a4637a3a133cefe70c13"><param name="Name" value="PlotPanel"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_scalar.html#aa901215be79b5a522c416224c6554cf3"><param name="Name" value="PlotScalar"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_scatter.html#aee86ff1a62c9f5131a9e2901078143d6"><param name="Name" value="PlotScatter"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_spectrum.html#aeab5798a4f3bd55bd69045cc7b817d48"><param name="Name" value="PlotSpectrum"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a3956d17d4ece2c0ca4d50b6f7002b24c"><param name="Name" value="PlotWaterfall"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a86c6b3a9dc720b681f7b4e47d1fe193d"><param name="Name" value="PlotWaterfall"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ac9a8cc0d4ab016dc22195b813643c675"><param name="Name" value="drawGraticule"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a5444b418c756380e5e08f86a34615be3"><param name="Name" value="drawGraticule"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ac9a8cc0d4ab016dc22195b813643c675"><param name="Name" value="PlotPanel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a5444b418c756380e5e08f86a34615be3"><param name="Name" value="PlotPanel"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_spectrum.html#a2d78efb58ea00ec8961a88632a54f357"><param name="Name" value="PlotSpectrum"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#aa97d243b7bb91238b7493dcb96139803"><param name="Name" value="PlotWaterfall"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_top_frame.html#a60ea330aef5ff340179c5ee637d3a204"><param name="Name" value="edit"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_top_frame.html#a2f719fd825ff8e4dbf04bc734429b668"><param name="Name" value="file"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_audio_stream.html#a1abd5e1c5f7fe05fc66c52603818fc5f"><param name="Name" value="generate"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_app.html#ae6022a31caf96dbcc2f519fc5fdc0bbe"><param name="Name" value="g_config"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#afd5fd9f501e93f712e46b0d805b57493"><param name="Name" value="getDataAvail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a2a122bf5de62e7f1fb1bfed6801e063c"><param name="Name" value="getDefaultInputDevice"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a8cde3f5f6f312fbd8c0ad60619d617ad"><param name="Name" value="getDefaultOutputDevice"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a246ec79a44d879a74d6afe3e1005bc00"><param name="Name" value="getDeviceInfo"></OBJECT>
@@ -175,6 +175,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#ae89ba28aeb62269ae28be8908294bb1c"><param name="Name" value="isActive"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#ad4a72bbe2ec6190336c2412df076c3f7"><param name="Name" value="isOpen"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#ae0bac2f93270a323c9ead4dbf61eda1d"><param name="Name" value="isStopped"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_app.html#af06cc098b89d1c606aa94ad87d6b0105"><param name="Name" value="loadConfig"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#aa5776602a5e021fe3c83c1cdf36340d1"><param name="Name" value="loadData"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a2577b78ec0105922e5356287519d2e54"><param name="Name" value="LoadUserImage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_top_frame.html#af2bf3b05c2e23a16d9b74d8689c83dca"><param name="Name" value="m_auiNbookCtrl"></OBJECT>
@@ -190,10 +191,10 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_audio.html#af35d36a3df31c77480d7714e08533d58"><param name="Name" value="m_comboCodecSpkr"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_audio.html#aeaf78c48df4b0314dc4dc06bfa2244b7"><param name="Name" value="m_comboCodecTx"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_audio.html#aa2cf1a98f25e26545da3044b354ba9a6"><param name="Name" value="m_comboRadioRx"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a1bb0714da68ee75a51a4ebb9e9ea3cad"><param name="Name" value="m_firstPass"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_top_frame.html#a156842bf1e564d3a3bfbf8a17ae1df10"><param name="Name" value="m_gaugeLevel"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_top_frame.html#aff23d43f975a63e1bfeec89f1ef19257"><param name="Name" value="m_gaugeSNR"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a1cb3639849f17b1882b2b3713fd690cf"><param name="Name" value="m_greyscale"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#adcc3cec53897df2c9e99a980938092c1"><param name="Name" value="m_h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#aae04482318331ac760954376f23a1e3c"><param name="Name" value="m_heatmap_lut"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_scalar.html#a3ff0dec7b8f50b3ca7155c06e8877ab5"><param name="Name" value="m_index"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a00eb5aef94866f0f385fcf793cb841b6"><param name="Name" value="m_label_size"></OBJECT>
@@ -202,7 +203,9 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_audio.html#a022070976a0bc9ffb78bea4298f759aa"><param name="Name" value="m_lbVoiceInput"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_audio.html#a75f209f62dd213b4236624f019f611e1"><param name="Name" value="m_lbVoiceOutput"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ab41676a2e46c2e801bc639c274a7d5f5"><param name="Name" value="m_left"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#aa0b8f5bb510697a7eb8f48628a39b9c7"><param name="Name" value="m_line_color"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_com_ports.html#a79fa4831dbf5e4aa13f239c23d1ca9a8"><param name="Name" value="m_listCtrlPortSelect"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a1b80aa40a1194ece27c87ec265ef7d2c"><param name="Name" value="m_mDC"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_scalar.html#a28e4e09d513bce7b2890635d1ed1967d"><param name="Name" value="m_mem"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_scalar.html#a28e4e09d513bce7b2890635d1ed1967d"><param name="Name" value="PlotScalar"></OBJECT>
@@ -226,6 +229,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a227751dba1777b261ffdc27b53fb087d"><param name="Name" value="m_penDotDash"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a111adb0975870b5d448da832bd44fc99"><param name="Name" value="m_penShortDash"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a229628c08bb7d0fa16589dbf83d635d1"><param name="Name" value="m_penSolid"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#aae86bcc3a14e94ddc496b9cce6a63c56"><param name="Name" value="m_pFDMDV_state"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#aabe58bef730ca69b342f8ac663c3d70d"><param name="Name" value="m_plotTimer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a63b99d2f75a6486dda96f4934ba369fa"><param name="Name" value="m_pNoteBook"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#af85cf51a62f09adf0cbb4eb35d7cfc97"><param name="Name" value="m_prev_h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a398b423039df00405f2f23b786a02b0d"><param name="Name" value="m_prev_w"></OBJECT>
@@ -234,9 +239,10 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ad28637582a93843082fc7b1d8d80c807"><param name="Name" value="m_pTopFrame"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_audio.html#abbbc7d86cca84f89c78c16b9b6d3b793"><param name="Name" value="m_radioBtnFileOnly"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_dlg_audio.html#a44c3e54a014e7a4e921398bddc6681c7"><param name="Name" value="m_radioBtnPortAudio"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ad1cfa169df1cfa5ef798b57d2619d742"><param name="Name" value="m_rectCtrl"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a467e202bbd0fa3ef1997fa2b322e349d"><param name="Name" value="m_rectGrid"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#afcee74e089f5a50659bb534db80532d9"><param name="Name" value="m_rectPlot"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a2c10cfe6bcd979613cec037a71ba2c94"><param name="Name" value="m_rCtrl"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#aef7e50cc8a27b9434d17d7d8c245606c"><param name="Name" value="m_rCtrlPrev"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ae8d79eab28220ea1fa8ffcbfd70bc84a"><param name="Name" value="m_rGrid"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#aa4d6249f2f09d03682b8fa704be04548"><param name="Name" value="m_rPlot"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a7182715e509f98f42e78210d324fe042"><param name="Name" value="m_rubberBand"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ad6f8ae2f867f69dd69a2b58ad0b26ccb"><param name="Name" value="m_RXCodec2"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ab9d54920598f48bdbfa67161b3167b11"><param name="Name" value="m_rxDevIn"></OBJECT>
@@ -313,7 +319,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a8532b7b31adc84716e6edcf9c8d54192"><param name="Name" value="m_TxRunning"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_top_frame.html#a7611a87ad6897f435cae4f9f972195b1"><param name="Name" value="m_txtCtrl"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a20336cef42ecb91f0fd1f9af1f70ba43"><param name="Name" value="m_use_bitmap"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ae78b6e7fc3e44bea81809813d753125c"><param name="Name" value="m_w"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#abd0a64bd20aec2e300e383abfd60315d"><param name="Name" value="m_x"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_scalar.html#a9a9edfbd8517f1ce1e7b75bcd4fda4f5"><param name="Name" value="m_x_max"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a822981fef8ff50da327b3dbca9fd2777"><param name="Name" value="m_y"></OBJECT>
@@ -321,6 +326,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ae2f4907a8e4ed958ef4995e99b1f7148"><param name="Name" value="m_zoomFactor"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_app.html"><param name="Name" value="MainApp"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_app.html#ae6022a31caf96dbcc2f519fc5fdc0bbe"><param name="Name" value="g_config"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_app.html#af06cc098b89d1c606aa94ad87d6b0105"><param name="Name" value="loadConfig"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_app.html#aff49a6bb4a0494d717a3136e9fe17351"><param name="Name" value="OnExit"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_app.html#aff3d398e1b61f1016c37d57798f86731"><param name="Name" value="OnInit"></OBJECT>
   </UL>
@@ -328,12 +335,15 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a44e48d93613d91be1db586553466feac"><param name="Name" value="abortRxStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#abbe36f1aac14dba091ab0ec0c6ef2936"><param name="Name" value="abortTxStream"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a31585b905eee875973b106f4e79c263f"><param name="Name" value="averageData"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a2577b78ec0105922e5356287519d2e54"><param name="Name" value="LoadUserImage"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a4cbae9088c818e3b0885955290b5db9e"><param name="Name" value="m_panelDefaultA"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a4b9bdbcea86dbffc51bc48ae586cbe01"><param name="Name" value="m_panelScalar"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ada5dd6fc66036782c19f12175793da13"><param name="Name" value="m_panelScatter"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a3fc0fe9ca321814476397cb32476e40c"><param name="Name" value="m_panelSpectrum"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a6f0fa80dd24e33f0d32228ac73418882"><param name="Name" value="m_panelWaterfall"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#aae86bcc3a14e94ddc496b9cce6a63c56"><param name="Name" value="m_pFDMDV_state"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#aabe58bef730ca69b342f8ac663c3d70d"><param name="Name" value="m_plotTimer"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ad6f8ae2f867f69dd69a2b58ad0b26ccb"><param name="Name" value="m_RXCodec2"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ab9d54920598f48bdbfa67161b3167b11"><param name="Name" value="m_rxDevIn"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#aa73d0adbbf4fe9f2d14778ad1474a3d3"><param name="Name" value="m_rxDevOut"></OBJECT>
@@ -377,6 +387,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a8fd9580d3191784843f34269810a676b"><param name="Name" value="OnSize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#aeda570594ad6ca298ade6b2dec5812c4"><param name="Name" value="OnSliderScrollBottom"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#af7e0da6a850c5f08fd726280b7dc0af4"><param name="Name" value="OnSliderScrollTop"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a9ad22e55c7a3c93f9c071d366ae760d6"><param name="Name" value="OnTimer"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ab1371babf6ebc9e24211a3ada34ab666"><param name="Name" value="OnTogBtnALCClick"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#af237b0cdbd857d4cc72f5a523457eb82"><param name="Name" value="OnTogBtnAnalogClick"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a7fc4afa20b92ac8e5f1ddfcf86820f28"><param name="Name" value="OnTogBtnOnOff"></OBJECT>
@@ -391,6 +402,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a82b97e0f3c4e530d5700b2c2dbac42bf"><param name="Name" value="OnToolsOptions"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ac7ceb1e047f2f3b0c26c0b42a110fe99"><param name="Name" value="OnToolsOptionsUI"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a4757c5d7d0e9b2c98dc34336f1dce49e"><param name="Name" value="OnUpdateUI"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#af9f4cfb8469872efd9c057d1bc215f08"><param name="Name" value="per_frame_rx_processing"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a45e054e7f42f10088a699821a169d295"><param name="Name" value="rxCallback"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ad17245c1c9c295fc216fc6615f31e0a5"><param name="Name" value="startRxStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#af01eb2c59f1a9bcee0b956f8a72004c0"><param name="Name" value="startTxStream"></OBJECT>
@@ -581,7 +593,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_scalar.html#a6b41cd9d409567b395f539d0204c706c"><param name="Name" value="PlotScalar"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_scatter.html#aefccecfa048d8102724295fce801cb4e"><param name="Name" value="PlotScatter"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_spectrum.html#aa104352673f08ff08c72bcf4729f23eb"><param name="Name" value="PlotSpectrum"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#adae15df2acf8dd7a1812ea79b2708b65"><param name="Name" value="PlotWaterfall"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#aeda570594ad6ca298ade6b2dec5812c4"><param name="Name" value="OnSliderScrollBottom"></OBJECT>
   <UL>
@@ -593,6 +604,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#af7e0da6a850c5f08fd726280b7dc0af4"><param name="Name" value="MainFrame"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_top_frame.html#add7272e7926661e4766572a5f3b39d70"><param name="Name" value="TopFrame"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a9ad22e55c7a3c93f9c071d366ae760d6"><param name="Name" value="OnTimer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ab1371babf6ebc9e24211a3ada34ab666"><param name="Name" value="OnTogBtnALCClick"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#ab1371babf6ebc9e24211a3ada34ab666"><param name="Name" value="MainFrame"></OBJECT>
@@ -686,18 +698,17 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structpa_call_back_data.html#a1eaf4a649210c178b8671653b89e2141"><param name="Name" value="in8k"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a042c9df2ebe0c245d9fb5f3aa63595bc"><param name="Name" value="paintEvent"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a4af13f96f4f8639148668c89942b3365"><param name="Name" value="per_frame_rx_processing"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#ae19ead564f66f723b7192dbb2bd5815b"><param name="Name" value="plotData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#af9f4cfb8469872efd9c057d1bc215f08"><param name="Name" value="per_frame_rx_processing"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html"><param name="Name" value="PlotPanel"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a5f35a9628a035ef904fb056f5ebcc3c3"><param name="Name" value="draw"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ac9a8cc0d4ab016dc22195b813643c675"><param name="Name" value="drawGraticule"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a974601747a67a4637a3a133cefe70c13"><param name="Name" value="draw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a5444b418c756380e5e08f86a34615be3"><param name="Name" value="drawGraticule"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a539ab140f79c5cff29031aa312a9f159"><param name="Name" value="GetLabelSize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a6f6ef3db5a4b4f6cb50d92a38fa36dbd"><param name="Name" value="GetZoomFactor"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a8cf01c846dc561a79c0d1dee88a80ef4"><param name="Name" value="m_bmp"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a61a49a35721e334b959e833464add15f"><param name="Name" value="m_Bufsz"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a07334de87de07eeab43eabbdaf730ab5"><param name="Name" value="m_clip"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#adcc3cec53897df2c9e99a980938092c1"><param name="Name" value="m_h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a1bb0714da68ee75a51a4ebb9e9ea3cad"><param name="Name" value="m_firstPass"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a00eb5aef94866f0f385fcf793cb841b6"><param name="Name" value="m_label_size"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ab41676a2e46c2e801bc639c274a7d5f5"><param name="Name" value="m_left"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#acebe9485868374626f03516e3508b592"><param name="Name" value="m_mouseDown"></OBJECT>
@@ -712,13 +723,13 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ab38a4323755a529cbdab28a5854ffc06"><param name="Name" value="m_prev_x"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a2e1ea18bbea07dd04acc76567a993070"><param name="Name" value="m_prev_y"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ad28637582a93843082fc7b1d8d80c807"><param name="Name" value="m_pTopFrame"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ad1cfa169df1cfa5ef798b57d2619d742"><param name="Name" value="m_rectCtrl"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a467e202bbd0fa3ef1997fa2b322e349d"><param name="Name" value="m_rectGrid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#afcee74e089f5a50659bb534db80532d9"><param name="Name" value="m_rectPlot"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a2c10cfe6bcd979613cec037a71ba2c94"><param name="Name" value="m_rCtrl"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#aef7e50cc8a27b9434d17d7d8c245606c"><param name="Name" value="m_rCtrlPrev"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ae8d79eab28220ea1fa8ffcbfd70bc84a"><param name="Name" value="m_rGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#aa4d6249f2f09d03682b8fa704be04548"><param name="Name" value="m_rPlot"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a7182715e509f98f42e78210d324fe042"><param name="Name" value="m_rubberBand"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a8c49969c560b64902272347835f151a0"><param name="Name" value="m_top"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a20336cef42ecb91f0fd1f9af1f70ba43"><param name="Name" value="m_use_bitmap"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ae78b6e7fc3e44bea81809813d753125c"><param name="Name" value="m_w"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#abd0a64bd20aec2e300e383abfd60315d"><param name="Name" value="m_x"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#a822981fef8ff50da327b3dbca9fd2777"><param name="Name" value="m_y"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_panel.html#ae2f4907a8e4ed958ef4995e99b1f7148"><param name="Name" value="m_zoomFactor"></OBJECT>
@@ -775,15 +786,15 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html"><param name="Name" value="PlotWaterfall"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a3956d17d4ece2c0ca4d50b6f7002b24c"><param name="Name" value="draw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a86c6b3a9dc720b681f7b4e47d1fe193d"><param name="Name" value="draw"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#aa97d243b7bb91238b7493dcb96139803"><param name="Name" value="drawGraticule"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a9258386bf42d94ddda768e4e767a77aa"><param name="Name" value="heatmap"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a1cb3639849f17b1882b2b3713fd690cf"><param name="Name" value="m_greyscale"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#aae04482318331ac760954376f23a1e3c"><param name="Name" value="m_heatmap_lut"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#aa0b8f5bb510697a7eb8f48628a39b9c7"><param name="Name" value="m_line_color"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a1b80aa40a1194ece27c87ec265ef7d2c"><param name="Name" value="m_mDC"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#a37d541349ac6f010a90fee3b9f32fbbb"><param name="Name" value="OnPaint"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#ad55e0e3078f0d5c3699df36ba6d8ab5d"><param name="Name" value="OnShow"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#adae15df2acf8dd7a1812ea79b2708b65"><param name="Name" value="OnSize"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#ae19ead564f66f723b7192dbb2bd5815b"><param name="Name" value="plotData"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#aec560c10f32a6c6e92a62225288c28f3"><param name="Name" value="plotPixelData"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_plot_waterfall.html#ab8cb1de06d17616f05ab872923563167"><param name="Name" value="PlotWaterfall"></OBJECT>
   </UL>
@@ -793,6 +804,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a22409ee2e9d87fbab60ef71288620c34"><param name="Name" value="abort"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a987405b6ca5fbecb33ac69ddfe843659"><param name="Name" value="averageData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#afd5fd9f501e93f712e46b0d805b57493"><param name="Name" value="getDataAvail"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a2a122bf5de62e7f1fb1bfed6801e063c"><param name="Name" value="getDefaultInputDevice"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a8cde3f5f6f312fbd8c0ad60619d617ad"><param name="Name" value="getDefaultOutputDevice"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a246ec79a44d879a74d6afe3e1005bc00"><param name="Name" value="getDeviceInfo"></OBJECT>
@@ -814,8 +826,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#ae0bac2f93270a323c9ead4dbf61eda1d"><param name="Name" value="isStopped"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#aa5776602a5e021fe3c83c1cdf36340d1"><param name="Name" value="loadData"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#ad9da60946a4fec855cce07c1e497d7be"><param name="Name" value="m_av_mag"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a4af13f96f4f8639148668c89942b3365"><param name="Name" value="per_frame_rx_processing"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a7b455cc4397b90c6d381c26073e51b2a"><param name="Name" value="setCallback"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a2a40702f7b56abb4b6927fb6493db92e"><param name="Name" value="setCallback"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a65d6263d05a44f6696a3eb93a669e862"><param name="Name" value="setFdmdvState"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a34ec7a96cbe5859f4a6aba6cb4b508cf"><param name="Name" value="setFramesPerBuffer"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a132273a300efd015cf3d66ee5b250216"><param name="Name" value="setInputBuffer"></OBJECT>
@@ -831,12 +842,9 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#ab7d9fc6cda5c61cda105e6d9bba9215c"><param name="Name" value="setOutputHostApiStreamInfo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a619ad8a126e30b328468a57c8047f2f8"><param name="Name" value="setOutputLatency"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a342018893c092acac26509351b45602f"><param name="Name" value="setOutputSampleFormat"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a20f5cf508b5e13bd29632acb1af52d26"><param name="Name" value="setSamplerate"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a7245832a8cafbc8d140a51e106838fbb"><param name="Name" value="setSampleRate"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#ad2c8ee53c0f11504777d1dc41747b453"><param name="Name" value="setStatusFlags"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a8f18f16ddf796eba036e11694b25a2a4"><param name="Name" value="setStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#adf02f262bcd9f85c33fea7da0e4cd841"><param name="Name" value="setStreamCallback"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a163f9ff1095444793a25f1e90442b32c"><param name="Name" value="setStreamFinishedCallback"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a85e2c0e5700cacd09a330cd6573cff7d"><param name="Name" value="setStreamFinishedCallback"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a47fe0dd437c0a4693824966e7100255a"><param name="Name" value="setStreamFlags"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a4d2bb7132714099aa2a0390f11a57ce6"><param name="Name" value="setTimeInfo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a2bac5a36a40fd1f86df5c1f94e964ac4"><param name="Name" value="setUserData"></OBJECT>
@@ -848,7 +856,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_c_o_m_p.html#aab5da66c35473e59242b301dafdfaf7e"><param name="Name" value="real"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_main_frame.html#a45e054e7f42f10088a699821a169d295"><param name="Name" value="rxCallback"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a7b455cc4397b90c6d381c26073e51b2a"><param name="Name" value="setCallback"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a2a40702f7b56abb4b6927fb6493db92e"><param name="Name" value="setCallback"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a65d6263d05a44f6696a3eb93a669e862"><param name="Name" value="setFdmdvState"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a34ec7a96cbe5859f4a6aba6cb4b508cf"><param name="Name" value="setFramesPerBuffer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a132273a300efd015cf3d66ee5b250216"><param name="Name" value="setInputBuffer"></OBJECT>
@@ -865,12 +873,9 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#ab7d9fc6cda5c61cda105e6d9bba9215c"><param name="Name" value="setOutputHostApiStreamInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a619ad8a126e30b328468a57c8047f2f8"><param name="Name" value="setOutputLatency"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a342018893c092acac26509351b45602f"><param name="Name" value="setOutputSampleFormat"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a20f5cf508b5e13bd29632acb1af52d26"><param name="Name" value="setSamplerate"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a7245832a8cafbc8d140a51e106838fbb"><param name="Name" value="setSampleRate"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#ad2c8ee53c0f11504777d1dc41747b453"><param name="Name" value="setStatusFlags"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a8f18f16ddf796eba036e11694b25a2a4"><param name="Name" value="setStream"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#adf02f262bcd9f85c33fea7da0e4cd841"><param name="Name" value="setStreamCallback"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a163f9ff1095444793a25f1e90442b32c"><param name="Name" value="setStreamFinishedCallback"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a85e2c0e5700cacd09a330cd6573cff7d"><param name="Name" value="setStreamFinishedCallback"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a47fe0dd437c0a4693824966e7100255a"><param name="Name" value="setStreamFlags"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a4d2bb7132714099aa2a0390f11a57ce6"><param name="Name" value="setTimeInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_port_audio_wrap.html#a2bac5a36a40fd1f86df5c1f94e964ac4"><param name="Name" value="setUserData"></OBJECT>

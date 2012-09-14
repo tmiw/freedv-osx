@@ -12,7 +12,6 @@ Title=FDMDV2
 main="FDMDV2","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
 
 [FILES]
-audiostream_8h_source.html
 comp_8h_source.html
 dlg__about_8h_source.html
 dlg__audio_8h_source.html
@@ -31,8 +30,6 @@ class_about_dlg.html
 class_about_dlg-members.html
 class_audio_dlg.html
 class_audio_dlg-members.html
-class_audio_stream.html
-class_audio_stream-members.html
 struct_c_o_m_p.html
 struct_c_o_m_p-members.html
 class_com_ports_dlg.html
@@ -213,4 +210,3 @@ inherit_graph_3.png
 inherit_graph_4.png
 inherit_graph_5.png
 inherit_graph_6.png
-inherit_graph_7.png

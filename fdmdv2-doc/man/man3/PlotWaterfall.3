@@ -1,4 +1,4 @@
-.TH "PlotWaterfall" 3 "Tue Sep 11 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "PlotWaterfall" 3 "Fri Sep 14 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,19 +25,13 @@ Inherits \fBPlotPanel\fP\&.
 .RI "void \fBOnPaint\fP (wxPaintEvent &evt)"
 .br
 .ti -1c
-.RI "void \fBOnSize\fP (wxSizeEvent &event)"
-.br
-.ti -1c
 .RI "void \fBOnShow\fP (wxShowEvent &event)"
 .br
 .ti -1c
 .RI "void \fBdrawGraticule\fP (wxAutoBufferedPaintDC &dc)"
 .br
 .ti -1c
-.RI "void \fBdraw\fP (wxAutoBufferedPaintDC &dc)"
-.br
-.ti -1c
-.RI "void \fBplotData\fP (wxAutoBufferedPaintDC &dc)"
+.RI "void \fBdraw\fP (wxAutoBufferedPaintDC &pdc)"
 .br
 .ti -1c
 .RI "void \fBplotPixelData\fP (wxAutoBufferedPaintDC &dc)"
@@ -51,6 +45,12 @@ Inherits \fBPlotPanel\fP\&.
 .br
 .ti -1c
 .RI "int \fBm_greyscale\fP"
+.br
+.ti -1c
+.RI "wxMemoryDC \fBm_mDC\fP"
+.br
+.ti -1c
+.RI "int \fBm_line_color\fP"
 .br
 .in -1c
 .SS "Additional Inherited Members"
