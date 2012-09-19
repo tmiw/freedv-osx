@@ -46,7 +46,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_main_app-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MainApp Class Reference</div>  </div>
@@ -68,18 +68,72 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff3d398e1b61f1016c37d57798f86731"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff3d398e1b61f1016c37d57798f86731"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>OnInit</b> ()</td></tr>
 <tr class="separator:aff3d398e1b61f1016c37d57798f86731"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff49a6bb4a0494d717a3136e9fe17351"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff49a6bb4a0494d717a3136e9fe17351"></a>
+<tr class="memitem:a7fcdb66d2268e47420a4a234808cf321"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fcdb66d2268e47420a4a234808cf321"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnExit</b> ()</td></tr>
-<tr class="separator:aff49a6bb4a0494d717a3136e9fe17351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a7fcdb66d2268e47420a4a234808cf321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af06cc098b89d1c606aa94ad87d6b0105"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af06cc098b89d1c606aa94ad87d6b0105"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadConfig</b> ()</td></tr>
 <tr class="separator:af06cc098b89d1c606aa94ad87d6b0105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620a6b1b271571cc10b8f36e45bfcd7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a620a6b1b271571cc10b8f36e45bfcd7e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveConfig</b> ()</td></tr>
+<tr class="separator:a620a6b1b271571cc10b8f36e45bfcd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ae6022a31caf96dbcc2f519fc5fdc0bbe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6022a31caf96dbcc2f519fc5fdc0bbe"></a>
-wxConfig *&#160;</td><td class="memItemRight" valign="bottom"><b>g_config</b></td></tr>
-<tr class="separator:ae6022a31caf96dbcc2f519fc5fdc0bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a5a666c9feecd113dfd3b2f522b6d5fc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a666c9feecd113dfd3b2f522b6d5fc9"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strVendName</b></td></tr>
+<tr class="separator:a5a666c9feecd113dfd3b2f522b6d5fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d0cc802b97b1309a9d96c5c85b83b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49d0cc802b97b1309a9d96c5c85b83b6"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_StrAppName</b></td></tr>
+<tr class="separator:a49d0cc802b97b1309a9d96c5c85b83b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae53cdf538cc560731cfff2e82da54605"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae53cdf538cc560731cfff2e82da54605"></a>
+wxRadioButton&#160;</td><td class="memItemRight" valign="bottom"><b>m_radioBtnPortAudio</b></td></tr>
+<tr class="separator:ae53cdf538cc560731cfff2e82da54605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25cbd9f158a2120015e154f74e768b98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25cbd9f158a2120015e154f74e768b98"></a>
+wxRadioButton&#160;</td><td class="memItemRight" valign="bottom"><b>m_radioBtnFileOnly</b></td></tr>
+<tr class="separator:a25cbd9f158a2120015e154f74e768b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac0e4eef0eb34a0cb974ac9208182aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeac0e4eef0eb34a0cb974ac9208182aa"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_textNumChOut</b></td></tr>
+<tr class="separator:aeac0e4eef0eb34a0cb974ac9208182aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f04f0f61a76df541a59101b627448da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f04f0f61a76df541a59101b627448da"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_textNumChIn</b></td></tr>
+<tr class="separator:a6f04f0f61a76df541a59101b627448da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131c5ad5d714c9ed32a79467e788ac18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a131c5ad5d714c9ed32a79467e788ac18"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strRxInAudio</b></td></tr>
+<tr class="separator:a131c5ad5d714c9ed32a79467e788ac18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d4ee823e86cc78439be9f50ce4eca1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73d4ee823e86cc78439be9f50ce4eca1"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strRxOutAudio</b></td></tr>
+<tr class="separator:a73d4ee823e86cc78439be9f50ce4eca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f3ff36360c245d7f5f1fc3e9300c91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23f3ff36360c245d7f5f1fc3e9300c91"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_textVoiceInput</b></td></tr>
+<tr class="separator:a23f3ff36360c245d7f5f1fc3e9300c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e76172a575851642a5b80ecf14a7b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94e76172a575851642a5b80ecf14a7b9"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_textVoiceOutput</b></td></tr>
+<tr class="separator:a94e76172a575851642a5b80ecf14a7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7dcb55a60f5b3a343238fdd60b748f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd7dcb55a60f5b3a343238fdd60b748f"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strSampleRate</b></td></tr>
+<tr class="separator:acd7dcb55a60f5b3a343238fdd60b748f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a984c580c1f2831348b857777bd800585"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a984c580c1f2831348b857777bd800585"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strBitrate</b></td></tr>
+<tr class="separator:a984c580c1f2831348b857777bd800585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab191e22c827be40319221b07b0afc91e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab191e22c827be40319221b07b0afc91e"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strRigCtrlPort</b></td></tr>
+<tr class="separator:ab191e22c827be40319221b07b0afc91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af367d4403e54c973f3b5d9708ac42318"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af367d4403e54c973f3b5d9708ac42318"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strRigCtrlBaud</b></td></tr>
+<tr class="separator:af367d4403e54c973f3b5d9708ac42318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ee4f9e7aed236fdf885442d5accf37f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ee4f9e7aed236fdf885442d5accf37f"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strRigCtrlDatabits</b></td></tr>
+<tr class="separator:a5ee4f9e7aed236fdf885442d5accf37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b597849713a2a3a18782243c2cbf89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9b597849713a2a3a18782243c2cbf89"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strRigCtrlStopbits</b></td></tr>
+<tr class="separator:ab9b597849713a2a3a18782243c2cbf89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61a6ceb5655721d22b71a28fbe4aab2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab61a6ceb5655721d22b71a28fbe4aab2"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>m_strRigCtrlParity</b></td></tr>
+<tr class="separator:ab61a6ceb5655721d22b71a28fbe4aab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef360a075faca729e3ad9d352b778478"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef360a075faca729e3ad9d352b778478"></a>
+wxRect&#160;</td><td class="memItemRight" valign="bottom"><b>m_rTopWindow</b></td></tr>
+<tr class="separator:aef360a075faca729e3ad9d352b778478"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/bin/Projects/Radio/fdmdv2/src/<a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a></li>
@@ -88,7 +142,7 @@ wxConfig *&#160;</td><td class="memItemRight" valign="bottom"><b>g_config</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 14 2012 18:21:31 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 19 2012 12:16:24 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

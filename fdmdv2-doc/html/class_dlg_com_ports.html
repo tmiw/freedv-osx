@@ -70,15 +70,30 @@ Collaboration diagram for DlgComPorts:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f410b6cd51d3cf06cb0b4b74963c63d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f410b6cd51d3cf06cb0b4b74963c63d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DlgComPorts</b> (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &amp;title=_(&quot;Select Com Port&quot;), const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxSize(399, 226), long style=wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER)</td></tr>
-<tr class="separator:a3f410b6cd51d3cf06cb0b4b74963c63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e059ff99dc69db797823fca6b053035"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e059ff99dc69db797823fca6b053035"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DlgComPorts</b> (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &amp;title=_(&quot;Select Com Port&quot;), const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxSize(399, 354), long style=wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER)</td></tr>
+<tr class="separator:a2e059ff99dc69db797823fca6b053035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1a4cc254a36227c69954b7e7dabf3efc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a4cc254a36227c69954b7e7dabf3efc"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnListItemSelected</b> (wxListEvent &amp;event)</td></tr>
 <tr class="separator:a1a4cc254a36227c69954b7e7dabf3efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ac050bfb10f016b99b07a37ef2b5e86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ac050bfb10f016b99b07a37ef2b5e86"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCancel</b> (wxCommandEvent &amp;event)</td></tr>
+<tr class="separator:a2ac050bfb10f016b99b07a37ef2b5e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6809c6639748851d77029d39596f6de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6809c6639748851d77029d39596f6de"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnOK</b> (wxCommandEvent &amp;event)</td></tr>
+<tr class="separator:ab6809c6639748851d77029d39596f6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b3539e9cd3b2903d9235ec93180479"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0b3539e9cd3b2903d9235ec93180479"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnClose</b> (wxCloseEvent &amp;event)</td></tr>
+<tr class="separator:ae0b3539e9cd3b2903d9235ec93180479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2a230b1a95b8390251d54b0735d2b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c2a230b1a95b8390251d54b0735d2b5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> (wxInitDialogEvent &amp;event)</td></tr>
+<tr class="separator:a1c2a230b1a95b8390251d54b0735d2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4018858127924affbf163ac09b6ed9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf4018858127924affbf163ac09b6ed9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnApply</b> (wxCommandEvent &amp;event)</td></tr>
+<tr class="separator:acf4018858127924affbf163ac09b6ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -91,18 +106,45 @@ wxListCtrl *&#160;</td><td class="memItemRight" valign="bottom"><b>m_listCtrlPor
 <tr class="memitem:ae20ae58413be1c7932f9d83f37ccfe3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae20ae58413be1c7932f9d83f37ccfe3e"></a>
 wxStaticText *&#160;</td><td class="memItemRight" valign="bottom"><b>m_staticText9</b></td></tr>
 <tr class="separator:ae20ae58413be1c7932f9d83f37ccfe3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f2305bfcbaa6ea63d78ad612b39e32c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f2305bfcbaa6ea63d78ad612b39e32c"></a>
-wxTextCtrl *&#160;</td><td class="memItemRight" valign="bottom"><b>m_textCtrl10</b></td></tr>
-<tr class="separator:a3f2305bfcbaa6ea63d78ad612b39e32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11141b8001c743a769287b0f3f99061c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11141b8001c743a769287b0f3f99061c"></a>
-wxStdDialogButtonSizer *&#160;</td><td class="memItemRight" valign="bottom"><b>m_sdbSizer3</b></td></tr>
-<tr class="separator:a11141b8001c743a769287b0f3f99061c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3148ae8add57c342e6f3446a25f743a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3148ae8add57c342e6f3446a25f743a5"></a>
-wxButton *&#160;</td><td class="memItemRight" valign="bottom"><b>m_sdbSizer3OK</b></td></tr>
-<tr class="separator:a3148ae8add57c342e6f3446a25f743a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a887df8e54cc7986a49497afeecc1b04d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a887df8e54cc7986a49497afeecc1b04d"></a>
-wxButton *&#160;</td><td class="memItemRight" valign="bottom"><b>m_sdbSizer3Cancel</b></td></tr>
-<tr class="separator:a887df8e54cc7986a49497afeecc1b04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9be845d35a7303c5ac404e892f10ffb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9be845d35a7303c5ac404e892f10ffb"></a>
+wxTextCtrl *&#160;</td><td class="memItemRight" valign="bottom"><b>m_textRigCtrlPort</b></td></tr>
+<tr class="separator:ac9be845d35a7303c5ac404e892f10ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4767f6424f77abf870d2c90dc7a47a9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4767f6424f77abf870d2c90dc7a47a9b"></a>
+wxStaticText *&#160;</td><td class="memItemRight" valign="bottom"><b>m_staticText91</b></td></tr>
+<tr class="separator:a4767f6424f77abf870d2c90dc7a47a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce4c208d87405f7c4242819339039d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ce4c208d87405f7c4242819339039d8"></a>
+wxTextCtrl *&#160;</td><td class="memItemRight" valign="bottom"><b>m_textRigCtrlBaud</b></td></tr>
+<tr class="separator:a3ce4c208d87405f7c4242819339039d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a45e6c9f89fa6595fe30611d3240760"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a45e6c9f89fa6595fe30611d3240760"></a>
+wxStaticText *&#160;</td><td class="memItemRight" valign="bottom"><b>m_staticText911</b></td></tr>
+<tr class="separator:a7a45e6c9f89fa6595fe30611d3240760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480454f649f9bc72afbf42c5e9521e3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a480454f649f9bc72afbf42c5e9521e3b"></a>
+wxTextCtrl *&#160;</td><td class="memItemRight" valign="bottom"><b>m_textRigCtrlDatabits</b></td></tr>
+<tr class="separator:a480454f649f9bc72afbf42c5e9521e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c213a919a1aff50754fad11b67a44d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49c213a919a1aff50754fad11b67a44d"></a>
+wxStaticText *&#160;</td><td class="memItemRight" valign="bottom"><b>m_staticText912</b></td></tr>
+<tr class="separator:a49c213a919a1aff50754fad11b67a44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf803269da16b3f56c2c5bd21ba484b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bf803269da16b3f56c2c5bd21ba484b"></a>
+wxTextCtrl *&#160;</td><td class="memItemRight" valign="bottom"><b>m_textRigCtrlStopbits</b></td></tr>
+<tr class="separator:a1bf803269da16b3f56c2c5bd21ba484b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4feeee0f9422f971e0ae0abd6a6ef68c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4feeee0f9422f971e0ae0abd6a6ef68c"></a>
+wxStaticText *&#160;</td><td class="memItemRight" valign="bottom"><b>m_staticText913</b></td></tr>
+<tr class="separator:a4feeee0f9422f971e0ae0abd6a6ef68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807f268b9b09eece038789b3b57eda1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a807f268b9b09eece038789b3b57eda1c"></a>
+wxTextCtrl *&#160;</td><td class="memItemRight" valign="bottom"><b>m_textRigCtrlParity</b></td></tr>
+<tr class="separator:a807f268b9b09eece038789b3b57eda1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2a43e0c378c7c1e032d10ba7f082d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace2a43e0c378c7c1e032d10ba7f082d5"></a>
+wxStdDialogButtonSizer *&#160;</td><td class="memItemRight" valign="bottom"><b>m_sdbSizer5</b></td></tr>
+<tr class="separator:ace2a43e0c378c7c1e032d10ba7f082d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff33e71acd9d244306526c9e1c914f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ff33e71acd9d244306526c9e1c914f8"></a>
+wxButton *&#160;</td><td class="memItemRight" valign="bottom"><b>m_sdbSizer5OK</b></td></tr>
+<tr class="separator:a2ff33e71acd9d244306526c9e1c914f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370f3c0a292163cfc65c09f85be962f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a370f3c0a292163cfc65c09f85be962f7"></a>
+wxButton *&#160;</td><td class="memItemRight" valign="bottom"><b>m_sdbSizer5Apply</b></td></tr>
+<tr class="separator:a370f3c0a292163cfc65c09f85be962f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad0ef2595c613184b545ecd91b994d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abad0ef2595c613184b545ecd91b994d9"></a>
+wxButton *&#160;</td><td class="memItemRight" valign="bottom"><b>m_sdbSizer5Cancel</b></td></tr>
+<tr class="separator:abad0ef2595c613184b545ecd91b994d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="class_dlg_com_ports.html">DlgComPorts</a> </p>
@@ -113,7 +155,7 @@ wxButton *&#160;</td><td class="memItemRight" valign="bottom"><b>m_sdbSizer3Canc
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 14 2012 18:21:31 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 19 2012 12:16:24 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

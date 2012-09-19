@@ -1,4 +1,4 @@
-.TH "PlotWaterfall" 3 "Fri Sep 14 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "PlotWaterfall" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -36,6 +36,12 @@ Inherits \fBPlotPanel\fP\&.
 .ti -1c
 .RI "void \fBplotPixelData\fP (wxAutoBufferedPaintDC &dc)"
 .br
+.ti -1c
+.RI "void \fBdrawData\fP ()"
+.br
+.ti -1c
+.RI "void \fBdrawData2\fP (wxMemoryDC &pDC, int barpos, int l, int t, int w, int h)"
+.br
 .in -1c
 .SS "Protected Attributes"
 
@@ -44,13 +50,7 @@ Inherits \fBPlotPanel\fP\&.
 .RI "unsigned \fBm_heatmap_lut\fP [256]"
 .br
 .ti -1c
-.RI "int \fBm_greyscale\fP"
-.br
-.ti -1c
 .RI "wxMemoryDC \fBm_mDC\fP"
-.br
-.ti -1c
-.RI "int \fBm_line_color\fP"
 .br
 .in -1c
 .SS "Additional Inherited Members"

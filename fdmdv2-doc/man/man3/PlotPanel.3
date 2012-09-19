@@ -1,4 +1,4 @@
-.TH "PlotPanel" 3 "Fri Sep 14 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "PlotPanel" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -105,10 +105,13 @@ Inherited by \fBPlotScalar\fP, \fBPlotScatter\fP, \fBPlotSpectrum\fP, and \fBPlo
 .RI "bool \fBm_newdata\fP"
 .br
 .ti -1c
-.RI "wxBitmap * \fBm_bmp\fP"
+.RI "wxImage \fBm_oImage\fP"
 .br
 .ti -1c
-.RI "wxNativePixelData * \fBm_pBmp\fP"
+.RI "wxBitmap * \fBm_pBmp\fP"
+.br
+.ti -1c
+.RI "wxNativePixelData * \fBm_pPix\fP"
 .br
 .in -1c
 .SS "Protected Attributes"
@@ -155,6 +158,12 @@ Inherited by \fBPlotScalar\fP, \fBPlotScatter\fP, \fBPlotSpectrum\fP, and \fBPlo
 .br
 .ti -1c
 .RI "double \fBm_zoomFactor\fP"
+.br
+.ti -1c
+.RI "int \fBm_greyscale\fP"
+.br
+.ti -1c
+.RI "int \fBm_line_color\fP"
 .br
 .in -1c
 

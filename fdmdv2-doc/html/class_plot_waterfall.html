@@ -137,21 +137,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (wxAutoBuffe
 <tr class="memitem:aec560c10f32a6c6e92a62225288c28f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec560c10f32a6c6e92a62225288c28f3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>plotPixelData</b> (wxAutoBufferedPaintDC &amp;dc)</td></tr>
 <tr class="separator:aec560c10f32a6c6e92a62225288c28f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb0731ac7eeecd219980637ac70b4c76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb0731ac7eeecd219980637ac70b4c76"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>drawData</b> ()</td></tr>
+<tr class="separator:aeb0731ac7eeecd219980637ac70b4c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6825ebbd247988bf052d29ebca72d02e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6825ebbd247988bf052d29ebca72d02e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>drawData2</b> (wxMemoryDC &amp;pDC, int barpos, int l, int t, int w, int h)</td></tr>
+<tr class="separator:a6825ebbd247988bf052d29ebca72d02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aae04482318331ac760954376f23a1e3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae04482318331ac760954376f23a1e3c"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>m_heatmap_lut</b> [256]</td></tr>
 <tr class="separator:aae04482318331ac760954376f23a1e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cb3639849f17b1882b2b3713fd690cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cb3639849f17b1882b2b3713fd690cf"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_greyscale</b></td></tr>
-<tr class="separator:a1cb3639849f17b1882b2b3713fd690cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b80aa40a1194ece27c87ec265ef7d2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b80aa40a1194ece27c87ec265ef7d2c"></a>
 wxMemoryDC&#160;</td><td class="memItemRight" valign="bottom"><b>m_mDC</b></td></tr>
 <tr class="separator:a1b80aa40a1194ece27c87ec265ef7d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0b8f5bb510697a7eb8f48628a39b9c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0b8f5bb510697a7eb8f48628a39b9c7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_line_color</b></td></tr>
-<tr class="separator:aa0b8f5bb510697a7eb8f48628a39b9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_plot_panel"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_plot_panel')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_plot_panel.html">PlotPanel</a></td></tr>
 <tr class="memitem:abd0a64bd20aec2e300e383abfd60315d inherit pro_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd0a64bd20aec2e300e383abfd60315d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>m_x</b></td></tr>
@@ -195,6 +195,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_firstPass</b></td><
 <tr class="memitem:ae2f4907a8e4ed958ef4995e99b1f7148 inherit pro_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2f4907a8e4ed958ef4995e99b1f7148"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>m_zoomFactor</b></td></tr>
 <tr class="separator:ae2f4907a8e4ed958ef4995e99b1f7148 inherit pro_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5bc0c62a2dcfccb9e0d9663d7983e3f inherit pro_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5bc0c62a2dcfccb9e0d9663d7983e3f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_greyscale</b></td></tr>
+<tr class="separator:ab5bc0c62a2dcfccb9e0d9663d7983e3f inherit pro_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff281e896bdb1f76d9ccbbe1d15c721d inherit pro_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff281e896bdb1f76d9ccbbe1d15c721d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_line_color</b></td></tr>
+<tr class="separator:aff281e896bdb1f76d9ccbbe1d15c721d inherit pro_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -235,12 +241,15 @@ wxSize&#160;</td><td class="memItemRight" valign="bottom"><b>m_Bufsz</b></td></t
 <tr class="memitem:a803a71153ab9758b6134fc51855a71b3 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a803a71153ab9758b6134fc51855a71b3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_newdata</b></td></tr>
 <tr class="separator:a803a71153ab9758b6134fc51855a71b3 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf01c846dc561a79c0d1dee88a80ef4 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cf01c846dc561a79c0d1dee88a80ef4"></a>
-wxBitmap *&#160;</td><td class="memItemRight" valign="bottom"><b>m_bmp</b></td></tr>
-<tr class="separator:a8cf01c846dc561a79c0d1dee88a80ef4 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274a9ad1bf4f03ccc74ae259029835d5 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a274a9ad1bf4f03ccc74ae259029835d5"></a>
-wxNativePixelData *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pBmp</b></td></tr>
-<tr class="separator:a274a9ad1bf4f03ccc74ae259029835d5 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455990d37fec44ad2eeb97b6be7016fe inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a455990d37fec44ad2eeb97b6be7016fe"></a>
+wxImage&#160;</td><td class="memItemRight" valign="bottom"><b>m_oImage</b></td></tr>
+<tr class="separator:a455990d37fec44ad2eeb97b6be7016fe inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931b1810b974771f4f79ebc9b2690833 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a931b1810b974771f4f79ebc9b2690833"></a>
+wxBitmap *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pBmp</b></td></tr>
+<tr class="separator:a931b1810b974771f4f79ebc9b2690833 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba680c266caf80a5a3f2ab98cbb7796 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abba680c266caf80a5a3f2ab98cbb7796"></a>
+wxNativePixelData *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pPix</b></td></tr>
+<tr class="separator:abba680c266caf80a5a3f2ab98cbb7796 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/bin/Projects/Radio/fdmdv2/src/<a class="el" href="fdmdv2__plot__waterfall_8h_source.html">fdmdv2_plot_waterfall.h</a></li>
@@ -249,7 +258,7 @@ wxNativePixelData *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pBmp
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 14 2012 18:21:32 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 19 2012 12:16:24 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

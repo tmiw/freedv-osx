@@ -1,4 +1,4 @@
-.TH "DlgComPorts" 3 "Fri Sep 14 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "DlgComPorts" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,7 +16,7 @@ Inherited by \fBComPortsDlg\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBDlgComPorts\fP (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &title=_('Select Com Port'), const wxPoint &pos=wxDefaultPosition, const wxSize &size=wxSize(399, 226), long style=wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER)"
+.RI "\fBDlgComPorts\fP (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &title=_('Select Com Port'), const wxPoint &pos=wxDefaultPosition, const wxSize &size=wxSize(399, 354), long style=wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER)"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -24,6 +24,21 @@ Inherited by \fBComPortsDlg\fP\&.
 .in +1c
 .ti -1c
 .RI "virtual void \fBOnListItemSelected\fP (wxListEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnCancel\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnOK\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnClose\fP (wxCloseEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnInitDialog\fP (wxInitDialogEvent &event)"
+.br
+.ti -1c
+.RI "virtual void \fBOnApply\fP (wxCommandEvent &event)"
 .br
 .in -1c
 .SS "Protected Attributes"
@@ -39,16 +54,43 @@ Inherited by \fBComPortsDlg\fP\&.
 .RI "wxStaticText * \fBm_staticText9\fP"
 .br
 .ti -1c
-.RI "wxTextCtrl * \fBm_textCtrl10\fP"
+.RI "wxTextCtrl * \fBm_textRigCtrlPort\fP"
 .br
 .ti -1c
-.RI "wxStdDialogButtonSizer * \fBm_sdbSizer3\fP"
+.RI "wxStaticText * \fBm_staticText91\fP"
 .br
 .ti -1c
-.RI "wxButton * \fBm_sdbSizer3OK\fP"
+.RI "wxTextCtrl * \fBm_textRigCtrlBaud\fP"
 .br
 .ti -1c
-.RI "wxButton * \fBm_sdbSizer3Cancel\fP"
+.RI "wxStaticText * \fBm_staticText911\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textRigCtrlDatabits\fP"
+.br
+.ti -1c
+.RI "wxStaticText * \fBm_staticText912\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textRigCtrlStopbits\fP"
+.br
+.ti -1c
+.RI "wxStaticText * \fBm_staticText913\fP"
+.br
+.ti -1c
+.RI "wxTextCtrl * \fBm_textRigCtrlParity\fP"
+.br
+.ti -1c
+.RI "wxStdDialogButtonSizer * \fBm_sdbSizer5\fP"
+.br
+.ti -1c
+.RI "wxButton * \fBm_sdbSizer5OK\fP"
+.br
+.ti -1c
+.RI "wxButton * \fBm_sdbSizer5Apply\fP"
+.br
+.ti -1c
+.RI "wxButton * \fBm_sdbSizer5Cancel\fP"
 .br
 .in -1c
 .SH "Detailed Description"

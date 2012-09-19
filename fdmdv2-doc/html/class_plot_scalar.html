@@ -204,6 +204,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_firstPass</b></td><
 <tr class="memitem:ae2f4907a8e4ed958ef4995e99b1f7148 inherit pro_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2f4907a8e4ed958ef4995e99b1f7148"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>m_zoomFactor</b></td></tr>
 <tr class="separator:ae2f4907a8e4ed958ef4995e99b1f7148 inherit pro_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5bc0c62a2dcfccb9e0d9663d7983e3f inherit pro_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5bc0c62a2dcfccb9e0d9663d7983e3f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_greyscale</b></td></tr>
+<tr class="separator:ab5bc0c62a2dcfccb9e0d9663d7983e3f inherit pro_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff281e896bdb1f76d9ccbbe1d15c721d inherit pro_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff281e896bdb1f76d9ccbbe1d15c721d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_line_color</b></td></tr>
+<tr class="separator:aff281e896bdb1f76d9ccbbe1d15c721d inherit pro_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -244,12 +250,15 @@ wxSize&#160;</td><td class="memItemRight" valign="bottom"><b>m_Bufsz</b></td></t
 <tr class="memitem:a803a71153ab9758b6134fc51855a71b3 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a803a71153ab9758b6134fc51855a71b3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_newdata</b></td></tr>
 <tr class="separator:a803a71153ab9758b6134fc51855a71b3 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf01c846dc561a79c0d1dee88a80ef4 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cf01c846dc561a79c0d1dee88a80ef4"></a>
-wxBitmap *&#160;</td><td class="memItemRight" valign="bottom"><b>m_bmp</b></td></tr>
-<tr class="separator:a8cf01c846dc561a79c0d1dee88a80ef4 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274a9ad1bf4f03ccc74ae259029835d5 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a274a9ad1bf4f03ccc74ae259029835d5"></a>
-wxNativePixelData *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pBmp</b></td></tr>
-<tr class="separator:a274a9ad1bf4f03ccc74ae259029835d5 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455990d37fec44ad2eeb97b6be7016fe inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a455990d37fec44ad2eeb97b6be7016fe"></a>
+wxImage&#160;</td><td class="memItemRight" valign="bottom"><b>m_oImage</b></td></tr>
+<tr class="separator:a455990d37fec44ad2eeb97b6be7016fe inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931b1810b974771f4f79ebc9b2690833 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a931b1810b974771f4f79ebc9b2690833"></a>
+wxBitmap *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pBmp</b></td></tr>
+<tr class="separator:a931b1810b974771f4f79ebc9b2690833 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba680c266caf80a5a3f2ab98cbb7796 inherit pub_attribs_class_plot_panel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abba680c266caf80a5a3f2ab98cbb7796"></a>
+wxNativePixelData *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pPix</b></td></tr>
+<tr class="separator:abba680c266caf80a5a3f2ab98cbb7796 inherit pub_attribs_class_plot_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/bin/Projects/Radio/fdmdv2/src/<a class="el" href="fdmdv2__plot__scalar_8h_source.html">fdmdv2_plot_scalar.h</a></li>
@@ -258,7 +267,7 @@ wxNativePixelData *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pBmp
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 14 2012 18:21:31 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 19 2012 12:16:24 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
