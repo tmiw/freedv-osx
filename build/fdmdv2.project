@@ -20,6 +20,7 @@
     <File Name="../src/fdmdv2_plot_spectrum.cpp"/>
     <File Name="../src/fdmdv2_pa_wrapper.cpp"/>
     <File Name="../src/fdmdv2_plot_scalar.cpp"/>
+    <File Name="../src/fdmdv2_hdw_ports.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_about.h"/>
@@ -64,6 +65,7 @@
     <File Name="../../codec2-dev/src/codec2.h"/>
     <File Name="../../codec2-dev/src/fdmdv.h"/>
     <File Name="../src/fdmdv2_defines.h"/>
+    <File Name="../src/fdmdv2_hdw_ports.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>

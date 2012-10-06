@@ -4,12 +4,12 @@
   <Project Name="drawing" Path="../../../../wxWidgets-2.9.4/samples/drawing/drawing.project" Active="No"/>
   <Project Name="configtest" Path="../../../../wxWidgets-2.9.4/samples/config/configtest.project" Active="No"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="no">
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Project Name="fdmdv2" ConfigName="Debug"/>
       <Project Name="drawing" ConfigName="Debug"/>
       <Project Name="configtest" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Project Name="fdmdv2" ConfigName="Release"/>
       <Project Name="drawing" ConfigName="Release"/>
       <Project Name="configtest" ConfigName="Release"/>
