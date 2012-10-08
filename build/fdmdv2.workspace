@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="fdmdv2" Database="./fdmdv2.tags">
   <Project Name="fdmdv2" Path="fdmdv2.project" Active="Yes"/>
-  <Project Name="drawing" Path="../../../../wxWidgets-2.9.4/samples/drawing/drawing.project" Active="No"/>
-  <Project Name="configtest" Path="../../../../wxWidgets-2.9.4/samples/config/configtest.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Project Name="fdmdv2" ConfigName="Debug"/>
-      <Project Name="drawing" ConfigName="Debug"/>
-      <Project Name="configtest" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="no">
+    <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="fdmdv2" ConfigName="Release"/>
-      <Project Name="drawing" ConfigName="Release"/>
-      <Project Name="configtest" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

@@ -66,6 +66,7 @@
     <File Name="../../codec2-dev/src/fdmdv.h"/>
     <File Name="../src/fdmdv2_defines.h"/>
     <File Name="../src/fdmdv2_hdw_ports.h"/>
+    <File Name="../../../Audio/portaudio/include/portaudio.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>
