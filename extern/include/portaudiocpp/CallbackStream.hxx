@@ -2,13 +2,10 @@
 #define INCLUDED_PORTAUDIO_CALLBACKSTREAM_HXX
 
 // ---------------------------------------------------------------------------------------
-
 #include "portaudio.h"
-
 #include "portaudiocpp/Stream.hxx"
 
 // ---------------------------------------------------------------------------------------
-
 // Declaration(s):
 namespace portaudio
 {
