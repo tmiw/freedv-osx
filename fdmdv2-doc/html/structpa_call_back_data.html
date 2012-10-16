@@ -30,6 +30,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -51,23 +52,125 @@
 <div class="title">paCallBackData Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for paCallBackData:</div>
+<div class="dyncontent">
+<div class="center"><img src="structpa_call_back_data__coll__graph.png" border="0" usemap="#pa_call_back_data_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2f3083066c414621a834d3af98aa26cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f3083066c414621a834d3af98aa26cf"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>in48k</b> [FDMDV_OS_TAPS+N48]</td></tr>
+<tr class="memitem:a6741cb7e3a02a9a7edde123b8d810014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_plot_spectrum.html">PlotSpectrum</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa_call_back_data.html#a6741cb7e3a02a9a7edde123b8d810014">pSPPanel</a></td></tr>
+<tr class="separator:a6741cb7e3a02a9a7edde123b8d810014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794284622a48e32d327f4787d9acb9fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_plot_waterfall.html">PlotWaterfall</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa_call_back_data.html#a794284622a48e32d327f4787d9acb9fa">pWFPanel</a></td></tr>
+<tr class="separator:a794284622a48e32d327f4787d9acb9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3083066c414621a834d3af98aa26cf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa_call_back_data.html#a2f3083066c414621a834d3af98aa26cf">in48k</a> [FDMDV_OS_TAPS+<a class="el" href="fdmdv2__defines_8h.html#a5722111a885cb7609e36f98422626e8b">N48</a>]</td></tr>
 <tr class="separator:a2f3083066c414621a834d3af98aa26cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eaf4a649210c178b8671653b89e2141"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eaf4a649210c178b8671653b89e2141"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>in8k</b> [MEM8+N8]</td></tr>
+<tr class="memitem:a1eaf4a649210c178b8671653b89e2141"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa_call_back_data.html#a1eaf4a649210c178b8671653b89e2141">in8k</a> [<a class="el" href="fdmdv2__defines_8h.html#abecf03ba94d7033c65398b6ebbf61919">MEM8</a>+<a class="el" href="fdmdv2__defines_8h.html#aae30e2de203d703d9ab68f0489f6b2d7">N8</a>]</td></tr>
 <tr class="separator:a1eaf4a649210c178b8671653b89e2141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce1a4d7f2654a49440799ca0c3e25e1"><td class="memItemLeft" align="right" valign="top">struct FIFO *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa_call_back_data.html#adce1a4d7f2654a49440799ca0c3e25e1">infifo</a></td></tr>
+<tr class="separator:adce1a4d7f2654a49440799ca0c3e25e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1114cd3fc9090e7cc89f6730481a890"><td class="memItemLeft" align="right" valign="top">struct FIFO *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpa_call_back_data.html#ab1114cd3fc9090e7cc89f6730481a890">outfifo</a></td></tr>
+<tr class="separator:ab1114cd3fc9090e7cc89f6730481a890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p>Definition at line <a class="el" href="fdmdv2__main_8h_source.html#l00116">116</a> of file <a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a>.</p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a2f3083066c414621a834d3af98aa26cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float paCallBackData::in48k[FDMDV_OS_TAPS+<a class="el" href="fdmdv2__defines_8h.html#a5722111a885cb7609e36f98422626e8b">N48</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fdmdv2__main_8h_source.html#l00121">121</a> of file <a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1eaf4a649210c178b8671653b89e2141"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float paCallBackData::in8k[<a class="el" href="fdmdv2__defines_8h.html#abecf03ba94d7033c65398b6ebbf61919">MEM8</a>+<a class="el" href="fdmdv2__defines_8h.html#aae30e2de203d703d9ab68f0489f6b2d7">N8</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fdmdv2__main_8h_source.html#l00122">122</a> of file <a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adce1a4d7f2654a49440799ca0c3e25e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct FIFO* paCallBackData::infifo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fdmdv2__main_8h_source.html#l00123">123</a> of file <a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1114cd3fc9090e7cc89f6730481a890"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct FIFO* paCallBackData::outfifo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fdmdv2__main_8h_source.html#l00124">124</a> of file <a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6741cb7e3a02a9a7edde123b8d810014"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_plot_spectrum.html">PlotSpectrum</a>* paCallBackData::pSPPanel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fdmdv2__main_8h_source.html#l00118">118</a> of file <a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a794284622a48e32d327f4787d9acb9fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_plot_waterfall.html">PlotWaterfall</a>* paCallBackData::pWFPanel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="fdmdv2__main_8h_source.html#l00119">119</a> of file <a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_pa_wrapper.cpp</li>
+<li>C:/bin/Projects/Radio/fdmdv2/src/<a class="el" href="fdmdv2__main_8h_source.html">fdmdv2_main.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 19 2012 12:16:24 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 16 2012 10:19:52 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

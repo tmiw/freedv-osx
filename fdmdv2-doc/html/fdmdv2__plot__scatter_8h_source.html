@@ -30,6 +30,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -37,6 +38,7 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -49,7 +51,7 @@
 <div class="title">fdmdv2_plot_scatter.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//==========================================================================</span></div>
+<a href="fdmdv2__plot__scatter_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//==========================================================================</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Name:            fdmdv2_plot_scatter.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Purpose:         Defines a waterfall plot derivative of fdmdv2_plot.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Created:         June 24, 2012</span></div>
@@ -76,9 +78,9 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef __FDMDV2_PLOT_SCATTER__</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __FDMDV2_PLOT_SCATTER__</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;comp.h&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;fdmdv2_plot.h&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;fdmdv2_defines.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="comp_8h.html">comp.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fdmdv2__plot_8h.html">fdmdv2_plot.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fdmdv2__defines_8h.html">fdmdv2_defines.h</a>&quot;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Class PlotScatter</span></div>
@@ -86,18 +88,18 @@
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="class_plot_scatter.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_plot_scatter.html">PlotScatter</a> : <span class="keyword">public</span> <a class="code" href="class_plot_panel.html">PlotPanel</a></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;       <a class="code" href="class_plot_scatter.html">PlotScatter</a>(wxFrame* parent);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        ~<a class="code" href="class_plot_scatter.html">PlotScatter</a>(){};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;       <a class="code" href="class_plot_scatter.html#a3afb429623d26da2e130a53940afae3d">PlotScatter</a>(wxFrame* parent);</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="class_plot_scatter.html#af6116b28aacb151a24435576b4cc0cf6">   39</a></span>&#160;        <a class="code" href="class_plot_scatter.html#af6116b28aacb151a24435576b4cc0cf6">~PlotScatter</a>(){};</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="struct_c_o_m_p.html">COMP</a> m_mem[SCATTER_MEM];</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="struct_c_o_m_p.html">COMP</a> m_new_samples[FDMDV_NSYM];</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="struct_c_o_m_p.html">COMP</a> <a class="code" href="class_plot_scatter.html#ab0c0683c27bb137bc7bb04aff7de88ab">m_mem</a>[<a class="code" href="fdmdv2__defines_8h.html#a7bd435902b097e36f8ee04bd992a0000">SCATTER_MEM</a>];</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="class_plot_scatter.html#a54ec91bd3e57b7648b1ee225de414993">   43</a></span>&#160;        <a class="code" href="struct_c_o_m_p.html">COMP</a> <a class="code" href="class_plot_scatter.html#a54ec91bd3e57b7648b1ee225de414993">m_new_samples</a>[FDMDV_NSYM];</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> draw(wxAutoBufferedPaintDC&amp;  dc);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> add_new_samples(<a class="code" href="struct_c_o_m_p.html">COMP</a> samples[]);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> OnPaint(wxPaintEvent&amp; event);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> OnSize(wxSizeEvent&amp; event);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> OnShow(wxShowEvent&amp; event);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plot_scatter.html#aee86ff1a62c9f5131a9e2901078143d6">draw</a>(wxAutoBufferedPaintDC&amp;  dc);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plot_scatter.html#ab88a05eba2000d796fd5d9ce3a722923">add_new_samples</a>(<a class="code" href="struct_c_o_m_p.html">COMP</a> samples[]);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plot_scatter.html#a96f16b57f595b0916a7fa4843aeed53f">OnPaint</a>(wxPaintEvent&amp; event);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plot_scatter.html#aefccecfa048d8102724295fce801cb4e">OnSize</a>(wxSizeEvent&amp; event);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plot_scatter.html#a7f56259f17e46eea4b223f6e6b4c2a8d">OnShow</a>(wxShowEvent&amp; event);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        DECLARE_EVENT_TABLE()</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
@@ -106,7 +108,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 19 2012 12:16:23 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 16 2012 10:19:50 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -30,6 +30,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -37,6 +38,7 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -49,7 +51,7 @@
 <div class="title">fdmdv2_plot_scalar.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//==========================================================================</span></div>
+<a href="fdmdv2__plot__scalar_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//==========================================================================</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Name:            fdmdv2_plot_scalar.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Purpose:         Defines a scalar plot derivative of fdmdv2_plot.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Created:         June 22, 2012</span></div>
@@ -76,8 +78,8 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef __FDMDV2_PLOT_SCALAR__</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __FDMDV2_PLOT_SCALAR__</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;fdmdv2_plot.h&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;fdmdv2_defines.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fdmdv2__plot_8h.html">fdmdv2_plot.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fdmdv2__defines_8h.html">fdmdv2_defines.h</a>&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// Class PlotScalar</span></div>
@@ -87,24 +89,24 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//PlotScalar(wxFrame* parent, int x, int y, int w, int h, int x_max_, int y_max_, const char name[]);</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_plot_scalar.html">PlotScalar</a>(wxFrame* parent, <span class="keywordtype">int</span> x_max_, <span class="keywordtype">int</span> y_max_);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        ~<a class="code" href="class_plot_scalar.html">PlotScalar</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;         <span class="keywordtype">void</span> add_new_sample(<span class="keywordtype">float</span> sample);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_plot_scalar.html#a53c9d8fbf1e4420dd1fc27910fb02403">PlotScalar</a>(wxFrame* parent, <span class="keywordtype">int</span> x_max_, <span class="keywordtype">int</span> y_max_);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_plot_scalar.html#afae3d26ba9a96f81c84d87a2b0a29a48">~PlotScalar</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;         <span class="keywordtype">void</span> <a class="code" href="class_plot_scalar.html#a0d910560ef24c40c5aab8540c6dd82c2">add_new_sample</a>(<span class="keywordtype">float</span> sample);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">int</span>    m_x_max;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span>    m_y_max;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">float</span>  *m_mem;              <span class="comment">/* array of x_max samples */</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">float</span>  m_new_sample;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">int</span>    m_index;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span>    m_step;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="class_plot_scalar.html#a9a9edfbd8517f1ce1e7b75bcd4fda4f5">   45</a></span>&#160;        <span class="keywordtype">int</span>    <a class="code" href="class_plot_scalar.html#a9a9edfbd8517f1ce1e7b75bcd4fda4f5">m_x_max</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="class_plot_scalar.html#a91ce24595550dd2c4add253025ba668c">   46</a></span>&#160;        <span class="keywordtype">int</span>    <a class="code" href="class_plot_scalar.html#a91ce24595550dd2c4add253025ba668c">m_y_max</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="class_plot_scalar.html#a28e4e09d513bce7b2890635d1ed1967d">   47</a></span>&#160;        <span class="keywordtype">float</span>  *<a class="code" href="class_plot_scalar.html#a28e4e09d513bce7b2890635d1ed1967d">m_mem</a>;              <span class="comment">/* array of x_max samples */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="class_plot_scalar.html#a963d1a8e34175f7d3b1f82fa4e71ae19">   48</a></span>&#160;        <span class="keywordtype">float</span>  <a class="code" href="class_plot_scalar.html#a963d1a8e34175f7d3b1f82fa4e71ae19">m_new_sample</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="class_plot_scalar.html#a3ff0dec7b8f50b3ca7155c06e8877ab5">   49</a></span>&#160;        <span class="keywordtype">int</span>    <a class="code" href="class_plot_scalar.html#a3ff0dec7b8f50b3ca7155c06e8877ab5">m_index</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="class_plot_scalar.html#a8e057f0175729eea2a6e8ec5597bb1c0">   50</a></span>&#160;        <span class="keywordtype">int</span>    <a class="code" href="class_plot_scalar.html#a8e057f0175729eea2a6e8ec5597bb1c0">m_step</a>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">int</span> clip(<span class="keywordtype">int</span> y1);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> draw(wxAutoBufferedPaintDC&amp;  dc);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> OnPaint(wxPaintEvent&amp; event);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> OnSize(wxSizeEvent&amp; event);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> OnShow(wxShowEvent&amp; event);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_plot_scalar.html#ad2c5214849ba51b85c61e5ed1949b28e">clip</a>(<span class="keywordtype">int</span> y1);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plot_scalar.html#aa901215be79b5a522c416224c6554cf3">draw</a>(wxAutoBufferedPaintDC&amp;  dc);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plot_scalar.html#a8e31e0b1a2415d7bdf8a4c521dbc2e8d">OnPaint</a>(wxPaintEvent&amp; event);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plot_scalar.html#a6b41cd9d409567b395f539d0204c706c">OnSize</a>(wxSizeEvent&amp; event);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_plot_scalar.html#acb95980f2589a99431b5e358c98a91f2">OnShow</a>(wxShowEvent&amp; event);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        DECLARE_EVENT_TABLE()</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
@@ -114,7 +116,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 19 2012 12:16:23 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 16 2012 10:19:50 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

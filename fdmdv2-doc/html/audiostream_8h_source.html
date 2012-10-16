@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>FDMDV2: C:/bin/Projects/Radio/fdmdv2/src/audiostream.h Source File</title>
+<title>FDMDV2: C:/bin/Projects/Radio/fdmdv2/src/detritus/audiostream.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,6 +30,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -37,11 +38,12 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2dca8952fbeb04e06b6ea2aea6220ae6.html">detritus</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -49,7 +51,7 @@
 <div class="title">audiostream.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//============================================================</span></div>
+<a href="audiostream_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//============================================================</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// AudioStream.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -67,19 +69,19 @@
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef __AudioStream__</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __AudioStream__</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> NUM_SECONDS = 5;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> SAMPLE_RATE = 44100.0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> FRAMES_PER_BUFFER = 64;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> TABLE_SIZE = 200;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="audiostream_8h.html#ab6b46a9cf3ce22ae2cbb6ff903b7afef">   19</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="audiostream_8h.html#ab6b46a9cf3ce22ae2cbb6ff903b7afef">NUM_SECONDS</a> = 5;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="audiostream_8h.html#a254783139625fe796c8924e0b04b1aee">   20</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="audiostream_8h.html#a254783139625fe796c8924e0b04b1aee">SAMPLE_RATE</a> = 44100.0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="audiostream_8h.html#a0ba5ca6cf467f019cb933a2f8bbaeb58">   21</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="audiostream_8h.html#a0ba5ca6cf467f019cb933a2f8bbaeb58">FRAMES_PER_BUFFER</a> = 64;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="audiostream_8h.html#ada4ebb227211f96616c9e6681a944bc1">   22</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="audiostream_8h.html#ada4ebb227211f96616c9e6681a944bc1">TABLE_SIZE</a> = 200;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="class_audio_stream.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_audio_stream.html">AudioStream</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//    AudioStream(int tableSize) : tableSize_(tableSize), leftPhase_(0), rightPhase_(0);</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_audio_stream.html">AudioStream</a>(<span class="keywordtype">int</span> tableSize);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ~<a class="code" href="class_audio_stream.html">AudioStream</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_audio_stream.html#a1e253941ff189daa6ae1ebdd4658b943">AudioStream</a>(<span class="keywordtype">int</span> tableSize);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_audio_stream.html#a480e5d3468bfe9357dd6c40649b1e449">~AudioStream</a>();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> generate(<span class="keyword">const</span> <span class="keywordtype">void</span> *inputBuffer, <span class="keywordtype">void</span> *outputBuffer, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> framesPerBuffer, <span class="keyword">const</span> PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_audio_stream.html#a1abd5e1c5f7fe05fc66c52603818fc5f">generate</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *inputBuffer, <span class="keywordtype">void</span> *outputBuffer, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> framesPerBuffer, <span class="keyword">const</span> PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">float</span> *table_;</div>
@@ -98,7 +100,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 11 2012 14:31:48 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 16 2012 10:19:50 for FDMDV2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

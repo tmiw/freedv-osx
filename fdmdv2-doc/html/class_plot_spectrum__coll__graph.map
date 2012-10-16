@@ -1,10 +1,11 @@
 <map id="PlotSpectrum" name="PlotSpectrum">
-<area shape="rect" id="node6" href="$class_main_frame.html" title="MainFrame" alt="" coords="198,187,284,213"/>
-<area shape="rect" id="node2" href="$class_plot_panel.html" title="PlotPanel" alt="" coords="281,277,359,304"/>
-<area shape="rect" id="node12" href="$class_plot_scalar.html" title="PlotScalar" alt="" coords="5,381,88,408"/>
-<area shape="rect" id="node18" href="$class_plot_scatter.html" title="PlotScatter" alt="" coords="329,381,415,408"/>
-<area shape="rect" id="node23" href="$class_plot_waterfall.html" title="PlotWaterfall" alt="" coords="160,381,256,408"/>
-<area shape="rect" id="node8" href="$class_top_frame.html" title="TopFrame" alt="" coords="135,83,215,109"/>
-<area shape="rect" id="node15" href="$class_port_audio_wrap.html" title="PortAudioWrap" alt="" coords="239,83,349,109"/>
-<area shape="rect" id="node21" href="$struct_c_o_m_p.html" title="COMP" alt="" coords="384,277,445,304"/>
+<area shape="rect" id="node6" href="$class_main_frame.html" title="MainFrame" alt="" coords="165,187,251,213"/>
+<area shape="rect" id="node19" href="$structpa_call_back_data.html" title="paCallBackData" alt="" coords="81,472,196,499"/>
+<area shape="rect" id="node2" href="$class_plot_panel.html" title="PlotPanel" alt="" coords="315,277,393,304"/>
+<area shape="rect" id="node14" href="$class_plot_scalar.html" title="PlotScalar" alt="" coords="264,381,347,408"/>
+<area shape="rect" id="node21" href="$class_plot_waterfall.html" title="PlotWaterfall" alt="" coords="5,381,101,408"/>
+<area shape="rect" id="node25" href="$class_plot_scatter.html" title="PlotScatter" alt="" coords="399,381,485,408"/>
+<area shape="rect" id="node8" href="$class_top_frame.html" title="TopFrame" alt="" coords="57,83,137,109"/>
+<area shape="rect" id="node17" href="$class_port_audio_wrap.html" title="PortAudioWrap" alt="" coords="162,83,272,109"/>
+<area shape="rect" id="node28" href="$struct_c_o_m_p.html" title="COMP" alt="" coords="563,277,624,304"/>
 </map>
