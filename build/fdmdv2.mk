@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=OFA-Staff
-Date                   :=10/15/2012
+Date                   :=10/16/2012
 CodeLitePath           :="C:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -50,8 +50,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/bin/Project
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"760\"  $(Preprocessors)
-CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"760\"  $(Preprocessors)
+CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"761\"  $(Preprocessors)
+CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"761\"  $(Preprocessors)
 
 
 ##
