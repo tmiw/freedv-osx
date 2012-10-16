@@ -1,5 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node3" href="$class_audio_thread.html" title="AudioThread" alt="" coords="153,5,247,32"/>
-<area shape="rect" id="node5" href="$class_fdmdv2_thread_audio.html" title="Fdmdv2ThreadAudio" alt="" coords="131,56,269,83"/>
-<area shape="rect" id="node7" href="$class_my_thread.html" title="MyThread" alt="" coords="161,107,239,133"/>
+<area shape="rect" id="node3" href="$class_dlg_about.html" title="DlgAbout" alt="" coords="140,5,215,32"/>
+<area shape="rect" id="node7" href="$class_dlg_audio.html" title="DlgAudio" alt="" coords="140,56,215,83"/>
+<area shape="rect" id="node11" href="$class_dlg_com_ports.html" title="DlgComPorts" alt="" coords="128,107,227,133"/>
+<area shape="rect" id="node15" href="$class_dlg_options.html" title="DlgOptions" alt="" coords="134,157,221,184"/>
+<area shape="rect" id="node5" href="$class_about_dlg.html" title="AboutDlg" alt="" coords="287,5,361,32"/>
+<area shape="rect" id="node9" href="$class_audio_dlg.html" title="AudioDlg" alt="" coords="287,56,361,83"/>
+<area shape="rect" id="node13" href="$class_com_ports_dlg.html" title="ComPortsDlg" alt="" coords="275,107,373,133"/>
+<area shape="rect" id="node17" href="$class_options_dlg.html" title="OptionsDlg" alt="" coords="281,157,367,184"/>
 </map>

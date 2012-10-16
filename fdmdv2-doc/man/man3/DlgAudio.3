@@ -1,4 +1,4 @@
-.TH "DlgAudio" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "DlgAudio" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,6 +17,9 @@ Inherited by \fBAudioDlg\fP\&.
 .in +1c
 .ti -1c
 .RI "\fBDlgAudio\fP (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &title=_('Audio Options'), const wxPoint &pos=wxDefaultPosition, const wxSize &size=wxSize(555, 419), long style=wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER)"
+.br
+.ti -1c
+.RI "\fB~DlgAudio\fP ()"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -144,6 +147,192 @@ Inherited by \fBAudioDlg\fP\&.
 .SH "Detailed Description"
 .PP 
 Class \fBDlgAudio\fP 
+.PP
+Definition at line 178 of file topFrame\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DlgAudio::DlgAudio (wxWindow *parent, wxWindowIDid = \fCwxID_ANY\fP, const wxString &title = \fC_('Audio Options')\fP, const wxPoint &pos = \fCwxDefaultPosition\fP, const wxSize &size = \fCwxSize( 555,419 )\fP, longstyle = \fCwxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER\fP)"
+
+.PP
+Definition at line 526 of file topFrame\&.cpp\&.
+.SS "DlgAudio::~DlgAudio ()"
+
+.PP
+Definition at line 800 of file topFrame\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void DlgAudio::OnApply (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAudioDlg\fP\&.
+.PP
+Definition at line 220 of file topFrame\&.h\&.
+.SS "virtual void DlgAudio::OnCancel (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAudioDlg\fP\&.
+.PP
+Definition at line 221 of file topFrame\&.h\&.
+.SS "virtual void DlgAudio::OnClose (wxCloseEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAudioDlg\fP\&.
+.PP
+Definition at line 214 of file topFrame\&.h\&.
+.SS "virtual void DlgAudio::OnInitDialog (wxInitDialogEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAudioDlg\fP\&.
+.PP
+Definition at line 215 of file topFrame\&.h\&.
+.SS "virtual void DlgAudio::OnOK (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAudioDlg\fP\&.
+.PP
+Definition at line 222 of file topFrame\&.h\&.
+.SS "virtual void DlgAudio::OnRxInputSelect (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAudioDlg\fP\&.
+.PP
+Definition at line 216 of file topFrame\&.h\&.
+.SS "virtual void DlgAudio::OnTxOutputSelect (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAudioDlg\fP\&.
+.PP
+Definition at line 217 of file topFrame\&.h\&.
+.SS "virtual void DlgAudio::OnVoiceInputSelect (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAudioDlg\fP\&.
+.PP
+Definition at line 218 of file topFrame\&.h\&.
+.SS "virtual void DlgAudio::OnVoiceOutputSelect (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAudioDlg\fP\&.
+.PP
+Definition at line 219 of file topFrame\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "wxComboBox* DlgAudio::m_comboAudioCodec\fC [protected]\fP"
+
+.PP
+Definition at line 191 of file topFrame\&.h\&.
+.SS "wxComboBox* DlgAudio::m_comboCodecSpkr\fC [protected]\fP"
+
+.PP
+Definition at line 197 of file topFrame\&.h\&.
+.SS "wxComboBox* DlgAudio::m_comboCodecTx\fC [protected]\fP"
+
+.PP
+Definition at line 193 of file topFrame\&.h\&.
+.SS "wxComboBox* DlgAudio::m_comboRadioRx\fC [protected]\fP"
+
+.PP
+Definition at line 195 of file topFrame\&.h\&.
+.SS "wxListBox* DlgAudio::m_lbRxInput\fC [protected]\fP"
+
+.PP
+Definition at line 200 of file topFrame\&.h\&.
+.SS "wxListBox* DlgAudio::m_lbTxOutput\fC [protected]\fP"
+
+.PP
+Definition at line 202 of file topFrame\&.h\&.
+.SS "wxListBox* DlgAudio::m_lbVoiceInput\fC [protected]\fP"
+
+.PP
+Definition at line 204 of file topFrame\&.h\&.
+.SS "wxListBox* DlgAudio::m_lbVoiceOutput\fC [protected]\fP"
+
+.PP
+Definition at line 206 of file topFrame\&.h\&.
+.SS "wxNotebook* DlgAudio::m_nbAudioOptions\fC [protected]\fP"
+
+.PP
+Definition at line 183 of file topFrame\&.h\&.
+.SS "wxPanel* DlgAudio::m_panelDevices\fC [protected]\fP"
+
+.PP
+Definition at line 184 of file topFrame\&.h\&.
+.SS "wxPanel* DlgAudio::m_panelSettings\fC [protected]\fP"
+
+.PP
+Definition at line 199 of file topFrame\&.h\&.
+.SS "wxRadioButton* DlgAudio::m_radioBtnFileOnly\fC [protected]\fP"
+
+.PP
+Definition at line 198 of file topFrame\&.h\&.
+.SS "wxRadioButton* DlgAudio::m_radioBtnPortAudio\fC [protected]\fP"
+
+.PP
+Definition at line 185 of file topFrame\&.h\&.
+.SS "wxStdDialogButtonSizer* DlgAudio::m_sdbSizer3\fC [protected]\fP"
+
+.PP
+Definition at line 208 of file topFrame\&.h\&.
+.SS "wxButton* DlgAudio::m_sdbSizer3Apply\fC [protected]\fP"
+
+.PP
+Definition at line 210 of file topFrame\&.h\&.
+.SS "wxButton* DlgAudio::m_sdbSizer3Cancel\fC [protected]\fP"
+
+.PP
+Definition at line 211 of file topFrame\&.h\&.
+.SS "wxButton* DlgAudio::m_sdbSizer3OK\fC [protected]\fP"
+
+.PP
+Definition at line 209 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgAudio::m_staticText14\fC [protected]\fP"
+
+.PP
+Definition at line 190 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgAudio::m_staticText141\fC [protected]\fP"
+
+.PP
+Definition at line 188 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgAudio::m_staticText15\fC [protected]\fP"
+
+.PP
+Definition at line 192 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgAudio::m_staticText151\fC [protected]\fP"
+
+.PP
+Definition at line 186 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgAudio::m_staticText16\fC [protected]\fP"
+
+.PP
+Definition at line 194 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgAudio::m_staticText17\fC [protected]\fP"
+
+.PP
+Definition at line 196 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgAudio::m_textNumChIn\fC [protected]\fP"
+
+.PP
+Definition at line 189 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgAudio::m_textNumChOut\fC [protected]\fP"
+
+.PP
+Definition at line 187 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgAudio::m_textRxInput\fC [protected]\fP"
+
+.PP
+Definition at line 201 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgAudio::m_textTxOutput\fC [protected]\fP"
+
+.PP
+Definition at line 203 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgAudio::m_textVoiceInput\fC [protected]\fP"
+
+.PP
+Definition at line 205 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgAudio::m_textVoiceOutput\fC [protected]\fP"
+
+.PP
+Definition at line 207 of file topFrame\&.h\&.
 
 .SH "Author"
 .PP 

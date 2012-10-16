@@ -1,3 +1,0 @@
-For a complete log of changes to Hamlib, please visit:
-
-http://hamlib.git.sourceforge.net/git/gitweb.cgi?p=hamlib/hamlib;a=log

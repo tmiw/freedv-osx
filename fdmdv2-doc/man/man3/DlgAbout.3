@@ -1,4 +1,4 @@
-.TH "DlgAbout" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "DlgAbout" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,6 +17,9 @@ Inherited by \fBAboutDlg\fP\&.
 .in +1c
 .ti -1c
 .RI "\fBDlgAbout\fP (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &title=_('About FDMDV2'), const wxPoint &pos=wxDefaultPosition, const wxSize &size=wxSize(352, 343), long style=wxDEFAULT_DIALOG_STYLE)"
+.br
+.ti -1c
+.RI "\fB~DlgAbout\fP ()"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -48,6 +51,48 @@ Inherited by \fBAboutDlg\fP\&.
 .SH "Detailed Description"
 .PP 
 Class \fBDlgAbout\fP 
+.PP
+Definition at line 153 of file topFrame\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DlgAbout::DlgAbout (wxWindow *parent, wxWindowIDid = \fCwxID_ANY\fP, const wxString &title = \fC_('About FDMDV2')\fP, const wxPoint &pos = \fCwxDefaultPosition\fP, const wxSize &size = \fCwxSize( 352,343 )\fP, longstyle = \fCwxDEFAULT_DIALOG_STYLE\fP)"
+
+.PP
+Definition at line 449 of file topFrame\&.cpp\&.
+.SS "DlgAbout::~DlgAbout ()"
+
+.PP
+Definition at line 518 of file topFrame\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void DlgAbout::OnClose (wxCloseEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 164 of file topFrame\&.h\&.
+.SS "virtual void DlgAbout::OnInitDialog (wxInitDialogEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAboutDlg\fP\&.
+.PP
+Definition at line 165 of file topFrame\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "wxStaticBitmap* DlgAbout::m_bitmapAbout\fC [protected]\fP"
+
+.PP
+Definition at line 158 of file topFrame\&.h\&.
+.SS "wxButton* DlgAbout::m_button9\fC [protected]\fP"
+
+.PP
+Definition at line 161 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgAbout::m_staticText1\fC [protected]\fP"
+
+.PP
+Definition at line 159 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgAbout::m_textCtrl2\fC [protected]\fP"
+
+.PP
+Definition at line 160 of file topFrame\&.h\&.
 
 .SH "Author"
 .PP 

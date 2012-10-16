@@ -1,0 +1,5 @@
+<map id="MainFrame::stopTxStream" name="MainFrame::stopTxStream">
+<area shape="rect" id="node3" href="$class_port_audio_wrap.html#a852668fd29440064746f2ce0530b3bc1" title="PortAudioWrap::stop" alt="" coords="254,5,397,32"/>
+<area shape="rect" id="node5" href="$class_port_audio_wrap.html#a7f900dbb4003a1e01341e4f9f95c72e8" title="PortAudioWrap::streamClose" alt="" coords="230,56,421,83"/>
+<area shape="rect" id="node7" href="$class_port_audio_wrap.html#ad4a72bbe2ec6190336c2412df076c3f7" title="PortAudioWrap::isOpen" alt="" coords="470,56,629,83"/>
+</map>

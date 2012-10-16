@@ -1,4 +1,4 @@
-.TH "MainApp" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "MainApp" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,8 @@ MainApp \-
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <fdmdv2_main\&.h>\fP
 .PP
 Inherits wxApp\&.
 .SS "Public Member Functions"
@@ -32,12 +34,6 @@ Inherits wxApp\&.
 .br
 .ti -1c
 .RI "wxString \fBm_StrAppName\fP"
-.br
-.ti -1c
-.RI "wxRadioButton \fBm_radioBtnPortAudio\fP"
-.br
-.ti -1c
-.RI "wxRadioButton \fBm_radioBtnFileOnly\fP"
 .br
 .ti -1c
 .RI "wxString \fBm_textNumChOut\fP"
@@ -82,6 +78,89 @@ Inherits wxApp\&.
 .RI "wxRect \fBm_rTopWindow\fP"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 74 of file fdmdv2_main\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool MainApp::loadConfig ()"
+
+.SS "int MainApp::OnExit ()\fC [virtual]\fP"
+
+.PP
+Definition at line 73 of file fdmdv2_main\&.cpp\&.
+.SS "bool MainApp::OnInit ()\fC [virtual]\fP"
+
+.PP
+Definition at line 40 of file fdmdv2_main\&.cpp\&.
+.SS "bool MainApp::saveConfig ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "wxRect MainApp::m_rTopWindow"
+
+.PP
+Definition at line 102 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_StrAppName"
+
+.PP
+Definition at line 81 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strBitrate"
+
+.PP
+Definition at line 94 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strRigCtrlBaud"
+
+.PP
+Definition at line 97 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strRigCtrlDatabits"
+
+.PP
+Definition at line 98 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strRigCtrlParity"
+
+.PP
+Definition at line 100 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strRigCtrlPort"
+
+.PP
+Definition at line 96 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strRigCtrlStopbits"
+
+.PP
+Definition at line 99 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strRxInAudio"
+
+.PP
+Definition at line 89 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strRxOutAudio"
+
+.PP
+Definition at line 90 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strSampleRate"
+
+.PP
+Definition at line 93 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_strVendName"
+
+.PP
+Definition at line 80 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_textNumChIn"
+
+.PP
+Definition at line 87 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_textNumChOut"
+
+.PP
+Definition at line 86 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_textVoiceInput"
+
+.PP
+Definition at line 91 of file fdmdv2_main\&.h\&.
+.SS "wxString MainApp::m_textVoiceOutput"
+
+.PP
+Definition at line 92 of file fdmdv2_main\&.h\&.
 
 .SH "Author"
 .PP 

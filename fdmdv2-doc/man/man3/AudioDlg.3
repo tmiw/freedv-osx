@@ -1,4 +1,4 @@
-.TH "AudioDlg" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "AudioDlg" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,8 @@ AudioDlg \-
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <dlg_audio\&.h>\fP
 .PP
 Inherits \fBDlgAudio\fP\&.
 .SS "Public Member Functions"
@@ -56,10 +58,83 @@ Inherits \fBDlgAudio\fP\&.
 .br
 .in -1c
 .SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 23 of file dlg_audio\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "AudioDlg::AudioDlg (wxWindow *parent)"
 Constructor 
+.PP
+Definition at line 17 of file dlg_audio\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void AudioDlg::ExchangeData (intinout)"
+
+.PP
+Definition at line 65 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::OnApply (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgAudio\fP\&.
+.PP
+Definition at line 40 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::OnCancel (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgAudio\fP\&.
+.PP
+Definition at line 24 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::OnClose (wxCloseEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgAudio\fP\&.
+.PP
+Definition at line 48 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::OnInitDialog (wxInitDialogEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgAudio\fP\&.
+.PP
+Definition at line 56 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::OnOK (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgAudio\fP\&.
+.PP
+Definition at line 32 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::OnRxInputSelect (wxCommandEvent &event)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgAudio\fP\&.
+.PP
+Definition at line 95 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::OnTxOutputSelect (wxCommandEvent &event)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgAudio\fP\&.
+.PP
+Definition at line 103 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::OnVoiceInputSelect (wxCommandEvent &event)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgAudio\fP\&.
+.PP
+Definition at line 111 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::OnVoiceOutputSelect (wxCommandEvent &event)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgAudio\fP\&.
+.PP
+Definition at line 119 of file dlg_audio\&.cpp\&.
+.SS "int AudioDlg::populateAudioInfo ()\fC [protected]\fP"
+
+.PP
+Definition at line 161 of file dlg_audio\&.cpp\&.
+.SS "void AudioDlg::populateStandardSampleRates (wxComboBox *target, const portaudio::DirectionSpecificStreamParameters &inputParameters, const portaudio::DirectionSpecificStreamParameters &outputParameters)\fC [protected]\fP"
+
+.PP
+Definition at line 127 of file dlg_audio\&.cpp\&.
 
 .SH "Author"
 .PP 

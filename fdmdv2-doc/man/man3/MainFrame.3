@@ -1,4 +1,4 @@
-.TH "MainFrame" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "MainFrame" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,8 @@ MainFrame \-
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <fdmdv2_main\&.h>\fP
 .PP
 Inherits \fBTopFrame\fP\&.
 .SS "Public Member Functions"
@@ -15,7 +17,7 @@ Inherits \fBTopFrame\fP\&.
 .RI "\fBMainFrame\fP (wxWindow *parent)"
 .br
 .ti -1c
-.RI "void \fBper_frame_rx_processing\fP (short output_buf[], int *n_output_buf, int codec_bits[], short input_buf[], int *n_input_buf, int *nin, int *state, struct CODEC2 *c2)"
+.RI "virtual \fB~MainFrame\fP ()"
 .br
 .in -1c
 .SS "Static Public Member Functions"
@@ -27,13 +29,13 @@ Inherits \fBTopFrame\fP\&.
 .ti -1c
 .RI "static int \fBtxCallback\fP (const void *inBuffer, void *outBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *outTime, PaStreamCallbackFlags statusFlags, void *userData)"
 .br
+.ti -1c
+.RI "static void \fBper_frame_rx_processing\fP (short output_buf[], int *n_output_buf, int codec_bits[], short input_buf[], int *n_input_buf, int *nin, int *state, struct CODEC2 *c2)"
+.br
 .in -1c
 .SS "Public Attributes"
 
 .in +1c
-.ti -1c
-.RI "\fBPlotPanel\fP * \fBm_panelDefaultA\fP"
-.br
 .ti -1c
 .RI "\fBPlotSpectrum\fP * \fBm_panelSpectrum\fP"
 .br
@@ -56,16 +58,16 @@ Inherits \fBTopFrame\fP\&.
 .RI "bool \fBm_TxRunning\fP"
 .br
 .ti -1c
-.RI "CODEC2 * \fBm_RXCodec2\fP"
-.br
-.ti -1c
-.RI "CODEC2 * \fBm_TXCodec2\fP"
-.br
-.ti -1c
 .RI "\fBPortAudioWrap\fP * \fBm_rxPa\fP"
 .br
 .ti -1c
 .RI "\fBPortAudioWrap\fP * \fBm_txPa\fP"
+.br
+.ti -1c
+.RI "\fBpaCallBackData\fP * \fBm_rxUserdata\fP"
+.br
+.ti -1c
+.RI "\fBpaCallBackData\fP * \fBm_txUserdata\fP"
 .br
 .ti -1c
 .RI "PaDeviceIndex \fBm_rxDevIn\fP"
@@ -87,9 +89,6 @@ Inherits \fBTopFrame\fP\&.
 .br
 .ti -1c
 .RI "wxSound * \fBm_sound\fP"
-.br
-.ti -1c
-.RI "struct FDMDV * \fBm_pFDMDV_state\fP"
 .br
 .ti -1c
 .RI "wxTimer \fBm_plotTimer\fP"
@@ -237,6 +236,33 @@ Inherits \fBTopFrame\fP\&.
 .RI "void \fBOnTogBtnOnOff\fP (wxCommandEvent &event)"
 .br
 .ti -1c
+.RI "void \fBOnTogBtnLoopRx\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnLoopTx\fP (wxCommandEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnSplitClickUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnAnalogClickUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnALCClickUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnRxIDUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnTxIDUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnTXClickUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
+.RI "void \fBOnTogBtnOnOffUI\fP (wxUpdateUIEvent &event)"
+.br
+.ti -1c
 .RI "void \fBOnPaint\fP (wxPaintEvent &event)"
 .br
 .ti -1c
@@ -249,17 +275,455 @@ Inherits \fBTopFrame\fP\&.
 .RI "void \fBOnUpdateUI\fP (wxUpdateUIEvent &event)"
 .br
 .ti -1c
-.RI "void \fBOnTimer\fP (wxTimerEvent &evt)"
+.RI "void \fBOnDeleteConfig\fP (wxCommandEvent &)"
 .br
 .ti -1c
-.RI "void \fBOnDeleteConfig\fP (wxCommandEvent &)"
+.RI "void \fBOnTimer\fP (wxTimerEvent &evt)"
 .br
 .ti -1c
 .RI "wxString \fBLoadUserImage\fP (wxImage &image)"
 .br
 .in -1c
 .SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 137 of file fdmdv2_main\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MainFrame::MainFrame (wxWindow *parent)"
 
+.PP
+Definition at line 81 of file fdmdv2_main\&.cpp\&.
+.SS "MainFrame::~MainFrame ()\fC [virtual]\fP"
+
+.PP
+Definition at line 181 of file fdmdv2_main\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void MainFrame::abortRxStream ()\fC [protected]\fP"
+
+.PP
+Definition at line 985 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::abortTxStream ()\fC [protected]\fP"
+
+.PP
+Definition at line 1079 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::averageData (floatmag_dB[])\fC [protected]\fP"
+
+.PP
+Definition at line 1099 of file fdmdv2_main\&.cpp\&.
+.SS "wxString MainFrame::LoadUserImage (wxImage &image)\fC [protected]\fP"
+
+.PP
+Definition at line 729 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCaptureRxStream (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 576 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCaptureTxStream (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 584 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCheckSQClick (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 352 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnClose (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 484 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnClose (wxCloseEvent &event)\fC [protected]\fP"
+
+.SS "void MainFrame::OnCloseFrame (wxCloseEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 268 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCloseUpdateUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 511 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCmdSliderScroll (wxScrollEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 319 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCmdSliderScrollChanged (wxScrollEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 327 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCopy (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 527 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCopyUpdateUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 535 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCut (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 543 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnCutUpdateUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 551 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnDeleteConfig (wxCommandEvent &)\fC [protected]\fP"
+
+.PP
+Definition at line 286 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnExit (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 519 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnExitClick (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 277 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnHelpAbout (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 713 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnHelpCheckUpdates (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 696 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnHelpCheckUpdatesUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 705 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnOpen (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 1091 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnOpenUpdateUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 467 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnPaint (wxPaintEvent &event)\fC [protected]\fP"
+
+.PP
+Definition at line 305 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnPaste (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 560 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnPasteUpdateUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 568 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnPlayAudioFile (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 592 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnSave (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 1454 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnSaveUpdateUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 475 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnSize (wxSizeEvent &event)\fC [protected]\fP"
+
+.SS "void MainFrame::OnSliderScrollBottom (wxScrollEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 343 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnSliderScrollTop (wxScrollEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 335 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTimer (wxTimerEvent &evt)\fC [protected]\fP"
+
+.PP
+Definition at line 236 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnALCClick (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 409 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnALCClickUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 435 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnAnalogClick (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 401 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnAnalogClickUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 427 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnLoopRx (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 807 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnLoopTx (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 815 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnOnOff (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 762 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnOnOffUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 748 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnRxID (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 377 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnRxIDUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 443 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnSplitClick (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 393 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnSplitClickUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 418 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnTXClick (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 367 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnTXClickUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 459 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnTxID (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 385 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnTogBtnTxIDUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 451 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnToolsAudio (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 623 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnToolsAudioUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 639 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnToolsComCfg (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 647 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnToolsComCfgUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 663 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnToolsOptions (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 671 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnToolsOptionsUI (wxUpdateUIEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTopFrame\fP\&.
+.PP
+Definition at line 687 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::OnUpdateUI (wxUpdateUIEvent &event)\fC [protected]\fP"
+
+.SS "void MainFrame::per_frame_rx_processing (shortoutput_buf[], int *n_output_buf, intcodec_bits[], shortinput_buf[], int *n_input_buf, int *nin, int *state, struct CODEC2 *c2)\fC [static]\fP"
+
+.PP
+Definition at line 1262 of file fdmdv2_main\&.cpp\&.
+.SS "int MainFrame::rxCallback (const void *inBuffer, void *outBuffer, unsigned longframesPerBuffer, const PaStreamCallbackTimeInfo *outTime, PaStreamCallbackFlagsstatusFlags, void *userData)\fC [static]\fP"
+
+.PP
+Definition at line 1113 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::startRxStream ()\fC [protected]\fP"
+
+.PP
+Definition at line 855 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::startTxStream ()\fC [protected]\fP"
+
+.PP
+Definition at line 997 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::stopRxStream ()\fC [protected]\fP"
+
+.PP
+Definition at line 954 of file fdmdv2_main\&.cpp\&.
+.SS "void MainFrame::stopTxStream ()\fC [protected]\fP"
+
+.PP
+Definition at line 1055 of file fdmdv2_main\&.cpp\&.
+.SS "int MainFrame::txCallback (const void *inBuffer, void *outBuffer, unsigned longframesPerBuffer, const PaStreamCallbackTimeInfo *outTime, PaStreamCallbackFlagsstatusFlags, void *userData)\fC [static]\fP"
+
+.PP
+Definition at line 1421 of file fdmdv2_main\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPlotScalar\fP* MainFrame::m_panelScalar"
+
+.PP
+Definition at line 147 of file fdmdv2_main\&.h\&.
+.SS "\fBPlotScatter\fP* MainFrame::m_panelScatter"
+
+.PP
+Definition at line 146 of file fdmdv2_main\&.h\&.
+.SS "\fBPlotSpectrum\fP* MainFrame::m_panelSpectrum"
+
+.PP
+Definition at line 144 of file fdmdv2_main\&.h\&.
+.SS "\fBPlotWaterfall\fP* MainFrame::m_panelWaterfall"
+
+.PP
+Definition at line 145 of file fdmdv2_main\&.h\&.
+.SS "wxTimer MainFrame::m_plotTimer"
+
+.PP
+Definition at line 163 of file fdmdv2_main\&.h\&.
+.SS "PaDeviceIndex MainFrame::m_rxDevIn"
+
+.PP
+Definition at line 155 of file fdmdv2_main\&.h\&.
+.SS "PaDeviceIndex MainFrame::m_rxDevOut"
+
+.PP
+Definition at line 156 of file fdmdv2_main\&.h\&.
+.SS "PaError MainFrame::m_rxErr"
+
+.PP
+Definition at line 159 of file fdmdv2_main\&.h\&.
+.SS "\fBPortAudioWrap\fP* MainFrame::m_rxPa"
+
+.PP
+Definition at line 151 of file fdmdv2_main\&.h\&.
+.SS "bool MainFrame::m_RxRunning"
+
+.PP
+Definition at line 149 of file fdmdv2_main\&.h\&.
+.SS "\fBpaCallBackData\fP* MainFrame::m_rxUserdata"
+
+.PP
+Definition at line 153 of file fdmdv2_main\&.h\&.
+.SS "wxSound* MainFrame::m_sound"
+
+.PP
+Definition at line 161 of file fdmdv2_main\&.h\&.
+.SS "bool MainFrame::m_SquelchActive"
+
+.PP
+Definition at line 148 of file fdmdv2_main\&.h\&.
+.SS "PaDeviceIndex MainFrame::m_txDevIn"
+
+.PP
+Definition at line 157 of file fdmdv2_main\&.h\&.
+.SS "PaDeviceIndex MainFrame::m_txDevOut"
+
+.PP
+Definition at line 158 of file fdmdv2_main\&.h\&.
+.SS "PaError MainFrame::m_txErr"
+
+.PP
+Definition at line 160 of file fdmdv2_main\&.h\&.
+.SS "\fBPortAudioWrap\fP* MainFrame::m_txPa"
+
+.PP
+Definition at line 152 of file fdmdv2_main\&.h\&.
+.SS "bool MainFrame::m_TxRunning"
+
+.PP
+Definition at line 150 of file fdmdv2_main\&.h\&.
+.SS "\fBpaCallBackData\fP* MainFrame::m_txUserdata"
+
+.PP
+Definition at line 154 of file fdmdv2_main\&.h\&.
 
 .SH "Author"
 .PP 

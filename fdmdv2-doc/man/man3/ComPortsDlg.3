@@ -1,4 +1,4 @@
-.TH "ComPortsDlg" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "ComPortsDlg" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,8 @@ ComPortsDlg \-
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <dlg_comports\&.h>\fP
 .PP
 Inherits \fBDlgComPorts\fP\&.
 .SS "Public Member Functions"
@@ -41,10 +43,57 @@ Inherits \fBDlgComPorts\fP\&.
 .br
 .in -1c
 .SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 19 of file dlg_comports\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ComPortsDlg::ComPortsDlg (wxWindow *parent)"
 Constructor 
+.PP
+Definition at line 16 of file dlg_comports\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ComPortsDlg::ExchangeData (intinout)"
+
+.PP
+Definition at line 33 of file dlg_comports\&.cpp\&.
+.SS "void ComPortsDlg::OnApply (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgComPorts\fP\&.
+.PP
+Definition at line 83 of file dlg_comports\&.cpp\&.
+.SS "void ComPortsDlg::OnCancel (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgComPorts\fP\&.
+.PP
+Definition at line 67 of file dlg_comports\&.cpp\&.
+.SS "void ComPortsDlg::OnClose (wxCloseEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgComPorts\fP\&.
+.PP
+Definition at line 91 of file dlg_comports\&.cpp\&.
+.SS "void ComPortsDlg::OnInitDialog (wxInitDialogEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgComPorts\fP\&.
+.PP
+Definition at line 99 of file dlg_comports\&.cpp\&.
+.SS "void ComPortsDlg::OnListItemSelected (wxListEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgComPorts\fP\&.
+.PP
+Definition at line 25 of file dlg_comports\&.cpp\&.
+.SS "void ComPortsDlg::OnOK (wxCommandEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgComPorts\fP\&.
+.PP
+Definition at line 75 of file dlg_comports\&.cpp\&.
 
 .SH "Author"
 .PP 

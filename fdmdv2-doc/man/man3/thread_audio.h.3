@@ -1,0 +1,57 @@
+.TH "C:/bin/Projects/Radio/fdmdv2/src/detritus/thread_audio.h" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/bin/Projects/Radio/fdmdv2/src/detritus/thread_audio.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <wx/thread\&.h>\fP
+.br
+\fC#include 'fdmdv2_main\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAudioThread\fP"
+.br
+.ti -1c
+.RI "class \fBMyThread\fP"
+.br
+.ti -1c
+.RI "class \fBMyFrame\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBwxDECLARE_EVENT\fP (wxEVT_COMMAND_MYTHREAD_COMPLETED, wxThreadEvent)"
+.br
+.ti -1c
+.RI "\fBwxDECLARE_EVENT\fP (wxEVT_COMMAND_MYTHREAD_UPDATE, wxThreadEvent)"
+.br
+.ti -1c
+.RI "\fBwxBEGIN_EVENT_TABLE\fP (\fBMyFrame\fP, wxFrame) wxEND_EVENT_TABLE() \fBwxDEFINE_EVENT\fP(wxEVT_COMMAND_MYTHREAD_COMPLETED"
+.br
+.ti -1c
+.RI "wxThreadEvent \fBwxDEFINE_EVENT\fP (wxEVT_COMMAND_MYTHREAD_UPDATE, wxThreadEvent) void \fBMyFrame\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "wxBEGIN_EVENT_TABLE (\fBMyFrame\fP, wxFrame)"
+
+.SS "wxDECLARE_EVENT (wxEVT_COMMAND_MYTHREAD_COMPLETED, wxThreadEvent)"
+
+.SS "wxDECLARE_EVENT (wxEVT_COMMAND_MYTHREAD_UPDATE, wxThreadEvent)"
+
+.SS "wxThreadEvent wxDEFINE_EVENT (wxEVT_COMMAND_MYTHREAD_UPDATE, wxThreadEvent)"
+
+.PP
+Definition at line 93 of file thread_audio\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

@@ -1,0 +1,134 @@
+.TH "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_hdw_ports.h" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_hdw_ports.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'wx/wx\&.h'\fP
+.br
+\fC#include <wx/dynarray\&.h>\fP
+.br
+\fC#include 'fdmdv2_main\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBHdwPort\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBSER_PAR_NONE\fP, \fBSER_PAR_ODD\fP, \fBSER_PAR_EVEN\fP, \fBSER_PAR_MARK\fP, \fBSER_PAR_SPACE\fP }"
+.br
+.ti -1c
+.RI "enum { \fBSER_FLOW_NONE\fP, \fBSER_FLOW_XONXOFF\fP, \fBSER_FLOW_RTSCTS\fP, \fBSER_FLOW_DSRDTR\fP }"
+.br
+.ti -1c
+.RI "enum { \fBPORT_TYPE_SERIAL\fP, \fBPORT_TYPE_USB\fP, \fBPORT_TYPE_VIRTUAL\fP, \fBPORT_TYPE_PARALLEL\fP, \fBPORT_TYPE_IEEE1394\fP, \fBPORT_TYPE_UNKNOWN\fP }"
+.br
+.ti -1c
+.RI "enum { \fBDEVICE_TYPE_SERIAL\fP, \fBDEVICE_TYPE_USB\fP, \fBDEVICE_TYPE_VIRTUAL\fP, \fBDEVICE_TYPE_PARALLEL\fP, \fBDEVICE_TYPE_BLUETOOTH\fP, \fBDEVICE_TYPE_NETWORK\fP, \fBDEVICE_TYPE_IEEE1394\fP, \fBDEVICE_TYPE_UNKNOWN\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWX_DECLARE_OBJARRAY\fP (\fBHdwPort\fP, ArrayOfPorts)"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fISER_PAR_NONE \fP\fP
+.TP
+\fB\fISER_PAR_ODD \fP\fP
+.TP
+\fB\fISER_PAR_EVEN \fP\fP
+.TP
+\fB\fISER_PAR_MARK \fP\fP
+.TP
+\fB\fISER_PAR_SPACE \fP\fP
+
+.PP
+Definition at line 32 of file fdmdv2_hdw_ports\&.h\&.
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fISER_FLOW_NONE \fP\fP
+.TP
+\fB\fISER_FLOW_XONXOFF \fP\fP
+.TP
+\fB\fISER_FLOW_RTSCTS \fP\fP
+.TP
+\fB\fISER_FLOW_DSRDTR \fP\fP
+
+.PP
+Definition at line 41 of file fdmdv2_hdw_ports\&.h\&.
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIPORT_TYPE_SERIAL \fP\fP
+.TP
+\fB\fIPORT_TYPE_USB \fP\fP
+.TP
+\fB\fIPORT_TYPE_VIRTUAL \fP\fP
+.TP
+\fB\fIPORT_TYPE_PARALLEL \fP\fP
+.TP
+\fB\fIPORT_TYPE_IEEE1394 \fP\fP
+.TP
+\fB\fIPORT_TYPE_UNKNOWN \fP\fP
+
+.PP
+Definition at line 49 of file fdmdv2_hdw_ports\&.h\&.
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIDEVICE_TYPE_SERIAL \fP\fP
+.TP
+\fB\fIDEVICE_TYPE_USB \fP\fP
+.TP
+\fB\fIDEVICE_TYPE_VIRTUAL \fP\fP
+.TP
+\fB\fIDEVICE_TYPE_PARALLEL \fP\fP
+.TP
+\fB\fIDEVICE_TYPE_BLUETOOTH \fP\fP
+.TP
+\fB\fIDEVICE_TYPE_NETWORK \fP\fP
+.TP
+\fB\fIDEVICE_TYPE_IEEE1394 \fP\fP
+.TP
+\fB\fIDEVICE_TYPE_UNKNOWN \fP\fP
+
+.PP
+Definition at line 59 of file fdmdv2_hdw_ports\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "WX_DECLARE_OBJARRAY (\fBHdwPort\fP, ArrayOfPorts)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

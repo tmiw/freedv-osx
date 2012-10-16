@@ -1,4 +1,4 @@
-.TH "PlotWaterfall" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "PlotWaterfall" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,12 +7,17 @@ PlotWaterfall \-
 .br
 .PP
 .PP
+\fC#include <fdmdv2_plot_waterfall\&.h>\fP
+.PP
 Inherits \fBPlotPanel\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
 .RI "\fBPlotWaterfall\fP (wxFrame *parent)"
+.br
+.ti -1c
+.RI "\fB~PlotWaterfall\fP ()"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -54,7 +59,67 @@ Inherits \fBPlotPanel\fP\&.
 .br
 .in -1c
 .SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 41 of file fdmdv2_plot_waterfall\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PlotWaterfall::PlotWaterfall (wxFrame *parent)"
 
+.PP
+Definition at line 65 of file fdmdv2_plot_waterfall\&.cpp\&.
+.SS "PlotWaterfall::~PlotWaterfall ()"
+
+.PP
+Definition at line 108 of file fdmdv2_plot_waterfall\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void PlotWaterfall::draw (wxAutoBufferedPaintDC &pdc)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPlotPanel\fP\&.
+.PP
+Definition at line 156 of file fdmdv2_plot_waterfall\&.cpp\&.
+.SS "void PlotWaterfall::drawData ()\fC [protected]\fP"
+
+.PP
+Definition at line 213 of file fdmdv2_plot_waterfall\&.cpp\&.
+.SS "void PlotWaterfall::drawData2 (wxMemoryDC &pDC, intbarpos, intl, intt, intw, inth)\fC [protected]\fP"
+
+.SS "void PlotWaterfall::drawGraticule (wxAutoBufferedPaintDC &dc)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPlotPanel\fP\&.
+.PP
+Definition at line 247 of file fdmdv2_plot_waterfall\&.cpp\&.
+.SS "unsigned PlotWaterfall::heatmap (floatval, floatmin, floatmax)\fC [protected]\fP"
+
+.PP
+Definition at line 117 of file fdmdv2_plot_waterfall\&.cpp\&.
+.SS "void PlotWaterfall::OnPaint (wxPaintEvent &evt)\fC [protected]\fP"
+
+.PP
+Definition at line 92 of file fdmdv2_plot_waterfall\&.cpp\&.
+.SS "void PlotWaterfall::OnShow (wxShowEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPlotPanel\fP\&.
+.PP
+Definition at line 101 of file fdmdv2_plot_waterfall\&.cpp\&.
+.SS "void PlotWaterfall::plotPixelData (wxAutoBufferedPaintDC &dc)\fC [protected]\fP"
+
+.PP
+Definition at line 290 of file fdmdv2_plot_waterfall\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "unsigned PlotWaterfall::m_heatmap_lut[256]\fC [protected]\fP"
+
+.PP
+Definition at line 50 of file fdmdv2_plot_waterfall\&.h\&.
+.SS "wxMemoryDC PlotWaterfall::m_mDC\fC [protected]\fP"
+
+.PP
+Definition at line 51 of file fdmdv2_plot_waterfall\&.h\&.
 
 .SH "Author"
 .PP 

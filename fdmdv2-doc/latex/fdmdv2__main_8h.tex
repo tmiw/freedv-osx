@@ -1,0 +1,137 @@
+\hypertarget{fdmdv2__main_8h}{\section{C\-:/bin/\-Projects/\-Radio/fdmdv2/src/fdmdv2\-\_\-main.h File Reference}
+\label{fdmdv2__main_8h}\index{C\-:/bin/\-Projects/\-Radio/fdmdv2/src/fdmdv2\-\_\-main.\-h@{C\-:/bin/\-Projects/\-Radio/fdmdv2/src/fdmdv2\-\_\-main.\-h}}
+}
+{\ttfamily \#include $<$wx/wx.\-h$>$}\\*
+{\ttfamily \#include $<$wx/tglbtn.\-h$>$}\\*
+{\ttfamily \#include $<$wx/app.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}wx/rawbmp.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/file.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/filename.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/config.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$wx/fileconf.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}wx/graphics.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/mstream.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/wfstream.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/quantize.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/scopedptr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/stopwatch.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/versioninfo.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$wx/sound.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}codec2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fdmdv.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fifo.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}top\-Frame.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dlg\-\_\-about.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dlg\-\_\-audio.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dlg\-\_\-options.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dlg\-\_\-comports.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fdmdv2\-\_\-plot.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fdmdv2\-\_\-plot\-\_\-scalar.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fdmdv2\-\_\-plot\-\_\-scatter.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fdmdv2\-\_\-plot\-\_\-waterfall.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fdmdv2\-\_\-plot\-\_\-spectrum.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fdmdv2\-\_\-pa\-\_\-wrapper.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sndfile.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portaudio.\-h\char`\"{}}\\*
+Include dependency graph for fdmdv2\-\_\-main.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fdmdv2__main_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fdmdv2__main_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_main_app}{Main\-App}
+\item 
+struct \hyperlink{structpa_call_back_data}{pa\-Call\-Back\-Data}
+\item 
+class \hyperlink{class_main_frame}{Main\-Frame}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fdmdv2__main_8h_a77e65e0f103cd6b9c7fd1efebd39f2e9}{\-\_\-\-U\-S\-E\-\_\-\-T\-I\-M\-E\-R}~1
+\item 
+\#define \hyperlink{fdmdv2__main_8h_a4dbb1f039e6f88d9ea867750af8fbda6}{\-\_\-\-D\-U\-M\-M\-Y\-\_\-\-D\-A\-T\-A}~1
+\item 
+\#define \hyperlink{fdmdv2__main_8h_ae58729a542ab799c68204b90593debab}{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N}~0
+\item 
+\#define \hyperlink{fdmdv2__main_8h_a13adfe217ec3bcc055e6fc3a4af803d5}{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}~1
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+\hyperlink{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea7d9a979aae3f7ef942276290679e15cb}{I\-D\-\_\-\-S\-T\-A\-R\-T} = wx\-I\-D\-\_\-\-H\-I\-G\-H\-E\-S\-T, 
+\hyperlink{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea277bba66e5f3ce1733dfbd95310ed372}{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-W\-A\-T\-E\-R\-F\-A\-L\-L}, 
+\hyperlink{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9eaf06588ef28b7494cb24b4dfc08a72f92}{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-P\-E\-C\-T\-R\-U\-M}, 
+\hyperlink{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea7a28907cd365795c0de9f02a9499d3dd}{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-T\-T\-E\-R}, 
+\\*
+\hyperlink{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea0aa9cd78213305f45c2c4a326ed0026a}{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-L\-A\-R}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{fdmdv2__main_8h_a4dbb1f039e6f88d9ea867750af8fbda6}{\index{fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}!\-\_\-\-D\-U\-M\-M\-Y\-\_\-\-D\-A\-T\-A@{\-\_\-\-D\-U\-M\-M\-Y\-\_\-\-D\-A\-T\-A}}
+\index{\-\_\-\-D\-U\-M\-M\-Y\-\_\-\-D\-A\-T\-A@{\-\_\-\-D\-U\-M\-M\-Y\-\_\-\-D\-A\-T\-A}!fdmdv2_main.h@{fdmdv2\-\_\-main.\-h}}
+\subsubsection[{\-\_\-\-D\-U\-M\-M\-Y\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-D\-U\-M\-M\-Y\-\_\-\-D\-A\-T\-A~1}}\label{fdmdv2__main_8h_a4dbb1f039e6f88d9ea867750af8fbda6}
+
+
+Definition at line 50 of file fdmdv2\-\_\-main.\-h.
+
+\hypertarget{fdmdv2__main_8h_a77e65e0f103cd6b9c7fd1efebd39f2e9}{\index{fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}!\-\_\-\-U\-S\-E\-\_\-\-T\-I\-M\-E\-R@{\-\_\-\-U\-S\-E\-\_\-\-T\-I\-M\-E\-R}}
+\index{\-\_\-\-U\-S\-E\-\_\-\-T\-I\-M\-E\-R@{\-\_\-\-U\-S\-E\-\_\-\-T\-I\-M\-E\-R}!fdmdv2_main.h@{fdmdv2\-\_\-main.\-h}}
+\subsubsection[{\-\_\-\-U\-S\-E\-\_\-\-T\-I\-M\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-U\-S\-E\-\_\-\-T\-I\-M\-E\-R~1}}\label{fdmdv2__main_8h_a77e65e0f103cd6b9c7fd1efebd39f2e9}
+
+
+Definition at line 49 of file fdmdv2\-\_\-main.\-h.
+
+\hypertarget{fdmdv2__main_8h_ae58729a542ab799c68204b90593debab}{\index{fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}!E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N@{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N}}
+\index{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N@{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N}!fdmdv2_main.h@{fdmdv2\-\_\-main.\-h}}
+\subsubsection[{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N~0}}\label{fdmdv2__main_8h_ae58729a542ab799c68204b90593debab}
+
+
+Definition at line 61 of file fdmdv2\-\_\-main.\-h.
+
+\hypertarget{fdmdv2__main_8h_a13adfe217ec3bcc055e6fc3a4af803d5}{\index{fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}!E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T@{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}}
+\index{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T@{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}!fdmdv2_main.h@{fdmdv2\-\_\-main.\-h}}
+\subsubsection[{E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-C\-H\-A\-N\-G\-E\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T~1}}\label{fdmdv2__main_8h_a13adfe217ec3bcc055e6fc3a4af803d5}
+
+
+Definition at line 62 of file fdmdv2\-\_\-main.\-h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9e}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9e}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{I\-D\-\_\-\-S\-T\-A\-R\-T@{I\-D\-\_\-\-S\-T\-A\-R\-T}!fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}}\index{fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}!I\-D\-\_\-\-S\-T\-A\-R\-T@{I\-D\-\_\-\-S\-T\-A\-R\-T}}\item[{\em 
+\hypertarget{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea7d9a979aae3f7ef942276290679e15cb}{I\-D\-\_\-\-S\-T\-A\-R\-T}\label{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea7d9a979aae3f7ef942276290679e15cb}
+}]\index{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-W\-A\-T\-E\-R\-F\-A\-L\-L@{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-W\-A\-T\-E\-R\-F\-A\-L\-L}!fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}}\index{fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}!I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-W\-A\-T\-E\-R\-F\-A\-L\-L@{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-W\-A\-T\-E\-R\-F\-A\-L\-L}}\item[{\em 
+\hypertarget{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea277bba66e5f3ce1733dfbd95310ed372}{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-W\-A\-T\-E\-R\-F\-A\-L\-L}\label{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea277bba66e5f3ce1733dfbd95310ed372}
+}]\index{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-P\-E\-C\-T\-R\-U\-M@{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-P\-E\-C\-T\-R\-U\-M}!fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}}\index{fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}!I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-P\-E\-C\-T\-R\-U\-M@{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-P\-E\-C\-T\-R\-U\-M}}\item[{\em 
+\hypertarget{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9eaf06588ef28b7494cb24b4dfc08a72f92}{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-P\-E\-C\-T\-R\-U\-M}\label{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9eaf06588ef28b7494cb24b4dfc08a72f92}
+}]\index{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-T\-T\-E\-R@{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-T\-T\-E\-R}!fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}}\index{fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}!I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-T\-T\-E\-R@{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-T\-T\-E\-R}}\item[{\em 
+\hypertarget{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea7a28907cd365795c0de9f02a9499d3dd}{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-T\-T\-E\-R}\label{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea7a28907cd365795c0de9f02a9499d3dd}
+}]\index{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-L\-A\-R@{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-L\-A\-R}!fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}}\index{fdmdv2\-\_\-main.\-h@{fdmdv2\-\_\-main.\-h}!I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-L\-A\-R@{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-L\-A\-R}}\item[{\em 
+\hypertarget{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea0aa9cd78213305f45c2c4a326ed0026a}{I\-D\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-C\-A\-L\-A\-R}\label{fdmdv2__main_8h_a61dadd085c1777f559549e05962b2c9ea0aa9cd78213305f45c2c4a326ed0026a}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 53 of file fdmdv2\-\_\-main.\-h.
+

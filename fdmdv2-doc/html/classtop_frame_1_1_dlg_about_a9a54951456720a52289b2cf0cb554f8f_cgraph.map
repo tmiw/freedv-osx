@@ -1,0 +1,14 @@
+<map id="topFrame.DlgAbout.__init__" name="topFrame.DlgAbout.__init__">
+<area shape="rect" id="node4" href="$classfdmdv2_top_frame.html#a83f38a1a80648104e706813518c4e88e" title="fdmdv2TopFrame::OnClose" alt="" coords="200,5,379,32"/>
+<area shape="rect" id="node6" href="$class_my_frame.html#abbf675938c147f9ba9394c8d2df49ca8" title="MyFrame::OnClose" alt="" coords="222,56,357,83"/>
+<area shape="rect" id="node8" href="$class_top_frame.html#a62e531b947f11cd089a675807ff12269" title="TopFrame::OnClose" alt="" coords="220,107,359,133"/>
+<area shape="rect" id="node10" href="$class_dlg_about.html#a3253b689497f4c6399d24c67ba78b51e" title="DlgAbout::OnClose" alt="" coords="223,157,356,184"/>
+<area shape="rect" id="node12" href="$class_dlg_audio.html#a3d19dbabda45d63849c95f9202d9ee56" title="DlgAudio::OnClose" alt="" coords="223,208,355,235"/>
+<area shape="rect" id="node14" href="$class_dlg_options.html#aad6cf9d439aced63416da6dc04f326d7" title="DlgOptions::OnClose" alt="" coords="217,259,361,285"/>
+<area shape="rect" id="node16" href="$classtop_frame_1_1_top_frame.html#a058b8d387613998277c124bbb123493d" title="topFrame.TopFrame.OnClose" alt="" coords="193,309,386,336"/>
+<area shape="rect" id="node18" href="$classtop_frame_1_1_dlg_about.html#a857097225e2f16ad6f280eb801e85a9a" title="topFrame.DlgAbout.OnClose" alt="" coords="195,360,383,387"/>
+<area shape="rect" id="node20" href="$class_dlg_about.html#a442a568cf1b87a5d52a588b212f474f3" title="DlgAbout::OnInitDialog" alt="" coords="213,411,366,437"/>
+<area shape="rect" id="node22" href="$class_dlg_audio.html#a4005f4224055bd5c8767e9e4d2296c26" title="DlgAudio::OnInitDialog" alt="" coords="213,461,365,488"/>
+<area shape="rect" id="node24" href="$class_dlg_options.html#ab293c5e4e64e5d2de1b9d1ee67e3a448" title="DlgOptions::OnInitDialog" alt="" coords="207,512,371,539"/>
+<area shape="rect" id="node26" href="$classtop_frame_1_1_dlg_about.html#aa081cc24b3c0e89f3e89b3d9db5607b4" title="topFrame.DlgAbout.OnInit\lDialog" alt="" coords="203,563,375,605"/>
+</map>

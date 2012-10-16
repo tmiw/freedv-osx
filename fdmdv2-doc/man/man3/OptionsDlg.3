@@ -1,4 +1,4 @@
-.TH "OptionsDlg" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "OptionsDlg" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,8 @@ OptionsDlg \-
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <dlg_options\&.h>\fP
 .PP
 Inherits \fBDlgOptions\fP\&.
 .SS "Public Member Functions"
@@ -38,10 +40,45 @@ Inherits \fBDlgOptions\fP\&.
 .br
 .in -1c
 .SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 20 of file dlg_options\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "OptionsDlg::OptionsDlg (wxWindow *parent)"
 Constructor 
+.PP
+Definition at line 17 of file dlg_options\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void OptionsDlg::ExchangeData (intinout)"
+
+.PP
+Definition at line 39 of file dlg_options\&.cpp\&.
+.SS "void OptionsDlg::OnApply (wxCommandEvent &event)"
+
+.PP
+Definition at line 88 of file dlg_options\&.cpp\&.
+.SS "void OptionsDlg::OnCancel (wxCommandEvent &event)"
+
+.PP
+Definition at line 72 of file dlg_options\&.cpp\&.
+.SS "void OptionsDlg::OnClose (wxCloseEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgOptions\fP\&.
+.PP
+Definition at line 24 of file dlg_options\&.cpp\&.
+.SS "void OptionsDlg::OnInitDialog (wxInitDialogEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDlgOptions\fP\&.
+.PP
+Definition at line 31 of file dlg_options\&.cpp\&.
+.SS "void OptionsDlg::OnOK (wxCommandEvent &event)"
+
+.PP
+Definition at line 80 of file dlg_options\&.cpp\&.
 
 .SH "Author"
 .PP 

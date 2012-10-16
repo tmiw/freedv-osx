@@ -1,0 +1,150 @@
+.TH "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_main.h" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_main.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <wx/wx\&.h>\fP
+.br
+\fC#include <wx/tglbtn\&.h>\fP
+.br
+\fC#include <wx/app\&.h>\fP
+.br
+\fC#include 'wx/rawbmp\&.h'\fP
+.br
+\fC#include 'wx/file\&.h'\fP
+.br
+\fC#include 'wx/filename\&.h'\fP
+.br
+\fC#include 'wx/config\&.h'\fP
+.br
+\fC#include <wx/fileconf\&.h>\fP
+.br
+\fC#include 'wx/graphics\&.h'\fP
+.br
+\fC#include 'wx/mstream\&.h'\fP
+.br
+\fC#include 'wx/wfstream\&.h'\fP
+.br
+\fC#include 'wx/quantize\&.h'\fP
+.br
+\fC#include 'wx/scopedptr\&.h'\fP
+.br
+\fC#include 'wx/stopwatch\&.h'\fP
+.br
+\fC#include 'wx/versioninfo\&.h'\fP
+.br
+\fC#include <wx/sound\&.h>\fP
+.br
+\fC#include 'codec2\&.h'\fP
+.br
+\fC#include 'fdmdv\&.h'\fP
+.br
+\fC#include 'fifo\&.h'\fP
+.br
+\fC#include 'topFrame\&.h'\fP
+.br
+\fC#include 'dlg_about\&.h'\fP
+.br
+\fC#include 'dlg_audio\&.h'\fP
+.br
+\fC#include 'dlg_options\&.h'\fP
+.br
+\fC#include 'dlg_comports\&.h'\fP
+.br
+\fC#include 'fdmdv2_plot\&.h'\fP
+.br
+\fC#include 'fdmdv2_plot_scalar\&.h'\fP
+.br
+\fC#include 'fdmdv2_plot_scatter\&.h'\fP
+.br
+\fC#include 'fdmdv2_plot_waterfall\&.h'\fP
+.br
+\fC#include 'fdmdv2_plot_spectrum\&.h'\fP
+.br
+\fC#include 'fdmdv2_pa_wrapper\&.h'\fP
+.br
+\fC#include 'sndfile\&.h'\fP
+.br
+\fC#include 'portaudio\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBMainApp\fP"
+.br
+.ti -1c
+.RI "struct \fBpaCallBackData\fP"
+.br
+.ti -1c
+.RI "class \fBMainFrame\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_USE_TIMER\fP   1"
+.br
+.ti -1c
+.RI "#define \fB_DUMMY_DATA\fP   1"
+.br
+.ti -1c
+.RI "#define \fBEXCHANGE_DATA_IN\fP   0"
+.br
+.ti -1c
+.RI "#define \fBEXCHANGE_DATA_OUT\fP   1"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBID_START\fP = wxID_HIGHEST, \fBID_TIMER_WATERFALL\fP, \fBID_TIMER_SPECTRUM\fP, \fBID_TIMER_SCATTER\fP, \fBID_TIMER_SCALAR\fP }"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define _DUMMY_DATA   1"
+
+.PP
+Definition at line 50 of file fdmdv2_main\&.h\&.
+.SS "#define _USE_TIMER   1"
+
+.PP
+Definition at line 49 of file fdmdv2_main\&.h\&.
+.SS "#define EXCHANGE_DATA_IN   0"
+
+.PP
+Definition at line 61 of file fdmdv2_main\&.h\&.
+.SS "#define EXCHANGE_DATA_OUT   1"
+
+.PP
+Definition at line 62 of file fdmdv2_main\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIID_START \fP\fP
+.TP
+\fB\fIID_TIMER_WATERFALL \fP\fP
+.TP
+\fB\fIID_TIMER_SPECTRUM \fP\fP
+.TP
+\fB\fIID_TIMER_SCATTER \fP\fP
+.TP
+\fB\fIID_TIMER_SCALAR \fP\fP
+
+.PP
+Definition at line 53 of file fdmdv2_main\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FDMDV2 from the source code\&.

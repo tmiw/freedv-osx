@@ -1,0 +1,5 @@
+<map id="AudioDlg::ExchangeData" name="AudioDlg::ExchangeData">
+<area shape="rect" id="node3" href="$class_audio_dlg.html#ab09ae2516d75502062744b924e33fe8b" title="AudioDlg::OnApply" alt="" coords="243,5,375,32"/>
+<area shape="rect" id="node5" href="$class_audio_dlg.html#af216bf6872bb49734b3c32b0a9122d8a" title="AudioDlg::OnInitDialog" alt="" coords="233,56,385,83"/>
+<area shape="rect" id="node7" href="$class_main_frame.html#a82a92e9b1ea9ffdd26badd5b74ee254d" title="MainFrame::OnToolsAudio" alt="" coords="221,107,397,133"/>
+</map>

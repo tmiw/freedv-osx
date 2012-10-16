@@ -1,4 +1,4 @@
-.TH "PlotScalar" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "PlotScalar" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,12 +7,17 @@ PlotScalar \-
 .br
 .PP
 .PP
+\fC#include <fdmdv2_plot_scalar\&.h>\fP
+.PP
 Inherits \fBPlotPanel\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
 .RI "\fBPlotScalar\fP (wxFrame *parent, int x_max_, int y_max_)"
+.br
+.ti -1c
+.RI "\fB~PlotScalar\fP ()"
 .br
 .ti -1c
 .RI "void \fBadd_new_sample\fP (float sample)"
@@ -60,7 +65,75 @@ Inherits \fBPlotPanel\fP\&.
 .br
 .in -1c
 .SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 34 of file fdmdv2_plot_scalar\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PlotScalar::PlotScalar (wxFrame *parent, intx_max_, inty_max_)"
 
+.PP
+Definition at line 44 of file fdmdv2_plot_scalar\&.cpp\&.
+.SS "PlotScalar::~PlotScalar ()"
+
+.PP
+Definition at line 69 of file fdmdv2_plot_scalar\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void PlotScalar::add_new_sample (floatsample)"
+
+.PP
+Definition at line 77 of file fdmdv2_plot_scalar\&.cpp\&.
+.SS "int PlotScalar::clip (inty1)\fC [protected]\fP"
+
+.PP
+Definition at line 85 of file fdmdv2_plot_scalar\&.cpp\&.
+.SS "void PlotScalar::draw (wxAutoBufferedPaintDC &dc)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPlotPanel\fP\&.
+.PP
+Definition at line 101 of file fdmdv2_plot_scalar\&.cpp\&.
+.SS "void PlotScalar::OnPaint (wxPaintEvent &event)\fC [protected]\fP"
+
+.PP
+Definition at line 192 of file fdmdv2_plot_scalar\&.cpp\&.
+.SS "void PlotScalar::OnShow (wxShowEvent &event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPlotPanel\fP\&.
+.PP
+Definition at line 210 of file fdmdv2_plot_scalar\&.cpp\&.
+.SS "void PlotScalar::OnSize (wxSizeEvent &event)\fC [protected]\fP"
+
+.PP
+Definition at line 201 of file fdmdv2_plot_scalar\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int PlotScalar::m_index\fC [protected]\fP"
+
+.PP
+Definition at line 49 of file fdmdv2_plot_scalar\&.h\&.
+.SS "float* PlotScalar::m_mem\fC [protected]\fP"
+
+.PP
+Definition at line 47 of file fdmdv2_plot_scalar\&.h\&.
+.SS "float PlotScalar::m_new_sample\fC [protected]\fP"
+
+.PP
+Definition at line 48 of file fdmdv2_plot_scalar\&.h\&.
+.SS "int PlotScalar::m_step\fC [protected]\fP"
+
+.PP
+Definition at line 50 of file fdmdv2_plot_scalar\&.h\&.
+.SS "int PlotScalar::m_x_max\fC [protected]\fP"
+
+.PP
+Definition at line 45 of file fdmdv2_plot_scalar\&.h\&.
+.SS "int PlotScalar::m_y_max\fC [protected]\fP"
+
+.PP
+Definition at line 46 of file fdmdv2_plot_scalar\&.h\&.
 
 .SH "Author"
 .PP 

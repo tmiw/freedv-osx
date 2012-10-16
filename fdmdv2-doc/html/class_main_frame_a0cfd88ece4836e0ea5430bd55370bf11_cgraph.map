@@ -1,0 +1,10 @@
+<map id="MainFrame::~MainFrame" name="MainFrame::~MainFrame">
+<area shape="rect" id="node3" href="$class_main_frame.html#aeb39ee428bf6002fe5a44d36394a16e7" title="MainFrame::OnTogBtnRxIDUI" alt="" coords="234,5,427,32"/>
+<area shape="rect" id="node5" href="$class_main_frame.html#a4fad443f0b49539875442afb1a55df47" title="MainFrame::OnTogBtnTxIDUI" alt="" coords="235,56,426,83"/>
+<area shape="rect" id="node7" href="$class_main_frame.html#aa4daf13c845672ae664ffefb8862f4df" title="MainFrame::OnTogBtnOnOffUI" alt="" coords="231,107,430,133"/>
+<area shape="rect" id="node9" href="$class_main_frame.html#a16ae41128eb85673930a9f5b1eec0978" title="MainFrame::OnTogBtnSplit\lClickUI" alt="" coords="241,158,420,199"/>
+<area shape="rect" id="node11" href="$class_main_frame.html#ab75fd428c1e461f06ebfc6d115dae197" title="MainFrame::OnTogBtnAnalog\lClickUI" alt="" coords="234,223,427,265"/>
+<area shape="rect" id="node13" href="$class_main_frame.html#a33984a8bd48c3da22b99a8fc0a3e5b3f" title="MainFrame::OnTogBtnALCClickUI" alt="" coords="221,289,440,316"/>
+<area shape="rect" id="node15" href="$class_main_frame.html#a45200661e219ba9533e83bd151d91de5" title="MainFrame::OnTogBtnTXClickUI" alt="" coords="227,340,435,367"/>
+<area shape="rect" id="node17" href="$class_main_frame.html#a9ad22e55c7a3c93f9c071d366ae760d6" title="MainFrame::OnTimer" alt="" coords="259,391,403,417"/>
+</map>

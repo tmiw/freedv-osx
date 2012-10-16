@@ -1,4 +1,4 @@
-.TH "DlgComPorts" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "DlgComPorts" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,6 +17,9 @@ Inherited by \fBComPortsDlg\fP\&.
 .in +1c
 .ti -1c
 .RI "\fBDlgComPorts\fP (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &title=_('Select Com Port'), const wxPoint &pos=wxDefaultPosition, const wxSize &size=wxSize(399, 354), long style=wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER)"
+.br
+.ti -1c
+.RI "\fB~DlgComPorts\fP ()"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -96,6 +99,122 @@ Inherited by \fBComPortsDlg\fP\&.
 .SH "Detailed Description"
 .PP 
 Class \fBDlgComPorts\fP 
+.PP
+Definition at line 271 of file topFrame\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DlgComPorts::DlgComPorts (wxWindow *parent, wxWindowIDid = \fCwxID_ANY\fP, const wxString &title = \fC_('Select Com Port')\fP, const wxPoint &pos = \fCwxDefaultPosition\fP, const wxSize &size = \fCwxSize( 399,354 )\fP, longstyle = \fCwxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER\fP)"
+
+.PP
+Definition at line 906 of file topFrame\&.cpp\&.
+.SS "DlgComPorts::~DlgComPorts ()"
+
+.PP
+Definition at line 988 of file topFrame\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void DlgComPorts::OnApply (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBComPortsDlg\fP\&.
+.PP
+Definition at line 299 of file topFrame\&.h\&.
+.SS "virtual void DlgComPorts::OnCancel (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBComPortsDlg\fP\&.
+.PP
+Definition at line 295 of file topFrame\&.h\&.
+.SS "virtual void DlgComPorts::OnClose (wxCloseEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBComPortsDlg\fP\&.
+.PP
+Definition at line 297 of file topFrame\&.h\&.
+.SS "virtual void DlgComPorts::OnInitDialog (wxInitDialogEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBComPortsDlg\fP\&.
+.PP
+Definition at line 298 of file topFrame\&.h\&.
+.SS "virtual void DlgComPorts::OnListItemSelected (wxListEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBComPortsDlg\fP\&.
+.PP
+Definition at line 294 of file topFrame\&.h\&.
+.SS "virtual void DlgComPorts::OnOK (wxCommandEvent &event)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBComPortsDlg\fP\&.
+.PP
+Definition at line 296 of file topFrame\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "wxListCtrl* DlgComPorts::m_listCtrlPortSelect\fC [protected]\fP"
+
+.PP
+Definition at line 277 of file topFrame\&.h\&.
+.SS "wxStdDialogButtonSizer* DlgComPorts::m_sdbSizer5\fC [protected]\fP"
+
+.PP
+Definition at line 288 of file topFrame\&.h\&.
+.SS "wxButton* DlgComPorts::m_sdbSizer5Apply\fC [protected]\fP"
+
+.PP
+Definition at line 290 of file topFrame\&.h\&.
+.SS "wxButton* DlgComPorts::m_sdbSizer5Cancel\fC [protected]\fP"
+
+.PP
+Definition at line 291 of file topFrame\&.h\&.
+.SS "wxButton* DlgComPorts::m_sdbSizer5OK\fC [protected]\fP"
+
+.PP
+Definition at line 289 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgComPorts::m_staticText8\fC [protected]\fP"
+
+.PP
+Definition at line 276 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgComPorts::m_staticText9\fC [protected]\fP"
+
+.PP
+Definition at line 278 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgComPorts::m_staticText91\fC [protected]\fP"
+
+.PP
+Definition at line 280 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgComPorts::m_staticText911\fC [protected]\fP"
+
+.PP
+Definition at line 282 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgComPorts::m_staticText912\fC [protected]\fP"
+
+.PP
+Definition at line 284 of file topFrame\&.h\&.
+.SS "wxStaticText* DlgComPorts::m_staticText913\fC [protected]\fP"
+
+.PP
+Definition at line 286 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgComPorts::m_textRigCtrlBaud\fC [protected]\fP"
+
+.PP
+Definition at line 281 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgComPorts::m_textRigCtrlDatabits\fC [protected]\fP"
+
+.PP
+Definition at line 283 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgComPorts::m_textRigCtrlParity\fC [protected]\fP"
+
+.PP
+Definition at line 287 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgComPorts::m_textRigCtrlPort\fC [protected]\fP"
+
+.PP
+Definition at line 279 of file topFrame\&.h\&.
+.SS "wxTextCtrl* DlgComPorts::m_textRigCtrlStopbits\fC [protected]\fP"
+
+.PP
+Definition at line 285 of file topFrame\&.h\&.
 
 .SH "Author"
 .PP 

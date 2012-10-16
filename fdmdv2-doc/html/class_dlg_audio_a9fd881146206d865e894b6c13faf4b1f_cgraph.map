@@ -1,0 +1,11 @@
+<map id="DlgAudio::~DlgAudio" name="DlgAudio::~DlgAudio">
+<area shape="rect" id="node3" href="$class_dlg_audio.html#a3d19dbabda45d63849c95f9202d9ee56" title="DlgAudio::OnClose" alt="" coords="235,5,367,32"/>
+<area shape="rect" id="node5" href="$class_dlg_audio.html#a4005f4224055bd5c8767e9e4d2296c26" title="DlgAudio::OnInitDialog" alt="" coords="225,56,377,83"/>
+<area shape="rect" id="node7" href="$class_dlg_audio.html#a6981a966c4e04931511d9a0fad482591" title="DlgAudio::OnRxInputSelect" alt="" coords="211,107,391,133"/>
+<area shape="rect" id="node9" href="$class_dlg_audio.html#a2da73ea801464d515f0b4ea01dec3aeb" title="DlgAudio::OnTxOutputSelect" alt="" coords="207,157,396,184"/>
+<area shape="rect" id="node11" href="$class_dlg_audio.html#a9c9848d90d805216ad52aad9443bffd8" title="DlgAudio::OnVoiceInputSelect" alt="" coords="203,208,400,235"/>
+<area shape="rect" id="node13" href="$class_dlg_audio.html#a337f1badd157dcdb9950e14033527f4a" title="DlgAudio::OnVoiceOutputSelect" alt="" coords="197,259,405,285"/>
+<area shape="rect" id="node15" href="$class_dlg_audio.html#a245e1317e52c8eeced77fcff2e6e2812" title="DlgAudio::OnApply" alt="" coords="235,309,367,336"/>
+<area shape="rect" id="node17" href="$class_dlg_audio.html#a68cb1a16f03fbb7af8d6ac0e7d5ba686" title="DlgAudio::OnCancel" alt="" coords="232,360,371,387"/>
+<area shape="rect" id="node19" href="$class_dlg_audio.html#a86b960dabc5dae9f8cf4946d562330bd" title="DlgAudio::OnOK" alt="" coords="242,411,361,437"/>
+</map>

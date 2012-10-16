@@ -1,0 +1,176 @@
+\hypertarget{fdmdv2__hdw__ports_8h}{\section{C\-:/bin/\-Projects/\-Radio/fdmdv2/src/fdmdv2\-\_\-hdw\-\_\-ports.h File Reference}
+\label{fdmdv2__hdw__ports_8h}\index{C\-:/bin/\-Projects/\-Radio/fdmdv2/src/fdmdv2\-\_\-hdw\-\_\-ports.\-h@{C\-:/bin/\-Projects/\-Radio/fdmdv2/src/fdmdv2\-\_\-hdw\-\_\-ports.\-h}}
+}
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}wx/wx.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$wx/dynarray.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}fdmdv2\-\_\-main.\-h\char`\"{}}\\*
+Include dependency graph for fdmdv2\-\_\-hdw\-\_\-ports.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fdmdv2__hdw__ports_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fdmdv2__hdw__ports_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_hdw_port}{Hdw\-Port}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+\hyperlink{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7a2c695c74f3a798b02d622d9cee2f8120}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7a90c3addff92988de344c9dbe532aab7e}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-O\-D\-D}, 
+\hyperlink{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7a58a963c633c7dab29f4999e303f2047f}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-E\-V\-E\-N}, 
+\hyperlink{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7ad4ac1fdc4786677a06b397239847893e}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-M\-A\-R\-K}, 
+\\*
+\hyperlink{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7af5fe4f8625d8221c1681e4d1a35ee67c}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-S\-P\-A\-C\-E}
+ \}
+\item 
+enum \{ \hyperlink{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a7976d9259ce8ef7c5f46679e42a03e04}{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a1c3b467305c50865b1b04dff9cd9698f}{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-X\-O\-N\-X\-O\-F\-F}, 
+\hyperlink{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a3a3094367b0bf9f07f37b227a842ae1d}{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-R\-T\-S\-C\-T\-S}, 
+\hyperlink{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a9095f56433df13dba6eab4b30962b9c4}{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-D\-S\-R\-D\-T\-R}
+ \}
+\item 
+enum \{ \\*
+\hyperlink{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a7fdf919aeb0f82eb619806c483e9b18b}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L}, 
+\hyperlink{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a37e7778561c585f6d0355f905d84613c}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B}, 
+\hyperlink{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a47d8d73f3779234fc2385ed3908c5584}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L}, 
+\hyperlink{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04aea02952745dcbcd06601d12ed642fecc}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L}, 
+\\*
+\hyperlink{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a0312cfbd33186319ea399d412b2181c9}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394}, 
+\hyperlink{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a751f147ae3d941bf08c27de99e5ae313}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}
+ \}
+\item 
+enum \{ \\*
+\hyperlink{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca50dc4796c382b8c775133dd941824175}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L}, 
+\hyperlink{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca61410bb6dda95cc2a2e87fc9ed29095e}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B}, 
+\hyperlink{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06caefb166bcfdc20aa586db7d7224480401}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L}, 
+\hyperlink{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06cac53de733cf217afa3302c251de7a1aa1}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L}, 
+\\*
+\hyperlink{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca5f86b12235e368132bc2f26a4d3d6815}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H}, 
+\hyperlink{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca5c73c1f1ac3f7d0c115707c2173e994d}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K}, 
+\hyperlink{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca83231695e92ac62b3fcca0b0e69e5e5e}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394}, 
+\hyperlink{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca1cadf07c80aab73657bf28010155a8cf}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fdmdv2__hdw__ports_8h_a75f7888ebeee13982498b51fbea619c5}{W\-X\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-B\-J\-A\-R\-R\-A\-Y} (\hyperlink{class_hdw_port}{Hdw\-Port}, Array\-Of\-Ports)
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-N\-O\-N\-E@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-N\-O\-N\-E}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-N\-O\-N\-E@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-N\-O\-N\-E}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7a2c695c74f3a798b02d622d9cee2f8120}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-N\-O\-N\-E}\label{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7a2c695c74f3a798b02d622d9cee2f8120}
+}]\index{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-O\-D\-D@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-O\-D\-D}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-O\-D\-D@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-O\-D\-D}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7a90c3addff92988de344c9dbe532aab7e}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-O\-D\-D}\label{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7a90c3addff92988de344c9dbe532aab7e}
+}]\index{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-E\-V\-E\-N@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-E\-V\-E\-N}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-E\-V\-E\-N@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-E\-V\-E\-N}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7a58a963c633c7dab29f4999e303f2047f}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-E\-V\-E\-N}\label{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7a58a963c633c7dab29f4999e303f2047f}
+}]\index{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-M\-A\-R\-K@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-M\-A\-R\-K}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-M\-A\-R\-K@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-M\-A\-R\-K}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7ad4ac1fdc4786677a06b397239847893e}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-M\-A\-R\-K}\label{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7ad4ac1fdc4786677a06b397239847893e}
+}]\index{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-S\-P\-A\-C\-E@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-S\-P\-A\-C\-E}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-S\-P\-A\-C\-E@{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-S\-P\-A\-C\-E}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7af5fe4f8625d8221c1681e4d1a35ee67c}{S\-E\-R\-\_\-\-P\-A\-R\-\_\-\-S\-P\-A\-C\-E}\label{fdmdv2__hdw__ports_8h_adf764cbdea00d65edcd07bb9953ad2b7af5fe4f8625d8221c1681e4d1a35ee67c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 32 of file fdmdv2\-\_\-hdw\-\_\-ports.\-h.
+
+\hypertarget{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-N\-O\-N\-E@{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-N\-O\-N\-E}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-N\-O\-N\-E@{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-N\-O\-N\-E}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a7976d9259ce8ef7c5f46679e42a03e04}{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-N\-O\-N\-E}\label{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a7976d9259ce8ef7c5f46679e42a03e04}
+}]\index{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-X\-O\-N\-X\-O\-F\-F@{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-X\-O\-N\-X\-O\-F\-F}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-X\-O\-N\-X\-O\-F\-F@{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-X\-O\-N\-X\-O\-F\-F}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a1c3b467305c50865b1b04dff9cd9698f}{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-X\-O\-N\-X\-O\-F\-F}\label{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a1c3b467305c50865b1b04dff9cd9698f}
+}]\index{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-R\-T\-S\-C\-T\-S@{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-R\-T\-S\-C\-T\-S}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-R\-T\-S\-C\-T\-S@{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-R\-T\-S\-C\-T\-S}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a3a3094367b0bf9f07f37b227a842ae1d}{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-R\-T\-S\-C\-T\-S}\label{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a3a3094367b0bf9f07f37b227a842ae1d}
+}]\index{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-D\-S\-R\-D\-T\-R@{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-D\-S\-R\-D\-T\-R}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-D\-S\-R\-D\-T\-R@{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-D\-S\-R\-D\-T\-R}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a9095f56433df13dba6eab4b30962b9c4}{S\-E\-R\-\_\-\-F\-L\-O\-W\-\_\-\-D\-S\-R\-D\-T\-R}\label{fdmdv2__hdw__ports_8h_a99fb83031ce9923c84392b4e92f956b5a9095f56433df13dba6eab4b30962b9c4}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 41 of file fdmdv2\-\_\-hdw\-\_\-ports.\-h.
+
+\hypertarget{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a7fdf919aeb0f82eb619806c483e9b18b}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L}\label{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a7fdf919aeb0f82eb619806c483e9b18b}
+}]\index{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a37e7778561c585f6d0355f905d84613c}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B}\label{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a37e7778561c585f6d0355f905d84613c}
+}]\index{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a47d8d73f3779234fc2385ed3908c5584}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L}\label{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a47d8d73f3779234fc2385ed3908c5584}
+}]\index{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04aea02952745dcbcd06601d12ed642fecc}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L}\label{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04aea02952745dcbcd06601d12ed642fecc}
+}]\index{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a0312cfbd33186319ea399d412b2181c9}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394}\label{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a0312cfbd33186319ea399d412b2181c9}
+}]\index{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N@{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a751f147ae3d941bf08c27de99e5ae313}{P\-O\-R\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}\label{fdmdv2__hdw__ports_8h_abc6126af1d45847bc59afa0aa3216b04a751f147ae3d941bf08c27de99e5ae313}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 49 of file fdmdv2\-\_\-hdw\-\_\-ports.\-h.
+
+\hypertarget{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06c}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06c}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca50dc4796c382b8c775133dd941824175}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-E\-R\-I\-A\-L}\label{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca50dc4796c382b8c775133dd941824175}
+}]\index{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca61410bb6dda95cc2a2e87fc9ed29095e}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-B}\label{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca61410bb6dda95cc2a2e87fc9ed29095e}
+}]\index{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06caefb166bcfdc20aa586db7d7224480401}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-V\-I\-R\-T\-U\-A\-L}\label{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06caefb166bcfdc20aa586db7d7224480401}
+}]\index{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06cac53de733cf217afa3302c251de7a1aa1}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-A\-R\-A\-L\-L\-E\-L}\label{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06cac53de733cf217afa3302c251de7a1aa1}
+}]\index{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca5f86b12235e368132bc2f26a4d3d6815}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H}\label{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca5f86b12235e368132bc2f26a4d3d6815}
+}]\index{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca5c73c1f1ac3f7d0c115707c2173e994d}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K}\label{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca5c73c1f1ac3f7d0c115707c2173e994d}
+}]\index{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca83231695e92ac62b3fcca0b0e69e5e5e}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-E\-E\-E1394}\label{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca83231695e92ac62b3fcca0b0e69e5e5e}
+}]\index{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}!fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N@{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}}\item[{\em 
+\hypertarget{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca1cadf07c80aab73657bf28010155a8cf}{D\-E\-V\-I\-C\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}\label{fdmdv2__hdw__ports_8h_adc29c2ff13d900c2f185ee95427fb06ca1cadf07c80aab73657bf28010155a8cf}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 59 of file fdmdv2\-\_\-hdw\-\_\-ports.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{fdmdv2__hdw__ports_8h_a75f7888ebeee13982498b51fbea619c5}{\index{fdmdv2\-\_\-hdw\-\_\-ports.\-h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}!W\-X\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-B\-J\-A\-R\-R\-A\-Y@{W\-X\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-B\-J\-A\-R\-R\-A\-Y}}
+\index{W\-X\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-B\-J\-A\-R\-R\-A\-Y@{W\-X\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-B\-J\-A\-R\-R\-A\-Y}!fdmdv2_hdw_ports.h@{fdmdv2\-\_\-hdw\-\_\-ports.\-h}}
+\subsubsection[{W\-X\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-B\-J\-A\-R\-R\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}W\-X\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-B\-J\-A\-R\-R\-A\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Hdw\-Port}}]{, }
+\item[{Array\-Of\-Ports}]{}
+\end{DoxyParamCaption}
+)}}\label{fdmdv2__hdw__ports_8h_a75f7888ebeee13982498b51fbea619c5}

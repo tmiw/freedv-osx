@@ -1,0 +1,4 @@
+<map id="PortAudioWrap::abort" name="PortAudioWrap::abort">
+<area shape="rect" id="node3" href="$class_main_frame.html#a44e48d93613d91be1db586553466feac" title="MainFrame::abortRxStream" alt="" coords="201,5,383,32"/>
+<area shape="rect" id="node5" href="$class_main_frame.html#abbe36f1aac14dba091ab0ec0c6ef2936" title="MainFrame::abortTxStream" alt="" coords="202,56,382,83"/>
+</map>

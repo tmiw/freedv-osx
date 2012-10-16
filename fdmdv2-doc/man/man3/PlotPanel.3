@@ -1,4 +1,4 @@
-.TH "PlotPanel" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "PlotPanel" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,8 @@ PlotPanel \-
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <fdmdv2_plot\&.h>\fP
 .PP
 Inherits wxPanel\&.
 .PP
@@ -15,6 +17,9 @@ Inherited by \fBPlotScalar\fP, \fBPlotScatter\fP, \fBPlotSpectrum\fP, and \fBPlo
 .in +1c
 .ti -1c
 .RI "\fBPlotPanel\fP (wxFrame *parent)"
+.br
+.ti -1c
+.RI "\fB~PlotPanel\fP ()"
 .br
 .ti -1c
 .RI "void \fBOnMouseMove\fP (wxMouseEvent &event)"
@@ -166,6 +171,215 @@ Inherited by \fBPlotScalar\fP, \fBPlotScatter\fP, \fBPlotSpectrum\fP, and \fBPlo
 .RI "int \fBm_line_color\fP"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 77 of file fdmdv2_plot\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PlotPanel::PlotPanel (wxFrame *parent)"
+
+.PP
+Definition at line 40 of file fdmdv2_plot\&.cpp\&.
+.SS "PlotPanel::~PlotPanel ()"
+
+.PP
+Definition at line 64 of file fdmdv2_plot\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void PlotPanel::draw (wxAutoBufferedPaintDC &pdc)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPlotWaterfall\fP, \fBPlotScalar\fP, \fBPlotScatter\fP, and \fBPlotSpectrum\fP\&.
+.PP
+Definition at line 184 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::drawGraticule (wxAutoBufferedPaintDC &pdc)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPlotWaterfall\fP, and \fBPlotSpectrum\fP\&.
+.PP
+Definition at line 225 of file fdmdv2_plot\&.cpp\&.
+.SS "double PlotPanel::GetLabelSize ()\fC [virtual]\fP"
+
+.PP
+Definition at line 75 of file fdmdv2_plot\&.cpp\&.
+.SS "double PlotPanel::GetZoomFactor (doublezf)\fC [virtual]\fP"
+
+.PP
+Definition at line 176 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::OnClose (wxCloseEvent &event)\fC [inline]\fP"
+
+.PP
+Definition at line 103 of file fdmdv2_plot\&.h\&.
+.SS "void PlotPanel::OnErase (wxEraseEvent &event)"
+
+.PP
+Definition at line 99 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::OnMouseDown (wxMouseEvent &event)"
+
+.PP
+Definition at line 141 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::OnMouseMove (wxMouseEvent &event)"
+
+.PP
+Definition at line 130 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::OnMouseUp (wxMouseEvent &event)"
+
+.PP
+Definition at line 156 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::OnMouseWheelMoved (wxMouseEvent &event)"
+
+.PP
+Definition at line 149 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::OnPaint (wxPaintEvent &event)"
+
+.PP
+Definition at line 266 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::OnShow (wxShowEvent &event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPlotWaterfall\fP, \fBPlotScalar\fP, \fBPlotScatter\fP, and \fBPlotSpectrum\fP\&.
+.PP
+Definition at line 91 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::OnSize (wxSizeEvent &event)"
+
+.PP
+Definition at line 107 of file fdmdv2_plot\&.cpp\&.
+.SS "void PlotPanel::paintEvent (wxPaintEvent &evt)"
+
+.SS "void PlotPanel::SetLabelSize (doublesize)\fC [virtual]\fP"
+
+.PP
+Definition at line 83 of file fdmdv2_plot\&.cpp\&.
+.SS "double PlotPanel::SetZoomFactor (doublezf)\fC [virtual]\fP"
+
+.PP
+Definition at line 164 of file fdmdv2_plot\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "wxSize PlotPanel::m_Bufsz"
+
+.PP
+Definition at line 92 of file fdmdv2_plot\&.h\&.
+.SS "bool PlotPanel::m_clip\fC [protected]\fP"
+
+.PP
+Definition at line 128 of file fdmdv2_plot\&.h\&.
+.SS "bool PlotPanel::m_firstPass\fC [protected]\fP"
+
+.PP
+Definition at line 131 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_greyscale\fC [protected]\fP"
+
+.PP
+Definition at line 133 of file fdmdv2_plot\&.h\&.
+.SS "double PlotPanel::m_label_size"
+
+.PP
+Definition at line 91 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_left\fC [protected]\fP"
+
+.PP
+Definition at line 121 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_line_color\fC [protected]\fP"
+
+.PP
+Definition at line 134 of file fdmdv2_plot\&.h\&.
+.SS "bool PlotPanel::m_mouseDown\fC [protected]\fP"
+
+.PP
+Definition at line 130 of file fdmdv2_plot\&.h\&.
+.SS "bool PlotPanel::m_newdata"
+
+.PP
+Definition at line 93 of file fdmdv2_plot\&.h\&.
+.SS "wxImage PlotPanel::m_oImage"
+
+.PP
+Definition at line 94 of file fdmdv2_plot\&.h\&.
+.SS "wxBitmap* PlotPanel::m_pBmp"
+
+.PP
+Definition at line 95 of file fdmdv2_plot\&.h\&.
+.SS "wxPen PlotPanel::m_penDotDash"
+
+.PP
+Definition at line 83 of file fdmdv2_plot\&.h\&.
+.SS "wxPen PlotPanel::m_penShortDash"
+
+.PP
+Definition at line 82 of file fdmdv2_plot\&.h\&.
+.SS "wxPen PlotPanel::m_penSolid"
+
+.PP
+Definition at line 84 of file fdmdv2_plot\&.h\&.
+.SS "wxAuiNotebook* PlotPanel::m_pNoteBook"
+
+.PP
+Definition at line 90 of file fdmdv2_plot\&.h\&.
+.SS "wxNativePixelData* PlotPanel::m_pPix"
+
+.PP
+Definition at line 96 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_prev_h\fC [protected]\fP"
+
+.PP
+Definition at line 124 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_prev_w\fC [protected]\fP"
+
+.PP
+Definition at line 123 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_prev_x\fC [protected]\fP"
+
+.PP
+Definition at line 125 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_prev_y\fC [protected]\fP"
+
+.PP
+Definition at line 126 of file fdmdv2_plot\&.h\&.
+.SS "\fBMainFrame\fP* PlotPanel::m_pTopFrame"
+
+.PP
+Definition at line 89 of file fdmdv2_plot\&.h\&.
+.SS "wxRect PlotPanel::m_rCtrl"
+
+.PP
+Definition at line 86 of file fdmdv2_plot\&.h\&.
+.SS "wxRect PlotPanel::m_rCtrlPrev"
+
+.PP
+Definition at line 85 of file fdmdv2_plot\&.h\&.
+.SS "wxRect PlotPanel::m_rGrid"
+
+.PP
+Definition at line 87 of file fdmdv2_plot\&.h\&.
+.SS "wxRect PlotPanel::m_rPlot"
+
+.PP
+Definition at line 88 of file fdmdv2_plot\&.h\&.
+.SS "bool PlotPanel::m_rubberBand\fC [protected]\fP"
+
+.PP
+Definition at line 129 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_top\fC [protected]\fP"
+
+.PP
+Definition at line 122 of file fdmdv2_plot\&.h\&.
+.SS "bool PlotPanel::m_use_bitmap\fC [protected]\fP"
+
+.PP
+Definition at line 127 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_x\fC [protected]\fP"
+
+.PP
+Definition at line 119 of file fdmdv2_plot\&.h\&.
+.SS "int PlotPanel::m_y\fC [protected]\fP"
+
+.PP
+Definition at line 120 of file fdmdv2_plot\&.h\&.
+.SS "double PlotPanel::m_zoomFactor\fC [protected]\fP"
+
+.PP
+Definition at line 132 of file fdmdv2_plot\&.h\&.
 
 .SH "Author"
 .PP 

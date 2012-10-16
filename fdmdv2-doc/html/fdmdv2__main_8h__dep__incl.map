@@ -1,0 +1,16 @@
+<map id="C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_main.h" name="C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_main.h">
+<area shape="rect" id="node3" href="$dlg__about_8h.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/dlg_about.h" alt="" coords="75,103,233,145"/>
+<area shape="rect" id="node8" href="$dlg__audio_8h.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/dlg_audio.h" alt="" coords="258,103,416,145"/>
+<area shape="rect" id="node13" href="$dlg__options_8h.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/dlg_options.h" alt="" coords="441,103,609,145"/>
+<area shape="rect" id="node18" href="$dlg__comports_8h.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/dlg_comports.h" alt="" coords="607,207,788,249"/>
+<area shape="rect" id="node23" href="$fdmdv2__hdw__ports_8h.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/fdmdv2_hdw\l_ports.h" alt="" coords="709,96,872,152"/>
+<area shape="rect" id="node29" href="$fdmdv2__main_8cpp.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/fdmdv2_main.cpp" alt="" coords="896,103,1088,145"/>
+<area shape="rect" id="node31" href="$fdmdv2__plot__scalar_8cpp.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/fdmdv2_plot\l_scalar.cpp" alt="" coords="1112,96,1272,152"/>
+<area shape="rect" id="node33" href="$fdmdv2__plot__spectrum_8cpp.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/fdmdv2_plot\l_spectrum.cpp" alt="" coords="1296,96,1456,152"/>
+<area shape="rect" id="node35" href="$fdmdv2__plot__waterfall_8cpp.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/fdmdv2_plot\l_waterfall.cpp" alt="" coords="1480,96,1640,152"/>
+<area shape="rect" id="node5" href="$dlg__about_8cpp.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/dlg_about.cpp" alt="" coords="5,207,179,249"/>
+<area shape="rect" id="node11" href="$dlg__audio_8cpp.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/dlg_audio.cpp" alt="" coords="203,207,375,249"/>
+<area shape="rect" id="node16" href="$dlg__options_8cpp.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/dlg_options.cpp" alt="" coords="399,207,581,249"/>
+<area shape="rect" id="node21" href="$dlg__comports_8cpp.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/dlg_comports.cpp" alt="" coords="664,305,859,346"/>
+<area shape="rect" id="node27" href="$fdmdv2__hdw__ports_8cpp.html" title="C:/bin/Projects/Radio\l/fdmdv2/src/fdmdv2_hdw\l_ports.cpp" alt="" coords="863,200,1025,256"/>
+</map>

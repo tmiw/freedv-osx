@@ -1,0 +1,5 @@
+<map id="PortAudioWrap::getDefaultInputDevice" name="PortAudioWrap::getDefaultInputDevice">
+<area shape="rect" id="node3" href="$class_main_frame.html#ad17245c1c9c295fc216fc6615f31e0a5" title="MainFrame::startRxStream" alt="" coords="229,5,408,32"/>
+<area shape="rect" id="node7" href="$class_main_frame.html#af01eb2c59f1a9bcee0b956f8a72004c0" title="MainFrame::startTxStream" alt="" coords="230,56,407,83"/>
+<area shape="rect" id="node5" href="$class_main_frame.html#a7fc4afa20b92ac8e5f1ddfcf86820f28" title="MainFrame::OnTogBtnOnOff" alt="" coords="456,5,643,32"/>
+</map>

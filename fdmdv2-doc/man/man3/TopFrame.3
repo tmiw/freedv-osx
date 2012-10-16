@@ -1,223 +1,111 @@
-.TH "TopFrame" 3 "Wed Sep 19 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
+.TH "topFrame" 3 "Tue Oct 16 2012" "Version 02.00.01" "FDMDV2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-TopFrame \- 
+topFrame \- 
 .SH SYNOPSIS
 .br
 .PP
-.PP
-\fC#include <topFrame\&.h>\fP
-.PP
-Inherits wxFrame\&.
-.PP
-Inherited by \fBMainFrame\fP\&.
-.SS "Public Member Functions"
+.SS "Classes"
 
 .in +1c
 .ti -1c
-.RI "\fBTopFrame\fP (wxWindow *parent, wxWindowID id=wxID_ANY, const wxString &title=_('FDMDV2'), const wxPoint &pos=wxDefaultPosition, const wxSize &size=wxSize(761, 500), long style=wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL)"
+.RI "class \fBTopFrame\fP"
 .br
+.RI "\fIClass \fBTopFrame\fP\&. \fP"
+.ti -1c
+.RI "class \fBDlgAbout\fP"
+.br
+.RI "\fIClass \fBDlgAbout\fP\&. \fP"
+.ti -1c
+.RI "class \fBDlgAudio\fP"
+.br
+.RI "\fIClass \fBDlgAudio\fP\&. \fP"
+.ti -1c
+.RI "class \fBDlgOptions\fP"
+.br
+.RI "\fIClass \fBDlgOptions\fP\&. \fP"
+.ti -1c
+.RI "class \fBDlgComPorts\fP"
+.br
+.RI "\fIClass \fBDlgComPorts\fP\&. \fP"
 .in -1c
-.SS "Public Attributes"
+.SS "Variables"
 
 .in +1c
 .ti -1c
-.RI "wxAuiNotebook * \fBm_auiNbookCtrl\fP"
+.RI "\fB_\fP gettext\&.gettext"
+.br
+.ti -1c
+.RI "int \fBID_OPEN\fP 1000"
+.br
+.ti -1c
+.RI "int \fBID_SAVE\fP 1001"
+.br
+.ti -1c
+.RI "int \fBID_CLOSE\fP 1002"
+.br
+.ti -1c
+.RI "int \fBID_EXIT\fP 1003"
+.br
+.ti -1c
+.RI "int \fBID_COPY\fP 1004"
+.br
+.ti -1c
+.RI "int \fBID_CUT\fP 1005"
+.br
+.ti -1c
+.RI "int \fBID_PASTE\fP 1006"
+.br
+.ti -1c
+.RI "int \fBID_OPTIONS\fP 1007"
+.br
+.ti -1c
+.RI "int \fBID_ABOUT\fP 1008"
 .br
 .in -1c
-.SS "Protected Member Functions"
-
-.in +1c
-.ti -1c
-.RI "virtual void \fBtopFrame_OnClose\fP (wxCloseEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBtopFrame_OnPaint\fP (wxPaintEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBtopFrame_OnSize\fP (wxSizeEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBtopFrame_OnUpdateUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnOpen\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnOpenUpdateUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnSave\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnSaveUpdateUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnClose\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCloseUpdateUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnExit\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCopy\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCopyUpdateUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCut\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCutUpdateUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnPaste\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnPasteUpdateUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnToolsAudio\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnToolsAudioUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnToolsComCfg\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnToolsComCfgUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnToolsOptions\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnToolsOptionsUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCaptureRxStream\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCaptureTxStream\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnPlayAudioFile\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnHelpCheckUpdates\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnHelpCheckUpdatesUI\fP (wxUpdateUIEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnHelpAbout\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnTogBtnRxID\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnTogBtnTxID\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCmdSliderScroll\fP (wxScrollEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnSliderScrollBottom\fP (wxScrollEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCmdSliderScrollChanged\fP (wxScrollEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnSliderScrollTop\fP (wxScrollEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnCheckSQClick\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnTogBtnOnOff\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnTogBtnSplitClick\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnTogBtnAnalogClick\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnTogBtnALCClick\fP (wxCommandEvent &event)"
-.br
-.ti -1c
-.RI "virtual void \fBOnTogBtnTXClick\fP (wxCommandEvent &event)"
-.br
-.in -1c
-.SS "Protected Attributes"
-
-.in +1c
-.ti -1c
-.RI "wxMenuBar * \fBm_menubarMain\fP"
-.br
-.ti -1c
-.RI "wxMenu * \fBfile\fP"
-.br
-.ti -1c
-.RI "wxMenu * \fBedit\fP"
-.br
-.ti -1c
-.RI "wxMenu * \fBtools\fP"
-.br
-.ti -1c
-.RI "wxMenu * \fBhelp\fP"
-.br
-.ti -1c
-.RI "wxGauge * \fBm_gaugeSNR\fP"
-.br
-.ti -1c
-.RI "wxTextCtrl * \fBm_textSNR\fP"
-.br
-.ti -1c
-.RI "wxGauge * \fBm_gaugeLevel\fP"
-.br
-.ti -1c
-.RI "wxTextCtrl * \fBm_txtCtrl\fP"
-.br
-.ti -1c
-.RI "wxToggleButton * \fBm_togRxID\fP"
-.br
-.ti -1c
-.RI "wxToggleButton * \fBm_togTxID\fP"
-.br
-.ti -1c
-.RI "wxSlider * \fBm_sliderSQ\fP"
-.br
-.ti -1c
-.RI "wxCheckBox * \fBm_ckboxSQ\fP"
-.br
-.ti -1c
-.RI "wxToggleButton * \fBm_togBtnOnOff\fP"
-.br
-.ti -1c
-.RI "wxToggleButton * \fBm_togBtnSplit\fP"
-.br
-.ti -1c
-.RI "wxToggleButton * \fBm_togBtnAnalog\fP"
-.br
-.ti -1c
-.RI "wxToggleButton * \fBm_togBtnALC\fP"
-.br
-.ti -1c
-.RI "wxToggleButton * \fBm_btnTogTX\fP"
-.br
-.ti -1c
-.RI "wxStatusBar * \fBm_statusBar1\fP"
-.br
-.in -1c
-.SH "Detailed Description"
+.SH "Variable Documentation"
 .PP 
-Class \fBTopFrame\fP 
+.SS "topFrame\&._ gettext\&.gettext"
 
+.PP
+Definition at line 15 of file topFrame\&.py\&.
+.SS "int topFrame\&.ID_ABOUT 1008"
+
+.PP
+Definition at line 25 of file topFrame\&.py\&.
+.SS "int topFrame\&.ID_CLOSE 1002"
+
+.PP
+Definition at line 19 of file topFrame\&.py\&.
+.SS "int topFrame\&.ID_COPY 1004"
+
+.PP
+Definition at line 21 of file topFrame\&.py\&.
+.SS "int topFrame\&.ID_CUT 1005"
+
+.PP
+Definition at line 22 of file topFrame\&.py\&.
+.SS "int topFrame\&.ID_EXIT 1003"
+
+.PP
+Definition at line 20 of file topFrame\&.py\&.
+.SS "int topFrame\&.ID_OPEN 1000"
+
+.PP
+Definition at line 17 of file topFrame\&.py\&.
+.SS "int topFrame\&.ID_OPTIONS 1007"
+
+.PP
+Definition at line 24 of file topFrame\&.py\&.
+.SS "int topFrame\&.ID_PASTE 1006"
+
+.PP
+Definition at line 23 of file topFrame\&.py\&.
+.SS "int topFrame\&.ID_SAVE 1001"
+
+.PP
+Definition at line 18 of file topFrame\&.py\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for FDMDV2 from the source code\&.
