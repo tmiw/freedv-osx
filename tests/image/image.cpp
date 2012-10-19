@@ -9,8 +9,6 @@
 //              (c) 2005-2009 Vadim Zeitlin
 // Licence:     wxWindows licence
 ///////////////////////////////////////////////////////////////////////////////
-
-
 #include "wx/wx.h"
 #include "wx/image.h"
 #include "wx/file.h"
@@ -24,11 +22,9 @@
 #include "wx/versioninfo.h"
 #include "wx/rawbmp.h"
 
-
 //-----------------------------------------------------------------------------
 // MyApp
 //-----------------------------------------------------------------------------
-
 class MyApp: public wxApp
 {
 public:
@@ -52,14 +48,10 @@ public:
         m_alphaBitmap(SIZE, SIZE, 32)
     */
 
-    MyRawBitmapFrame(): wxFrame( (wxFrame *)NULL, wxID_ANY, wxT("wxImage sample"),
-				wxPoint(20, 20), wxSize(950, 700) ),
-		       m_bitmap(SIZE, SIZE, 24)
+    MyRawBitmapFrame(): wxFrame( (wxFrame *)NULL, wxID_ANY, wxT("wxImage sample"), wxPoint(20, 20), wxSize(950, 700)), m_bitmap(SIZE, SIZE, 24)
     {
-        SetClientSize(SIZE, SIZE*2+25);
-
+        SetClientSize(SIZE, SIZE * 2 + 25);
         InitBitmap();
-
     }
 
     void InitBitmap()
@@ -80,7 +72,6 @@ public:
             int r = y < SIZE/3 ? 255 : 0,
                 g = (SIZE/3 <= y) && (y < 2*(SIZE/3)) ? 255 : 0,
                 b = 2*(SIZE/3) <= y ? 255 : 0;
-
             for ( int x = 0; x < SIZE; ++x )
             {
                 p.Red() = r;
@@ -88,7 +79,6 @@ public:
                 p.Blue() = b;
                 ++p; // same as p.OffsetX(1)
             }
-
             p = rowStart;
             p.OffsetY(data, 1);
         }
