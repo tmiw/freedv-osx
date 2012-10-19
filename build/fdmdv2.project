@@ -67,6 +67,7 @@
     <File Name="../src/fdmdv2_defines.h"/>
     <File Name="../src/fdmdv2_hdw_ports.h"/>
     <File Name="../../../Audio/portaudio/include/portaudio.h"/>
+    <File Name="../../../Audio/libsndfile/include/sndfile.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>
@@ -85,16 +86,17 @@
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" C_Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
-        <IncludePath Value="/bin/MinGW/msys/1.0/local/include"/>
+        <IncludePath Value="/bin/MinGW-4.6.1/msys/1.0/local/include"/>
         <IncludePath Value="../../codec2-dev/src"/>
-        <IncludePath Value="../3rdparty/portaudio/include"/>
-        <IncludePath Value="../3rdparty/portaudio/bindings/cpp/include"/>
-        <IncludePath Value="../3rdparty/libsndfile/include"/>
+        <IncludePath Value="/bin/Projects/Audio/libsndfile/include"/>
         <Preprocessor Value="__WX__"/>
       </Compiler>
       <Linker Options="-mwindows;$(shell wx-config --debug=yes --libs --unicode=yes)" Required="yes">
-        <LibraryPath Value="/bin/MinGW/msys/1.0/local/lib"/>
-        <Library Value="libcodec2.a"/>
+        <LibraryPath Value="/bin/Projects/Radio/codec2-dev/src/.libs"/>
+        <LibraryPath Value="/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
+        <LibraryPath Value="/bin/Projects/Audio/libsndfile/lib"/>
+        <Library Value="libsndfile-1.dll"/>
+        <Library Value="codec2"/>
         <Library Value="libportaudio.a"/>
         <Library Value="libportaudiocpp.a"/>
       </Linker>
@@ -134,11 +136,13 @@
       <Compiler Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" C_Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <IncludePath Value="/bin/MinGW-4.6.1/msys/1.0/local/include"/>
         <IncludePath Value="../../codec2-dev/src"/>
+        <IncludePath Value="/bin/Projects/Audio/libsndfile/"/>
         <Preprocessor Value="__WX__"/>
       </Compiler>
       <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes">
         <LibraryPath Value="/bin/Projects/Radio/codec2-dev/src/.libs"/>
         <LibraryPath Value="/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
+        <LibraryPath Value="/bin/Projects/Audio/libsndfile/lib"/>
         <Library Value="libsndfile-1.dll"/>
         <Library Value="codec2"/>
         <Library Value="libportaudio.a"/>
