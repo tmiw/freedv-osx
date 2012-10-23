@@ -6,11 +6,11 @@
   </Environment>
   <Project Name="rawbits" Path="../tests/image/rawbits.project" Active="No"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="yes">
+    <WorkspaceConfiguration Name="Debug" Selected="no">
       <Project Name="fdmdv2" ConfigName="Debug"/>
       <Project Name="rawbits" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="no">
+    <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="fdmdv2" ConfigName="Release"/>
       <Project Name="rawbits" ConfigName="Release"/>
     </WorkspaceConfiguration>

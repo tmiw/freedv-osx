@@ -16,11 +16,11 @@
     <File Name="../src/fdmdv2_plot.cpp"/>
     <File Name="../src/topFrame.cpp"/>
     <File Name="../src/fdmdv2_plot_scatter.cpp"/>
-    <File Name="../src/fdmdv2_plot_waterfall.cpp"/>
     <File Name="../src/fdmdv2_plot_spectrum.cpp"/>
     <File Name="../src/fdmdv2_pa_wrapper.cpp"/>
     <File Name="../src/fdmdv2_plot_scalar.cpp"/>
     <File Name="../src/fdmdv2_hdw_ports.cpp"/>
+    <File Name="../src/fdmdv2_plot_waterfall_linux.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_about.h"/>
@@ -57,7 +57,6 @@
       <File Name="../extern/include/portaudiocpp/SystemHostApiIterator.hxx"/>
     </VirtualDirectory>
     <File Name="../src/fdmdv2_plot_scatter.h"/>
-    <File Name="../src/fdmdv2_plot_waterfall.h"/>
     <File Name="../src/fdmdv2_plot_spectrum.h"/>
     <File Name="../src/fdmdv2_pa_wrapper.h"/>
     <File Name="../src/comp.h"/>
@@ -68,6 +67,7 @@
     <File Name="../src/fdmdv2_hdw_ports.h"/>
     <File Name="../../../Audio/portaudio/include/portaudio.h"/>
     <File Name="../../../Audio/libsndfile/include/sndfile.h"/>
+    <File Name="../src/fdmdv2_plot_waterfall_linux.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>
