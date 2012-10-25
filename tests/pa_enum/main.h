@@ -99,10 +99,20 @@ class MainFrame : public MainFrameBase
         void OnDeviceSelect( wxListEvent& event );
 
         void OnExitClick( wxCommandEvent& event );
-        void OnRefreshClick( wxCommandEvent& event );
         void DisplaySupportedSampleRates(const PaStreamParameters *inputParameters, const PaStreamParameters *outputParameters);
         void populateParams(AudioInfoDisplay);
         void showAPIInfo();
+
+//        void OnActivateApp( wxActivateEvent& event ) { event.Skip(); }
+//        void OnCloseFrame( wxCloseEvent& event ) { event.Skip(); }
+        void OnRxInDeviceSelect(wxListEvent& event);
+        void OnRxOutDeviceSelect(wxListEvent& event);
+        void OnTxInDeviceSelect(wxListEvent& event);
+        void OnTxOutDeviceSelect(wxListEvent& event);
+        void OnRefreshClick(wxCommandEvent& event);
+        void OnApplyAudioParameters(wxCommandEvent& event);
+        void OnCancelAudioParameters(wxCommandEvent& event);
+        void OnOkAudioParameters(wxCommandEvent& event);
         AudioInfoDisplay m_RxInDevices;
         AudioInfoDisplay m_RxOutDevices;
         AudioInfoDisplay m_TxInDevices;

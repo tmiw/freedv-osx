@@ -83,7 +83,7 @@ MainFrame::MainFrame(wxWindow *parent) : MainFrameBase(parent)
 
     m_RxOutDevices.m_listDevices  = m_listCtrlRxOutDevices;
     m_RxOutDevices.direction      = AUDIO_OUT;
-    m_RxOutDevices.m_textDevice   = m_textRxOut;
+    m_RxOutDevices.m_textDevice   = m_textCtrlRxOut;
     m_RxOutDevices.m_cbSampleRate = m_cbSampleRateRxOut;
 
     m_TxInDevices.m_listDevices   = m_listCtrlTxInDevices;
@@ -93,7 +93,7 @@ MainFrame::MainFrame(wxWindow *parent) : MainFrameBase(parent)
 
     m_TxOutDevices.m_listDevices  = m_listCtrlTxOutDevices;
     m_TxOutDevices.direction      = AUDIO_OUT;
-    m_TxOutDevices.m_textDevice   = m_textCtrTxOut;
+    m_TxOutDevices.m_textDevice   = m_textCtrlTxOut;
     m_TxOutDevices.m_cbSampleRate = m_cbSampleRateTxOut;
 
     populateParams(m_RxInDevices);
@@ -230,19 +230,6 @@ void MainFrame::DisplaySupportedSampleRates(const PaStreamParameters *inputParam
     {
         printf("\n");
     }
-}
-
-//-------------------------------------------------------------------------
-// OnRefreshClick()
-//-------------------------------------------------------------------------
-void MainFrame::OnRefreshClick(wxCommandEvent& event)
-{
-    m_notebook1->SetSelection(0);
-    showAPIInfo();
-    populateParams(m_RxInDevices);
-    populateParams(m_RxOutDevices);
-    populateParams(m_TxInDevices);
-    populateParams(m_TxOutDevices);
 }
 
 //-------------------------------------------------------------------------
@@ -427,3 +414,106 @@ void MainFrame::populateParams(AudioInfoDisplay ai)    //wxListCtrl* ctrl, int i
     }
 }
 
+//-------------------------------------------------------------------------
+// OnRxInDeviceSelect()
+//-------------------------------------------------------------------------
+void MainFrame::OnRxInDeviceSelect(wxListEvent& event)
+{
+    wxString str;
+    int index = event.GetIndex();
+    wxString str2;
+
+    str2 = m_listCtrlRxInDevices->GetItemText(index, 2);
+    str.Printf("Name: %s", str2);
+    wxMessageBox(str, _("OnSelect"));
+    m_textCtrlRxIn->SetValue(str2);
+//    event.Skip();
+}
+
+//-------------------------------------------------------------------------
+// OnRxOutDeviceSelect()
+//-------------------------------------------------------------------------
+void MainFrame::OnRxOutDeviceSelect(wxListEvent& event)
+{
+    wxString str;
+    int index = event.GetIndex();
+    wxString str2;
+
+    str2 = m_listCtrlRxOutDevices->GetItemText(index, 2);
+    str.Printf("Name: %s", str2);
+    wxMessageBox(str, _("OnSelect"));
+    m_textCtrlRxOut->SetValue(str2);
+//    event.Skip();
+}
+
+//-------------------------------------------------------------------------
+// OnTxInDeviceSelect()
+//-------------------------------------------------------------------------
+void MainFrame::OnTxInDeviceSelect(wxListEvent& event)
+{
+    wxString str;
+    int index = event.GetIndex();
+    wxString str2;
+
+    str2 = m_listCtrlTxInDevices->GetItemText(index, 2);
+    str.Printf("Name: %s", str2);
+    wxMessageBox(str, _("OnSelect"));
+    m_textCtrlTxIn->SetValue(str2);
+//    event.Skip();
+}
+
+//-------------------------------------------------------------------------
+// OnTxOutDeviceSelect()
+//-------------------------------------------------------------------------
+void MainFrame::OnTxOutDeviceSelect(wxListEvent& event)
+{
+    wxString str;
+    int index = event.GetIndex();
+    wxString str2;
+
+    str2 = m_listCtrlTxOutDevices->GetItemText(index, 2);
+    str.Printf("Name: %s", str2);
+    wxMessageBox(str, _("OnSelect"));
+    m_textCtrlTxOut->SetValue(str2);
+//    event.Skip();
+}
+
+//-------------------------------------------------------------------------
+// OnRefreshClick()
+//-------------------------------------------------------------------------
+void MainFrame::OnRefreshClick(wxCommandEvent& event)
+{
+    m_notebook1->SetSelection(0);
+    showAPIInfo();
+    populateParams(m_RxInDevices);
+    populateParams(m_RxOutDevices);
+    populateParams(m_TxInDevices);
+    populateParams(m_TxOutDevices);
+}
+
+//-------------------------------------------------------------------------
+// OnApplyAudioParameters()
+//-------------------------------------------------------------------------
+void MainFrame::OnApplyAudioParameters(wxCommandEvent& event)
+{
+    Close();
+    event.Skip();
+}
+
+//-------------------------------------------------------------------------
+// OnCancelAudioParameters()
+//-------------------------------------------------------------------------
+void MainFrame::OnCancelAudioParameters(wxCommandEvent& event)
+{
+    Close();
+    //event.Skip();
+}
+
+//-------------------------------------------------------------------------
+// OnOkAudioParameters()
+//-------------------------------------------------------------------------
+void MainFrame::OnOkAudioParameters(wxCommandEvent& event)
+{
+    Close();
+    event.Skip();
+}

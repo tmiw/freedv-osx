@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version Mar 17 2012)
+// C++ code generated with wxFormBuilder (version Apr 10 2012)
 // http://www.wxformbuilder.org/
 //
 // PLEASE DO "NOT" EDIT THIS FILE!
@@ -12,11 +12,11 @@
 #include <wx/xrc/xmlres.h>
 #include <wx/intl.h>
 #include <wx/listctrl.h>
-#include <wx/string.h>
 #include <wx/gdicmn.h>
 #include <wx/font.h>
 #include <wx/colour.h>
 #include <wx/settings.h>
+#include <wx/string.h>
 #include <wx/stattext.h>
 #include <wx/textctrl.h>
 #include <wx/combobox.h>
@@ -36,10 +36,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Class MainFrameBase
 ///////////////////////////////////////////////////////////////////////////////
-class MainFrameBase : public wxFrame 
+class MainFrameBase : public wxFrame
 {
 	private:
-	
+
 	protected:
 		wxPanel* m_panel1;
 		wxNotebook* m_notebook1;
@@ -51,7 +51,7 @@ class MainFrameBase : public wxFrame
 		wxComboBox* m_cbSampleRateRxIn;
 		wxListCtrl* m_listCtrlRxOutDevices;
 		wxStaticText* m_staticText9;
-		wxTextCtrl* m_textRxOut;
+		wxTextCtrl* m_textCtrlRxOut;
 		wxStaticText* m_staticText10;
 		wxComboBox* m_cbSampleRateRxOut;
 		wxPanel* m_panelTx;
@@ -62,7 +62,7 @@ class MainFrameBase : public wxFrame
 		wxComboBox* m_cbSampleRateTxIn;
 		wxListCtrl* m_listCtrlTxOutDevices;
 		wxStaticText* m_staticText81;
-		wxTextCtrl* m_textCtrTxOut;
+		wxTextCtrl* m_textCtrlTxOut;
 		wxStaticText* m_staticText71;
 		wxComboBox* m_cbSampleRateTxOut;
 		wxPanel* m_panelAPI;
@@ -79,7 +79,7 @@ class MainFrameBase : public wxFrame
 		wxButton* m_sdbSizer1OK;
 		wxButton* m_sdbSizer1Apply;
 		wxButton* m_sdbSizer1Cancel;
-		
+
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnActivateApp( wxActivateEvent& event ) { event.Skip(); }
 		virtual void OnCloseFrame( wxCloseEvent& event ) { event.Skip(); }
@@ -91,14 +91,15 @@ class MainFrameBase : public wxFrame
 		virtual void OnApplyAudioParameters( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnCancelAudioParameters( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnOkAudioParameters( wxCommandEvent& event ) { event.Skip(); }
-		
-	
+
+
 	public:
-		
-		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("PortAudio Device Enumeration"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 790,400 ), long style = wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
-		
+
+		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("PortAudio Device Enumeration"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 690,400 ), long style = wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
+//		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("PortAudio Device Enumeration"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 690,400 ), long style = wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
+
 		~MainFrameBase();
-	
+
 };
 
 #endif //__GUI_H__

@@ -2,7 +2,7 @@
 <resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
 	<object class="wxFrame" name="MainFrameBase">
 		<style>wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL</style>
-		<size>790,400</size>
+		<size>690,400</size>
 		<title>PortAudio Device Enumeration</title>
 		<centered>1</centered>
 		<aui_managed>0</aui_managed>

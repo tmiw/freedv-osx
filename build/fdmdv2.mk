@@ -2,18 +2,18 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Release
+## Debug
 ProjectName            :=fdmdv2
-ConfigurationName      :=Release
+ConfigurationName      :=Debug
 WorkspacePath          := "C:\bin\Projects\Radio\fdmdv2\build"
 ProjectPath            := "C:\bin\Projects\Radio\fdmdv2\build"
-IntermediateDirectory  :=./Release
+IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=OFA-Staff
-Date                   :=10/24/2012
+Date                   :=10/25/2012
 CodeLitePath           :="C:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -35,8 +35,8 @@ PreprocessOnlySwitch   :=-E
 ObjectsFileList        :="C:\bin\Projects\Radio\fdmdv2\build\fdmdv2.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
-LinkOptions            :=  -mwindows -s $(shell wx-config --debug=no --libs --unicode=yes)
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)/bin/MinGW-4.6.1/msys/1.0/local/include $(IncludeSwitch)../../codec2-dev/src $(IncludeSwitch)/bin/Projects/Audio/libsndfile/ 
+LinkOptions            :=  -mwindows $(shell wx-config --debug=yes --libs --unicode=yes)
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)/bin/MinGW-4.6.1/msys/1.0/local/include $(IncludeSwitch)../../codec2-dev/src $(IncludeSwitch)/bin/Projects/Audio/libsndfile/include 
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)sndfile-1 $(LibrarySwitch)codec2 $(LibrarySwitch)portaudio $(LibrarySwitch)portaudiocpp 
@@ -50,8 +50,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/bin/Project
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"803\"  $(Preprocessors)
-CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"803\"  $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"810\"  $(Preprocessors)
+CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"810\"  $(Preprocessors)
 
 
 ##
@@ -78,7 +78,7 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 $(IntermediateDirectory)/.d:
-	@$(MakeDirCommand) "./Release"
+	@$(MakeDirCommand) "./Debug"
 
 PreBuild:
 
@@ -237,6 +237,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) "C:\bin\Projects\Radio\fdmdv2\build\.build-release\fdmdv2"
+	$(RM) "C:\bin\Projects\Radio\fdmdv2\build\.build-debug\fdmdv2"
 
 

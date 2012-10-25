@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 ###########################################################################
-## Python code generated with wxFormBuilder (version Mar 17 2012)
+## Python code generated with wxFormBuilder (version Apr 10 2012)
 ## http://www.wxformbuilder.org/
 ##
 ## PLEASE DO "NOT" EDIT THIS FILE!
@@ -17,11 +17,12 @@ _ = gettext.gettext
 ## Class MainFrameBase
 ###########################################################################
 
-class MainFrameBase ( wx.Frame ):
+class MainFrameBase ( wx.Frame wx.Frame ):
 	
-	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"PortAudio Device Enumeration"), pos = wx.DefaultPosition, size = wx.Size( 790,400 ), style = wx.CLOSE_BOX|wx.DEFAULT_FRAME_STYLE|wx.RESIZE_BORDER|wx.TAB_TRAVERSAL )
+	def __init__( self, parent ):def __init__( self, parent ):
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"PortAudio Device Enumeration"), pos = wx.DefaultPosition, size = wx.Size( 690,400 ), style = wx.CLOSE_BOX|wx.DEFAULT_FRAME_STYLE|wx.RESIZE_BORDER|wx.TAB_TRAVERSAL )wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"PortAudio Device Enumeration"), pos = wx.DefaultPosition, size = wx.Size( 690,400 ), style = wx.CLOSE_BOX|wx.DEFAULT_FRAME_STYLE|wx.RESIZE_BORDER|wx.TAB_TRAVERSAL )
 		
+		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		
 		mainSizer = wx.BoxSizer( wx.VERTICAL )
@@ -281,10 +282,11 @@ class MainFrameBase ( wx.Frame ):
 		self.Layout()
 		
 		self.Centre( wx.BOTH )
+		self.Centre( wx.BOTH )
 		
 		# Connect Events
-		self.Bind( wx.EVT_ACTIVATE_APP, self.OnActivateApp )
-		self.Bind( wx.EVT_CLOSE, self.OnCloseFrame )
+		self.Bind( wx.EVT_ACTIVATE_APP, self.OnActivateApp )self.Bind( wx.EVT_ACTIVATE_APP, self.OnActivateApp )
+		self.Bind( wx.EVT_CLOSE, self.OnCloseFrame )self.Bind( wx.EVT_CLOSE, self.OnCloseFrame )
 		self.m_listCtrlRxInDevices.Bind( wx.EVT_LIST_ITEM_SELECTED, self.OnRxInDeviceSelect )
 		self.m_listCtrlRxOutDevices.Bind( wx.EVT_LIST_ITEM_SELECTED, self.OnRxOutDeviceSelect )
 		self.m_listCtrlTxInDevices.Bind( wx.EVT_LIST_ITEM_SELECTED, self.OnTxInDeviceSelect )

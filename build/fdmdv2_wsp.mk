@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo ----------Building project:[ fdmdv2 - Release ]----------
-	@"$(MAKE)" -f "fdmdv2.mk"
+	@echo ----------Building project:[ pa_enum - Debug ]----------
+	@cd "C:\bin\Projects\Radio\fdmdv2\tests\pa_enum" && "$(MAKE)" -f "pa_enum.mk"
 clean:
-	@echo ----------Cleaning project:[ fdmdv2 - Release ]----------
-	@"$(MAKE)" -f "fdmdv2.mk" clean
+	@echo ----------Cleaning project:[ pa_enum - Debug ]----------
+	@cd "C:\bin\Projects\Radio\fdmdv2\tests\pa_enum" && "$(MAKE)" -f "pa_enum.mk" clean
