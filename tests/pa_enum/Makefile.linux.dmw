@@ -4,7 +4,6 @@
 # $ make -f Makefile.linux.dmw
 
 WX_GTK_PATH=/home/wittend/Projects/wxWidgets-2.9.4/build_gtk
-#CODEC2_PATH=/home/wittend/codec2-dev
 
 WX_CONFIG=$(WX_GTK_PATH)/wx-config
 WX_CPPFLAGS = $(shell $(WX_CONFIG) --cxxflags)

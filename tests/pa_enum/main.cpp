@@ -33,14 +33,15 @@ MainFrame::MainFrame(wxWindow *parent) : MainFrameBase(parent)
 {
     m_isPaInitialized = false;
     wxInitAllImageHandlers();
-    // Give it an icon
-    SetIcon(wxICON("../bitmaps/sample.ico"));
 
     // Make an image list containing large icons
     m_imageListNormal = new wxImageList(32, 32, true);
     m_imageListSmall = new wxImageList(16, 16, true);
 
 #ifdef __WXMSW__
+    // Give it an icon
+    SetIcon(wxICON("bitmaps/sample.ico"));
+
     m_imageListSmall->Add(wxIcon(wxT("bitmaps/toolchec.ico"), wxBITMAP_TYPE_ICO));
     m_imageListSmall->Add(wxIcon(wxT("bitmaps/transparent.ico"), wxBITMAP_TYPE_ICO));
     m_imageListSmall->Add(wxIcon(wxT("bitmaps/toolchar.ico"), wxBITMAP_TYPE_ICO));
@@ -51,6 +52,19 @@ MainFrame::MainFrame(wxWindow *parent) : MainFrameBase(parent)
     m_imageListSmall->Add(wxIcon(wxT("bitmaps/inArrow16x16.ico"), wxBITMAP_TYPE_ICO));
     m_imageListSmall->Add(wxIcon(wxT("bitmaps/outArrow16x16.ico"), wxBITMAP_TYPE_ICO));
 #else
+    // Give it an icon
+    SetIcon(wxICON("bitmaps/sample.xpm"));
+
+    m_imageListSmall->Add(wxIcon(wxT("bitmaps/toolchec.xpm"), wxBITMAP_TYPE_XPM));
+    m_imageListSmall->Add(wxIcon(wxT("bitmaps/transparent.xpm"), wxBITMAP_TYPE_XPM));
+    m_imageListSmall->Add(wxIcon(wxT("bitmaps/toolchar.xpm"), wxBITMAP_TYPE_XPM));
+    m_imageListSmall->Add(wxIcon(wxT("bitmaps/tooldata.xpm"), wxBITMAP_TYPE_XPM));
+    m_imageListSmall->Add(wxIcon(wxT("bitmaps/toolgame.xpm"), wxBITMAP_TYPE_XPM));
+    m_imageListSmall->Add(wxIcon(wxT("bitmaps/toolnote.xpm"), wxBITMAP_TYPE_XPM));
+    m_imageListSmall->Add(wxIcon(wxT("bitmaps/tooltime.xpm"), wxBITMAP_TYPE_XPM));
+//    m_imageListSmall->Add(wxIcon(wxT("bitmaps/inArrow16x16.xpm"), wxBITMAP_TYPE_XPM));
+//    m_imageListSmall->Add(wxIcon(wxT("bitmaps/outArrow16x16.xpm"), wxBITMAP_TYPE_XPM));
+/*
     m_imageListNormal->Add(wxIcon( toolbrai_xpm ));
     m_imageListNormal->Add(wxIcon( toolchar_xpm ));
     m_imageListNormal->Add(wxIcon( tooldata_xpm ));
@@ -61,6 +75,7 @@ MainFrame::MainFrame(wxWindow *parent) : MainFrameBase(parent)
     m_imageListNormal->Add(wxIcon( tooltime_xpm ));
     m_imageListNormal->Add(wxIcon( toolword_xpm ));
     m_imageListSmall->Add(wxIcon(small1_xpm));
+*/
 #endif
     if(!m_isPaInitialized)
     {

@@ -16,6 +16,7 @@
 // main wxWidgets header file
 #include <wx/wx.h>
 #include <wx/textctrl.h>
+/*
 #if !defined(__WXMSW__) && !defined(__WXPM__)
     #include "../bitmaps/sample.xpm"
 #endif
@@ -32,6 +33,7 @@
     #include "bitmaps/toolword.xpm"
     #include "bitmaps/small1.xpm"
 #endif
+*/
 
 #define AUDIO_IN      0
 #define AUDIO_OUT     1
