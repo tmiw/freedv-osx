@@ -10,10 +10,12 @@
   <VirtualDirectory Name="src">
     <File Name="gui.cpp"/>
     <File Name="main.cpp"/>
+    <File Name="AudioOptsDialog.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="gui.h"/>
     <File Name="main.h"/>
+    <File Name="AudioOptsDialog.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="gui.fbp"/>

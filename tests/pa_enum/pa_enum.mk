@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=OFA-Staff
-Date                   :=10/25/2012
+Date                   :=10/26/2012
 CodeLitePath           :="C:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -50,8 +50,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/bin/MinGW-4
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"814\"  $(Preprocessors)
-CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"814\"  $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"824\"  $(Preprocessors)
+CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"824\"  $(Preprocessors)
 
 
 ##
@@ -62,7 +62,7 @@ WXWIN:=C:\bin\wxWidgets-2.9.4
 PATH:=$(WXWIN)\lib\gcc_dll;$(PATH)
 WXCFG:=gcc_dll\mswu
 UNIT_TEST_PP_SRC_DIR:=C:\bin\UnitTest++-1.3
-Objects=$(IntermediateDirectory)/gui$(ObjectSuffix) $(IntermediateDirectory)/main$(ObjectSuffix) 
+Objects=$(IntermediateDirectory)/gui$(ObjectSuffix) $(IntermediateDirectory)/main$(ObjectSuffix) $(IntermediateDirectory)/AudioOptsDialog$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -101,6 +101,14 @@ $(IntermediateDirectory)/main$(DependSuffix): main.cpp
 $(IntermediateDirectory)/main$(PreprocessSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/tests/pa_enum/main.cpp"
 
+$(IntermediateDirectory)/AudioOptsDialog$(ObjectSuffix): AudioOptsDialog.cpp $(IntermediateDirectory)/AudioOptsDialog$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/tests/pa_enum/AudioOptsDialog.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/AudioOptsDialog$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/AudioOptsDialog$(DependSuffix): AudioOptsDialog.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/AudioOptsDialog$(ObjectSuffix) -MF$(IntermediateDirectory)/AudioOptsDialog$(DependSuffix) -MM "C:/bin/Projects/Radio/fdmdv2/tests/pa_enum/AudioOptsDialog.cpp"
+
+$(IntermediateDirectory)/AudioOptsDialog$(PreprocessSuffix): AudioOptsDialog.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/AudioOptsDialog$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/tests/pa_enum/AudioOptsDialog.cpp"
+
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##
@@ -113,6 +121,9 @@ clean:
 	$(RM) $(IntermediateDirectory)/main$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/main$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/main$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/AudioOptsDialog$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/AudioOptsDialog$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/AudioOptsDialog$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
 	$(RM) "C:\bin\Projects\Radio\fdmdv2\build\.build-debug\pa_enum"

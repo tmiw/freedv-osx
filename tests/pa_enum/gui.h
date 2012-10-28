@@ -12,6 +12,7 @@
 #include <wx/xrc/xmlres.h>
 #include <wx/intl.h>
 #include <wx/listctrl.h>
+#include <wx/menu.h>
 #include <wx/gdicmn.h>
 #include <wx/font.h>
 #include <wx/colour.h>
@@ -29,77 +30,33 @@
 #include <wx/notebook.h>
 #include <wx/button.h>
 #include <wx/frame.h>
+#include <wx/dialog.h>
 
 ///////////////////////////////////////////////////////////////////////////
-
+#define ID_AUDIO_OPTIONS 1000
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Class MainFrameBase
 ///////////////////////////////////////////////////////////////////////////////
 class MainFrameBase : public wxFrame
 {
-	private:
+    private:
 
-	protected:
-		wxPanel* m_panel1;
-		wxNotebook* m_notebook1;
-		wxPanel* m_panelRx;
-		wxListCtrl* m_listCtrlRxInDevices;
-		wxStaticText* m_staticText51;
-		wxTextCtrl* m_textCtrlRxIn;
-		wxStaticText* m_staticText6;
-		wxComboBox* m_cbSampleRateRxIn;
-		wxListCtrl* m_listCtrlRxOutDevices;
-		wxStaticText* m_staticText9;
-		wxTextCtrl* m_textCtrlRxOut;
-		wxStaticText* m_staticText10;
-		wxComboBox* m_cbSampleRateRxOut;
-		wxPanel* m_panelTx;
-		wxListCtrl* m_listCtrlTxInDevices;
-		wxStaticText* m_staticText12;
-		wxTextCtrl* m_textCtrlTxIn;
-		wxStaticText* m_staticText11;
-		wxComboBox* m_cbSampleRateTxIn;
-		wxListCtrl* m_listCtrlTxOutDevices;
-		wxStaticText* m_staticText81;
-		wxTextCtrl* m_textCtrlTxOut;
-		wxStaticText* m_staticText71;
-		wxComboBox* m_cbSampleRateTxOut;
-		wxPanel* m_panelAPI;
-		wxStaticText* m_staticText7;
-		wxTextCtrl* m_textStringVer;
-		wxStaticText* m_staticText8;
-		wxTextCtrl* m_textIntVer;
-		wxStaticText* m_staticText5;
-		wxTextCtrl* m_textCDevCount;
-		wxStaticText* m_staticText4;
-		wxTextCtrl* m_textAPICount;
-		wxButton* m_btnRefresh;
-		wxStdDialogButtonSizer* m_sdbSizer1;
-		wxButton* m_sdbSizer1OK;
-		wxButton* m_sdbSizer1Apply;
-		wxButton* m_sdbSizer1Cancel;
+    protected:
+        wxMenuBar* m_menuBar;
+        wxMenu* m_menuFile;
+        wxMenu* tools;
+        wxPanel* m_panel1;
+        wxStatusBar* m_statusBar;
 
-		// Virtual event handlers, overide them in your derived class
-		virtual void OnActivateApp( wxActivateEvent& event ) { event.Skip(); }
-		virtual void OnCloseFrame( wxCloseEvent& event ) { event.Skip(); }
-		virtual void OnRxInDeviceSelect( wxListEvent& event ) { event.Skip(); }
-		virtual void OnRxOutDeviceSelect( wxListEvent& event ) { event.Skip(); }
-		virtual void OnTxInDeviceSelect( wxListEvent& event ) { event.Skip(); }
-		virtual void OnTxOutDeviceSelect( wxListEvent& event ) { event.Skip(); }
-		virtual void OnRefreshClick( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnApplyAudioParameters( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnCancelAudioParameters( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnOkAudioParameters( wxCommandEvent& event ) { event.Skip(); }
+        // Virtual event handlers, overide them in your derived class
+        virtual void OnCloseFrame( wxCloseEvent& event ) { event.Skip(); }
+        virtual void OnExitClick( wxCommandEvent& event ) { event.Skip(); }
+        virtual void OnAudioOptsDialog( wxCommandEvent& event ) { event.Skip(); }
 
-
-	public:
-
-		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("PortAudio Device Enumeration"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 690,400 ), long style = wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
-//		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("PortAudio Device Enumeration"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 690,400 ), long style = wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
-
-		~MainFrameBase();
-
+    public:
+        MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("PortAudio Device Enumeration"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 690,400 ), long style = wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
+       ~MainFrameBase();
 };
 
 #endif //__GUI_H__
