@@ -315,7 +315,7 @@ AudioOptsDialog::~AudioOptsDialog()
 void AudioOptsDialog::OnInitDialog( wxInitDialogEvent& event )
 {
     ExchangeData(EXCHANGE_DATA_IN);
-    populateAudioInfo();
+    //populateAudioInfo();
 }
 
 //-------------------------------------------------------------------------
@@ -326,17 +326,17 @@ void AudioOptsDialog::ExchangeData(int inout)
     wxConfigBase *pConfig = wxConfigBase::Get();
     if(inout == EXCHANGE_DATA_IN)
     {
-        m_textRxInput->SetValue(wxGetApp().m_strRxInAudio);
-        m_textTxOutput->SetValue(wxGetApp().m_strRxOutAudio);
-        m_textVoiceInput->SetValue(wxGetApp().m_textVoiceInput);
-        m_textVoiceOutput->SetValue(wxGetApp().m_textVoiceOutput);
+        m_textCtrlRxIn->SetValue(wxGetApp().m_strRxInAudio);
+        m_textCtrlRxOut->SetValue(wxGetApp().m_strRxOutAudio);
+        m_textCtrlTxIn->SetValue(wxGetApp().m_textVoiceInput);
+        m_textCtrlTxOut->SetValue(wxGetApp().m_textVoiceOutput);
     }
     if(inout == EXCHANGE_DATA_OUT)
     {
-        wxGetApp().m_strRxInAudio    = m_textRxInput->GetValue();
-        wxGetApp().m_strRxOutAudio   = m_textTxOutput->GetValue();
-        wxGetApp().m_textVoiceInput  = m_textVoiceInput->GetValue();
-        wxGetApp().m_textVoiceOutput = m_textVoiceOutput->GetValue();
+        wxGetApp().m_strRxInAudio    = m_textCtrlRxIn->GetValue();
+        wxGetApp().m_strRxOutAudio   = m_textCtrlRxOut->GetValue();
+        wxGetApp().m_textVoiceInput  = m_textCtrlTxIn->GetValue();
+        wxGetApp().m_textVoiceOutput = m_textCtrlTxOut->GetValue();
 
         pConfig->Write(wxT("/Audio/RxIn"),          wxGetApp().m_strRxInAudio);
         pConfig->Write(wxT("/Audio/RxOut"),         wxGetApp().m_strRxOutAudio);
@@ -665,6 +665,7 @@ void AudioOptsDialog::OnRefreshClick(wxCommandEvent& event)
 //-------------------------------------------------------------------------
 void AudioOptsDialog::OnApplyAudioParameters(wxCommandEvent& event)
 {
+    ExchangeData(EXCHANGE_DATA_OUT);
     if(m_isPaInitialized)
     {
         if((pa_err = Pa_Terminate()) == paNoError)
@@ -702,6 +703,7 @@ void AudioOptsDialog::OnCancelAudioParameters(wxCommandEvent& event)
 //-------------------------------------------------------------------------
 void AudioOptsDialog::OnOkAudioParameters(wxCommandEvent& event)
 {
+    ExchangeData(EXCHANGE_DATA_OUT);
     if(m_isPaInitialized)
     {
         if((pa_err = Pa_Terminate()) == paNoError)

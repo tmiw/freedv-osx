@@ -32,6 +32,32 @@ bool MainApp::OnInit()
 MainFrame::MainFrame(wxWindow *parent) : MainFrameBase(parent)
 {
     wxInitAllImageHandlers();
+    wxConfigBase *pConfig = wxConfigBase::Get();
+
+    // restore frame position and size
+//    int x = pConfig->Read(wxT("/MainFrame/top"),       50);
+//    int y = pConfig->Read(wxT("/MainFrame/left"),      50);
+//    int w = pConfig->Read(wxT("/MainFrame/width"),     650);
+//    int h = pConfig->Read(wxT("/MainFrame/height"),    400);
+//    wxGetApp().m_show_wf      = pConfig->Read(wxT("/MainFrame/show_wf"),      1);
+//    wxGetApp().m_show_spect   = pConfig->Read(wxT("/MainFrame/show_spect"),   1);
+//    wxGetApp().m_show_scatter = pConfig->Read(wxT("/MainFrame/show_scatter"), 1);
+//    wxGetApp().m_show_timing  = pConfig->Read(wxT("/MainFrame/show_timing"),  1);
+//    wxGetApp().m_show_freq    = pConfig->Read(wxT("/MainFrame/show_freq"),    1);
+
+    wxGetApp().m_strRxInAudio       = pConfig->Read(wxT("/Audio/RxIn"),         wxT("<m_strRxInAudio>"));
+    wxGetApp().m_strRxOutAudio      = pConfig->Read(wxT("/Audio/RxOut"),        wxT("<m_strRxOutAudio>"));
+    wxGetApp().m_textVoiceInput     = pConfig->Read(wxT("/Audio/TxIn"),         wxT("<m_textVoiceInput>"));
+    wxGetApp().m_textVoiceOutput    = pConfig->Read(wxT("/Audio/TxOut"),        wxT("<m_textVoiceOutput>"));
+    wxGetApp().m_strSampleRate      = pConfig->Read(wxT("/Audio/SampleRate"),   wxT("48000"));
+
+//    wxGetApp().m_strRigCtrlPort     = pConfig->Read("/Rig/Port",                wxT("\\\\.\\com1"));
+//    wxGetApp().m_strRigCtrlBaud     = pConfig->Read("/Rig/Baud",                wxT("9600"));
+//    wxGetApp().m_strRigCtrlDatabits = pConfig->Read("/Rig/DataBits",            wxT("8"));
+//    wxGetApp().m_strRigCtrlStopbits = pConfig->Read("/Rig/StopBits",            wxT("1"));
+//    wxGetApp().m_strRigCtrlParity   = pConfig->Read("/Rig/Parity",              wxT("n"));
+
+    pConfig->SetPath(wxT("/"));
 
     this->Connect(ID_AUDIO_OPTIONS, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler(MainFrame::OnAudioOptsDialog));
 }
@@ -42,6 +68,33 @@ MainFrame::MainFrame(wxWindow *parent) : MainFrameBase(parent)
 MainFrame::~MainFrame()
 {
     this->Disconnect(ID_AUDIO_OPTIONS, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler(MainFrame::OnAudioOptsDialog));
+    wxConfigBase *pConfig = wxConfigBase::Get();
+    if(pConfig)
+    {
+//        GetClientSize(&w, &h);
+//        GetPosition(&x, &y);
+//        pConfig->Write(wxT("/MainFrame/top"),           (long) x);
+//        pConfig->Write(wxT("/MainFrame/left"),          (long) y);
+//        pConfig->Write(wxT("/MainFrame/width"),         (long) w);
+//        pConfig->Write(wxT("/MainFrame/height"),        (long) h);
+//        pConfig->Write(wxT("/MainFrame/show_wf"),       wxGetApp().m_show_wf);
+//        pConfig->Write(wxT("/MainFrame/show_spect"),    wxGetApp().m_show_spect);
+//        pConfig->Write(wxT("/MainFrame/show_scatter"),  wxGetApp().m_show_scatter);
+//        pConfig->Write(wxT("/MainFrame/show_timing"),   wxGetApp().m_show_timing);
+//        pConfig->Write(wxT("/MainFrame/show_freq"),     wxGetApp().m_show_freq);
+
+        pConfig->Write(wxT("/Audio/RxIn"),              wxGetApp().m_strRxInAudio);
+        pConfig->Write(wxT("/Audio/RxOut"),             wxGetApp().m_strRxOutAudio);
+        pConfig->Write(wxT("/Audio/TxIn"),              wxGetApp().m_textVoiceInput);
+        pConfig->Write(wxT("/Audio/TxOut"),             wxGetApp().m_textVoiceOutput);
+        pConfig->Write(wxT("/Audio/SampleRate"),        wxGetApp().m_strSampleRate);
+
+//        pConfig->Write(wxT("/Rig/Port"),                wxGetApp().m_strRigCtrlPort);
+//        pConfig->Write(wxT("/Rig/Baud"),                wxGetApp().m_strRigCtrlBaud);
+//        pConfig->Write(wxT("/Rig/DataBits"),            wxGetApp().m_strRigCtrlDatabits);
+//        pConfig->Write(wxT("/Rig/StopBits"),            wxGetApp().m_strRigCtrlStopbits);
+//        pConfig->Write(wxT("/Rig/Parity"),              wxGetApp().m_strRigCtrlParity);
+    }
 }
 
 //-------------------------------------------------------------------------

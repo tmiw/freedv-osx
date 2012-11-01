@@ -1,1 +1,1 @@
-./Debug/gui.o ./Debug/main.o ./Debug/AudioOptsDialog.o  
+./Release/gui.o ./Release/main.o ./Release/AudioOptsDialog.o  

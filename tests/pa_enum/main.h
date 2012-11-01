@@ -18,6 +18,7 @@
 #include <wx/textctrl.h>
 #include <wx/artprov.h>
 #include <wx/xrc/xmlres.h>
+#include "wx/config.h"
 #include <wx/intl.h>
 #include <wx/listctrl.h>
 #include <wx/menu.h>
@@ -48,6 +49,12 @@ class MainApp : public wxApp
 {
     public:
         virtual bool OnInit();
+        wxString            m_strRxInAudio;
+        wxString            m_strRxOutAudio;
+        wxString            m_textVoiceInput;
+        wxString            m_textVoiceOutput;
+        wxString            m_strSampleRate;
+        wxString            m_strBitrate;
 };
 
 // declare global static function wxGetApp()
