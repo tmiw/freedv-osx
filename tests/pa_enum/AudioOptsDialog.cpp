@@ -663,7 +663,7 @@ void AudioOptsDialog::OnRefreshClick(wxCommandEvent& event)
 //-------------------------------------------------------------------------
 // OnApplyAudioParameters()
 //-------------------------------------------------------------------------
-void AudioOptsDialog::OnApplyAudioParameters(wxCommandEvent& event)
+ void AudioOptsDialog::OnApplyAudioParameters(wxCommandEvent& event)
 {
     ExchangeData(EXCHANGE_DATA_OUT);
     if(m_isPaInitialized)
@@ -676,7 +676,6 @@ void AudioOptsDialog::OnApplyAudioParameters(wxCommandEvent& event)
         {
             wxMessageBox(wxT("Port Audio failed to Terminate"), wxT("Pa_Terminate"), wxOK);
         }
-    }
 }
 
 //-------------------------------------------------------------------------
