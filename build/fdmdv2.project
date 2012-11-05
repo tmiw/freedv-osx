@@ -99,6 +99,7 @@
         <Library Value="codec2"/>
         <Library Value="libportaudio.a"/>
         <Library Value="libportaudiocpp.a"/>
+        <Library Value="libsamplerate.a"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
@@ -147,6 +148,7 @@
         <Library Value="codec2"/>
         <Library Value="libportaudio.a"/>
         <Library Value="libportaudiocpp.a"/>
+        <Library Value="libsamplerate.dll.a"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
