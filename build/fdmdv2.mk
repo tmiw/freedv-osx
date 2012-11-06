@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=OFA-Staff
-Date                   :=11/5/2012
+Date                   :=11/6/2012
 CodeLitePath           :="C:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/bin/Project
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"934\"  $(Preprocessors)
-CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"934\"  $(Preprocessors)
+CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"936\"  $(Preprocessors)
+CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"936\"  $(Preprocessors)
 
 
 ##
@@ -65,7 +65,7 @@ PATH:=$(WXWIN)\lib\gcc_dll;$(PATH)
 WXCFG:=gcc_dll\mswu
 UNIT_TEST_PP_SRC_DIR:=C:\bin\UnitTest++-1.3
 Objects=$(IntermediateDirectory)/src_dlg_about$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_audio$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_options$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) \
-	$(IntermediateDirectory)/src_fdmdv2_plot_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix) 
+	$(IntermediateDirectory)/src_fdmdv2_plot_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -192,6 +192,14 @@ $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(DependSuffix): ../src/
 $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(PreprocessSuffix): ../src/fdmdv2_plot_waterfall_linux.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/fdmdv2_plot_waterfall_linux.cpp"
 
+$(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix): ../src/dlg_audiooptions.cpp $(IntermediateDirectory)/src_dlg_audiooptions$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/bin/Projects/Radio/fdmdv2/src/dlg_audiooptions.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_dlg_audiooptions$(DependSuffix): ../src/dlg_audiooptions.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) -MF$(IntermediateDirectory)/src_dlg_audiooptions$(DependSuffix) -MM "C:/bin/Projects/Radio/fdmdv2/src/dlg_audiooptions.cpp"
+
+$(IntermediateDirectory)/src_dlg_audiooptions$(PreprocessSuffix): ../src/dlg_audiooptions.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_dlg_audiooptions$(PreprocessSuffix) "C:/bin/Projects/Radio/fdmdv2/src/dlg_audiooptions.cpp"
+
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##
@@ -237,6 +245,9 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_dlg_audiooptions$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_dlg_audiooptions$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
 	$(RM) "C:\bin\Projects\Radio\fdmdv2\build\.build-release\fdmdv2"

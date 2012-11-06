@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=OFA-Staff
-Date                   :=11/1/2012
+Date                   :=11/5/2012
 CodeLitePath           :="C:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -35,6 +35,8 @@ PreprocessOnlySwitch   :=-E
 ObjectsFileList        :="C:\bin\Projects\Radio\fdmdv2\tests\pa_enum\pa_enum.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
+RcCmpOptions           := $(shell wx-config --rcflags)
+RcCompilerName         :=windres
 LinkOptions            :=  -mwindows -s $(shell wx-config --debug=no --libs --unicode=yes)
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)/bin/MinGW-4.6.1/msys/1.0/local/include $(IncludeSwitch)../../codec2-dev/src $(IncludeSwitch)/bin/Projects/Audio/libsndfile/ 
 IncludePCH             := 
@@ -50,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/bin/MinGW-4
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"914\"  $(Preprocessors)
-CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"914\"  $(Preprocessors)
+CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"936\"  $(Preprocessors)
+CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"936\"  $(Preprocessors)
 
 
 ##
