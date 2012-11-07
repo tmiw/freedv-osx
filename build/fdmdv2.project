@@ -9,7 +9,6 @@
   <Dependencies/>
   <VirtualDirectory Name="src">
     <File Name="../src/dlg_about.cpp"/>
-    <File Name="../src/dlg_audio.cpp"/>
     <File Name="../src/dlg_comports.cpp"/>
     <File Name="../src/dlg_options.cpp"/>
     <File Name="../src/fdmdv2_main.cpp"/>
@@ -25,7 +24,6 @@
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_about.h"/>
-    <File Name="../src/dlg_audio.h"/>
     <File Name="../src/dlg_comports.h"/>
     <File Name="../src/dlg_options.h"/>
     <File Name="../src/fdmdv2_main.h"/>
@@ -35,28 +33,6 @@
     <File Name="../extern/include/rig_dll.h"/>
     <File Name="../extern/include/riglist.h"/>
     <File Name="../extern/include/samplerate.h"/>
-    <VirtualDirectory Name="portaudio_cpp">
-      <File Name="../extern/include/portaudiocpp/AsioDeviceAdapter.hxx"/>
-      <File Name="../extern/include/portaudiocpp/AutoSystem.hxx"/>
-      <File Name="../extern/include/portaudiocpp/BlockingStream.hxx"/>
-      <File Name="../extern/include/portaudiocpp/CallbackInterface.hxx"/>
-      <File Name="../extern/include/portaudiocpp/CallbackStream.hxx"/>
-      <File Name="../extern/include/portaudiocpp/CFunCallbackStream.hxx"/>
-      <File Name="../extern/include/portaudiocpp/CppFunCallbackStream.hxx"/>
-      <File Name="../extern/include/portaudiocpp/Device.hxx"/>
-      <File Name="../extern/include/portaudiocpp/DirectionSpecificStreamParameters.hxx"/>
-      <File Name="../extern/include/portaudiocpp/Exception.hxx"/>
-      <File Name="../extern/include/portaudiocpp/HostApi.hxx"/>
-      <File Name="../extern/include/portaudiocpp/InterfaceCallbackStream.hxx"/>
-      <File Name="../extern/include/portaudiocpp/MemFunCallbackStream.hxx"/>
-      <File Name="../extern/include/portaudiocpp/PortAudioCpp.hxx"/>
-      <File Name="../extern/include/portaudiocpp/SampleDataFormat.hxx"/>
-      <File Name="../extern/include/portaudiocpp/Stream.hxx"/>
-      <File Name="../extern/include/portaudiocpp/StreamParameters.hxx"/>
-      <File Name="../extern/include/portaudiocpp/System.hxx"/>
-      <File Name="../extern/include/portaudiocpp/SystemDeviceIterator.hxx"/>
-      <File Name="../extern/include/portaudiocpp/SystemHostApiIterator.hxx"/>
-    </VirtualDirectory>
     <File Name="../src/fdmdv2_plot_scatter.h"/>
     <File Name="../src/fdmdv2_plot_spectrum.h"/>
     <File Name="../src/fdmdv2_pa_wrapper.h"/>
