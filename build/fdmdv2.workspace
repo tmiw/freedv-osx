@@ -4,9 +4,7 @@
   <Environment>
     <![CDATA[]]>
   </Environment>
-  <Project Name="rawbits" Path="../tests/image/rawbits.project" Active="No"/>
   <Project Name="pa_enum" Path="../tests/pa_enum/pa_enum.project" Active="No"/>
-  <Project Name="appWithDlg" Path="../tests/appWithDlg/appWithDlg.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="no">
       <Project Name="fdmdv2" ConfigName="Debug"/>
