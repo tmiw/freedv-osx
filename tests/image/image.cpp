@@ -11,14 +11,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include "wx/wx.h"
 #include "wx/image.h"
-#include "wx/file.h"
-#include "wx/filename.h"
 #include "wx/graphics.h"
-#include "wx/mstream.h"
-#include "wx/wfstream.h"
-#include "wx/quantize.h"
-#include "wx/scopedptr.h"
-#include "wx/stopwatch.h"
 #include "wx/versioninfo.h"
 #include "wx/rawbmp.h"
 
@@ -48,16 +41,22 @@ public:
         m_alphaBitmap(SIZE, SIZE, 32)
     */
 
-    MyRawBitmapFrame(): wxFrame( (wxFrame *)NULL, wxID_ANY, wxT("wxImage sample"), wxPoint(20, 20), wxSize(950, 700)), m_bitmap(SIZE, SIZE, 24)
+    MyRawBitmapFrame(): wxFrame( (wxFrame *)NULL, wxID_ANY, wxT("wxImage sample"),
+				wxPoint(20, 20), wxSize(950, 700) )
     {
-        SetClientSize(SIZE, SIZE * 2 + 25);
+	m_pBitmap = new wxBitmap(SIZE, SIZE, 24);
         InitBitmap();
+        SetClientSize(SIZE, SIZE*2+25);
+
+    }
+    ~MyRawBitmapFrame() {
+	delete m_pBitmap;
     }
 
     void InitBitmap()
     {
         // draw some colourful stripes without alpha
-        wxNativePixelData data(m_bitmap);
+        wxNativePixelData data(*m_pBitmap);
         if ( !data )
         {
             wxLogError(wxT("Failed to gain raw access to bitmap data"));
@@ -88,15 +87,13 @@ public:
     {
         wxPaintDC dc( this );
         dc.DrawText(wxT("This is alpha and raw bitmap test"), 0, BORDER);
-        dc.DrawText(wxT("This is alpha and raw bitmap test"), 0, SIZE/2 - BORDER);
-        dc.DrawText(wxT("This is alpha and raw bitmap test"), 0, SIZE - 2*BORDER);
 
         dc.DrawText(wxT("Raw bitmap access without alpha"), 0, SIZE+5);
-        dc.DrawBitmap( m_bitmap, 0, SIZE+5+dc.GetCharHeight());
+        dc.DrawBitmap( *m_pBitmap, 0, SIZE+5+dc.GetCharHeight());
     }
 
 private:
-    wxBitmap m_bitmap;
+    wxBitmap *m_pBitmap;
 
     DECLARE_EVENT_TABLE()
 };
