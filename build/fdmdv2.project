@@ -70,9 +70,9 @@
         <Preprocessor Value="__WX__"/>
       </Compiler>
       <Linker Options="-mwindows;$(shell wx-config --debug=yes --libs --unicode=yes)" Required="yes">
-        <LibraryPath Value="/bin/Projects/Radio/codec2-dev/src/.libs"/>
-        <LibraryPath Value="/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
-        <LibraryPath Value="/bin/Projects/Audio/libsndfile/lib"/>
+        <LibraryPath Value="d:/Projects/Radio/codec2-dev/src/.libs"/>
+        <LibraryPath Value="d:/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
+        <LibraryPath Value="d:/Projects/Audio/libsndfile/lib"/>
         <Library Value="libsndfile-1.dll"/>
         <Library Value="codec2"/>
         <Library Value="libportaudio.a"/>
@@ -121,9 +121,9 @@
         <Preprocessor Value="__WX__"/>
       </Compiler>
       <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes">
-        <LibraryPath Value="/bin/Projects/Radio/codec2-dev/src/.libs"/>
-        <LibraryPath Value="/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
-        <LibraryPath Value="/bin/Projects/Audio/libsndfile/lib"/>
+        <LibraryPath Value="d:/Projects/Radio/codec2-dev/src/.libs"/>
+        <LibraryPath Value="d:/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
+        <LibraryPath Value="d:/Projects/Audio/libsndfile/lib"/>
         <Library Value="libsndfile-1.dll"/>
         <Library Value="codec2"/>
         <Library Value="libportaudio.a"/>

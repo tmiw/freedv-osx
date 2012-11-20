@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=11/18/2012
+Date                   :=11/19/2012
 CodeLitePath           :="D:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -43,7 +43,7 @@ IncludePCH             :=
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)sndfile-1 $(LibrarySwitch)codec2 $(LibrarySwitch)portaudio $(LibrarySwitch)portaudiocpp $(LibrarySwitch)samplerate.dll 
 ArLibs                 :=  "libsndfile-1.dll" "codec2" "libportaudio.a" "libportaudiocpp.a" "libsamplerate.dll.a" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/bin/Projects/Radio/codec2-dev/src/.libs $(LibraryPathSwitch)/bin/MinGW-4.6.1/msys/1.0/local/lib $(LibraryPathSwitch)/bin/Projects/Audio/libsndfile/lib 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/Radio/codec2-dev/src/.libs $(LibraryPathSwitch)d:/bin/MinGW-4.6.1/msys/1.0/local/lib $(LibraryPathSwitch)d:/Projects/Audio/libsndfile/lib 
 
 ##
 ## Common variables
