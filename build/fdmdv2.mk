@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"1046\"  $(Preprocessors)
-CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"1046\"  $(Preprocessors)
+CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"1048\"  $(Preprocessors)
+CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"1048\"  $(Preprocessors)
 
 
 ##
@@ -64,8 +64,8 @@ WXWIN:=D:\bin\wxWidgets-2.9.4
 PATH:=$(WXWIN)\lib\gcc_dll;$(PATH)
 WXCFG:=gcc_dll\mswu
 UNIT_TEST_PP_SRC_DIR:=D:\bin\UnitTest++-1.3
-Objects=$(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_options$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix) \
-	$(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) 
+Objects=$(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix) \
+	$(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -98,14 +98,6 @@ $(IntermediateDirectory)/src_dlg_comports$(DependSuffix): ../src/dlg_comports.cp
 
 $(IntermediateDirectory)/src_dlg_comports$(PreprocessSuffix): ../src/dlg_comports.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_dlg_comports$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/dlg_comports.cpp"
-
-$(IntermediateDirectory)/src_dlg_options$(ObjectSuffix): ../src/dlg_options.cpp $(IntermediateDirectory)/src_dlg_options$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Projects/Radio/fdmdv2/src/dlg_options.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_dlg_options$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_dlg_options$(DependSuffix): ../src/dlg_options.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_dlg_options$(ObjectSuffix) -MF$(IntermediateDirectory)/src_dlg_options$(DependSuffix) -MM "D:/Projects/Radio/fdmdv2/src/dlg_options.cpp"
-
-$(IntermediateDirectory)/src_dlg_options$(PreprocessSuffix): ../src/dlg_options.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_dlg_options$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/dlg_options.cpp"
 
 $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix): ../src/fdmdv2_main.cpp $(IntermediateDirectory)/src_fdmdv2_main$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Projects/Radio/fdmdv2/src/fdmdv2_main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IncludePath)
@@ -196,9 +188,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_dlg_comports$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_dlg_comports$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/src_dlg_options$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/src_dlg_options$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/src_dlg_options$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_main$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_main$(PreprocessSuffix)

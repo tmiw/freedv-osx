@@ -9,7 +9,6 @@
   <Dependencies/>
   <VirtualDirectory Name="src">
     <File Name="../src/dlg_comports.cpp"/>
-    <File Name="../src/dlg_options.cpp"/>
     <File Name="../src/fdmdv2_main.cpp"/>
     <File Name="../src/fdmdv2_plot.cpp"/>
     <File Name="../src/topFrame.cpp"/>
@@ -23,7 +22,6 @@
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_comports.h"/>
-    <File Name="../src/dlg_options.h"/>
     <File Name="../src/fdmdv2_main.h"/>
     <File Name="../src/fdmdv2_plot.h"/>
     <File Name="../src/topFrame.h"/>
