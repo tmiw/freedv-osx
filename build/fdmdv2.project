@@ -8,7 +8,6 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="../src/dlg_about.cpp"/>
     <File Name="../src/dlg_comports.cpp"/>
     <File Name="../src/dlg_options.cpp"/>
     <File Name="../src/fdmdv2_main.cpp"/>
@@ -23,7 +22,6 @@
     <File Name="../src/dlg_audiooptions.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
-    <File Name="../src/dlg_about.h"/>
     <File Name="../src/dlg_comports.h"/>
     <File Name="../src/dlg_options.h"/>
     <File Name="../src/fdmdv2_main.h"/>
@@ -119,6 +117,7 @@
         <IncludePath Value="../../../Audio/libsndfile/include"/>
         <IncludePath Value="../../../Audio/libsamplerate-0.1.8/src"/>
         <Preprocessor Value="__WX__"/>
+        <Preprocessor Value="DMW=1"/>
       </Compiler>
       <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes">
         <LibraryPath Value="d:/Projects/Radio/codec2-dev/src/.libs"/>
@@ -131,7 +130,7 @@
         <Library Value="libsamplerate.dll.a"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
-      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
+      <General OutputFile="$(IntermediateDirectory)/freeDV" IntermediateDirectory="./Release" Command="./freeDV" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
       </Environment>
@@ -139,7 +138,9 @@
         <PostConnectCommands/>
         <StartupCommands/>
       </Debugger>
-      <PreBuild/>
+      <PreBuild>
+        <Command Enabled="yes">D:\bin\TortiseSVN\bin\svnversion -c D:\Projects\Radio\fdmdv2</Command>
+      </PreBuild>
       <PostBuild/>
       <CustomBuild Enabled="no">
         <RebuildCommand/>
