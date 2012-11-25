@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ fdmdv2 - Release ]----------"
-	@"$(MAKE)" -f "fdmdv2.mk" PreBuild && "$(MAKE)" -f "fdmdv2.mk"
+	@echo "----------Building project:[ fdmdv2 - Debug ]----------"
+	@"$(MAKE)" -f "fdmdv2.mk"
 clean:
-	@echo "----------Cleaning project:[ fdmdv2 - Release ]----------"
+	@echo "----------Cleaning project:[ fdmdv2 - Debug ]----------"
 	@"$(MAKE)" -f "fdmdv2.mk" clean

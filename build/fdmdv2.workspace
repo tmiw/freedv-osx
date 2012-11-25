@@ -6,13 +6,13 @@
   </Environment>
   <Project Name="pa_enum" Path="../tests/pa_enum/pa_enum.project" Active="No"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="no">
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Project Name="fdmdv2" ConfigName="Debug"/>
       <Project Name="rawbits" ConfigName="Debug"/>
       <Project Name="pa_enum" ConfigName="Debug"/>
       <Project Name="appWithDlg" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Project Name="fdmdv2" ConfigName="Release"/>
       <Project Name="rawbits" ConfigName="Release"/>
       <Project Name="pa_enum" ConfigName="Release"/>
