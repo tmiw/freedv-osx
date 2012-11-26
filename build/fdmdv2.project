@@ -19,6 +19,7 @@
     <File Name="../src/fdmdv2_hdw_ports.cpp"/>
     <File Name="../src/fdmdv2_plot_waterfall_linux.cpp"/>
     <File Name="../src/dlg_audiooptions.cpp"/>
+    <File Name="../src/dlg_filter.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_comports.h"/>
@@ -42,6 +43,7 @@
     <File Name="../../../Audio/libsndfile/include/sndfile.h"/>
     <File Name="../src/fdmdv2_plot_waterfall_linux.h"/>
     <File Name="../src/dlg_audiooptions.h"/>
+    <File Name="../src/dlg_filter.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>
