@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=11/25/2012
+Date                   :=11/29/2012
 CodeLitePath           :="D:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -41,8 +41,8 @@ LinkOptions            :=  -mwindows $(shell wx-config --debug=yes --libs --unic
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)/bin/MinGW-4.6.1/msys/1.0/local/include $(IncludeSwitch)../../codec2-dev/src $(IncludeSwitch)/bin/Projects/Audio/libsndfile/include 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)sndfile-1 $(LibrarySwitch)codec2 $(LibrarySwitch)portaudio $(LibrarySwitch)portaudiocpp $(LibrarySwitch)samplerate 
-ArLibs                 :=  "libsndfile-1.dll" "codec2" "libportaudio.a" "libportaudiocpp.a" "libsamplerate.a" 
+Libs                   := $(LibrarySwitch)sndfile-1 $(LibrarySwitch)codec2 $(LibrarySwitch)portaudio $(LibrarySwitch)portaudiocpp $(LibrarySwitch)samplerate.dll $(LibrarySwitch)ctb-0.16 
+ArLibs                 :=  "libsndfile-1.dll" "codec2" "libportaudio.a" "libportaudiocpp.a" "libsamplerate.dll.a" "ctb-0.16.dll" 
 LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/Radio/codec2-dev/src/.libs $(LibraryPathSwitch)d:/bin/MinGW-4.6.1/msys/1.0/local/lib $(LibraryPathSwitch)d:/Projects/Audio/libsndfile/lib 
 
 ##
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1066\"  $(Preprocessors)
-CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1066\"  $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1083\"  $(Preprocessors)
+CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1083\"  $(Preprocessors)
 
 
 ##
@@ -65,7 +65,7 @@ PATH:=$(WXWIN)\lib\gcc_dll;$(PATH)
 WXCFG:=gcc_dll\mswu
 UNIT_TEST_PP_SRC_DIR:=D:\bin\UnitTest++-1.3
 Objects=$(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix) \
-	$(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_filter$(ObjectSuffix) 
+	$(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_filter$(ObjectSuffix) $(IntermediateDirectory)/src_varicode$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -184,6 +184,14 @@ $(IntermediateDirectory)/src_dlg_filter$(DependSuffix): ../src/dlg_filter.cpp
 $(IntermediateDirectory)/src_dlg_filter$(PreprocessSuffix): ../src/dlg_filter.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_dlg_filter$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/dlg_filter.cpp"
 
+$(IntermediateDirectory)/src_varicode$(ObjectSuffix): ../src/varicode.c $(IntermediateDirectory)/src_varicode$(DependSuffix)
+	$(CC) $(SourceSwitch) "D:/Projects/Radio/fdmdv2/src/varicode.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_varicode$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_varicode$(DependSuffix): ../src/varicode.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_varicode$(ObjectSuffix) -MF$(IntermediateDirectory)/src_varicode$(DependSuffix) -MM "D:/Projects/Radio/fdmdv2/src/varicode.c"
+
+$(IntermediateDirectory)/src_varicode$(PreprocessSuffix): ../src/varicode.c
+	@$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_varicode$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/varicode.c"
+
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##
@@ -226,6 +234,9 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_dlg_filter$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_dlg_filter$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_dlg_filter$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_varicode$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_varicode$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_varicode$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
 	$(RM) "D:\Projects\Radio\fdmdv2\build\.build-debug\fdmdv2"

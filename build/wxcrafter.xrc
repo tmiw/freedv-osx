@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+  <object class="wxDialog" name="PTTDialog">
+    <title>Hardware PTT</title>
+    <centered>1</centered>
+    <style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+    <size>450,300</size>
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem" name="staticBoxSizer28">
+        <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+        <border>5</border>
+        <object class="wxStaticBoxSizer" name="staticBoxSizer28">
+          <sizeritem>
+            <object class="spacer"/>
+          </sizeritem>
+          <orient>wxVERTICAL</orient>
+          <label>Audio Tone</label>
+          <object class="sizeritem">
+            <flag>wxALIGN_CENTER|wxALIGN_CENTER_VERTICAL</flag>
+            <border>5</border>
+            <object class="wxCheckBox" name="m_ckPTTRtChan">
+              <style/>
+              <label>PTT tone on right audio channel</label>
+              <checked>0</checked>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object class="sizeritem" name="staticBoxSizer17">
+        <flag>wxEXPAND</flag>
+        <border>5</border>
+        <option>1</option>
+        <object class="wxStaticBoxSizer" name="staticBoxSizer17">
+          <sizeritem>
+            <object class="spacer"/>
+          </sizeritem>
+          <orient>wxVERTICAL</orient>
+          <label>Hardware PTT Settings</label>
+          <object class="sizeritem" name="staticBoxSizer31">
+            <flag>wxEXPAND</flag>
+            <border>5</border>
+            <object class="wxStaticBoxSizer" name="staticBoxSizer31">
+              <sizeritem>
+                <object class="spacer"/>
+              </sizeritem>
+              <orient>wxVERTICAL</orient>
+              <label>PTT Port</label>
+              <object class="sizeritem">
+                <flag>wxALIGN_CENTER</flag>
+                <option>1</option>
+                <object class="wxListBox" name="m_listCtrlPorts">
+                  <style>wxLB_SINGLE</style>
+                  <content/>
+                  <selection>-1</selection>
+                </object>
+              </object>
+            </object>
+          </object>
+          <object class="sizeritem" name="boxSizer19">
+            <flag>wxEXPAND</flag>
+            <border>5</border>
+            <option>1</option>
+            <object class="wxBoxSizer">
+              <orient>wxVERTICAL</orient>
+              <object class="sizeritem" name="staticBoxSizer16">
+                <flag>wxEXPAND|wxALIGN_CENTER|wxALIGN_RIGHT</flag>
+                <border>5</border>
+                <option>1</option>
+                <object class="wxStaticBoxSizer" name="staticBoxSizer16">
+                  <sizeritem>
+                    <object class="spacer"/>
+                  </sizeritem>
+                  <orient>wxHORIZONTAL</orient>
+                  <label>Signal polarity</label>
+                  <object class="sizeritem" name="gridSizer17">
+                    <flag>wxEXPAND|wxALIGN_RIGHT</flag>
+                    <border>5</border>
+                    <option>1</option>
+                    <object class="wxGridSizer">
+                      <cols>2</cols>
+                      <rows>3</rows>
+                      <vgap>0</vgap>
+                      <hgap>0</hgap>
+                      <object class="sizeritem">
+                        <flag>wxALIGN_CENTER</flag>
+                        <border>10</border>
+                        <object class="wxCheckBox" name="m_ckUseSerialPTT">
+                          <style/>
+                          <label>Use Serial Port PTT</label>
+                          <checked>0</checked>
+                        </object>
+                      </object>
+                      <object class="spacer" name="Spacer">
+                        <flag/>
+                        <border>5</border>
+                      </object>
+                      <object class="sizeritem">
+                        <flag>wxALIGN_CENTER|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+                        <border>5</border>
+                        <object class="wxRadioButton" name="m_rbUseDTR">
+                          <style/>
+                          <label>Use DTR</label>
+                          <value>1</value>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <flag>wxALIGN_CENTER|wxALIGN_RIGHT</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="m_ckRTSPos">
+                          <style/>
+                          <label>DTR = +V</label>
+                          <checked>0</checked>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <flag>wxALIGN_CENTER|wxALIGN_RIGHT</flag>
+                        <border>5</border>
+                        <object class="wxRadioButton" name="m_rbUseRTS">
+                          <style/>
+                          <label>Use RTS</label>
+                          <tooltip>Toggle the RTS pin for PTT</tooltip>
+                          <value>1</value>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <flag>wxALIGN_CENTER|wxALIGN_RIGHT</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="m_ckDTRPos">
+                          <tooltip>Set Polarity of the RTS line</tooltip>
+                          <style/>
+                          <label>RTS = +V</label>
+                          <checked>0</checked>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object class="sizeritem" name="boxSizer12">
+        <flag>wxLEFT|wxRIGHT|wxTOP|wxBOTTOM|wxALIGN_CENTER_HORIZONTAL</flag>
+        <border>5</border>
+        <object class="wxBoxSizer">
+          <orient>wxHORIZONTAL</orient>
+          <object class="sizeritem">
+            <flag>wxLEFT|wxRIGHT|wxTOP|wxBOTTOM</flag>
+            <border>5</border>
+            <object class="wxButton" name="m_buttonOK">
+              <label>OK</label>
+              <style/>
+              <default>1</default>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <flag>wxLEFT|wxRIGHT|wxTOP|wxBOTTOM</flag>
+            <border>5</border>
+            <object class="wxButton" name="m_buttonCancel">
+              <label>Cancel</label>
+              <style/>
+              <default>0</default>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <flag>wxLEFT|wxRIGHT|wxTOP|wxBOTTOM</flag>
+            <border>5</border>
+            <object class="wxButton" name="m_buttonApply">
+              <label>Apply</label>
+              <style/>
+              <default>0</default>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+</resource>
