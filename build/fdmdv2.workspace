@@ -16,7 +16,7 @@
       <Project Name="dialogTest" ConfigName="Debug"/>
       <Project Name="bigButtonRig" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Project Name="fdmdv2" ConfigName="Release"/>
       <Project Name="rawbits" ConfigName="Release"/>
       <Project Name="pa_enum" ConfigName="Release"/>
