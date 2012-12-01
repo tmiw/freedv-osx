@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1090\"  $(Preprocessors)
-CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1090\"  $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1101\"  $(Preprocessors)
+CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1101\"  $(Preprocessors)
 
 
 ##
