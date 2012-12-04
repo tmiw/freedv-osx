@@ -7,6 +7,8 @@
   <Project Name="pa_enum" Path="../tests/pa_enum/pa_enum.project" Active="No"/>
   <Project Name="dialogTest" Path="dialogTest.project" Active="No"/>
   <Project Name="bigButtonRig" Path="../../../code/SerialPortControl/bigButtonRig/bigButtonRig.project" Active="No"/>
+  <Project Name="libCTB" Path="libCTB/libCTB.project" Active="No"/>
+  <Project Name="enumSerial" Path="../tests/serial_enum/enumSerial.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Project Name="fdmdv2" ConfigName="Debug"/>
@@ -15,14 +17,18 @@
       <Project Name="appWithDlg" ConfigName="Debug"/>
       <Project Name="dialogTest" ConfigName="Debug"/>
       <Project Name="bigButtonRig" ConfigName="Debug"/>
+      <Project Name="libCTB" ConfigName="Debug"/>
+      <Project Name="enumSerial" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="no">
+    <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="fdmdv2" ConfigName="Release"/>
       <Project Name="rawbits" ConfigName="Release"/>
       <Project Name="pa_enum" ConfigName="Release"/>
       <Project Name="appWithDlg" ConfigName="Release"/>
       <Project Name="dialogTest" ConfigName="Release"/>
       <Project Name="bigButtonRig" ConfigName="Release"/>
+      <Project Name="libCTB" ConfigName="Release"/>
+      <Project Name="enumSerial" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

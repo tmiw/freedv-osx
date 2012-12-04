@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=11/30/2012
+Date                   :=12/3/2012
 CodeLitePath           :="D:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -41,8 +41,8 @@ LinkOptions            :=  -mwindows $(shell wx-config --debug=yes --libs --unic
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)/bin/MinGW-4.6.1/msys/1.0/local/include $(IncludeSwitch)../../codec2-dev/src $(IncludeSwitch)/bin/Projects/Audio/libsndfile/include 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)sndfile-1 $(LibrarySwitch)codec2 $(LibrarySwitch)portaudio $(LibrarySwitch)portaudiocpp $(LibrarySwitch)samplerate.dll $(LibrarySwitch)ctb-0.16 
-ArLibs                 :=  "libsndfile-1.dll" "codec2" "libportaudio.a" "libportaudiocpp.a" "libsamplerate.dll.a" "ctb-0.16.dll" 
+Libs                   := $(LibrarySwitch)sndfile-1 $(LibrarySwitch)codec2 $(LibrarySwitch)portaudio $(LibrarySwitch)portaudiocpp $(LibrarySwitch)samplerate.dll $(LibrarySwitch)ctb-0.16 $(LibrarySwitch)sox 
+ArLibs                 :=  "libsndfile-1.dll" "codec2" "libportaudio.a" "libportaudiocpp.a" "libsamplerate.dll.a" "ctb-0.16.dll" "libsox" 
 LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/Radio/codec2-dev/src/.libs $(LibraryPathSwitch)d:/bin/MinGW-4.6.1/msys/1.0/local/lib $(LibraryPathSwitch)d:/Projects/Audio/libsndfile/lib 
 
 ##
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1101\"  $(Preprocessors)
-CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1101\"  $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1111\"  $(Preprocessors)
+CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1111\"  $(Preprocessors)
 
 
 ##
@@ -64,8 +64,8 @@ WXWIN:=D:\bin\wxWidgets-2.9.4
 PATH:=$(WXWIN)\lib\gcc_dll;$(PATH)
 WXCFG:=gcc_dll\mswu
 UNIT_TEST_PP_SRC_DIR:=D:\bin\UnitTest++-1.3
-Objects=$(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix) \
-	$(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_filter$(ObjectSuffix) $(IntermediateDirectory)/src_varicode$(ObjectSuffix) 
+Objects=$(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) \
+	$(IntermediateDirectory)/src_dlg_filter$(ObjectSuffix) $(IntermediateDirectory)/src_varicode$(ObjectSuffix) $(IntermediateDirectory)/src_sox_biquad$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -152,14 +152,6 @@ $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(DependSuffix): ../src/fdmdv2_pl
 $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(PreprocessSuffix): ../src/fdmdv2_plot_scalar.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/fdmdv2_plot_scalar.cpp"
 
-$(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix): ../src/fdmdv2_hdw_ports.cpp $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Projects/Radio/fdmdv2/src/fdmdv2_hdw_ports.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_fdmdv2_hdw_ports$(DependSuffix): ../src/fdmdv2_hdw_ports.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix) -MF$(IntermediateDirectory)/src_fdmdv2_hdw_ports$(DependSuffix) -MM "D:/Projects/Radio/fdmdv2/src/fdmdv2_hdw_ports.cpp"
-
-$(IntermediateDirectory)/src_fdmdv2_hdw_ports$(PreprocessSuffix): ../src/fdmdv2_hdw_ports.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/fdmdv2_hdw_ports.cpp"
-
 $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix): ../src/fdmdv2_plot_waterfall_linux.cpp $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Projects/Radio/fdmdv2/src/fdmdv2_plot_waterfall_linux.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(DependSuffix): ../src/fdmdv2_plot_waterfall_linux.cpp
@@ -192,6 +184,14 @@ $(IntermediateDirectory)/src_varicode$(DependSuffix): ../src/varicode.c
 $(IntermediateDirectory)/src_varicode$(PreprocessSuffix): ../src/varicode.c
 	@$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_varicode$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/varicode.c"
 
+$(IntermediateDirectory)/src_sox_biquad$(ObjectSuffix): ../src/sox_biquad.c $(IntermediateDirectory)/src_sox_biquad$(DependSuffix)
+	$(CC) $(SourceSwitch) "D:/Projects/Radio/fdmdv2/src/sox_biquad.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_sox_biquad$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_sox_biquad$(DependSuffix): ../src/sox_biquad.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_sox_biquad$(ObjectSuffix) -MF$(IntermediateDirectory)/src_sox_biquad$(DependSuffix) -MM "D:/Projects/Radio/fdmdv2/src/sox_biquad.c"
+
+$(IntermediateDirectory)/src_sox_biquad$(PreprocessSuffix): ../src/sox_biquad.c
+	@$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_sox_biquad$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/sox_biquad.c"
+
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##
@@ -222,9 +222,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/src_fdmdv2_hdw_ports$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(PreprocessSuffix)
@@ -237,6 +234,9 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_varicode$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_varicode$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_varicode$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_sox_biquad$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_sox_biquad$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_sox_biquad$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
 	$(RM) "D:\Projects\Radio\fdmdv2\build\.build-debug\fdmdv2"

@@ -16,11 +16,11 @@
     <File Name="../src/fdmdv2_plot_spectrum.cpp"/>
     <File Name="../src/fdmdv2_pa_wrapper.cpp"/>
     <File Name="../src/fdmdv2_plot_scalar.cpp"/>
-    <File Name="../src/fdmdv2_hdw_ports.cpp"/>
     <File Name="../src/fdmdv2_plot_waterfall_linux.cpp"/>
     <File Name="../src/dlg_audiooptions.cpp"/>
     <File Name="../src/dlg_filter.cpp"/>
     <File Name="../src/varicode.c"/>
+    <File Name="../src/sox_biquad.c"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_comports.h"/>
@@ -39,7 +39,6 @@
     <File Name="../../codec2-dev/src/codec2.h"/>
     <File Name="../../codec2-dev/src/fdmdv.h"/>
     <File Name="../src/fdmdv2_defines.h"/>
-    <File Name="../src/fdmdv2_hdw_ports.h"/>
     <File Name="../../../Audio/portaudio/include/portaudio.h"/>
     <File Name="../../../Audio/libsndfile/include/sndfile.h"/>
     <File Name="../src/fdmdv2_plot_waterfall_linux.h"/>
@@ -47,6 +46,9 @@
     <File Name="../src/dlg_filter.h"/>
     <File Name="../src/varicode.h"/>
     <File Name="../src/varicode_table.h"/>
+    <File Name="../src/sox_biquad.h"/>
+    <File Name="../../../../bin/MinGW-4.6.1/msys/1.0/local/include/sox.h"/>
+    <File Name="../../../../bin/MinGW-4.6.1/msys/1.0/local/include/ctb-0.16/ctb.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>
@@ -80,6 +82,7 @@
         <Library Value="libportaudiocpp.a"/>
         <Library Value="libsamplerate.dll.a"/>
         <Library Value="ctb-0.16.dll"/>
+        <Library Value="libsox"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/freeDV" IntermediateDirectory="./Debug" Command="./freeDV.exe" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
@@ -133,6 +136,7 @@
         <Library Value="libportaudiocpp.a"/>
         <Library Value="libsamplerate.dll.a"/>
         <Library Value="ctb-0.16.dll"/>
+        <Library Value="libsox.la"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/freeDV" IntermediateDirectory="./Release" Command="./freeDV.exe" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
