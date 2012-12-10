@@ -1,7 +1,0 @@
-<map id="MainFrame::OnClose" name="MainFrame::OnClose">
-<area shape="rect" id="node3" href="$class_main_frame.html#a91b813d6f6fc4c3777e332b018999a8d" title="MainFrame::stopRxStream" alt="" coords="200,5,379,32"/>
-<area shape="rect" id="node11" href="$class_main_frame.html#a9c5b263953c6703f0e721ba5694391f4" title="MainFrame::stopTxStream" alt="" coords="201,56,377,83"/>
-<area shape="rect" id="node5" href="$class_port_audio_wrap.html#a852668fd29440064746f2ce0530b3bc1" title="PortAudioWrap::stop" alt="" coords="451,5,594,32"/>
-<area shape="rect" id="node7" href="$class_port_audio_wrap.html#a7f900dbb4003a1e01341e4f9f95c72e8" title="PortAudioWrap::streamClose" alt="" coords="427,56,618,83"/>
-<area shape="rect" id="node9" href="$class_port_audio_wrap.html#ad4a72bbe2ec6190336c2412df076c3f7" title="PortAudioWrap::isOpen" alt="" coords="667,56,826,83"/>
-</map>

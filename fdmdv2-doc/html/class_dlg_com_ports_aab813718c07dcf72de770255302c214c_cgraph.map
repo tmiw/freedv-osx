@@ -1,7 +1,0 @@
-<map id="DlgComPorts::~DlgComPorts" name="DlgComPorts::~DlgComPorts">
-<area shape="rect" id="node3" href="$class_dlg_com_ports.html#a1c2a230b1a95b8390251d54b0735d2b5" title="DlgComPorts::OnInitDialog" alt="" coords="267,5,445,32"/>
-<area shape="rect" id="node5" href="$class_dlg_com_ports.html#a1a4cc254a36227c69954b7e7dabf3efc" title="DlgComPorts::OnListItemSelected" alt="" coords="245,56,467,83"/>
-<area shape="rect" id="node7" href="$class_dlg_com_ports.html#acf4018858127924affbf163ac09b6ed9" title="DlgComPorts::OnApply" alt="" coords="277,107,435,133"/>
-<area shape="rect" id="node9" href="$class_dlg_com_ports.html#a2ac050bfb10f016b99b07a37ef2b5e86" title="DlgComPorts::OnCancel" alt="" coords="274,157,438,184"/>
-<area shape="rect" id="node11" href="$class_dlg_com_ports.html#ab6809c6639748851d77029d39596f6de" title="DlgComPorts::OnOK" alt="" coords="285,208,427,235"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="OptionsDlg::ExchangeData" name="OptionsDlg::ExchangeData">
-<area shape="rect" id="node3" href="$class_options_dlg.html#a955c09ba654830aae49fa44221fe92a9" title="OptionsDlg::OnInitDialog" alt="" coords="245,5,409,32"/>
-<area shape="rect" id="node5" href="$class_options_dlg.html#a3c0ded9050e9dc1ffbd8c65977852bc3" title="OptionsDlg::OnApply" alt="" coords="255,56,399,83"/>
-<area shape="rect" id="node7" href="$class_main_frame.html#a82b97e0f3c4e530d5700b2c2dbac42bf" title="MainFrame::OnToolsOptions" alt="" coords="233,107,421,133"/>
-</map>

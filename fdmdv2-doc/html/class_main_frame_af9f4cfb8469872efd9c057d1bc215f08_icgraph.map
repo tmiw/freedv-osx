@@ -1,5 +1,0 @@
-<map id="MainFrame::per_frame_rx_processing" name="MainFrame::per_frame_rx_processing">
-<area shape="rect" id="node3" href="$class_main_frame.html#a45e054e7f42f10088a699821a169d295" title="MainFrame::rxCallback" alt="" coords="206,12,362,39"/>
-<area shape="rect" id="node5" href="$class_main_frame.html#ad17245c1c9c295fc216fc6615f31e0a5" title="MainFrame::startRxStream" alt="" coords="411,12,589,39"/>
-<area shape="rect" id="node7" href="$class_main_frame.html#a7fc4afa20b92ac8e5f1ddfcf86820f28" title="MainFrame::OnTogBtnOnOff" alt="" coords="637,12,824,39"/>
-</map>
