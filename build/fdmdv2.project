@@ -21,6 +21,7 @@
     <File Name="../src/dlg_filter.cpp"/>
     <File Name="../src/varicode.c"/>
     <File Name="../src/sox_biquad.c"/>
+    <File Name="../src/dlg_about.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../src/dlg_comports.h"/>
@@ -49,6 +50,8 @@
     <File Name="../src/sox_biquad.h"/>
     <File Name="../../../../bin/MinGW-4.6.1/msys/1.0/local/include/sox.h"/>
     <File Name="../../../../bin/MinGW-4.6.1/msys/1.0/local/include/ctb-0.16/ctb.h"/>
+    <File Name="../src/dlg_about.h"/>
+    <File Name="../version.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../src/FDMDV2.fbp"/>
@@ -136,7 +139,7 @@
         <Library Value="libportaudiocpp.a"/>
         <Library Value="libsamplerate.dll.a"/>
         <Library Value="ctb-0.16.dll"/>
-        <Library Value="libsox.la"/>
+        <Library Value="libsox.a"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/freeDV" IntermediateDirectory="./Release" Command="./freeDV.exe" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
@@ -147,9 +150,7 @@
         <PostConnectCommands/>
         <StartupCommands/>
       </Debugger>
-      <PreBuild>
-        <Command Enabled="yes">D:\bin\TortiseSVN\bin\svnversion -c D:\Projects\Radio\fdmdv2</Command>
-      </PreBuild>
+      <PreBuild/>
       <PostBuild/>
       <CustomBuild Enabled="no">
         <RebuildCommand/>

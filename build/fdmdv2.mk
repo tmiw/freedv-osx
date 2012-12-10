@@ -2,18 +2,18 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Debug
+## Release
 ProjectName            :=fdmdv2
-ConfigurationName      :=Debug
+ConfigurationName      :=Release
 WorkspacePath          := "D:\Projects\Radio\fdmdv2\build"
 ProjectPath            := "D:\Projects\Radio\fdmdv2\build"
-IntermediateDirectory  :=./Debug
+IntermediateDirectory  :=./Release
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=12/5/2012
+Date                   :=12/9/2012
 CodeLitePath           :="D:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -28,7 +28,7 @@ LibraryPathSwitch      :=-L
 PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
 OutputFile             :=$(IntermediateDirectory)/freeDV
-Preprocessors          :=$(PreprocessorSwitch)__WX__ 
+Preprocessors          :=$(PreprocessorSwitch)__WX__ $(PreprocessorSwitch)DMW=1 
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
@@ -37,12 +37,12 @@ PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := $(shell wx-config --rcflags)
 RcCompilerName         :=windres
-LinkOptions            :=  -mwindows $(shell wx-config --debug=yes --libs --unicode=yes)
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)/bin/MinGW-4.6.1/msys/1.0/local/include $(IncludeSwitch)../../codec2-dev/src $(IncludeSwitch)/bin/Projects/Audio/libsndfile/include 
+LinkOptions            :=  -mwindows -s $(shell wx-config --debug=no --libs --unicode=yes)
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)/bin/MinGW-4.6.1/msys/1.0/local/include $(IncludeSwitch)../../codec2-dev/src $(IncludeSwitch)../../../Audio/portaudio/include $(IncludeSwitch)../../../Audio/libsndfile/include $(IncludeSwitch)../../../Audio/libsamplerate-0.1.8/src 
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)sndfile-1 $(LibrarySwitch)codec2 $(LibrarySwitch)portaudio $(LibrarySwitch)portaudiocpp $(LibrarySwitch)samplerate.dll $(LibrarySwitch)ctb-0.16 $(LibrarySwitch)sox 
-ArLibs                 :=  "libsndfile-1.dll" "codec2" "libportaudio.a" "libportaudiocpp.a" "libsamplerate.dll.a" "ctb-0.16.dll" "libsox" 
+ArLibs                 :=  "libsndfile-1.dll" "codec2" "libportaudio.a" "libportaudiocpp.a" "libsamplerate.dll.a" "ctb-0.16.dll" "libsox.a" 
 LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/Radio/codec2-dev/src/.libs $(LibraryPathSwitch)d:/bin/MinGW-4.6.1/msys/1.0/local/lib $(LibraryPathSwitch)d:/Projects/Audio/libsndfile/lib 
 
 ##
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1119\"  $(Preprocessors)
-CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1119\"  $(Preprocessors)
+CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"1124\"  $(Preprocessors)
+CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"1124\"  $(Preprocessors)
 
 
 ##
@@ -65,7 +65,7 @@ PATH:=$(WXWIN)\lib\gcc_dll;$(PATH)
 WXCFG:=gcc_dll\mswu
 UNIT_TEST_PP_SRC_DIR:=D:\bin\UnitTest++-1.3
 Objects=$(IntermediateDirectory)/src_dlg_comports$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_main$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot$(ObjectSuffix) $(IntermediateDirectory)/src_topFrame$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scatter$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_spectrum$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_pa_wrapper$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_scalar$(ObjectSuffix) $(IntermediateDirectory)/src_fdmdv2_plot_waterfall_linux$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_audiooptions$(ObjectSuffix) \
-	$(IntermediateDirectory)/src_dlg_filter$(ObjectSuffix) $(IntermediateDirectory)/src_varicode$(ObjectSuffix) $(IntermediateDirectory)/src_sox_biquad$(ObjectSuffix) 
+	$(IntermediateDirectory)/src_dlg_filter$(ObjectSuffix) $(IntermediateDirectory)/src_varicode$(ObjectSuffix) $(IntermediateDirectory)/src_sox_biquad$(ObjectSuffix) $(IntermediateDirectory)/src_dlg_about$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -80,7 +80,7 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 $(IntermediateDirectory)/.d:
-	@$(MakeDirCommand) "./Debug"
+	@$(MakeDirCommand) "./Release"
 
 PreBuild:
 
@@ -192,6 +192,14 @@ $(IntermediateDirectory)/src_sox_biquad$(DependSuffix): ../src/sox_biquad.c
 $(IntermediateDirectory)/src_sox_biquad$(PreprocessSuffix): ../src/sox_biquad.c
 	@$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_sox_biquad$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/sox_biquad.c"
 
+$(IntermediateDirectory)/src_dlg_about$(ObjectSuffix): ../src/dlg_about.cpp $(IntermediateDirectory)/src_dlg_about$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Projects/Radio/fdmdv2/src/dlg_about.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_dlg_about$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_dlg_about$(DependSuffix): ../src/dlg_about.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_dlg_about$(ObjectSuffix) -MF$(IntermediateDirectory)/src_dlg_about$(DependSuffix) -MM "D:/Projects/Radio/fdmdv2/src/dlg_about.cpp"
+
+$(IntermediateDirectory)/src_dlg_about$(PreprocessSuffix): ../src/dlg_about.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_dlg_about$(PreprocessSuffix) "D:/Projects/Radio/fdmdv2/src/dlg_about.cpp"
+
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##
@@ -237,8 +245,11 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_sox_biquad$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/src_sox_biquad$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/src_sox_biquad$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/src_dlg_about$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/src_dlg_about$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/src_dlg_about$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) "D:\Projects\Radio\fdmdv2\build\.build-debug\fdmdv2"
+	$(RM) "D:\Projects\Radio\fdmdv2\build\.build-release\fdmdv2"
 
 

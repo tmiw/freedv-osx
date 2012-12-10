@@ -10,7 +10,7 @@
   <Project Name="libCTB" Path="libCTB/libCTB.project" Active="No"/>
   <Project Name="enumSerial" Path="../tests/serial_enum/enumSerial.project" Active="No"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="yes">
+    <WorkspaceConfiguration Name="Debug" Selected="no">
       <Project Name="fdmdv2" ConfigName="Debug"/>
       <Project Name="rawbits" ConfigName="Debug"/>
       <Project Name="pa_enum" ConfigName="Debug"/>
