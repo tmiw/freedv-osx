@@ -1,1 +1,0 @@
-./Release/gui.o ./Release/main.o  
