@@ -1,0 +1,965 @@
+{
+	"metadata":	{
+		"m_generatedFilesDir":	"",
+		"m_objCounter":	32,
+		"m_includeFiles":	[],
+		"m_bitmapFunction":	"wxC9ED9InitBitmapResources",
+		"m_bitmapsFile":	"wxcrafter_bitmaps.cpp",
+		"m_GenerateCodeTypes":	3
+	},
+	"windows":	[{
+			"m_type":	4421,
+			"proportion":	0,
+			"border":	5,
+			"gbSpan":	"1,1",
+			"gbPosition":	"0,0",
+			"m_styles":	["wxDEFAULT_DIALOG_STYLE", "wxRESIZE_BORDER"],
+			"m_sizerFlags":	["wxLEFT", "wxRIGHT", "wxTOP", "wxBOTTOM"],
+			"m_properties":	[{
+					"type":	"winid",
+					"m_label":	"ID:",
+					"m_winid":	"wxID_ANY"
+				}, {
+					"type":	"string",
+					"m_label":	"Size:",
+					"m_value":	"450,300"
+				}, {
+					"type":	"string",
+					"m_label":	"Minimum Size:",
+					"m_value":	"-1,-1"
+				}, {
+					"type":	"string",
+					"m_label":	"Name:",
+					"m_value":	"PTTDialog"
+				}, {
+					"type":	"multi-string",
+					"m_label":	"Tooltip:",
+					"m_value":	""
+				}, {
+					"type":	"colour",
+					"m_label":	"Bg Colour:",
+					"colour":	"<Default>"
+				}, {
+					"type":	"colour",
+					"m_label":	"Fg Colour:",
+					"colour":	"<Default>"
+				}, {
+					"type":	"font",
+					"m_label":	"Font:",
+					"m_value":	""
+				}, {
+					"type":	"string",
+					"m_label":	"Class Name:",
+					"m_value":	""
+				}, {
+					"type":	"string",
+					"m_label":	"Include File:",
+					"m_value":	""
+				}, {
+					"type":	"string",
+					"m_label":	"Title:",
+					"m_value":	"Hardware PTT"
+				}, {
+					"type":	"string",
+					"m_label":	"File:",
+					"m_value":	"MainDialog"
+				}, {
+					"type":	"virtualFolderPicker",
+					"m_label":	"Virtual Folder:",
+					"m_path":	""
+				}, {
+					"type":	"choice",
+					"m_label":	"Centre:",
+					"m_selection":	1,
+					"m_options":	["", "wxBOTH", "wxVERTICAL", "wxHORIZONTAL"]
+				}],
+			"m_events":	[{
+					"m_eventName":	"wxEVT_INIT_DIALOG",
+					"m_eventClass":	"wxInitDialogEvent",
+					"m_eventHandler":	"wxInitDialogEventHandler",
+					"m_functionNameAndSignature":	"OnInitDialog(wxInitDialogEvent& event)",
+					"m_description":	"A wxInitDialogEvent is sent as a dialog or panel is being initialised. Handlers for this event can transfer data to the window.\nThe default handler calls wxWindow::TransferDataToWindow"
+				}],
+			"m_children":	[{
+					"m_type":	4401,
+					"proportion":	0,
+					"border":	5,
+					"gbSpan":	"1,1",
+					"gbPosition":	"0,0",
+					"m_styles":	[],
+					"m_sizerFlags":	["wxLEFT", "wxRIGHT", "wxTOP", "wxBOTTOM"],
+					"m_properties":	[{
+							"type":	"string",
+							"m_label":	"Name:",
+							"m_value":	"mainSizer"
+						}, {
+							"type":	"choice",
+							"m_label":	"Orientation:",
+							"m_selection":	0,
+							"m_options":	["wxVERTICAL", "wxHORIZONTAL"]
+						}],
+					"m_events":	[],
+					"m_children":	[{
+							"m_type":	4449,
+							"proportion":	0,
+							"border":	5,
+							"gbSpan":	"1,1",
+							"gbPosition":	"0,0",
+							"m_styles":	[],
+							"m_sizerFlags":	["wxEXPAND", "wxALIGN_CENTER_VERTICAL"],
+							"m_properties":	[{
+									"type":	"string",
+									"m_label":	"Name:",
+									"m_value":	"staticBoxSizer28"
+								}, {
+									"type":	"choice",
+									"m_label":	"Orientation:",
+									"m_selection":	0,
+									"m_options":	["Vertical", "Horizontal"]
+								}, {
+									"type":	"string",
+									"m_label":	"Label:",
+									"m_value":	"Audio Tone"
+								}],
+							"m_events":	[],
+							"m_children":	[{
+									"m_type":	4415,
+									"proportion":	0,
+									"border":	5,
+									"gbSpan":	"1,1",
+									"gbPosition":	"0,0",
+									"m_styles":	[],
+									"m_sizerFlags":	["wxALIGN_CENTER", "wxALIGN_CENTER_VERTICAL"],
+									"m_properties":	[{
+											"type":	"winid",
+											"m_label":	"ID:",
+											"m_winid":	"wxID_ANY"
+										}, {
+											"type":	"string",
+											"m_label":	"Size:",
+											"m_value":	"-1,-1"
+										}, {
+											"type":	"string",
+											"m_label":	"Minimum Size:",
+											"m_value":	"-1,-1"
+										}, {
+											"type":	"string",
+											"m_label":	"Name:",
+											"m_value":	"m_ckPTTRtChan"
+										}, {
+											"type":	"multi-string",
+											"m_label":	"Tooltip:",
+											"m_value":	""
+										}, {
+											"type":	"colour",
+											"m_label":	"Bg Colour:",
+											"colour":	"<Default>"
+										}, {
+											"type":	"colour",
+											"m_label":	"Fg Colour:",
+											"colour":	"<Default>"
+										}, {
+											"type":	"font",
+											"m_label":	"Font:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Class Name:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Include File:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Label:",
+											"m_value":	"PTT tone on right audio channel"
+										}, {
+											"type":	"bool",
+											"m_label":	"Value:",
+											"m_value":	false
+										}],
+									"m_events":	[{
+											"m_eventName":	"wxEVT_COMMAND_CHECKBOX_CLICKED",
+											"m_eventClass":	"wxCommandEvent",
+											"m_eventHandler":	"wxCommandEventHandler",
+											"m_functionNameAndSignature":	"PTTAudioClick(wxCommandEvent& event)",
+											"m_description":	"Process a wxEVT_COMMAND_CHECKBOX_CLICKED event, when the checkbox is clicked."
+										}],
+									"m_children":	[]
+								}]
+						}, {
+							"m_type":	4449,
+							"proportion":	1,
+							"border":	5,
+							"gbSpan":	"1,1",
+							"gbPosition":	"0,0",
+							"m_styles":	[],
+							"m_sizerFlags":	["wxEXPAND"],
+							"m_properties":	[{
+									"type":	"string",
+									"m_label":	"Name:",
+									"m_value":	"staticBoxSizer17"
+								}, {
+									"type":	"choice",
+									"m_label":	"Orientation:",
+									"m_selection":	0,
+									"m_options":	["Vertical", "Horizontal"]
+								}, {
+									"type":	"string",
+									"m_label":	"Label:",
+									"m_value":	"Hardware PTT Settings"
+								}],
+							"m_events":	[],
+							"m_children":	[{
+									"m_type":	4449,
+									"proportion":	0,
+									"border":	5,
+									"gbSpan":	"1,1",
+									"gbPosition":	"0,0",
+									"m_styles":	[],
+									"m_sizerFlags":	["wxEXPAND"],
+									"m_properties":	[{
+											"type":	"string",
+											"m_label":	"Name:",
+											"m_value":	"staticBoxSizer31"
+										}, {
+											"type":	"choice",
+											"m_label":	"Orientation:",
+											"m_selection":	0,
+											"m_options":	["Vertical", "Horizontal"]
+										}, {
+											"type":	"string",
+											"m_label":	"Label:",
+											"m_value":	"PTT Port"
+										}],
+									"m_events":	[],
+									"m_children":	[{
+											"m_type":	4412,
+											"proportion":	1,
+											"border":	0,
+											"gbSpan":	"1,1",
+											"gbPosition":	"0,0",
+											"m_styles":	["wxLB_SINGLE"],
+											"m_sizerFlags":	["wxALIGN_CENTER"],
+											"m_properties":	[{
+													"type":	"winid",
+													"m_label":	"ID:",
+													"m_winid":	"wxID_ANY"
+												}, {
+													"type":	"string",
+													"m_label":	"Size:",
+													"m_value":	"-1,-1"
+												}, {
+													"type":	"string",
+													"m_label":	"Minimum Size:",
+													"m_value":	"-1,-1"
+												}, {
+													"type":	"string",
+													"m_label":	"Name:",
+													"m_value":	"m_listCtrlPorts"
+												}, {
+													"type":	"multi-string",
+													"m_label":	"Tooltip:",
+													"m_value":	""
+												}, {
+													"type":	"colour",
+													"m_label":	"Bg Colour:",
+													"colour":	"<Default>"
+												}, {
+													"type":	"colour",
+													"m_label":	"Fg Colour:",
+													"colour":	"<Default>"
+												}, {
+													"type":	"font",
+													"m_label":	"Font:",
+													"m_value":	""
+												}, {
+													"type":	"string",
+													"m_label":	"Class Name:",
+													"m_value":	""
+												}, {
+													"type":	"string",
+													"m_label":	"Include File:",
+													"m_value":	""
+												}, {
+													"type":	"multi-string",
+													"m_label":	"Choices:",
+													"m_value":	""
+												}, {
+													"type":	"string",
+													"m_label":	"Selection:",
+													"m_value":	"-1"
+												}],
+											"m_events":	[{
+													"m_eventName":	"wxEVT_COMMAND_LISTBOX_SELECTED",
+													"m_eventClass":	"wxCommandEvent",
+													"m_eventHandler":	"wxCommandEventHandler",
+													"m_functionNameAndSignature":	"PTTPortSlelcted(wxCommandEvent& event)",
+													"m_description":	"Process a wxEVT_COMMAND_LISTBOX_SELECTED event, when an item on the list is selected or the selection changes."
+												}],
+											"m_children":	[]
+										}]
+								}, {
+									"m_type":	4401,
+									"proportion":	1,
+									"border":	5,
+									"gbSpan":	"1,1",
+									"gbPosition":	"0,0",
+									"m_styles":	[],
+									"m_sizerFlags":	["wxEXPAND"],
+									"m_properties":	[{
+											"type":	"string",
+											"m_label":	"Name:",
+											"m_value":	"boxSizer19"
+										}, {
+											"type":	"choice",
+											"m_label":	"Orientation:",
+											"m_selection":	0,
+											"m_options":	["wxVERTICAL", "wxHORIZONTAL"]
+										}],
+									"m_events":	[],
+									"m_children":	[{
+											"m_type":	4449,
+											"proportion":	1,
+											"border":	5,
+											"gbSpan":	"1,1",
+											"gbPosition":	"0,0",
+											"m_styles":	[],
+											"m_sizerFlags":	["wxEXPAND", "wxALIGN_CENTER", "wxALIGN_RIGHT"],
+											"m_properties":	[{
+													"type":	"string",
+													"m_label":	"Name:",
+													"m_value":	"staticBoxSizer16"
+												}, {
+													"type":	"choice",
+													"m_label":	"Orientation:",
+													"m_selection":	1,
+													"m_options":	["Vertical", "Horizontal"]
+												}, {
+													"type":	"string",
+													"m_label":	"Label:",
+													"m_value":	"Signal polarity"
+												}],
+											"m_events":	[],
+											"m_children":	[{
+													"m_type":	4452,
+													"proportion":	1,
+													"border":	5,
+													"gbSpan":	"1,1",
+													"gbPosition":	"0,0",
+													"m_styles":	[],
+													"m_sizerFlags":	["wxEXPAND", "wxALIGN_RIGHT"],
+													"m_properties":	[{
+															"type":	"string",
+															"m_label":	"Name:",
+															"m_value":	"gridSizer17"
+														}, {
+															"type":	"string",
+															"m_label":	"# Columns:",
+															"m_value":	"2"
+														}, {
+															"type":	"string",
+															"m_label":	"# Rows:",
+															"m_value":	"3"
+														}, {
+															"type":	"string",
+															"m_label":	"Horizontal gap:",
+															"m_value":	"0"
+														}, {
+															"type":	"string",
+															"m_label":	"Vertical gap:",
+															"m_value":	"0"
+														}],
+													"m_events":	[],
+													"m_children":	[{
+															"m_type":	4415,
+															"proportion":	0,
+															"border":	10,
+															"gbSpan":	"1,1",
+															"gbPosition":	"0,0",
+															"m_styles":	[],
+															"m_sizerFlags":	["wxALIGN_CENTER"],
+															"m_properties":	[{
+																	"type":	"winid",
+																	"m_label":	"ID:",
+																	"m_winid":	"wxID_ANY"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Minimum Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Name:",
+																	"m_value":	"m_ckUseSerialPTT"
+																}, {
+																	"type":	"multi-string",
+																	"m_label":	"Tooltip:",
+																	"m_value":	""
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Bg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Fg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"font",
+																	"m_label":	"Font:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Class Name:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Include File:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Label:",
+																	"m_value":	"Use Serial Port PTT"
+																}, {
+																	"type":	"bool",
+																	"m_label":	"Value:",
+																	"m_value":	false
+																}],
+															"m_events":	[{
+																	"m_eventName":	"wxEVT_COMMAND_CHECKBOX_CLICKED",
+																	"m_eventClass":	"wxCommandEvent",
+																	"m_eventHandler":	"wxCommandEventHandler",
+																	"m_functionNameAndSignature":	"PTTUseSerialClicked(wxCommandEvent& event)",
+																	"m_description":	"Process a wxEVT_COMMAND_CHECKBOX_CLICKED event, when the checkbox is clicked."
+																}],
+															"m_children":	[]
+														}, {
+															"m_type":	4454,
+															"proportion":	0,
+															"border":	5,
+															"gbSpan":	"1,1",
+															"gbPosition":	"0,0",
+															"m_styles":	[],
+															"m_sizerFlags":	[],
+															"m_properties":	[{
+																	"type":	"string",
+																	"m_label":	"Name:",
+																	"m_value":	"Spacer"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Size:",
+																	"m_value":	"0,0"
+																}],
+															"m_events":	[],
+															"m_children":	[]
+														}, {
+															"m_type":	4417,
+															"proportion":	0,
+															"border":	5,
+															"gbSpan":	"1,1",
+															"gbPosition":	"0,0",
+															"m_styles":	[],
+															"m_sizerFlags":	["wxALIGN_CENTER", "wxALIGN_RIGHT", "wxALIGN_CENTER_VERTICAL"],
+															"m_properties":	[{
+																	"type":	"winid",
+																	"m_label":	"ID:",
+																	"m_winid":	"wxID_ANY"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Minimum Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Name:",
+																	"m_value":	"m_rbUseDTR"
+																}, {
+																	"type":	"multi-string",
+																	"m_label":	"Tooltip:",
+																	"m_value":	""
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Bg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Fg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"font",
+																	"m_label":	"Font:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Class Name:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Include File:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Label:",
+																	"m_value":	"Use DTR"
+																}, {
+																	"type":	"bool",
+																	"m_label":	"Value:",
+																	"m_value":	true
+																}],
+															"m_events":	[{
+																	"m_eventName":	"wxEVT_COMMAND_RADIOBUTTON_SELECTED",
+																	"m_eventClass":	"wxCommandEvent",
+																	"m_eventHandler":	"wxCommandEventHandler",
+																	"m_functionNameAndSignature":	"UseDTRCliched(wxCommandEvent& event)",
+																	"m_description":	"Process a wxEVT_COMMAND_RADIOBUTTON_SELECTED event, when the radiobutton is clicked."
+																}],
+															"m_children":	[]
+														}, {
+															"m_type":	4415,
+															"proportion":	0,
+															"border":	5,
+															"gbSpan":	"1,1",
+															"gbPosition":	"0,0",
+															"m_styles":	[],
+															"m_sizerFlags":	["wxALIGN_CENTER", "wxALIGN_RIGHT"],
+															"m_properties":	[{
+																	"type":	"winid",
+																	"m_label":	"ID:",
+																	"m_winid":	"wxID_ANY"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Minimum Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Name:",
+																	"m_value":	"m_ckRTSPos"
+																}, {
+																	"type":	"multi-string",
+																	"m_label":	"Tooltip:",
+																	"m_value":	""
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Bg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Fg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"font",
+																	"m_label":	"Font:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Class Name:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Include File:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Label:",
+																	"m_value":	"DTR = +V"
+																}, {
+																	"type":	"bool",
+																	"m_label":	"Value:",
+																	"m_value":	false
+																}],
+															"m_events":	[{
+																	"m_eventName":	"wxEVT_COMMAND_CHECKBOX_CLICKED",
+																	"m_eventClass":	"wxCommandEvent",
+																	"m_eventHandler":	"wxCommandEventHandler",
+																	"m_functionNameAndSignature":	"DTRVPlusClicked(wxCommandEvent& event)",
+																	"m_description":	"Process a wxEVT_COMMAND_CHECKBOX_CLICKED event, when the checkbox is clicked."
+																}],
+															"m_children":	[]
+														}, {
+															"m_type":	4417,
+															"proportion":	0,
+															"border":	5,
+															"gbSpan":	"1,1",
+															"gbPosition":	"0,0",
+															"m_styles":	[],
+															"m_sizerFlags":	["wxALIGN_CENTER", "wxALIGN_RIGHT"],
+															"m_properties":	[{
+																	"type":	"winid",
+																	"m_label":	"ID:",
+																	"m_winid":	"wxID_ANY"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Minimum Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Name:",
+																	"m_value":	"m_rbUseRTS"
+																}, {
+																	"type":	"multi-string",
+																	"m_label":	"Tooltip:",
+																	"m_value":	"Toggle the RTS pin for PTT"
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Bg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Fg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"font",
+																	"m_label":	"Font:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Class Name:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Include File:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Label:",
+																	"m_value":	"Use RTS"
+																}, {
+																	"type":	"bool",
+																	"m_label":	"Value:",
+																	"m_value":	true
+																}],
+															"m_events":	[{
+																	"m_eventName":	"wxEVT_COMMAND_RADIOBUTTON_SELECTED",
+																	"m_eventClass":	"wxCommandEvent",
+																	"m_eventHandler":	"wxCommandEventHandler",
+																	"m_functionNameAndSignature":	"UseRTSClicked(wxCommandEvent& event)",
+																	"m_description":	"Process a wxEVT_COMMAND_RADIOBUTTON_SELECTED event, when the radiobutton is clicked."
+																}],
+															"m_children":	[]
+														}, {
+															"m_type":	4415,
+															"proportion":	0,
+															"border":	5,
+															"gbSpan":	"1,1",
+															"gbPosition":	"0,0",
+															"m_styles":	[],
+															"m_sizerFlags":	["wxALIGN_CENTER", "wxALIGN_RIGHT"],
+															"m_properties":	[{
+																	"type":	"winid",
+																	"m_label":	"ID:",
+																	"m_winid":	"wxID_ANY"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Minimum Size:",
+																	"m_value":	"-1,-1"
+																}, {
+																	"type":	"string",
+																	"m_label":	"Name:",
+																	"m_value":	"m_ckDTRPos"
+																}, {
+																	"type":	"multi-string",
+																	"m_label":	"Tooltip:",
+																	"m_value":	"Set Polarity of the RTS line"
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Bg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"colour",
+																	"m_label":	"Fg Colour:",
+																	"colour":	"<Default>"
+																}, {
+																	"type":	"font",
+																	"m_label":	"Font:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Class Name:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Include File:",
+																	"m_value":	""
+																}, {
+																	"type":	"string",
+																	"m_label":	"Label:",
+																	"m_value":	"RTS = +V"
+																}, {
+																	"type":	"bool",
+																	"m_label":	"Value:",
+																	"m_value":	false
+																}],
+															"m_events":	[{
+																	"m_eventName":	"wxEVT_COMMAND_CHECKBOX_CLICKED",
+																	"m_eventClass":	"wxCommandEvent",
+																	"m_eventHandler":	"wxCommandEventHandler",
+																	"m_functionNameAndSignature":	"RTSVPlusClicked(wxCommandEvent& event)",
+																	"m_description":	"Process a wxEVT_COMMAND_CHECKBOX_CLICKED event, when the checkbox is clicked."
+																}],
+															"m_children":	[]
+														}]
+												}]
+										}]
+								}]
+						}, {
+							"m_type":	4401,
+							"proportion":	0,
+							"border":	5,
+							"gbSpan":	"1,1",
+							"gbPosition":	"0,0",
+							"m_styles":	[],
+							"m_sizerFlags":	["wxLEFT", "wxRIGHT", "wxTOP", "wxBOTTOM", "wxALIGN_CENTER_HORIZONTAL"],
+							"m_properties":	[{
+									"type":	"string",
+									"m_label":	"Name:",
+									"m_value":	"boxSizer12"
+								}, {
+									"type":	"choice",
+									"m_label":	"Orientation:",
+									"m_selection":	1,
+									"m_options":	["wxVERTICAL", "wxHORIZONTAL"]
+								}],
+							"m_events":	[],
+							"m_children":	[{
+									"m_type":	4400,
+									"proportion":	0,
+									"border":	5,
+									"gbSpan":	"1,1",
+									"gbPosition":	"0,0",
+									"m_styles":	[],
+									"m_sizerFlags":	["wxLEFT", "wxRIGHT", "wxTOP", "wxBOTTOM"],
+									"m_properties":	[{
+											"type":	"winid",
+											"m_label":	"ID:",
+											"m_winid":	"wxID_OK"
+										}, {
+											"type":	"string",
+											"m_label":	"Size:",
+											"m_value":	"-1,-1"
+										}, {
+											"type":	"string",
+											"m_label":	"Minimum Size:",
+											"m_value":	"-1,-1"
+										}, {
+											"type":	"string",
+											"m_label":	"Name:",
+											"m_value":	"m_buttonOK"
+										}, {
+											"type":	"multi-string",
+											"m_label":	"Tooltip:",
+											"m_value":	""
+										}, {
+											"type":	"colour",
+											"m_label":	"Bg Colour:",
+											"colour":	"<Default>"
+										}, {
+											"type":	"colour",
+											"m_label":	"Fg Colour:",
+											"colour":	"<Default>"
+										}, {
+											"type":	"font",
+											"m_label":	"Font:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Class Name:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Include File:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Label:",
+											"m_value":	"OK"
+										}, {
+											"type":	"bool",
+											"m_label":	"Default Button",
+											"m_value":	true
+										}, {
+											"type":	"filePicker",
+											"m_label":	"Bitmap File:",
+											"m_path":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Margins:",
+											"m_value":	"2,2"
+										}],
+									"m_events":	[{
+											"m_eventName":	"wxEVT_COMMAND_BUTTON_CLICKED",
+											"m_eventClass":	"wxCommandEvent",
+											"m_eventHandler":	"wxCommandEventHandler",
+											"m_functionNameAndSignature":	"OnOK(wxCommandEvent& event)",
+											"m_description":	"Process a wxEVT_COMMAND_BUTTON_CLICKED event, when the button is clicked."
+										}],
+									"m_children":	[]
+								}, {
+									"m_type":	4400,
+									"proportion":	0,
+									"border":	5,
+									"gbSpan":	"1,1",
+									"gbPosition":	"0,0",
+									"m_styles":	[],
+									"m_sizerFlags":	["wxLEFT", "wxRIGHT", "wxTOP", "wxBOTTOM"],
+									"m_properties":	[{
+											"type":	"winid",
+											"m_label":	"ID:",
+											"m_winid":	"wxID_CANCEL"
+										}, {
+											"type":	"string",
+											"m_label":	"Size:",
+											"m_value":	"-1,-1"
+										}, {
+											"type":	"string",
+											"m_label":	"Minimum Size:",
+											"m_value":	"-1,-1"
+										}, {
+											"type":	"string",
+											"m_label":	"Name:",
+											"m_value":	"m_buttonCancel"
+										}, {
+											"type":	"multi-string",
+											"m_label":	"Tooltip:",
+											"m_value":	""
+										}, {
+											"type":	"colour",
+											"m_label":	"Bg Colour:",
+											"colour":	"<Default>"
+										}, {
+											"type":	"colour",
+											"m_label":	"Fg Colour:",
+											"colour":	"<Default>"
+										}, {
+											"type":	"font",
+											"m_label":	"Font:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Class Name:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Include File:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Label:",
+											"m_value":	"Cancel"
+										}, {
+											"type":	"bool",
+											"m_label":	"Default Button",
+											"m_value":	false
+										}, {
+											"type":	"filePicker",
+											"m_label":	"Bitmap File:",
+											"m_path":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Margins:",
+											"m_value":	"2,2"
+										}],
+									"m_events":	[{
+											"m_eventName":	"wxEVT_COMMAND_BUTTON_CLICKED",
+											"m_eventClass":	"wxCommandEvent",
+											"m_eventHandler":	"wxCommandEventHandler",
+											"m_functionNameAndSignature":	"OnCancel(wxCommandEvent& event)",
+											"m_description":	"Process a wxEVT_COMMAND_BUTTON_CLICKED event, when the button is clicked."
+										}],
+									"m_children":	[]
+								}, {
+									"m_type":	4400,
+									"proportion":	0,
+									"border":	5,
+									"gbSpan":	"1,1",
+									"gbPosition":	"0,0",
+									"m_styles":	[],
+									"m_sizerFlags":	["wxLEFT", "wxRIGHT", "wxTOP", "wxBOTTOM"],
+									"m_properties":	[{
+											"type":	"winid",
+											"m_label":	"ID:",
+											"m_winid":	"wxID_APPLY"
+										}, {
+											"type":	"string",
+											"m_label":	"Size:",
+											"m_value":	"-1,-1"
+										}, {
+											"type":	"string",
+											"m_label":	"Minimum Size:",
+											"m_value":	"-1,-1"
+										}, {
+											"type":	"string",
+											"m_label":	"Name:",
+											"m_value":	"m_buttonApply"
+										}, {
+											"type":	"multi-string",
+											"m_label":	"Tooltip:",
+											"m_value":	""
+										}, {
+											"type":	"colour",
+											"m_label":	"Bg Colour:",
+											"colour":	"<Default>"
+										}, {
+											"type":	"colour",
+											"m_label":	"Fg Colour:",
+											"colour":	"<Default>"
+										}, {
+											"type":	"font",
+											"m_label":	"Font:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Class Name:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Include File:",
+											"m_value":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Label:",
+											"m_value":	"Apply"
+										}, {
+											"type":	"bool",
+											"m_label":	"Default Button",
+											"m_value":	false
+										}, {
+											"type":	"filePicker",
+											"m_label":	"Bitmap File:",
+											"m_path":	""
+										}, {
+											"type":	"string",
+											"m_label":	"Margins:",
+											"m_value":	"2,2"
+										}],
+									"m_events":	[{
+											"m_eventName":	"wxEVT_COMMAND_BUTTON_CLICKED",
+											"m_eventClass":	"wxCommandEvent",
+											"m_eventHandler":	"wxCommandEventHandler",
+											"m_functionNameAndSignature":	"OnApply(wxCommandEvent& event)",
+											"m_description":	"Process a wxEVT_COMMAND_BUTTON_CLICKED event, when the button is clicked."
+										}],
+									"m_children":	[]
+								}]
+						}]
+				}]
+		}]
+}

@@ -1,0 +1,1 @@
+./Debug/main.o ./Debug/wxcrafter.o ./Debug/wxcrafter_bitmaps.o ./Debug/MainDialog.o ./Debug/win_resources.rc.o  
