@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="libCTB" InternalType="Library">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="../../../../code/libCTB-0.16/src/fifo.cpp"/>
+    <File Name="../../../../code/libCTB-0.16/src/getopt.cpp"/>
+    <File Name="../../../../code/libCTB-0.16/src/gpib.cpp"/>
+    <File Name="../../../../code/libCTB-0.16/src/iobase.cpp"/>
+    <File Name="../../../../code/libCTB-0.16/src/kbhit.cpp"/>
+    <File Name="../../../../code/libCTB-0.16/src/portscan.cpp"/>
+    <File Name="../../../../code/libCTB-0.16/src/serportx.cpp"/>
+    <File Name="../../../../code/libCTB-0.16/src/win32/getopt.cpp"/>
+    <File Name="../../../../code/libCTB-0.16/src/win32/serport.cpp"/>
+    <File Name="../../../../code/libCTB-0.16/src/win32/timer.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="include">
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/ctb.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/fifo.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/getopt.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/gpib.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/iobase.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/kbhit.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/portscan.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/serport.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/serportx.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/timer.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/win32/getopt.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/win32/gpib-32.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/win32/serport.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/win32/timer.h"/>
+  </VirtualDirectory>
+  <Settings Type="Static Library">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" C_Options="-g" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/lib$(ProjectName).a" IntermediateDirectory="./Debug" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" C_Options="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/lib$(ProjectName).a" IntermediateDirectory="./Release" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

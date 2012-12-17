@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="fdmdv2" InternalType="GUI">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="../../src/dlg_comports.cpp"/>
+    <File Name="../../src/fdmdv2_main.cpp"/>
+    <File Name="../../src/fdmdv2_plot.cpp"/>
+    <File Name="../../src/topFrame.cpp"/>
+    <File Name="../../src/fdmdv2_plot_scatter.cpp"/>
+    <File Name="../../src/fdmdv2_plot_spectrum.cpp"/>
+    <File Name="../../src/fdmdv2_pa_wrapper.cpp"/>
+    <File Name="../../src/fdmdv2_plot_scalar.cpp"/>
+    <File Name="../../src/fdmdv2_plot_waterfall_linux.cpp"/>
+    <File Name="../../src/dlg_audiooptions.cpp"/>
+    <File Name="../../src/dlg_filter.cpp"/>
+    <File Name="../../src/varicode.c"/>
+    <File Name="../../src/sox_biquad.c"/>
+    <File Name="../../src/dlg_about.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="include">
+    <File Name="../../src/dlg_comports.h"/>
+    <File Name="../../src/fdmdv2_main.h"/>
+    <File Name="../../src/fdmdv2_plot.h"/>
+    <File Name="../../src/topFrame.h"/>
+    <File Name="../../src/fdmdv2_plot_scatter.h"/>
+    <File Name="../../src/fdmdv2_plot_spectrum.h"/>
+    <File Name="../../src/fdmdv2_pa_wrapper.h"/>
+    <File Name="../../src/comp.h"/>
+    <File Name="../../src/fdmdv2_plot_scalar.h"/>
+    <File Name="../../../codec2-dev/src/codec2.h"/>
+    <File Name="../../../codec2-dev/src/fdmdv.h"/>
+    <File Name="../../src/fdmdv2_defines.h"/>
+    <File Name="../../../Audio/portaudio/include/portaudio.h"/>
+    <File Name="../../../Audio/libsndfile/include/sndfile.h"/>
+    <File Name="../../src/fdmdv2_plot_waterfall_linux.h"/>
+    <File Name="../../src/dlg_audiooptions.h"/>
+    <File Name="../../src/dlg_filter.h"/>
+    <File Name="../../src/varicode.h"/>
+    <File Name="../../src/varicode_table.h"/>
+    <File Name="../../src/sox_biquad.h"/>
+    <File Name="../../src/dlg_about.h"/>
+    <File Name="../version.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="resources">
+    <File Name="../../src/FDMDV2.fbp"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" C_Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="/bin/MinGW-4.6.1/msys/1.0/local/include"/>
+        <IncludePath Value="../../codec2-dev/src"/>
+        <IncludePath Value="/bin/Projects/Audio/libsndfile/include"/>
+        <Preprocessor Value="__WX__"/>
+      </Compiler>
+      <Linker Options="-mwindows;$(shell wx-config --debug=yes --libs --unicode=yes)" Required="yes">
+        <LibraryPath Value="d:/Projects/Radio/codec2-dev/src/.libs"/>
+        <LibraryPath Value="d:/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
+        <LibraryPath Value="d:/Projects/Audio/libsndfile/lib"/>
+        <Library Value="libsndfile-1.dll"/>
+        <Library Value="codec2"/>
+        <Library Value="libportaudio.a"/>
+        <Library Value="libportaudiocpp.a"/>
+        <Library Value="libsamplerate.dll.a"/>
+        <Library Value="ctb-0.16.dll"/>
+        <Library Value="libsox"/>
+      </Linker>
+      <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/freeDV" IntermediateDirectory="./Debug" Command="./freeDV.exe" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" C_Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="/bin/MinGW-4.6.1/msys/1.0/local/include"/>
+        <IncludePath Value="../../../codec2-dev/src"/>
+        <IncludePath Value="../../../Audio/portaudio/include"/>
+        <IncludePath Value="../../../Audio/libsndfile/include"/>
+        <IncludePath Value="../../../Audio/libsamplerate-0.1.8/src"/>
+        <Preprocessor Value="__WX__"/>
+        <Preprocessor Value="DMW=1"/>
+      </Compiler>
+      <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes">
+        <LibraryPath Value="d:/Projects/Radio/codec2-dev/src/.libs"/>
+        <LibraryPath Value="d:/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
+        <LibraryPath Value="d:/Projects/Audio/libsndfile/lib"/>
+        <Library Value="libsndfile-1.dll"/>
+        <Library Value="codec2"/>
+        <Library Value="libportaudio.a"/>
+        <Library Value="libportaudiocpp.a"/>
+        <Library Value="libsamplerate.dll.a"/>
+        <Library Value="ctb-0.16.dll"/>
+        <Library Value="libsox.a"/>
+      </Linker>
+      <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/freeDV" IntermediateDirectory="./Release" Command="./freeDV.exe" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>
