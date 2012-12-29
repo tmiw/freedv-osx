@@ -36,7 +36,6 @@
     <File Name="../../../codec2-dev/src/codec2.h"/>
     <File Name="../../../codec2-dev/src/fdmdv.h"/>
     <File Name="../../src/fdmdv2_defines.h"/>
-    <File Name="../../../Audio/portaudio/include/portaudio.h"/>
     <File Name="../../../Audio/libsndfile/include/sndfile.h"/>
     <File Name="../../src/fdmdv2_plot_waterfall_linux.h"/>
     <File Name="../../src/dlg_audiooptions.h"/>
@@ -46,6 +45,8 @@
     <File Name="../../src/sox_biquad.h"/>
     <File Name="../../src/dlg_about.h"/>
     <File Name="../version.h"/>
+    <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/ctb.h"/>
+    <File Name="../../../../Audio/portaudio/include/portaudio.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../../src/FDMDV2.fbp"/>

@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ libCTB - Release ]----------"
-	@cd "libCTB" && "$(MAKE)" -f "libCTB.mk"
+	@echo "----------Building project:[ fdmdv2 - Release ]----------"
+	@"$(MAKE)" -f "fdmdv2.mk"
 clean:
-	@echo "----------Cleaning project:[ libCTB - Release ]----------"
-	@cd "libCTB" && "$(MAKE)" -f "libCTB.mk" clean
+	@echo "----------Cleaning project:[ fdmdv2 - Release ]----------"
+	@"$(MAKE)" -f "fdmdv2.mk" clean
