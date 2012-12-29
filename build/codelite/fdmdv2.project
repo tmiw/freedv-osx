@@ -34,12 +34,10 @@
     <File Name="../../src/comp.h"/>
     <File Name="../../src/fdmdv2_plot_scalar.h"/>
     <File Name="../../../codec2-dev/src/codec2.h"/>
-    <File Name="../../../codec2-dev/src/fdmdv.h"/>
     <File Name="../../src/fdmdv2_defines.h"/>
     <File Name="../../../Audio/libsndfile/include/sndfile.h"/>
     <File Name="../../src/fdmdv2_plot_waterfall_linux.h"/>
     <File Name="../../src/dlg_audiooptions.h"/>
-    <File Name="../../src/dlg_filter.h"/>
     <File Name="../../src/varicode.h"/>
     <File Name="../../src/varicode_table.h"/>
     <File Name="../../src/sox_biquad.h"/>
@@ -47,6 +45,7 @@
     <File Name="../version.h"/>
     <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/ctb.h"/>
     <File Name="../../../../Audio/portaudio/include/portaudio.h"/>
+    <File Name="../../src/dlg_filter.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../../src/FDMDV2.fbp"/>
@@ -69,6 +68,7 @@
         <IncludePath Value="../../codec2-dev/src"/>
         <IncludePath Value="/bin/Projects/Audio/libsndfile/include"/>
         <Preprocessor Value="__WX__"/>
+        <Preprocessor Value="_NO_AUTOTOOLS_=1"/>
       </Compiler>
       <Linker Options="-mwindows;$(shell wx-config --debug=yes --libs --unicode=yes)" Required="yes">
         <LibraryPath Value="d:/Projects/Radio/codec2-dev/src/.libs"/>
@@ -123,6 +123,7 @@
         <IncludePath Value="../../../Audio/libsamplerate-0.1.8/src"/>
         <Preprocessor Value="__WX__"/>
         <Preprocessor Value="DMW=1"/>
+        <Preprocessor Value="_NO_AUTOTOOLS_=1"/>
       </Compiler>
       <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes">
         <LibraryPath Value="d:/Projects/Radio/codec2-dev/src/.libs"/>

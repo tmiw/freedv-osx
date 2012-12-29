@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=12/16/2012
+Date                   :=12/29/2012
 CodeLitePath           :="D:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch).
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=    -DSVN_REVISION=\"1140\"  $(Preprocessors)
-CFLAGS   :=    -DSVN_REVISION=\"1140\"  $(Preprocessors)
+CXXFLAGS :=    -DSVN_REVISION=\"1152\"  $(Preprocessors)
+CFLAGS   :=    -DSVN_REVISION=\"1152\"  $(Preprocessors)
 
 
 ##
