@@ -65,7 +65,7 @@
     <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" C_Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <IncludePath Value="/bin/MinGW-4.6.1/msys/1.0/local/include"/>
-        <IncludePath Value="../../codec2-dev/src"/>
+        <IncludePath Value="../../../codec2-dev/src"/>
         <IncludePath Value="/bin/Projects/Audio/libsndfile/include"/>
         <Preprocessor Value="__WX__"/>
         <Preprocessor Value="_NO_AUTOTOOLS_=1"/>

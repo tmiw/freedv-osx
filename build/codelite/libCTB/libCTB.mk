@@ -2,18 +2,18 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Release
+## Debug
 ProjectName            :=libCTB
-ConfigurationName      :=Release
+ConfigurationName      :=Debug
 WorkspacePath          := "D:\Projects\Radio\fdmdv2\build\codelite"
 ProjectPath            := "D:\Projects\Radio\fdmdv2\build\codelite\libCTB"
-IntermediateDirectory  :=./Release
+IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=12/29/2012
+Date                   :=12/30/2012
 CodeLitePath           :="D:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch).
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=    -DSVN_REVISION=\"1152\"  $(Preprocessors)
-CFLAGS   :=    -DSVN_REVISION=\"1152\"  $(Preprocessors)
+CXXFLAGS :=  -g  -DSVN_REVISION=\"1152\"  $(Preprocessors)
+CFLAGS   :=  -g  -DSVN_REVISION=\"1152\"  $(Preprocessors)
 
 
 ##
@@ -78,11 +78,11 @@ $(OutputFile): $(Objects)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects) > $(ObjectsFileList)
 	$(AR) $(ArchiveOutputSwitch)$(OutputFile) @$(ObjectsFileList) $(ArLibs)
-	@$(MakeDirCommand) "D:\Projects\Radio\fdmdv2\build\codelite\.build-release"
-	@echo rebuilt > "D:\Projects\Radio\fdmdv2\build\codelite\.build-release\libCTB"
+	@$(MakeDirCommand) "D:\Projects\Radio\fdmdv2\build\codelite\.build-debug"
+	@echo rebuilt > "D:\Projects\Radio\fdmdv2\build\codelite\.build-debug\libCTB"
 
-./Release:
-	@$(MakeDirCommand) "./Release"
+./Debug:
+	@$(MakeDirCommand) "./Debug"
 
 PreBuild:
 
@@ -208,6 +208,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/win32_timer$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile)
-	$(RM) "D:\Projects\Radio\fdmdv2\build\codelite\.build-release\libCTB"
+	$(RM) "D:\Projects\Radio\fdmdv2\build\codelite\.build-debug\libCTB"
 
 
