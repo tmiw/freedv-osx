@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+  <object class="wxFrame" name="MainFrameBaseClass">
+    <title>topFrame</title>
+    <centered>1</centered>
+    <style>wxCAPTION|wxRESIZE_BORDER|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxSYSTEM_MENU|wxCLOSE_BOX</style>
+    <size>500,300</size>
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem">
+        <flag>wxEXPAND</flag>
+        <border>5</border>
+        <option>1</option>
+        <object class="wxPanel" name="m_mainPanel">
+          <style>wxTAB_TRAVERSAL</style>
+          <object class="wxBoxSizer">
+            <orient>wxVERTICAL</orient>
+          </object>
+        </object>
+      </object>
+    </object>
+    <object class="wxMenuBar" name="m_menuBar">
+      <style/>
+      <object class="wxMenu" name="m_mbFile">
+        <label>File</label>
+        <style/>
+        <object class="wxMenuItem" name="m_mbiNew">
+          <label>New</label>
+          <accel/>
+        </object>
+        <object class="wxMenuItem" name="m_mbiOpen">
+          <label>Open</label>
+          <accel/>
+        </object>
+        <object class="wxMenuItem" name="m_mbiSave">
+          <label>Save</label>
+          <accel/>
+        </object>
+        <object class="wxMenuItem" name="m_mbiSaveAs">
+          <label>Save As</label>
+          <accel/>
+        </object>
+        <object class="separator"/>
+        <object class="wxMenuItem" name="m_mbiExit">
+          <label>Exit</label>
+          <accel>Alt-X</accel>
+        </object>
+      </object>
+      <object class="wxMenu" name="m_mbTools">
+        <label>Tools</label>
+        <style/>
+        <object class="wxMenuItem" name="m_mbiPrefs">
+          <label>Preferences</label>
+          <accel/>
+        </object>
+      </object>
+      <object class="wxMenu" name="m_mbHelp">
+        <label>Help</label>
+        <style/>
+        <object class="wxMenuItem" name="m_menuItem9">
+          <label>About...</label>
+          <accel/>
+        </object>
+      </object>
+    </object>
+    <object class="wxToolBar" name="m_mainToolbar">
+      <style>wxTB_FLAT</style>
+      <bitmapsize>16,16</bitmapsize>
+      <object class="tool" name="m_tbiNew">
+        <label>New</label>
+        <tooltip>New</tooltip>
+        <longhelp>New</longhelp>
+        <bitmap>C:/Users/wittend/AppData/Local/Temp/placeholder16.png</bitmap>
+      </object>
+      <object class="tool" name="m_rbiOpen">
+        <label>Tool Label</label>
+        <tooltip>Open</tooltip>
+        <longhelp>Open</longhelp>
+        <bitmap>C:/Users/wittend/AppData/Local/Temp/placeholder16.png</bitmap>
+      </object>
+    </object>
+  </object>
+  <object class="wxDialog" name="DlgRigCtrlBase">
+    <title>Rig Control</title>
+    <centered>1</centered>
+    <style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxCLOSE_BOX</style>
+    <size>450,300</size>
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem">
+        <flag>wxALL|wxEXPAND</flag>
+        <border>2</border>
+        <option>1</option>
+        <object class="wxNotebook" name="m_notebook53">
+          <style>wxBK_DEFAULT</style>
+          <object class="notebookpage">
+            <label>Hardware PTT</label>
+            <selected>1</selected>
+            <object class="wxPanel" name="m_panelHDWPTT">
+              <style>wxTAB_TRAVERSAL</style>
+              <tooltip>Hardware Push-to-Talk</tooltip>
+              <object class="wxFlexGridSizer">
+                <cols>1</cols>
+                <rows>3</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>3</growablerows>
+                <object class="sizeritem" name="staticBoxSizer169">
+                  <flag>wxALL|wxEXPAND</flag>
+                  <border>2</border>
+                  <object class="wxStaticBoxSizer" name="staticBoxSizer169">
+                    <sizeritem>
+                      <object class="spacer"/>
+                    </sizeritem>
+                    <orient>wxVERTICAL</orient>
+                    <label/>
+                    <object class="sizeritem">
+                      <flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxCheckBox" name="m_checkBox7537">
+                        <style/>
+                        <label>PTT tone on right audio channel</label>
+                        <checked>0</checked>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+                <object class="sizeritem" name="gridSizer159">
+                  <flag>wxALL|wxALIGN_LEFT|wxALIGN_TOP</flag>
+                  <border>2</border>
+                  <object class="wxGridSizer">
+                    <cols>1</cols>
+                    <rows>1</rows>
+                    <vgap>0</vgap>
+                    <hgap>0</hgap>
+                    <object class="sizeritem" name="staticBoxSizer157">
+                      <flag>wxALL|wxEXPAND|wxALIGN_TOP</flag>
+                      <border>2</border>
+                      <object class="wxStaticBoxSizer" name="staticBoxSizer157">
+                        <sizeritem>
+                          <object class="spacer"/>
+                        </sizeritem>
+                        <orient>wxHORIZONTAL</orient>
+                        <label>h/w ptt device pin</label>
+                        <object class="sizeritem" name="boxSizer175">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                              <flag>wxALL|wxALIGN_TOP</flag>
+                              <border>2</border>
+                              <object class="wxCheckBox" name="m_checkBox9112">
+                                <style/>
+                                <label>Use separate PTT device pin</label>
+                                <checked>0</checked>
+                              </object>
+                            </object>
+                            <object class="sizeritem">
+                              <flag>wxALL</flag>
+                              <border>5</border>
+                              <object class="wxStaticText" name="m_staticText173">
+                                <label>Device:</label>
+                                <style/>
+                              </object>
+                            </object>
+                            <object class="sizeritem">
+                              <flag>wxALL</flag>
+                              <border>2</border>
+                              <object class="wxComboBox" name="m_comboBox9313">
+                                <style/>
+                                <selection>-1</selection>
+                                <content/>
+                              </object>
+                            </object>
+                          </object>
+                        </object>
+                        <object class="sizeritem" name="boxSizer171">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem" name="boxSizer12714">
+                              <flag>wxALL|wxALIGN_CENTER_HORIZONTAL</flag>
+                              <border>2</border>
+                              <option>1</option>
+                              <object class="wxBoxSizer">
+                                <orient>wxVERTICAL</orient>
+                                <object class="sizeritem">
+                                  <flag>wxALL|wxALIGN_CENTER_HORIZONTAL</flag>
+                                  <border>2</border>
+                                  <option>1</option>
+                                  <object class="wxRadioBox" name="m_radioBox10115">
+                                    <label>Use RTS</label>
+                                    <style>wxRA_SPECIFY_COLS</style>
+                                    <dimension>2</dimension>
+                                    <selection>0</selection>
+                                    <content>
+                                      <item>Normal (V-)</item>
+                                      <item>Inverted (V+)</item>
+                                    </content>
+                                  </object>
+                                </object>
+                                <object class="sizeritem">
+                                  <flag>wxALL|wxALIGN_CENTER_HORIZONTAL</flag>
+                                  <border>2</border>
+                                  <option>1</option>
+                                  <object class="wxRadioBox" name="m_radioBox10316">
+                                    <label>Use DTR</label>
+                                    <style>wxRA_SPECIFY_COLS</style>
+                                    <dimension>2</dimension>
+                                    <selection>0</selection>
+                                    <content>
+                                      <item>Normal (V-)</item>
+                                      <item>Inverted (V+)</item>
+                                    </content>
+                                  </object>
+                                </object>
+                                <object class="sizeritem" name="boxSizer13118">
+                                  <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                                  <border>2</border>
+                                  <object class="wxBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                      <flag>wxALL</flag>
+                                      <border>2</border>
+                                      <option>1</option>
+                                      <object class="wxButton" name="m_button11319">
+                                        <label>Initialize</label>
+                                        <style/>
+                                        <default>0</default>
+                                      </object>
+                                    </object>
+                                  </object>
+                                </object>
+                              </object>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+                <object class="sizeritem" name="staticBoxSizer79420">
+                  <flag>wxALL|wxEXPAND|wxALIGN_LEFT</flag>
+                  <border>2</border>
+                  <object class="wxStaticBoxSizer" name="staticBoxSizer79420">
+                    <sizeritem>
+                      <object class="spacer"/>
+                    </sizeritem>
+                    <orient>wxHORIZONTAL</orient>
+                    <label>PTT delay for all CAT/PTT types</label>
+                    <object class="sizeritem">
+                      <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>2</border>
+                      <object class="wxStaticText" name="m_staticText177">
+                        <label>Start of xmit delay</label>
+                        <style/>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxSlider" name="m_slider10721">
+                        <style>wxSL_HORIZONTAL</style>
+                        <min>0</min>
+                        <max>100</max>
+                        <value>50</value>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>2</border>
+                      <object class="wxStaticText" name="m_staticText179">
+                        <label>End of xmit delay:</label>
+                        <style/>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>2</border>
+                      <object class="wxSlider" name="m_slider10922">
+                        <style>wxSL_HORIZONTAL</style>
+                        <min>0</min>
+                        <max>100</max>
+                        <value>50</value>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+          </object>
+          <object class="notebookpage">
+            <label>RigCAT</label>
+            <selected>0</selected>
+            <object class="wxPanel" name="m_panelRIGCat">
+              <style>wxTAB_TRAVERSAL</style>
+              <tooltip>RigCat</tooltip>
+              <object class="wxBoxSizer">
+                <orient>wxVERTICAL</orient>
+                <object class="sizeritem">
+                  <flag>wxALL|wxALIGN_CENTER_HORIZONTAL</flag>
+                  <border>2</border>
+                  <object class="wxRadioButton" name="m_radioButton185">
+                    <style/>
+                    <label>Use RigCAT</label>
+                    <value>1</value>
+                  </object>
+                </object>
+                <object class="sizeritem" name="staticBoxSizer183">
+                  <flag>wxALL|wxALIGN_TOP</flag>
+                  <border>2</border>
+                  <option>1</option>
+                  <object class="wxStaticBoxSizer" name="staticBoxSizer183">
+                    <sizeritem>
+                      <object class="spacer"/>
+                    </sizeritem>
+                    <orient>wxVERTICAL</orient>
+                    <label/>
+                    <object class="sizeritem" name="flexGridSizer187">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxFlexGridSizer">
+                        <cols>1</cols>
+                        <rows>1</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>1</growablecols>
+                        <growablerows>1</growablerows>
+                        <object class="sizeritem" name="flexGridSizer204">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxFlexGridSizer">
+                            <cols>4</cols>
+                            <rows>3</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols/>
+                            <growablerows/>
+                            <object class="sizeritem" name="boxSizer193">
+                              <flag>wxALL|wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                              <border>2</border>
+                              <option>1</option>
+                              <object class="wxBoxSizer">
+                                <orient>wxHORIZONTAL</orient>
+                                <object class="sizeritem">
+                                  <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                                  <border>2</border>
+                                  <object class="wxStaticText" name="m_staticText189">
+                                    <label>File:</label>
+                                    <style/>
+                                  </object>
+                                </object>
+                                <object class="sizeritem">
+                                  <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                                  <border>2</border>
+                                  <object class="wxTextCtrl" name="m_textCtrl191">
+                                    <style/>
+                                  </object>
+                                </object>
+                              </object>
+                            </object>
+                            <object class="sizeritem" name="boxSizer206">
+                              <flag>wxALL|wxEXPAND</flag>
+                              <border>5</border>
+                              <option>1</option>
+                              <object class="wxBoxSizer">
+                                <orient>wxVERTICAL</orient>
+                                <object class="sizeritem">
+                                  <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                                  <border>2</border>
+                                  <object class="wxButton" name="m_button208">
+                                    <label>Open</label>
+                                    <style/>
+                                    <default>0</default>
+                                  </object>
+                                </object>
+                              </object>
+                            </object>
+                            <object class="sizeritem" name="boxSizer19329">
+                              <flag>wxALL|wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                              <border>2</border>
+                              <option>1</option>
+                              <object class="wxBoxSizer">
+                                <orient>wxHORIZONTAL</orient>
+                                <object class="sizeritem">
+                                  <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                                  <border>2</border>
+                                  <object class="wxStaticText" name="m_staticText18930">
+                                    <label>Device:</label>
+                                    <style/>
+                                  </object>
+                                </object>
+                                <object class="sizeritem">
+                                  <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                                  <border>5</border>
+                                  <object class="wxComboBox" name="m_comboBox218">
+                                    <style/>
+                                    <selection>-1</selection>
+                                    <content/>
+                                  </object>
+                                </object>
+                              </object>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="flexGridSizer222">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxFlexGridSizer">
+                        <cols>3</cols>
+                        <rows>1</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>2</growablecols>
+                        <growablerows/>
+                        <object class="sizeritem" name="boxSizer19326">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                              <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                              <border>2</border>
+                              <object class="wxStaticText" name="m_staticText18927">
+                                <label>Retries:</label>
+                                <style/>
+                              </object>
+                            </object>
+                            <object class="sizeritem">
+                              <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                              <border>2</border>
+                              <option>1</option>
+                              <object class="wxTextCtrl" name="m_textCtrl19128">
+                                <style/>
+                              </object>
+                            </object>
+                          </object>
+                        </object>
+                        <object class="sizeritem" name="boxSizer19323">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                              <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                              <border>2</border>
+                              <object class="wxStaticText" name="m_staticText18924">
+                                <label>Retry Interval:</label>
+                                <style/>
+                              </object>
+                            </object>
+                            <object class="sizeritem">
+                              <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                              <border>2</border>
+                              <option>1</option>
+                              <object class="wxTextCtrl" name="m_textCtrl19125">
+                                <style/>
+                              </object>
+                            </object>
+                          </object>
+                        </object>
+                        <object class="sizeritem" name="boxSizer1932954">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                              <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                              <border>2</border>
+                              <object class="wxStaticText" name="m_staticText1893055">
+                                <label>Baud Rate:</label>
+                                <style/>
+                              </object>
+                            </object>
+                            <object class="sizeritem">
+                              <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                              <border>2</border>
+                              <option>1</option>
+                              <object class="wxComboBox" name="m_comboBaud">
+                                <style/>
+                                <selection>-1</selection>
+                                <content>
+                                  <item>300</item>
+                                  <item>600</item>
+                                  <item>1200</item>
+                                  <item>2400</item>
+                                  <item>9600</item>
+                                  <item>19200</item>
+                                  <item>38400</item>
+                                  <item>56800</item>
+                                </content>
+                              </object>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="flexGridSizer18747">
+                      <flag>wxALL|wxEXPAND</flag>
+                      <border>2</border>
+                      <object class="wxFlexGridSizer">
+                        <cols>1</cols>
+                        <rows>1</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>1</growablecols>
+                        <growablerows/>
+                        <object class="sizeritem" name="flexGridSizer20448">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxFlexGridSizer">
+                            <cols>3</cols>
+                            <rows>1</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>3</growablecols>
+                            <growablerows>1</growablerows>
+                            <object class="sizeritem" name="boxSizer19349">
+                              <flag>wxALL|wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                              <border>2</border>
+                              <option>1</option>
+                              <object class="wxBoxSizer">
+                                <orient>wxHORIZONTAL</orient>
+                                <object class="sizeritem">
+                                  <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                                  <border>2</border>
+                                  <object class="wxStaticText" name="m_staticText18950">
+                                    <label>Write Delay (ms):</label>
+                                    <style/>
+                                  </object>
+                                </object>
+                                <object class="sizeritem">
+                                  <flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+                                  <border>2</border>
+                                  <object class="wxTextCtrl" name="m_textCtrl19151">
+                                    <style/>
+                                  </object>
+                                </object>
+                              </object>
+                            </object>
+                            <object class="sizeritem" name="boxSizer298">
+                              <flag>wxALL|wxEXPAND</flag>
+                              <border>2</border>
+                              <option>1</option>
+                              <object class="wxBoxSizer">
+                                <orient>wxHORIZONTAL</orient>
+                                <object class="sizeritem">
+                                  <flag>wxALL</flag>
+                                  <border>2</border>
+                                  <object class="wxStaticText" name="m_staticText298">
+                                    <label>Stop Bits:</label>
+                                    <style/>
+                                  </object>
+                                </object>
+                                <object class="sizeritem">
+                                  <flag>wxALL</flag>
+                                  <border>5</border>
+                                  <object class="wxSlider" name="m_sliderStopBits">
+                                    <style>wxSL_HORIZONTAL</style>
+                                    <min>0</min>
+                                    <max>2</max>
+                                    <value>0</value>
+                                  </object>
+                                </object>
+                              </object>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="flexGridSizer224">
+                      <flag>wxALL|wxEXPAND</flag>
+                      <border>2</border>
+                      <object class="wxFlexGridSizer">
+                        <cols>4</cols>
+                        <rows>1</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>4</growablecols>
+                        <growablerows>1</growablerows>
+                        <object class="spacer" name="Spacer234">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>1</border>
+                          <object class="wxCheckBox" name="m_checkBox236">
+                            <style/>
+                            <label>My CheckBox</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                        <object class="spacer" name="Spacer240">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxCheckBox" name="m_checkBox238">
+                            <style/>
+                            <label>My CheckBox</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="flexGridSizer22432">
+                      <flag>wxALL|wxEXPAND</flag>
+                      <border>2</border>
+                      <object class="wxFlexGridSizer">
+                        <cols>4</cols>
+                        <rows>1</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>4</growablecols>
+                        <growablerows>1</growablerows>
+                        <object class="spacer" name="Spacer23433">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                          <object class="wxCheckBox" name="m_checkBox23634">
+                            <style/>
+                            <label>My CheckBox</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                        <object class="spacer" name="Spacer24035">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                          <object class="wxCheckBox" name="m_checkBox23836">
+                            <style/>
+                            <label>My CheckBox</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="flexGridSizer22437">
+                      <flag>wxALL|wxEXPAND</flag>
+                      <border>2</border>
+                      <object class="wxFlexGridSizer">
+                        <cols>4</cols>
+                        <rows>1</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>4</growablecols>
+                        <growablerows>1</growablerows>
+                        <object class="spacer" name="Spacer23438">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxCheckBox" name="m_checkBox23639">
+                            <style/>
+                            <label>My CheckBox</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                        <object class="spacer" name="Spacer24040">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxEXPAND</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxCheckBox" name="m_checkBox23841">
+                            <style/>
+                            <label>My CheckBox</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="flexGridSizer22442">
+                      <flag>wxALL|wxEXPAND</flag>
+                      <border>2</border>
+                      <object class="wxFlexGridSizer">
+                        <cols>4</cols>
+                        <rows>1</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>4</growablecols>
+                        <growablerows>1</growablerows>
+                        <object class="spacer" name="Spacer23443">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                          <object class="wxCheckBox" name="m_checkBox23644">
+                            <style/>
+                            <label>My CheckBox</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                        <object class="spacer" name="Spacer24045">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                          <object class="wxCheckBox" name="m_checkBox23846">
+                            <style/>
+                            <label>My CheckBox</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+          </object>
+          <object class="notebookpage">
+            <label>Hamlib</label>
+            <selected>0</selected>
+            <object class="wxPanel" name="m_panelHAMLib">
+              <style>wxTAB_TRAVERSAL</style>
+              <tooltip>Hamlib Configuration</tooltip>
+              <object class="wxStaticBoxSizer" name="staticBoxSizer296">
+                <sizeritem>
+                  <object class="spacer"/>
+                </sizeritem>
+                <orient>wxVERTICAL</orient>
+                <label>My Label</label>
+              </object>
+            </object>
+          </object>
+          <object class="notebookpage">
+            <label>MemMap</label>
+            <selected>0</selected>
+            <object class="wxPanel" name="m_panelMemMap">
+              <style>wxTAB_TRAVERSAL</style>
+              <tooltip>Memory Mapped control</tooltip>
+              <object class="wxStaticBoxSizer" name="staticBoxSizer294">
+                <sizeritem>
+                  <object class="spacer"/>
+                </sizeritem>
+                <orient>wxVERTICAL</orient>
+                <label>My Label</label>
+              </object>
+            </object>
+          </object>
+          <object class="notebookpage">
+            <label>XML-RPC</label>
+            <selected>0</selected>
+            <object class="wxPanel" name="m_panelXMLRPC">
+              <style>wxTAB_TRAVERSAL</style>
+              <tooltip>XML-RPC control</tooltip>
+              <object class="wxStaticBoxSizer" name="staticBoxSizer85">
+                <sizeritem>
+                  <object class="spacer"/>
+                </sizeritem>
+                <orient>wxVERTICAL</orient>
+                <label>My Label</label>
+              </object>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object class="sizeritem">
+        <flag>wxALL|wxALIGN_RIGHT|wxALIGN_BOTTOM</flag>
+        <border>2</border>
+        <object class="wxStdDialogButtonSizer" name="m_stdBtnSizer155">
+          <object class="button">
+            <object class="wxButton" name="wxID_APPLY">
+              <label/>
+              <style/>
+              <bg/>
+              <fg/>
+              <default>0</default>
+            </object>
+          </object>
+          <object class="button">
+            <object class="wxButton" name="wxID_OK">
+              <label/>
+              <style/>
+              <bg/>
+              <fg/>
+              <default>1</default>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+</resource>

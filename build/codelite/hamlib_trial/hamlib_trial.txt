@@ -1,0 +1,1 @@
+./Release/main.o ./Release/MainFrame.o ./Release/wxcrafter.o ./Release/wxcrafter_bitmaps.o ./Release/win_resources.rc.o ./Release/dlg_rig_ctrl.o   
