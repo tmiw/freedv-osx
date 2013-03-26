@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ fdmdv2 - Release ]----------"
-	@"$(MAKE)" -f "fdmdv2.mk"
+	@echo "----------Building project:[ hamlib_trial - Release ]----------"
+	@cd "hamlib_trial" && $(MAKE) -f  "hamlib_trial.mk"
 clean:
-	@echo "----------Cleaning project:[ fdmdv2 - Release ]----------"
-	@"$(MAKE)" -f "fdmdv2.mk" clean
+	@echo "----------Cleaning project:[ hamlib_trial - Release ]----------"
+	@cd "hamlib_trial" && $(MAKE) -f  "hamlib_trial.mk" clean

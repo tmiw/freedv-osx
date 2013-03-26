@@ -22,6 +22,7 @@
     <File Name="../../src/varicode.c"/>
     <File Name="../../src/sox_biquad.c"/>
     <File Name="../../src/dlg_about.cpp"/>
+    <File Name="../../../codec2-dev/src/golay23.c"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../../src/dlg_comports.h"/>
@@ -42,10 +43,11 @@
     <File Name="../../src/varicode_table.h"/>
     <File Name="../../src/sox_biquad.h"/>
     <File Name="../../src/dlg_about.h"/>
-    <File Name="../version.h"/>
     <File Name="../../../../code/libCTB-0.16/include/ctb-0.16/ctb.h"/>
     <File Name="../../../../Audio/portaudio/include/portaudio.h"/>
     <File Name="../../src/dlg_filter.h"/>
+    <File Name="../../src/version.h"/>
+    <File Name="../../../codec2-dev/src/golay23.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
     <File Name="../../src/FDMDV2.fbp"/>
@@ -64,16 +66,16 @@
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" C_Options="-g;-O0;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=yes)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
-        <IncludePath Value="/bin/MinGW-4.6.1/msys/1.0/local/include"/>
+        <IncludePath Value="/bin/MinGW-4.7.1/msys/1.0/local/include"/>
         <IncludePath Value="../../../codec2-dev/src"/>
         <IncludePath Value="/bin/Projects/Audio/libsndfile/include"/>
         <Preprocessor Value="__WX__"/>
         <Preprocessor Value="_NO_AUTOTOOLS_=1"/>
+        <Preprocessor Value="DMW=1"/>
       </Compiler>
       <Linker Options="-mwindows;$(shell wx-config --debug=yes --libs --unicode=yes)" Required="yes">
         <LibraryPath Value="d:/Projects/Radio/codec2-dev/src/.libs"/>
-        <LibraryPath Value="d:/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
-        <LibraryPath Value="d:/Projects/Audio/libsndfile/lib"/>
+        <LibraryPath Value="d:/bin/MinGW-4.7.1/msys/1.0/local/lib"/>
         <Library Value="libsndfile-1.dll"/>
         <Library Value="codec2"/>
         <Library Value="libportaudio.a"/>
@@ -116,7 +118,7 @@
     </Configuration>
     <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" C_Options="-O2;-Wall;$(shell wx-config --cxxflags --unicode=yes --debug=no)" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
-        <IncludePath Value="/bin/MinGW-4.6.1/msys/1.0/local/include"/>
+        <IncludePath Value="/bin/MinGW-4.7.1/msys/1.0/local/include"/>
         <IncludePath Value="../../../codec2-dev/src"/>
         <IncludePath Value="../../../Audio/portaudio/include"/>
         <IncludePath Value="../../../Audio/libsndfile/include"/>
@@ -127,14 +129,14 @@
       </Compiler>
       <Linker Options="-mwindows;-s;$(shell wx-config --debug=no --libs --unicode=yes)" Required="yes">
         <LibraryPath Value="d:/Projects/Radio/codec2-dev/src/.libs"/>
-        <LibraryPath Value="d:/bin/MinGW-4.6.1/msys/1.0/local/lib"/>
+        <LibraryPath Value="d:/bin/MinGW-4.7.1/msys/1.0/local/lib"/>
         <LibraryPath Value="d:/Projects/Audio/libsndfile/lib"/>
         <Library Value="libsndfile-1.dll"/>
         <Library Value="codec2"/>
         <Library Value="libportaudio.a"/>
         <Library Value="libportaudiocpp.a"/>
         <Library Value="libsamplerate.dll.a"/>
-        <Library Value="ctb-0.16.dll"/>
+        <Library Value="libctb-0.16.a"/>
         <Library Value="libsox.a"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
