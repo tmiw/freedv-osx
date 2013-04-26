@@ -84,7 +84,7 @@
     <title>Rig Control</title>
     <centered>1</centered>
     <style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxCLOSE_BOX</style>
-    <size>450,300</size>
+    <size>460,315</size>
     <object class="wxBoxSizer">
       <orient>wxVERTICAL</orient>
       <object class="sizeritem">
@@ -314,7 +314,7 @@
                   </object>
                 </object>
                 <object class="sizeritem" name="staticBoxSizer183">
-                  <flag>wxALL|wxALIGN_TOP</flag>
+                  <flag>wxALL|wxEXPAND|wxALIGN_TOP</flag>
                   <border>2</border>
                   <option>1</option>
                   <object class="wxStaticBoxSizer" name="staticBoxSizer183">
@@ -593,6 +593,7 @@
                         <growablecols>4</growablecols>
                         <growablerows>1</growablerows>
                         <object class="spacer" name="Spacer234">
+                          <size>2,2</size>
                           <flag>wxALL|wxEXPAND</flag>
                           <border>2</border>
                           <option>1</option>
@@ -600,13 +601,15 @@
                         <object class="sizeritem">
                           <flag>wxALL|wxEXPAND</flag>
                           <border>1</border>
-                          <object class="wxCheckBox" name="m_checkBox236">
+                          <object class="wxCheckBox" name="m_cbEcho">
+                            <tooltip>Commands are echoed</tooltip>
                             <style/>
-                            <label>My CheckBox</label>
+                            <label>Commands echoed</label>
                             <checked>0</checked>
                           </object>
                         </object>
                         <object class="spacer" name="Spacer240">
+                          <size>2,2</size>
                           <flag>wxALL|wxEXPAND</flag>
                           <border>2</border>
                           <option>1</option>
@@ -615,9 +618,10 @@
                           <flag>wxALL|wxEXPAND</flag>
                           <border>2</border>
                           <option>1</option>
-                          <object class="wxCheckBox" name="m_checkBox238">
+                          <object class="wxCheckBox" name="m_cbCATPTT">
+                            <tooltip>Use CAT commands for PTT</tooltip>
                             <style/>
-                            <label>My CheckBox</label>
+                            <label>CAT command for PTT</label>
                             <checked>0</checked>
                           </object>
                         </object>
@@ -633,29 +637,37 @@
                         <hgap>0</hgap>
                         <growablecols>4</growablecols>
                         <growablerows>1</growablerows>
-                        <object class="spacer" name="Spacer23433">
-                          <flag>wxALL</flag>
+                        <object class="spacer" name="Spacer2402">
+                          <size>2,2</size>
+                          <flag>wxALL|wxEXPAND</flag>
                           <border>2</border>
+                          <option>1</option>
                         </object>
                         <object class="sizeritem">
                           <flag>wxALL</flag>
                           <border>2</border>
-                          <object class="wxCheckBox" name="m_checkBox23634">
+                          <option>1</option>
+                          <object class="wxCheckBox" name="m_cbToggleRTSPTT">
+                            <tooltip>Toggle RTS for PTT</tooltip>
                             <style/>
-                            <label>My CheckBox</label>
+                            <label>Toggle RTS for PTT</label>
                             <checked>0</checked>
                           </object>
                         </object>
-                        <object class="spacer" name="Spacer24035">
-                          <flag>wxALL</flag>
+                        <object class="spacer" name="Spacer2401">
+                          <size>2,2</size>
+                          <flag>wxALL|wxEXPAND</flag>
                           <border>2</border>
+                          <option>1</option>
                         </object>
                         <object class="sizeritem">
                           <flag>wxALL</flag>
                           <border>2</border>
-                          <object class="wxCheckBox" name="m_checkBox23836">
+                          <option>1</option>
+                          <object class="wxCheckBox" name="m_cbToggleDTRPTT">
+                            <tooltip>Toggle DTR for PTT</tooltip>
                             <style/>
-                            <label>My CheckBox</label>
+                            <label>Toggle DTR for PTT</label>
                             <checked>0</checked>
                           </object>
                         </object>
@@ -672,6 +684,7 @@
                         <growablecols>4</growablecols>
                         <growablerows>1</growablerows>
                         <object class="spacer" name="Spacer23438">
+                          <size>2,2</size>
                           <flag>wxALL|wxEXPAND</flag>
                           <border>2</border>
                           <option>1</option>
@@ -680,13 +693,15 @@
                           <flag>wxALL|wxEXPAND</flag>
                           <border>2</border>
                           <option>1</option>
-                          <object class="wxCheckBox" name="m_checkBox23639">
+                          <object class="wxCheckBox" name="m_cbRTS12VInit">
+                            <tooltip>Initialize state of RTS</tooltip>
                             <style/>
-                            <label>My CheckBox</label>
+                            <label>Initial RTS +12v</label>
                             <checked>0</checked>
                           </object>
                         </object>
                         <object class="spacer" name="Spacer24040">
+                          <size>2,2</size>
                           <flag>wxALL|wxEXPAND</flag>
                           <border>2</border>
                           <option>1</option>
@@ -695,9 +710,10 @@
                           <flag>wxALL|wxEXPAND</flag>
                           <border>2</border>
                           <option>1</option>
-                          <object class="wxCheckBox" name="m_checkBox23841">
+                          <object class="wxCheckBox" name="m_cbDTR12VInit">
+                            <tooltip>Initialize state of DTR</tooltip>
                             <style/>
-                            <label>My CheckBox</label>
+                            <label>Initial DTR +12v</label>
                             <checked>0</checked>
                           </object>
                         </object>
@@ -714,28 +730,31 @@
                         <growablecols>4</growablecols>
                         <growablerows>1</growablerows>
                         <object class="spacer" name="Spacer23443">
+                          <size>2,2</size>
                           <flag>wxALL</flag>
                           <border>2</border>
                         </object>
                         <object class="sizeritem">
                           <flag>wxALL</flag>
                           <border>2</border>
-                          <object class="wxCheckBox" name="m_checkBox23644">
+                          <object class="wxCheckBox" name="m_cbRTSCTSFlowCtl">
                             <style/>
-                            <label>My CheckBox</label>
+                            <label>RTS/CTS Flow Control</label>
                             <checked>0</checked>
                           </object>
                         </object>
                         <object class="spacer" name="Spacer24045">
+                          <size>2,2</size>
                           <flag>wxALL</flag>
                           <border>2</border>
                         </object>
                         <object class="sizeritem">
                           <flag>wxALL</flag>
                           <border>2</border>
-                          <object class="wxCheckBox" name="m_checkBox23846">
+                          <object class="wxCheckBox" name="m_cbVSPEnable">
+                            <tooltip>Virtual serial port enable. Suppress WARNINGS</tooltip>
                             <style/>
-                            <label>My CheckBox</label>
+                            <label>RTS/CTS Flow Control</label>
                             <checked>0</checked>
                           </object>
                         </object>
@@ -747,7 +766,7 @@
             </object>
           </object>
           <object class="notebookpage">
-            <label>Hamlib</label>
+            <label>HAMlib</label>
             <selected>0</selected>
             <object class="wxPanel" name="m_panelHAMLib">
               <style>wxTAB_TRAVERSAL</style>
@@ -757,7 +776,357 @@
                   <object class="spacer"/>
                 </sizeritem>
                 <orient>wxVERTICAL</orient>
-                <label>My Label</label>
+                <label/>
+                <object class="sizeritem" name="gridSizer368">
+                  <flag>wxALL|wxEXPAND</flag>
+                  <border>5</border>
+                  <object class="wxGridSizer">
+                    <cols>3</cols>
+                    <rows>8</rows>
+                    <vgap>0</vgap>
+                    <hgap>0</hgap>
+                    <object class="sizeritem" name="boxSizer312">
+                      <flag>wxALL|wxEXPAND</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <object class="wxStaticText" name="m_staticText308">
+                            <label>Device:</label>
+                            <style/>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxComboBox" name="m_comboBox314">
+                            <style/>
+                            <selection>-1</selection>
+                            <content/>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxStaticText" name="m_staticText304">
+                        <label>Rig:</label>
+                        <style/>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer302">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxTextCtrl" name="m_textCtrl306">
+                            <style/>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer320">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <object class="wxStaticText" name="m_staticText326">
+                            <label>Retries:</label>
+                            <style/>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxTextCtrl" name="m_textCtrl328">
+                            <style/>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer32057">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <object class="wxStaticText" name="m_staticText32658">
+                            <label>Retry Interval:</label>
+                            <style/>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxTextCtrl" name="m_textCtrl32859">
+                            <style/>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer32060">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <object class="wxStaticText" name="m_staticText32661">
+                            <label>Baud Rate:</label>
+                            <style/>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxComboBox" name="m_comboBox339">
+                            <style/>
+                            <selection>-1</selection>
+                            <content>
+                              <item>300</item>
+                              <item>600</item>
+                              <item>1200</item>
+                              <item>2400</item>
+                              <item>9600</item>
+                              <item>19200</item>
+                              <item>38400</item>
+                              <item>56800</item>
+                            </content>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer32064">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <object class="wxStaticText" name="m_staticText32665">
+                            <label>Write Delay:</label>
+                            <style/>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxTextCtrl" name="m_textCtrl32866">
+                            <style/>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer3205767">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <object class="wxStaticText" name="m_staticText3265868">
+                            <label>Post Write Delay:</label>
+                            <style/>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxTextCtrl" name="m_textCtrl3285969">
+                            <style/>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer3206070">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxStaticText" name="m_staticText3266171">
+                            <label>Stop bits:</label>
+                            <style/>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <option>1</option>
+                          <object class="wxSlider" name="m_slider361">
+                            <style>wxSL_LABELS|wxSL_HORIZONTAL</style>
+                            <min>0</min>
+                            <max>2</max>
+                            <value>1</value>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxCheckBox" name="m_cbHAMLIBPTT">
+                        <tooltip>Use Hamlib to control PTT</tooltip>
+                        <style/>
+                        <label>PTT via HAMLib</label>
+                        <checked>0</checked>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL|wxALIGN_RIGHT</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxStaticText" name="m_staticText408">
+                        <label>Sideband:</label>
+                        <style/>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer410">
+                      <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxBoxSizer">
+                        <orient>wxVERTICAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>2</border>
+                          <object class="wxComboBox" name="m_comboBox376">
+                            <style/>
+                            <selection>-1</selection>
+                            <content>
+                              <item>Upper</item>
+                              <item>Lower</item>
+                            </content>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxCheckBox" name="m_checkBox378">
+                        <tooltip>Initialize state of RTS</tooltip>
+                        <style/>
+                        <label>Initial RTS +12v</label>
+                        <checked>0</checked>
+                      </object>
+                    </object>
+                    <object class="spacer" name="Spacer380">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxCheckBox" name="m_checkBox382">
+                        <style/>
+                        <label>Initial DTR +12v</label>
+                        <checked>0</checked>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxCheckBox" name="m_cbRTSCTS">
+                        <tooltip>Use RTS/CTS Flow Control</tooltip>
+                        <style/>
+                        <label>RTS/CTS Flow Control</label>
+                        <checked>0</checked>
+                      </object>
+                    </object>
+                    <object class="spacer" name="Spacer386">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxCheckBox" name="m_cbXONXOFF">
+                        <tooltip>Use XON/XOFF flow control</tooltip>
+                        <style/>
+                        <label>XON/XOFF Flow Control</label>
+                        <checked>0</checked>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxStaticText" name="m_staticText404">
+                        <label>Advanced Configuration:</label>
+                        <style/>
+                      </object>
+                    </object>
+                    <object class="spacer" name="Spacer396">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxButton" name="m_btnRevert">
+                        <label>Revert</label>
+                        <style/>
+                        <tooltip>Revert to previous settings</tooltip>
+                        <default>0</default>
+                      </object>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL|wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>2</border>
+                      <option>1</option>
+                      <object class="wxTextCtrl" name="m_textAdvancedCFG">
+                        <style/>
+                        <tooltip>Enter Advanced Configuration string</tooltip>
+                      </object>
+                    </object>
+                    <object class="spacer" name="Spacer406">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                    </object>
+                    <object class="sizeritem">
+                      <flag>wxALL</flag>
+                      <border>2</border>
+                      <object class="wxButton" name="m_btnInitHamlib">
+                        <label>Initialize</label>
+                        <style/>
+                        <tooltip>Initialize HAMLib</tooltip>
+                        <default>0</default>
+                      </object>
+                    </object>
+                  </object>
+                </object>
               </object>
             </object>
           </object>
@@ -766,13 +1135,81 @@
             <selected>0</selected>
             <object class="wxPanel" name="m_panelMemMap">
               <style>wxTAB_TRAVERSAL</style>
+              <bg>wxSYS_COLOUR_BTNHIGHLIGHT</bg>
               <tooltip>Memory Mapped control</tooltip>
               <object class="wxStaticBoxSizer" name="staticBoxSizer294">
                 <sizeritem>
                   <object class="spacer"/>
                 </sizeritem>
                 <orient>wxVERTICAL</orient>
-                <label>My Label</label>
+                <label/>
+                <object class="sizeritem" name="gridSizer420">
+                  <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                  <border>2</border>
+                  <option>1</option>
+                  <object class="wxGridSizer">
+                    <cols>1</cols>
+                    <rows>2</rows>
+                    <vgap>0</vgap>
+                    <hgap>0</hgap>
+                    <object class="sizeritem" name="staticBoxSizer424">
+                      <flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>5</border>
+                      <option>1</option>
+                      <object class="wxStaticBoxSizer" name="staticBoxSizer424">
+                        <sizeritem>
+                          <object class="spacer"/>
+                        </sizeritem>
+                        <orient>wxVERTICAL</orient>
+                        <label/>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>5</border>
+                          <option>1</option>
+                          <object class="wxStaticText" name="m_staticText422">
+                            <label>\nControl via Memory Mapped Shared Variables, i. e. Kachina \n</label>
+                            <style>wxALIGN_CENTRE</style>
+                            <bg>wxSYS_COLOUR_BTNFACE</bg>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer4456">
+                      <flag>wxALL|wxALIGN_CENTER_HORIZONTAL</flag>
+                      <border>5</border>
+                      <object class="wxBoxSizer">
+                        <orient>wxVERTICAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>5</border>
+                          <object class="wxCheckBox" name="m_checkBox4377">
+                            <style/>
+                            <label>Use Memorymap</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_BOTTOM</flag>
+                          <border>5</border>
+                          <object class="wxCheckBox" name="m_checkBox4398">
+                            <style/>
+                            <label>Use Memmap PTT</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>5</border>
+                          <object class="wxButton" name="m_button4419">
+                            <label>Initialize</label>
+                            <style/>
+                            <default>0</default>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
               </object>
             </object>
           </object>
@@ -787,7 +1224,65 @@
                   <object class="spacer"/>
                 </sizeritem>
                 <orient>wxVERTICAL</orient>
-                <label>My Label</label>
+                <label/>
+                <object class="sizeritem" name="gridSizer4203">
+                  <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                  <border>2</border>
+                  <option>1</option>
+                  <object class="wxGridSizer">
+                    <cols>1</cols>
+                    <rows>2</rows>
+                    <vgap>0</vgap>
+                    <hgap>0</hgap>
+                    <object class="sizeritem" name="staticBoxSizer4244">
+                      <flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                      <border>5</border>
+                      <option>1</option>
+                      <object class="wxStaticBoxSizer" name="staticBoxSizer4244">
+                        <sizeritem>
+                          <object class="spacer"/>
+                        </sizeritem>
+                        <orient>wxVERTICAL</orient>
+                        <label/>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>5</border>
+                          <option>1</option>
+                          <object class="wxStaticText" name="m_staticText42210">
+                            <label>\nRig control via external program using XML RPC Remote Calls\n</label>
+                            <style>wxALIGN_CENTRE</style>
+                            <bg>wxSYS_COLOUR_BTNFACE</bg>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object class="sizeritem" name="boxSizer445">
+                      <flag>wxALL|wxALIGN_CENTER_HORIZONTAL</flag>
+                      <border>5</border>
+                      <object class="wxBoxSizer">
+                        <orient>wxVERTICAL</orient>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>5</border>
+                          <object class="wxCheckBox" name="m_checkBox437">
+                            <style/>
+                            <label>Use XML-RPC</label>
+                            <checked>0</checked>
+                          </object>
+                        </object>
+                        <object class="sizeritem">
+                          <flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+                          <border>5</border>
+                          <object class="wxButton" name="m_button441">
+                            <label>Initialize</label>
+                            <style/>
+                            <default>0</default>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
               </object>
             </object>
           </object>
@@ -813,6 +1308,15 @@
               <bg/>
               <fg/>
               <default>1</default>
+            </object>
+          </object>
+          <object class="button">
+            <object class="wxButton" name="wxID_CANCEL">
+              <label/>
+              <style/>
+              <bg/>
+              <fg/>
+              <default>0</default>
             </object>
           </object>
         </object>

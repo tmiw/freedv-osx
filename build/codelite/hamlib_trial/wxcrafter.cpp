@@ -231,7 +231,7 @@ DlgRigCtrlBase::DlgRigCtrlBase(wxWindow* parent, wxWindowID id, const wxString& 
     
     wxStaticBoxSizer* staticBoxSizer183 = new wxStaticBoxSizer( new wxStaticBox(m_panelRIGCat, wxID_ANY, wxT("")), wxVERTICAL);
     
-    boxSizer67->Add(staticBoxSizer183, 1, wxALL|wxALIGN_TOP, 2);
+    boxSizer67->Add(staticBoxSizer183, 1, wxALL|wxEXPAND|wxALIGN_TOP, 2);
     
     wxFlexGridSizer* flexGridSizer187 = new wxFlexGridSizer(  1, 1, 0, 0);
     flexGridSizer187->SetFlexibleDirection( wxBOTH );
@@ -379,19 +379,21 @@ DlgRigCtrlBase::DlgRigCtrlBase(wxWindow* parent, wxWindowID id, const wxString& 
     
     staticBoxSizer183->Add(flexGridSizer224, 0, wxALL|wxEXPAND, 2);
     
-    flexGridSizer224->Add(0, 0, 1, wxALL|wxEXPAND, 2);
+    flexGridSizer224->Add(2, 2, 1, wxALL|wxEXPAND, 2);
     
-    m_checkBox236 = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("My CheckBox"), wxDefaultPosition, wxSize(-1,-1), 0);
-    m_checkBox236->SetValue(false);
+    m_cbEcho = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("Commands echoed"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbEcho->SetValue(false);
+    m_cbEcho->SetToolTip(_("Commands are echoed"));
     
-    flexGridSizer224->Add(m_checkBox236, 0, wxALL|wxEXPAND, 1);
+    flexGridSizer224->Add(m_cbEcho, 0, wxALL|wxEXPAND, 1);
     
-    flexGridSizer224->Add(0, 0, 1, wxALL|wxEXPAND, 2);
+    flexGridSizer224->Add(2, 2, 1, wxALL|wxEXPAND, 2);
     
-    m_checkBox238 = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("My CheckBox"), wxDefaultPosition, wxSize(-1,-1), 0);
-    m_checkBox238->SetValue(false);
+    m_cbCATPTT = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("CAT command for PTT"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbCATPTT->SetValue(false);
+    m_cbCATPTT->SetToolTip(_("Use CAT commands for PTT"));
     
-    flexGridSizer224->Add(m_checkBox238, 1, wxALL|wxEXPAND, 2);
+    flexGridSizer224->Add(m_cbCATPTT, 1, wxALL|wxEXPAND, 2);
     
     wxFlexGridSizer* flexGridSizer22432 = new wxFlexGridSizer(  1, 4, 0, 0);
     flexGridSizer22432->SetFlexibleDirection( wxBOTH );
@@ -401,19 +403,21 @@ DlgRigCtrlBase::DlgRigCtrlBase(wxWindow* parent, wxWindowID id, const wxString& 
     
     staticBoxSizer183->Add(flexGridSizer22432, 0, wxALL|wxEXPAND, 2);
     
-    flexGridSizer22432->Add(0, 0, 0, wxALL, 2);
+    flexGridSizer22432->Add(2, 2, 1, wxALL|wxEXPAND, 2);
     
-    m_checkBox23634 = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("My CheckBox"), wxDefaultPosition, wxSize(-1,-1), 0);
-    m_checkBox23634->SetValue(false);
+    m_cbToggleRTSPTT = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("Toggle RTS for PTT"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbToggleRTSPTT->SetValue(false);
+    m_cbToggleRTSPTT->SetToolTip(_("Toggle RTS for PTT"));
     
-    flexGridSizer22432->Add(m_checkBox23634, 0, wxALL, 2);
+    flexGridSizer22432->Add(m_cbToggleRTSPTT, 1, wxALL, 2);
     
-    flexGridSizer22432->Add(0, 0, 0, wxALL, 2);
+    flexGridSizer22432->Add(2, 2, 1, wxALL|wxEXPAND, 2);
     
-    m_checkBox23836 = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("My CheckBox"), wxDefaultPosition, wxSize(-1,-1), 0);
-    m_checkBox23836->SetValue(false);
+    m_cbToggleDTRPTT = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("Toggle DTR for PTT"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbToggleDTRPTT->SetValue(false);
+    m_cbToggleDTRPTT->SetToolTip(_("Toggle DTR for PTT"));
     
-    flexGridSizer22432->Add(m_checkBox23836, 0, wxALL, 2);
+    flexGridSizer22432->Add(m_cbToggleDTRPTT, 1, wxALL, 2);
     
     wxFlexGridSizer* flexGridSizer22437 = new wxFlexGridSizer(  1, 4, 0, 0);
     flexGridSizer22437->SetFlexibleDirection( wxBOTH );
@@ -423,19 +427,21 @@ DlgRigCtrlBase::DlgRigCtrlBase(wxWindow* parent, wxWindowID id, const wxString& 
     
     staticBoxSizer183->Add(flexGridSizer22437, 0, wxALL|wxEXPAND, 2);
     
-    flexGridSizer22437->Add(0, 0, 1, wxALL|wxEXPAND, 2);
+    flexGridSizer22437->Add(2, 2, 1, wxALL|wxEXPAND, 2);
     
-    m_checkBox23639 = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("My CheckBox"), wxDefaultPosition, wxSize(-1,-1), 0);
-    m_checkBox23639->SetValue(false);
+    m_cbRTS12VInit = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("Initial RTS +12v"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbRTS12VInit->SetValue(false);
+    m_cbRTS12VInit->SetToolTip(_("Initialize state of RTS"));
     
-    flexGridSizer22437->Add(m_checkBox23639, 1, wxALL|wxEXPAND, 2);
+    flexGridSizer22437->Add(m_cbRTS12VInit, 1, wxALL|wxEXPAND, 2);
     
-    flexGridSizer22437->Add(0, 0, 1, wxALL|wxEXPAND, 2);
+    flexGridSizer22437->Add(2, 2, 1, wxALL|wxEXPAND, 2);
     
-    m_checkBox23841 = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("My CheckBox"), wxDefaultPosition, wxSize(-1,-1), 0);
-    m_checkBox23841->SetValue(false);
+    m_cbDTR12VInit = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("Initial DTR +12v"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbDTR12VInit->SetValue(false);
+    m_cbDTR12VInit->SetToolTip(_("Initialize state of DTR"));
     
-    flexGridSizer22437->Add(m_checkBox23841, 1, wxALL|wxEXPAND, 2);
+    flexGridSizer22437->Add(m_cbDTR12VInit, 1, wxALL|wxEXPAND, 2);
     
     wxFlexGridSizer* flexGridSizer22442 = new wxFlexGridSizer(  1, 4, 0, 0);
     flexGridSizer22442->SetFlexibleDirection( wxBOTH );
@@ -445,40 +451,280 @@ DlgRigCtrlBase::DlgRigCtrlBase(wxWindow* parent, wxWindowID id, const wxString& 
     
     staticBoxSizer183->Add(flexGridSizer22442, 0, wxALL|wxEXPAND, 2);
     
-    flexGridSizer22442->Add(0, 0, 0, wxALL, 2);
+    flexGridSizer22442->Add(2, 2, 0, wxALL, 2);
     
-    m_checkBox23644 = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("My CheckBox"), wxDefaultPosition, wxSize(-1,-1), 0);
-    m_checkBox23644->SetValue(false);
+    m_cbRTSCTSFlowCtl = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("RTS/CTS Flow Control"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbRTSCTSFlowCtl->SetValue(false);
     
-    flexGridSizer22442->Add(m_checkBox23644, 0, wxALL, 2);
+    flexGridSizer22442->Add(m_cbRTSCTSFlowCtl, 0, wxALL, 2);
     
-    flexGridSizer22442->Add(0, 0, 0, wxALL, 2);
+    flexGridSizer22442->Add(2, 2, 0, wxALL, 2);
     
-    m_checkBox23846 = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("My CheckBox"), wxDefaultPosition, wxSize(-1,-1), 0);
-    m_checkBox23846->SetValue(false);
+    m_cbVSPEnable = new wxCheckBox(m_panelRIGCat, wxID_ANY, _("RTS/CTS Flow Control"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbVSPEnable->SetValue(false);
+    m_cbVSPEnable->SetToolTip(_("Virtual serial port enable. Suppress WARNINGS"));
     
-    flexGridSizer22442->Add(m_checkBox23846, 0, wxALL, 2);
+    flexGridSizer22442->Add(m_cbVSPEnable, 0, wxALL, 2);
     
     m_panelHAMLib = new wxPanel(m_notebook53, wxID_ANY, wxDefaultPosition, wxSize(-1,-1), wxTAB_TRAVERSAL);
     m_panelHAMLib->SetToolTip(_("Hamlib Configuration"));
-    m_notebook53->AddPage(m_panelHAMLib, _("Hamlib"), false);
+    m_notebook53->AddPage(m_panelHAMLib, _("HAMlib"), false);
     
-    wxStaticBoxSizer* staticBoxSizer296 = new wxStaticBoxSizer( new wxStaticBox(m_panelHAMLib, wxID_ANY, _("My Label")), wxVERTICAL);
+    wxStaticBoxSizer* staticBoxSizer296 = new wxStaticBoxSizer( new wxStaticBox(m_panelHAMLib, wxID_ANY, wxT("")), wxVERTICAL);
     m_panelHAMLib->SetSizer(staticBoxSizer296);
     
+    wxGridSizer* gridSizer368 = new wxGridSizer(  8, 3, 0, 0);
+    
+    staticBoxSizer296->Add(gridSizer368, 0, wxALL|wxEXPAND, 5);
+    
+    wxBoxSizer* boxSizer312 = new wxBoxSizer(wxHORIZONTAL);
+    
+    gridSizer368->Add(boxSizer312, 1, wxALL|wxEXPAND, 2);
+    
+    m_staticText308 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Device:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer312->Add(m_staticText308, 0, wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxArrayString m_comboBox314Arr;
+    m_comboBox314 = new wxComboBox(m_panelHAMLib, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(-1,-1), m_comboBox314Arr, 0);
+    
+    boxSizer312->Add(m_comboBox314, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    m_staticText304 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Rig:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    gridSizer368->Add(m_staticText304, 1, wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxBoxSizer* boxSizer302 = new wxBoxSizer(wxHORIZONTAL);
+    
+    gridSizer368->Add(boxSizer302, 1, wxALL, 2);
+    
+    m_textCtrl306 = new wxTextCtrl(m_panelHAMLib, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer302->Add(m_textCtrl306, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxBoxSizer* boxSizer320 = new wxBoxSizer(wxHORIZONTAL);
+    
+    gridSizer368->Add(boxSizer320, 1, wxALL, 2);
+    
+    m_staticText326 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Retries:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer320->Add(m_staticText326, 0, wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    m_textCtrl328 = new wxTextCtrl(m_panelHAMLib, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer320->Add(m_textCtrl328, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxBoxSizer* boxSizer32057 = new wxBoxSizer(wxHORIZONTAL);
+    
+    gridSizer368->Add(boxSizer32057, 1, wxALL, 2);
+    
+    m_staticText32658 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Retry Interval:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer32057->Add(m_staticText32658, 0, wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    m_textCtrl32859 = new wxTextCtrl(m_panelHAMLib, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer32057->Add(m_textCtrl32859, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxBoxSizer* boxSizer32060 = new wxBoxSizer(wxHORIZONTAL);
+    
+    gridSizer368->Add(boxSizer32060, 1, wxALL, 2);
+    
+    m_staticText32661 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Baud Rate:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer32060->Add(m_staticText32661, 0, wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxArrayString m_comboBox339Arr;
+    m_comboBox339Arr.Add(wxT("300"));
+    m_comboBox339Arr.Add(wxT("600"));
+    m_comboBox339Arr.Add(wxT("1200"));
+    m_comboBox339Arr.Add(wxT("2400"));
+    m_comboBox339Arr.Add(wxT("9600"));
+    m_comboBox339Arr.Add(wxT("19200"));
+    m_comboBox339Arr.Add(wxT("38400"));
+    m_comboBox339Arr.Add(wxT("56800"));
+    m_comboBox339 = new wxComboBox(m_panelHAMLib, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(-1,-1), m_comboBox339Arr, 0);
+    
+    boxSizer32060->Add(m_comboBox339, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxBoxSizer* boxSizer32064 = new wxBoxSizer(wxHORIZONTAL);
+    
+    gridSizer368->Add(boxSizer32064, 0, wxALL, 2);
+    
+    m_staticText32665 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Write Delay:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer32064->Add(m_staticText32665, 0, wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    m_textCtrl32866 = new wxTextCtrl(m_panelHAMLib, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer32064->Add(m_textCtrl32866, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxBoxSizer* boxSizer3205767 = new wxBoxSizer(wxHORIZONTAL);
+    
+    gridSizer368->Add(boxSizer3205767, 1, wxALL, 2);
+    
+    m_staticText3265868 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Post Write Delay:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer3205767->Add(m_staticText3265868, 0, wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    m_textCtrl3285969 = new wxTextCtrl(m_panelHAMLib, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer3205767->Add(m_textCtrl3285969, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxBoxSizer* boxSizer3206070 = new wxBoxSizer(wxHORIZONTAL);
+    
+    gridSizer368->Add(boxSizer3206070, 0, wxALL, 2);
+    
+    m_staticText3266171 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Stop bits:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer3206070->Add(m_staticText3266171, 1, wxALL, 2);
+    
+    m_slider361 = new wxSlider(m_panelHAMLib, wxID_ANY, 1, 0, 2, wxDefaultPosition, wxSize(-1,-1), wxSL_LABELS|wxSL_HORIZONTAL);
+    
+    boxSizer3206070->Add(m_slider361, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+    
+    m_cbHAMLIBPTT = new wxCheckBox(m_panelHAMLib, wxID_ANY, _("PTT via HAMLib"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbHAMLIBPTT->SetValue(false);
+    m_cbHAMLIBPTT->SetToolTip(_("Use Hamlib to control PTT"));
+    
+    gridSizer368->Add(m_cbHAMLIBPTT, 1, wxALL, 2);
+    
+    m_staticText408 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Sideband:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    gridSizer368->Add(m_staticText408, 1, wxALL|wxALIGN_RIGHT, 2);
+    
+    wxBoxSizer* boxSizer410 = new wxBoxSizer(wxVERTICAL);
+    
+    gridSizer368->Add(boxSizer410, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxArrayString m_comboBox376Arr;
+    m_comboBox376Arr.Add(wxT("Upper"));
+    m_comboBox376Arr.Add(wxT("Lower"));
+    m_comboBox376 = new wxComboBox(m_panelHAMLib, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(-1,-1), m_comboBox376Arr, 0);
+    
+    boxSizer410->Add(m_comboBox376, 0, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 2);
+    
+    m_checkBox378 = new wxCheckBox(m_panelHAMLib, wxID_ANY, _("Initial RTS +12v"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_checkBox378->SetValue(false);
+    m_checkBox378->SetToolTip(_("Initialize state of RTS"));
+    
+    gridSizer368->Add(m_checkBox378, 0, wxALL, 2);
+    
+    gridSizer368->Add(0, 0, 0, wxALL, 2);
+    
+    m_checkBox382 = new wxCheckBox(m_panelHAMLib, wxID_ANY, _("Initial DTR +12v"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_checkBox382->SetValue(false);
+    
+    gridSizer368->Add(m_checkBox382, 0, wxALL, 2);
+    
+    m_cbRTSCTS = new wxCheckBox(m_panelHAMLib, wxID_ANY, _("RTS/CTS Flow Control"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbRTSCTS->SetValue(false);
+    m_cbRTSCTS->SetToolTip(_("Use RTS/CTS Flow Control"));
+    
+    gridSizer368->Add(m_cbRTSCTS, 0, wxALL, 2);
+    
+    gridSizer368->Add(0, 0, 0, wxALL, 2);
+    
+    m_cbXONXOFF = new wxCheckBox(m_panelHAMLib, wxID_ANY, _("XON/XOFF Flow Control"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_cbXONXOFF->SetValue(false);
+    m_cbXONXOFF->SetToolTip(_("Use XON/XOFF flow control"));
+    
+    gridSizer368->Add(m_cbXONXOFF, 0, wxALL, 2);
+    
+    m_staticText404 = new wxStaticText(m_panelHAMLib, wxID_ANY, _("Advanced Configuration:"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    gridSizer368->Add(m_staticText404, 0, wxALL, 2);
+    
+    gridSizer368->Add(0, 0, 0, wxALL, 2);
+    
+    m_btnRevert = new wxButton(m_panelHAMLib, wxID_ANY, _("Revert"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_btnRevert->SetToolTip(_("Revert to previous settings"));
+    
+    gridSizer368->Add(m_btnRevert, 0, wxALL, 2);
+    
+    m_textAdvancedCFG = new wxTextCtrl(m_panelHAMLib, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_textAdvancedCFG->SetToolTip(_("Enter Advanced Configuration string"));
+    
+    gridSizer368->Add(m_textAdvancedCFG, 1, wxALL|wxEXPAND|wxALIGN_CENTER_VERTICAL, 2);
+    
+    gridSizer368->Add(0, 0, 0, wxALL, 2);
+    
+    m_btnInitHamlib = new wxButton(m_panelHAMLib, wxID_ANY, _("Initialize"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_btnInitHamlib->SetToolTip(_("Initialize HAMLib"));
+    
+    gridSizer368->Add(m_btnInitHamlib, 0, wxALL, 2);
+    
     m_panelMemMap = new wxPanel(m_notebook53, wxID_ANY, wxDefaultPosition, wxSize(-1,-1), wxTAB_TRAVERSAL);
+    m_panelMemMap->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNHIGHLIGHT));
     m_panelMemMap->SetToolTip(_("Memory Mapped control"));
     m_notebook53->AddPage(m_panelMemMap, _("MemMap"), false);
     
-    wxStaticBoxSizer* staticBoxSizer294 = new wxStaticBoxSizer( new wxStaticBox(m_panelMemMap, wxID_ANY, _("My Label")), wxVERTICAL);
+    wxStaticBoxSizer* staticBoxSizer294 = new wxStaticBoxSizer( new wxStaticBox(m_panelMemMap, wxID_ANY, wxT("")), wxVERTICAL);
     m_panelMemMap->SetSizer(staticBoxSizer294);
+    
+    wxGridSizer* gridSizer420 = new wxGridSizer(  2, 1, 0, 0);
+    
+    staticBoxSizer294->Add(gridSizer420, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxStaticBoxSizer* staticBoxSizer424 = new wxStaticBoxSizer( new wxStaticBox(m_panelMemMap, wxID_ANY, wxT("")), wxVERTICAL);
+    
+    gridSizer420->Add(staticBoxSizer424, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    
+    m_staticText422 = new wxStaticText(m_panelMemMap, wxID_ANY, _("\nControl via Memory Mapped Shared Variables, i. e. Kachina \n"), wxDefaultPosition, wxSize(-1,-1), wxALIGN_CENTRE);
+    m_staticText422->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNFACE));
+    
+    staticBoxSizer424->Add(m_staticText422, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    
+    wxBoxSizer* boxSizer4456 = new wxBoxSizer(wxVERTICAL);
+    
+    gridSizer420->Add(boxSizer4456, 0, wxALL|wxALIGN_CENTER_HORIZONTAL, 5);
+    
+    m_checkBox4377 = new wxCheckBox(m_panelMemMap, wxID_ANY, _("Use Memorymap"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_checkBox4377->SetValue(false);
+    
+    boxSizer4456->Add(m_checkBox4377, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    
+    m_checkBox4398 = new wxCheckBox(m_panelMemMap, wxID_ANY, _("Use Memmap PTT"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_checkBox4398->SetValue(false);
+    
+    boxSizer4456->Add(m_checkBox4398, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_BOTTOM, 5);
+    
+    m_button4419 = new wxButton(m_panelMemMap, wxID_ANY, _("Initialize"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer4456->Add(m_button4419, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     
     m_panelXMLRPC = new wxPanel(m_notebook53, wxID_ANY, wxDefaultPosition, wxSize(-1,-1), wxTAB_TRAVERSAL);
     m_panelXMLRPC->SetToolTip(_("XML-RPC control"));
     m_notebook53->AddPage(m_panelXMLRPC, _("XML-RPC"), false);
     
-    wxStaticBoxSizer* staticBoxSizer85 = new wxStaticBoxSizer( new wxStaticBox(m_panelXMLRPC, wxID_ANY, _("My Label")), wxVERTICAL);
+    wxStaticBoxSizer* staticBoxSizer85 = new wxStaticBoxSizer( new wxStaticBox(m_panelXMLRPC, wxID_ANY, wxT("")), wxVERTICAL);
     m_panelXMLRPC->SetSizer(staticBoxSizer85);
+    
+    wxGridSizer* gridSizer4203 = new wxGridSizer(  2, 1, 0, 0);
+    
+    staticBoxSizer85->Add(gridSizer4203, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+    
+    wxStaticBoxSizer* staticBoxSizer4244 = new wxStaticBoxSizer( new wxStaticBox(m_panelXMLRPC, wxID_ANY, wxT("")), wxVERTICAL);
+    
+    gridSizer4203->Add(staticBoxSizer4244, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    
+    m_staticText42210 = new wxStaticText(m_panelXMLRPC, wxID_ANY, _("\nRig control via external program using XML RPC Remote Calls\n"), wxDefaultPosition, wxSize(-1,-1), wxALIGN_CENTRE);
+    m_staticText42210->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNFACE));
+    
+    staticBoxSizer4244->Add(m_staticText42210, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    
+    wxBoxSizer* boxSizer445 = new wxBoxSizer(wxVERTICAL);
+    
+    gridSizer4203->Add(boxSizer445, 0, wxALL|wxALIGN_CENTER_HORIZONTAL, 5);
+    
+    m_checkBox437 = new wxCheckBox(m_panelXMLRPC, wxID_ANY, _("Use XML-RPC"), wxDefaultPosition, wxSize(-1,-1), 0);
+    m_checkBox437->SetValue(false);
+    
+    boxSizer445->Add(m_checkBox437, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    
+    m_button441 = new wxButton(m_panelXMLRPC, wxID_ANY, _("Initialize"), wxDefaultPosition, wxSize(-1,-1), 0);
+    
+    boxSizer445->Add(m_button441, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     
     m_stdBtnSizer155 = new wxStdDialogButtonSizer();
     
@@ -490,10 +736,13 @@ DlgRigCtrlBase::DlgRigCtrlBase(wxWindow* parent, wxWindowID id, const wxString& 
     m_button167 = new wxButton(this, wxID_OK, wxT(""), wxDefaultPosition, wxSize(-1, -1), 0);
     m_button167->SetDefault();
     m_stdBtnSizer155->AddButton(m_button167);
+    
+    m_button366 = new wxButton(this, wxID_CANCEL, wxT(""), wxDefaultPosition, wxSize(-1, -1), 0);
+    m_stdBtnSizer155->AddButton(m_button366);
     m_stdBtnSizer155->Realize();
     
     
-    SetSizeHints(450,300);
+    SetSizeHints(460,315);
     if ( GetSizer() ) {
          GetSizer()->Fit(this);
     }
