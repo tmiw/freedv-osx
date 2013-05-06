@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="fdmdv2" Database="./fdmdv2.tags">
-  <Project Name="fdmdv2" Path="fdmdv2.project" Active="No"/>
+  <Project Name="fdmdv2" Path="fdmdv2.project" Active="Yes"/>
   <Environment>
     <![CDATA[]]>
   </Environment>
-  <Project Name="hamlib_trial" Path="hamlib_trial/hamlib_trial.project" Active="Yes"/>
+  <Project Name="hamlib_trial" Path="hamlib_trial/hamlib_trial.project" Active="No"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="no">
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Project Name="fdmdv2" ConfigName="Debug"/>
       <Project Name="rawbits" ConfigName="Debug"/>
       <Project Name="pa_enum" ConfigName="Debug"/>
@@ -16,7 +16,7 @@
       <Project Name="enumSerial" ConfigName="Debug"/>
       <Project Name="hamlib_trial" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Project Name="fdmdv2" ConfigName="Release"/>
       <Project Name="rawbits" ConfigName="Release"/>
       <Project Name="pa_enum" ConfigName="Release"/>

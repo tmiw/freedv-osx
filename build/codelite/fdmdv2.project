@@ -137,7 +137,7 @@
         <Library Value="libportaudiocpp.a"/>
         <Library Value="libsamplerate.dll.a"/>
         <Library Value="libctb-0.16.a"/>
-        <Library Value="libsox.a"/>
+        <Library Value="libsox.dll.a"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/freeDV" IntermediateDirectory="./Release" Command="./freeDV.exe" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>

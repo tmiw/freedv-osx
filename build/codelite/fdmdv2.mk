@@ -2,18 +2,18 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Release
+## Debug
 ProjectName            :=fdmdv2
-ConfigurationName      :=Release
+ConfigurationName      :=Debug
 WorkspacePath          := "D:\Projects\Radio\fdmdv2\build\codelite"
 ProjectPath            := "D:\Projects\Radio\fdmdv2\build\codelite"
-IntermediateDirectory  :=./Release
+IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=3/24/2013
+Date                   :=5/4/2013
 CodeLitePath           :="D:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -28,7 +28,7 @@ LibraryPathSwitch      :=-L
 PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
 OutputFile             :=$(IntermediateDirectory)/freeDV
-Preprocessors          :=$(PreprocessorSwitch)__WX__ $(PreprocessorSwitch)DMW=1 $(PreprocessorSwitch)_NO_AUTOTOOLS_=1 
+Preprocessors          :=$(PreprocessorSwitch)__WX__ $(PreprocessorSwitch)_NO_AUTOTOOLS_=1 $(PreprocessorSwitch)DMW=1 
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
@@ -37,13 +37,13 @@ PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := $(shell wx-config --rcflags)
 RcCompilerName         :=windres
-LinkOptions            :=  -mwindows -s $(shell wx-config --debug=no --libs --unicode=yes)
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)/bin/MinGW-4.7.1/msys/1.0/local/include $(IncludeSwitch)../../../codec2-dev/src $(IncludeSwitch)../../../Audio/portaudio/include $(IncludeSwitch)../../../Audio/libsndfile/include $(IncludeSwitch)../../../Audio/libsamplerate-0.1.8/src 
+LinkOptions            :=  -mwindows $(shell wx-config --debug=yes --libs --unicode=yes)
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)/bin/MinGW-4.7.1/msys/1.0/local/include $(IncludeSwitch)../../../codec2-dev/src $(IncludeSwitch)/bin/Projects/Audio/libsndfile/include 
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)sndfile-1 $(LibrarySwitch)codec2 $(LibrarySwitch)portaudio $(LibrarySwitch)portaudiocpp $(LibrarySwitch)samplerate.dll $(LibrarySwitch)ctb-0.16 $(LibrarySwitch)sox 
-ArLibs                 :=  "libsndfile-1.dll" "codec2" "libportaudio.a" "libportaudiocpp.a" "libsamplerate.dll.a" "libctb-0.16.a" "libsox.a" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/Radio/codec2-dev/src/.libs $(LibraryPathSwitch)d:/bin/MinGW-4.7.1/msys/1.0/local/lib $(LibraryPathSwitch)d:/Projects/Audio/libsndfile/lib 
+ArLibs                 :=  "libsndfile-1.dll" "codec2" "libportaudio.a" "libportaudiocpp.a" "libsamplerate.dll.a" "ctb-0.16.dll" "libsox" 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/Radio/codec2-dev/src/.libs $(LibraryPathSwitch)d:/bin/MinGW-4.7.1/msys/1.0/local/lib 
 
 ##
 ## Common variables
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)d:/Projects/
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"1225\"  $(Preprocessors)
-CFLAGS   :=  -O2 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=no)  -DSVN_REVISION=\"1225\"  $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1237\"  $(Preprocessors)
+CFLAGS   :=  -g -O0 -Wall $(shell wx-config --cxxflags --unicode=yes --debug=yes)  -DSVN_REVISION=\"1237\"  $(Preprocessors)
 
 
 ##
@@ -84,7 +84,7 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 $(IntermediateDirectory)/.d:
-	@$(MakeDirCommand) "./Release"
+	@$(MakeDirCommand) "./Debug"
 
 PreBuild:
 
@@ -265,6 +265,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/src_golay23$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) ".build-release/fdmdv2"
+	$(RM) ".build-debug/fdmdv2"
 
 
