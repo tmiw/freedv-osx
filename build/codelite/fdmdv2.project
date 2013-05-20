@@ -81,7 +81,7 @@
         <Library Value="libportaudio.a"/>
         <Library Value="libportaudiocpp.a"/>
         <Library Value="libsamplerate.dll.a"/>
-        <Library Value="ctb-0.16.dll"/>
+        <Library Value="libctb-0.16.a"/>
         <Library Value="libsox"/>
       </Linker>
       <ResourceCompiler Options="$(shell wx-config --rcflags)" Required="no"/>
