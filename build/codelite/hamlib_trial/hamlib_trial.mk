@@ -2,18 +2,18 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Release
+## Debug
 ProjectName            :=hamlib_trial
-ConfigurationName      :=Release
+ConfigurationName      :=Debug
 WorkspacePath          := "D:\Projects\Radio\fdmdv2\build\codelite"
 ProjectPath            := "D:\Projects\Radio\fdmdv2\build\codelite\hamlib_trial"
-IntermediateDirectory  :=./Release
+IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=wittend
-Date                   :=3/26/2013
+Date                   :=5/6/2013
 CodeLitePath           :="D:\bin\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -37,8 +37,8 @@ PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := $(shell wx-config --rcflags)
 RcCompilerName         :=windres
-LinkOptions            :=  $(shell wx-config --libs) -mwindows
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)D:/Projects/Radio/fdmdv2/build/codelite/hamlib-win32-1.2.15.3/include/hamlib $(IncludeSwitch)D:/Projects/Radio/fdmdv2/build/codelite/hamlib-win32-1.2.15.3/include 
+LinkOptions            :=  $(shell wx-config --libs --debug) -mwindows
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). 
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := 
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch).
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -O2 -Wall $(shell wx-config --cflags)  -DSVN_REVISION=\"1229\"  $(Preprocessors)
-CFLAGS   :=  -O2 -Wall  -DSVN_REVISION=\"1229\"  $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(shell wx-config --cflags --debug)  -DSVN_REVISION=\"1237\"  $(Preprocessors)
+CFLAGS   :=  -g -O0 -Wall  -DSVN_REVISION=\"1237\"  $(Preprocessors)
 
 
 ##
@@ -83,7 +83,7 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 $(IntermediateDirectory)/.d:
-	@$(MakeDirCommand) "./Release"
+	@$(MakeDirCommand) "./Debug"
 
 PreBuild:
 
@@ -157,6 +157,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/dlg_rig_ctrl$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) "../.build-release/hamlib_trial"
+	$(RM) "../.build-debug/hamlib_trial"
 
 
