@@ -62,7 +62,7 @@ NOTE: This forces "USE_STATIC_WXWIDGETS" to be true internally regarless of the
 value set manually.
 
 (from any prefered directory outside of the source)
-$ cmake -DBOOTSTRAP_WXWIDGETS=TRUE <path to source>
+$ cmake -DBOOTSTRAP_WXWIDGETS=TRUE <path to fdmdv2 source>
 $ make
 (wxWidgets is downloaded and built)
 $ cmake .

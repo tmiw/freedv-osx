@@ -1,6 +1,6 @@
 include(ExternalProject)
 ExternalProject_Add(codec2
-   SVN_REPOSITORY https://freetel.svn.sourceforge.net/svnroot/freetel/codec2-dev
+   SVN_REPOSITORY https://svn.code.sf.net/p/freetel/code/codec2-dev
    CMAKE_ARGS -DBUILD_SHARED_LIBS=FALSE 
    INSTALL_COMMAND ""
 )

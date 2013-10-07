@@ -3119,19 +3119,15 @@ void MainFrame::SerialPTTRx(void)
     printf("m_boolUseRTS: %d m_boolRTSPos: %d m_boolUseDTR: %d m_boolDTRPos: %d\n",
            wxGetApp().m_boolUseRTS, wxGetApp().m_boolRTSPos, wxGetApp().m_boolUseDTR, wxGetApp().m_boolDTRPos);
 
-    if (wxGetApp().m_boolUseRTS) {
         if(wxGetApp().m_boolRTSPos) // RTS cleared LOW
             m_serialPort->ClrLineState(ctb::LinestateRts);
         else                        // RTS cleared HIGH
             m_serialPort->SetLineState(ctb::LinestateRts);
-    }
 
-    if (wxGetApp().m_boolUseDTR) {
         if(wxGetApp().m_boolDTRPos) // DTR cleared LOW
             m_serialPort->ClrLineState(ctb::LinestateDtr);
         else                        // DTR cleared HIGH
             m_serialPort->SetLineState(ctb::LinestateDtr);
-    }
 }
 
 //----------------------------------------------------------------
