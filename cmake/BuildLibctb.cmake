@@ -3,17 +3,17 @@ set(LIBCTB_TARBALL "libctb-0.16")
 include(ExternalProject)
 ExternalProject_Add(libctb
    URL https://iftools.com/download/ctb/0.16/${LIBCTB_TARBALL}.tar.gz
-   CONFIGURE_COMMAND ""
-   BINARY_DIR libctb-prefix/src/libctb/build
-   BUILD_COMMAND $(MAKE) -f GNUmakefile
-   INSTALL_DIR external/dist
-   INSTALL_COMMAND $(MAKE) install prefix=${CMAKE_BINARY_DIR}/external/dist
+   PATCH_COMMAND patch -p1 < ${CMAKE_SOURCE_DIR}/cmake/libctb.patch
+   CMAKE_ARGS -DBUILD_SHARED_LIBS=FALSE
+   INSTALL_COMMAND ""
 )
 if(WIN32)
-   set(LIBCTB_LIBRARY ${CMAKE_BINARY_DIR}/external/dist/lib/ctb-0.16.lib)
+   set(LIBCTB_LIBRARY
+       ${CMAKE_BINARY_DIR}/libctb-prefix/src/libctb-build/src/ctb-0.16.lib)
 else(WIN32)
-   set(LIBCTB_LIBRARY ${CMAKE_BINARY_DIR}/external/dist/lib/libctb-0.16.a)
+   set(LIBCTB_LIBRARY
+       ${CMAKE_BINARY_DIR}/libctb-prefix/src/libctb-build/src/libctb-0.16.a)
 endif(WIN32)
-include_directories(${CMAKE_BINARY_DIR}/external/dist/include)
+include_directories(${CMAKE_BINARY_DIR}/libctb-prefix/src/libctb/include)
 list(APPEND FREEDV_LINK_LIBS ${LIBCTB_LIBRARY})
 list(APPEND FREEDV_STATIC_DEPS libctb)

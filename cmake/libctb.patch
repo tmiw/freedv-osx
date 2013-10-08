@@ -1,0 +1,186 @@
+diff -Naur libctb-0.16.orig/CMakeLists.txt libctb-0.16/CMakeLists.txt
+--- libctb-0.16.orig/CMakeLists.txt	1969-12-31 18:00:00.000000000 -0600
++++ libctb-0.16/CMakeLists.txt	2013-06-10 14:05:30.328586762 -0500
+@@ -0,0 +1,55 @@
++cmake_minimum_required(VERSION 2.6)
++project(libctb)
++
++set(LIBCTB_VERSION_MAJOR 0)
++set(LIBCTB_VERSION_MINOR 16)
++# Set patch level for bug fix updates which do not affect API/ABI.
++set(LIBCTB_VERSION_PATCH FALSE)
++set(LIBCTB_VERSION ${LIBCTB_VERSION_MAJOR}.${LIBCTB_VERSION_MINOR})
++if(LIBCTB_VERSION_PATCH)
++    set(LIBCTB_VERSION ${LIBCTB_VERSION}.${LIBCTB_VERSION_PATCH})
++endif(LIBCTB_VERSION_PATCH)
++
++if(NOT CMAKE_BUILD_TYPE)
++    set(CMAKE_BUILD_TYPE Release)
++endif(NOT CMAKE_BUILD_TYPE)
++
++option(BUILD_SHARED_LIBS
++    "Build CTB library as a shared library. Turn off for a static library." ON)
++option(GPIB "Build with GPIB support." OFF)
++option(SAMPLES "Build sample program." OFF)
++
++add_definitions(-D_THREAD_SAFE -DPIC)
++
++set(LIBCTB_LINK_LIBS "")
++
++if(WIN32)
++    message(STATUS "Performing Windows based build.")
++    add_definitions(-mthreads)
++    find_library(WINMM_LIBRARY winmm)
++    if(NOT WINMM_LIBRARY)
++        message(FATAL_ERROR
++        "The winmm library is required on Windows platforms.")
++    endif(NOT WINMM_LIBRARY)
++    list(APPEND LIBCTB_LINK_LIBS ${WINMM_LIBRARY})
++    #find_library(GPIB_LIBRARY NAMES gpib gpib32 gpib32.lib
++    #    PATHS ${CMAKE_SOURCE_DIR}/lib)
++    set(GPIB_LIBRARY ${CMAKE_SOURCE_DIR}/lib/gpib32.lib)
++    message(STATUS "GPIB Library: ${GPIB_LIBRARY}")
++    list(APPEND LIBCTB_LINK_LIBS ${GPIB_LIBRARY})
++else(WIN32)
++    message(STATUS "Performing POSIX based build.")
++    add_definitions(-fPIC)
++endif(WIN32)
++
++find_package(Threads REQUIRED)
++message(STATUS "Threads library flags: ${CMAKE_THREAD_LIBS_INIT}")
++list(APPEND LIBCTB_LINK_LIBS ${CMAKE_THREAD_LIBS_INIT})
++
++include_directories(include)
++add_subdirectory(src)
++add_subdirectory(include)
++
++if(SAMPLES)
++    add_subdirectory(samples)
++endif(SAMPLES)
+diff -Naur libctb-0.16.orig/include/CMakeLists.txt libctb-0.16/include/CMakeLists.txt
+--- libctb-0.16.orig/include/CMakeLists.txt	1969-12-31 18:00:00.000000000 -0600
++++ libctb-0.16/include/CMakeLists.txt	2013-05-17 15:23:57.642330757 -0500
+@@ -0,0 +1,30 @@
++set(INCDIR ctb-${LIBCTB_VERSION_MAJOR}.${LIBCTB_VERSION_MINOR})
++
++install(FILES
++    ${INCDIR}/ctb.h
++    ${INCDIR}/fifo.h
++    ${INCDIR}/gpib.h
++    ${INCDIR}/getopt.h
++    ${INCDIR}/portscan.h
++    ${INCDIR}/iobase.h
++    ${INCDIR}/kbhit.h
++    ${INCDIR}/serport.h
++    ${INCDIR}/serportx.h
++    ${INCDIR}/timer.h
++    DESTINATION include/${INCDIR}
++)
++
++if(WIN32)
++    install(FILES
++        ${INCDIR}/win32/getopt.h
++        ${INCDIR}/win32/gpib-32.h
++        ${INCDIR}/win32/serport.h
++        DESTINATION include/${INCDIR}/win32
++    )
++else(WIN32)
++    install(FILES
++        ${INCDIR}/linux/serport.h
++        ${INCDIR}/linux/timer.h
++        DESTINATION include/${INCDIR}/linux
++    )
++endif(WIN32)
+diff -Naur libctb-0.16.orig/include/ctb-0.16/serport.h libctb-0.16/include/ctb-0.16/serport.h
+--- libctb-0.16.orig/include/ctb-0.16/serport.h	2010-09-26 08:49:51.000000000 -0500
++++ libctb-0.16/include/ctb-0.16/serport.h	2013-10-08 14:05:24.901905094 -0500
+@@ -10,9 +10,9 @@
+ /////////////////////////////////////////////////////////////////////////////
+ 
+ #if defined (WIN32)
+-# include "ctb-0.16/win32/serport.h"
++# include "win32/serport.h"
+ #else
+-# include "ctb-0.16/linux/serport.h"
++# include "linux/serport.h"
+ #endif
+ 
+ #endif
+diff -Naur libctb-0.16.orig/include/ctb-0.16/serport.h.inc libctb-0.16/include/ctb-0.16/serport.h.inc
+--- libctb-0.16.orig/include/ctb-0.16/serport.h.inc	1969-12-31 18:00:00.000000000 -0600
++++ libctb-0.16/include/ctb-0.16/serport.h.inc	2010-09-26 08:49:51.000000000 -0500
+@@ -0,0 +1,20 @@
++#ifndef LIBCTB_SERPORT_H_INCLUDED_
++#define LIBCTB_SERPORT_H_INCLUDED_
++
++/////////////////////////////////////////////////////////////////////////////
++// Name:        serport.h
++// Purpose:     simple wrapper file
++// Author:      Joachim Buermann
++// Copyright:   (c) 2010 Joachim Buermann
++// Licence:     wxWindows licence
++/////////////////////////////////////////////////////////////////////////////
++
++#if defined (WIN32)
++# include "ctb-0.16/win32/serport.h"
++#else
++# include "ctb-0.16/linux/serport.h"
++#endif
++
++#endif
++// __SERPORT_BASE_H
++
+diff -Naur libctb-0.16.orig/samples/CMakeLists.txt libctb-0.16/samples/CMakeLists.txt
+--- libctb-0.16.orig/samples/CMakeLists.txt	1969-12-31 18:00:00.000000000 -0600
++++ libctb-0.16/samples/CMakeLists.txt	2013-05-17 11:12:30.449892653 -0500
+@@ -0,0 +1,9 @@
++if(GPIB)
++    add_definitions(-DGPIB=1)
++else(GPIB)
++    add_definitions(-DGPIB=0)
++endif(GPIB)
++
++add_executable(ctbtest ctbtest.cpp)
++target_link_libraries(ctbtest libctb ${LIBCTB_LINK_LIBS})
++install(TARGETS ctbtest DESTINATION bin)
+diff -Naur libctb-0.16.orig/src/CMakeLists.txt libctb-0.16/src/CMakeLists.txt
+--- libctb-0.16.orig/src/CMakeLists.txt	1969-12-31 18:00:00.000000000 -0600
++++ libctb-0.16/src/CMakeLists.txt	2013-05-17 11:12:15.569201549 -0500
+@@ -0,0 +1,37 @@
++set(LIBCTB_SRCS
++    fifo.cpp
++    #kbhit.cpp
++    serportx.cpp
++    getopt.cpp
++    iobase.cpp
++    portscan.cpp)
++
++if(WIN32)
++   list(APPEND LIBCTB_SRCS
++       win32/serport.cpp
++       win32/timer.cpp)
++else(WIN32)
++   list(APPEND LIBCTB_SRCS
++       linux/serport.cpp
++       linux/timer.cpp)
++endif(WIN32)
++
++if(GPIB)
++    message(STATUS "GPIB support enabled.")
++    list(APPEND LIBCTB_SRCS gpib.cpp)
++else(GPIB)
++    message(STATUS "GPIB support disabled.")
++endif(GPIB)
++
++add_library(libctb ${LIBCTB_SRCS})
++target_link_libraries(libctb ${LIBCTB_LINK_LIBS})
++set_target_properties(libctb
++    PROPERTIES OUTPUT_NAME ctb-${LIBCTB_VERSION_MAJOR}.${LIBCTB_VERSION_MINOR})
++
++# NOTE: cmake may have been updated by now but the ${LIB_SUFFIX} is handy for
++# multi-lib *nix systems (32bit libraries go in /usr/lib, 64bit in /usr/lib64)
++install(TARGETS libctb
++    ARCHIVE DESTINATION lib${LIB_SUFFIX}
++    LIBRARY DESTINATION lib${LIB_SUFFIX}
++    RUNTIME DESTINATION bin
++    )
