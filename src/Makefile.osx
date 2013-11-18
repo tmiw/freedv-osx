@@ -5,11 +5,13 @@
 # Note: dependencies must be installed with universal binary support due to the use of Carbon by portaudio and others.
 #       (Carbon is officially deprecated by Apple and does not have 64-bit support.)
 #
-# $ sudo port install wxWidgets30 +aui +universal portaudio +universal sox +universal libsndfile +universal libsamplerate +universal hamlib +universal dylibbundler
+# $ sudo port install wxWidgets30 +aui +universal portaudio +universal sox +universal libsndfile +universal libsamplerate +universal dylibbundler
+# (build and install static hamlib from https://github.com/N0NB/hamlib and modify paths below accordingly)
 # $ make -f Makefile.osx
 
 SVN_REVISION = $(shell git show -s --pretty=format:%h)
 MACPORTS_FOLDER = /opt/local
+HAMLIB_FOLDER = /Users/mooneer/hamlib
 
 # Codec 2 -----------------------------------------------
 
@@ -19,7 +21,7 @@ CODEC2_LIB = $(CODEC2)/src/.libs/libcodec2.a
 
 # FreeDV ------------------------------------------------
 
-WXCONFIG = /opt/local/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.0/lib/wx/config/osx_cocoa-unicode-static-3.0
+WXCONFIG = $(MACPORTS_FOLDER)/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.0/lib/wx/config/osx_cocoa-unicode-static-3.0
 WXCONFIGLIBS := $(shell $(WXCONFIG) --libs all)
 WXCONFIGLIBS := $(WXCONFIGLIBS:-lpng=$(MACPORTS_FOLDER)/lib/libpng.a)
 WXCONFIGLIBS := $(WXCONFIGLIBS:-lz=$(MACPORTS_FOLDER)/lib/libz.a)
@@ -27,10 +29,9 @@ WXCONFIGLIBS := $(WXCONFIGLIBS:-ljpeg=$(MACPORTS_FOLDER)/lib/libjpeg.a)
 WXCONFIGLIBS := $(WXCONFIGLIBS:-ltiff=$(MACPORTS_FOLDER)/lib/libtiff.a)
 WXCONFIGLIBS := $(WXCONFIGLIBS:-liconv=$(MACPORTS_FOLDER)/lib/libiconv.a)
 
-HAMLIB = /Users/mooneer/hamlib/lib/libhamlib.a  -lusb /opt/local/lib/libltdl.a #/opt/local/lib/hamlib/hamlib-*.a
-#/Users/mooneer/hamlib/lib/libhamlib.a 
+HAMLIB = $(HAMLIB_FOLDER)/lib/libhamlib.a -lusb $(MACPORTS_FOLDER)/libltdl.a 
 
-CPPFLAGS = -D_NO_AUTOTOOLS_ -I$(MACPORTS_FOLDER)/include `$(WXCONFIG) --cppflags` $(CODEC2_INC) -I. -g -Wall -O3 -DSVN_REVISION=\"$(SVN_REVISION)\"
+CPPFLAGS = -D_NO_AUTOTOOLS_ -I$(HAMLIB_FOLDER)/include -I$(MACPORTS_FOLDER)/include `$(WXCONFIG) --cppflags` $(CODEC2_INC) -I. -g -Wall -O3 -DSVN_REVISION=\"$(SVN_REVISION)\"
 FREEDV_LIBS = -L$(MACPORTS_FOLDER)/lib $(WXCONFIGLIBS) -lportaudio $(CODEC2_LIB) -lm -lpthread -lsndfile -lsamplerate -lsox $(HAMLIB) $(MACPORTS_FOLDER)/lib/liblzma.a
 
 OBJS = topFrame.o \
