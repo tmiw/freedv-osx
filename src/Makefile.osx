@@ -67,6 +67,12 @@ FreeDV.app: info.plist freedv
 	echo -n "APPL????" > $@/Contents/PkgInfo
 	cp freedv $@/Contents/MacOS/FreeDV
 	dylibbundler -od -b -x FreeDV.app/Contents/MacOS/FreeDV -d FreeDV.app/Contents/libs -p @executable_path/../libs/
+
+dist: FreeDV.app
+	if [ -e dist_tmp/ ]; then rm -rf dist_tmp/; fi
+	mkdir dist_tmp
+	cp -r FreeDV.app dist_tmp
+	hdiutil create -srcfolder dist_tmp/ -volname FreeDV -format UDZO ./FreeDV.dmg
 	
 %.o: %.cpp $(HDRS)
 	g++ $(CPPFLAGS) -c $< -o $@
@@ -81,7 +87,9 @@ clean:
 	rm -f *.o freedv
 	rm -rf codec2-dev/ 
 	rm -rf FreeDV.app/
-	
+	rm -f FreeDV.dmg
+	rm -rf dist_tmp/
+
 clean-lib: clean
 	rm -Rf $(CODEC2)
  

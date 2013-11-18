@@ -4,3 +4,5 @@ src/freedv.dSYM
 src/codec2-dev
 src/FreeDV.app
 .DS_Store
+FreeDV.dmg
+dist_tmp
