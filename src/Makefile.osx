@@ -28,10 +28,11 @@ WXCONFIGLIBS := $(WXCONFIGLIBS:-lz=$(MACPORTS_FOLDER)/lib/libz.a)
 WXCONFIGLIBS := $(WXCONFIGLIBS:-ljpeg=$(MACPORTS_FOLDER)/lib/libjpeg.a)
 WXCONFIGLIBS := $(WXCONFIGLIBS:-ltiff=$(MACPORTS_FOLDER)/lib/libtiff.a)
 WXCONFIGLIBS := $(WXCONFIGLIBS:-liconv=$(MACPORTS_FOLDER)/lib/libiconv.a)
+WXCONFIGCPPFLAGS := $(shell $(WXCONFIG) --cppflags)
 
-HAMLIB = $(HAMLIB_FOLDER)/lib/libhamlib.a -lusb $(MACPORTS_FOLDER)/libltdl.a 
+HAMLIB = $(HAMLIB_FOLDER)/lib/libhamlib.a -lusb $(MACPORTS_FOLDER)/lib/libltdl.a 
 
-CPPFLAGS = -D_NO_AUTOTOOLS_ -I$(HAMLIB_FOLDER)/include -I$(MACPORTS_FOLDER)/include `$(WXCONFIG) --cppflags` $(CODEC2_INC) -I. -g -Wall -O3 -DSVN_REVISION=\"$(SVN_REVISION)\"
+CPPFLAGS = -D_NO_AUTOTOOLS_ -I$(HAMLIB_FOLDER)/include -I$(MACPORTS_FOLDER)/include $(WXCONFIGCPPFLAGS) $(CODEC2_INC) -I. -g -Wall -O3 -DSVN_REVISION=\"$(SVN_REVISION)\"
 FREEDV_LIBS = -L$(MACPORTS_FOLDER)/lib $(WXCONFIGLIBS) -lportaudio $(CODEC2_LIB) -lm -lpthread -lsndfile -lsamplerate -lsox $(HAMLIB) $(MACPORTS_FOLDER)/lib/liblzma.a
 
 OBJS = topFrame.o \
@@ -86,7 +87,7 @@ varicode.o: varicode.c
 clean:
 	rm -f *.o freedv
 	rm -rf codec2-dev/ 
-	rm -rf FreeDV.app/
+	rm -rf FreeDV.app/ FreeDV.dSYM/
 	rm -f FreeDV.dmg
 	rm -rf dist_tmp/
 
