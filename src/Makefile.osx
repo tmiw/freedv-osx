@@ -2,10 +2,11 @@
 # Mooneer Salem 28 Dec 2012
 #
 # Makefile for OSX - assumes MacPorts for some libraries and builds the others locally.
-# Note: dependencies must be installed with universal binary support due to the use of Carbon by portaudio and others.
-#       (Carbon is officially deprecated by Apple and does not have 64-bit support.)
 #
-# $ sudo port install wxWidgets30 +aui +universal portaudio +universal sox +universal libsndfile +universal libsamplerate +universal dylibbundler
+# Instructions:
+#
+# (Copy port/graphics/wxWidgets-3.0-devel port into your MacPorts installation.)
+# $ sudo port install wxWidgets-3.0-devel +chojin portaudio +universal sox +universal libsndfile +universal libsamplerate +universal dylibbundler
 # (build and install static hamlib from https://github.com/N0NB/hamlib and modify paths below accordingly)
 # $ make -f Makefile.osx
 
