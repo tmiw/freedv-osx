@@ -52,10 +52,7 @@
 #include <samplerate.h>
 
 #include <hamlib.h> 
-#include "ctb-0.16/ctb.h"
-#include "ctb-0.16/portscan.h"
-#include "ctb-0.16/serportx.h"
-#include "ctb-0.16/serport.h"
+#include "serialport.h"
 
 #include "codec2.h"
 #include "codec2_fdmdv.h"
@@ -375,8 +372,7 @@ class MainFrame : public TopFrame
 
     protected:
 
-        ctb::IOBase*            m_device;
-        ctb::SerialPort*        m_serialPort;
+        SerialPort*             m_serialPort;
 
         void setsnrBeta(bool snrSlow);
 

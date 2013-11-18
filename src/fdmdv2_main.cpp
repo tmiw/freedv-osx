@@ -980,16 +980,16 @@ void MainFrame::togglePTT(void) {
         if (wxGetApp().m_boolUseRTS) {
             printf("g_tx: %d m_boolRTSPos: %d serialLine: %d\n", g_tx, wxGetApp().m_boolRTSPos, g_tx == wxGetApp().m_boolRTSPos);
             if (g_tx == wxGetApp().m_boolRTSPos)
-                m_serialPort->SetLineState(ctb::LinestateRts);
+                m_serialPort->setRTS(true);
             else
-                m_serialPort->ClrLineState(ctb::LinestateRts);
+                m_serialPort->setRTS(false);
         }
         if (wxGetApp().m_boolUseDTR) {
             printf("g_tx: %d m_boolDTRPos: %d serialLine: %d\n", g_tx, wxGetApp().m_boolDTRPos, g_tx == wxGetApp().m_boolDTRPos);
             if (g_tx == wxGetApp().m_boolDTRPos)
-                m_serialPort->SetLineState(ctb::LinestateDtr);
+                m_serialPort->setDTR(true);
             else
-                m_serialPort->ClrLineState(ctb::LinestateDtr);
+                m_serialPort->setDTR(false);
         }
  
     }
@@ -3097,17 +3097,15 @@ void MainFrame::SetupSerialPort(void)
     if(!wxGetApp().m_strRigCtrlPort.IsEmpty())
     {
         wxString protocol = _("8N1");
-        m_serialPort = new ctb::SerialPort();
-        if(m_serialPort->Open(wxGetApp().m_strRigCtrlPort.c_str(), baudrate, protocol.c_str(), ctb::SerialPort::NoFlowControl ) >= 0 )
+        m_serialPort = new SerialPort(std::string(wxGetApp().m_strRigCtrlPort.c_str()));
+        if(m_serialPort->open() )
         {
-            m_device = m_serialPort;
             // always start PTT in Rx state
             SerialPTTRx();
         }
         else
         {
             m_serialPort = NULL;
-            m_device     = NULL;
             wxMessageBox("Couldn't open Serial Port", wxT("About"), wxOK | wxICON_ERROR, this);
 
         }
@@ -3120,14 +3118,14 @@ void MainFrame::SerialPTTRx(void)
            wxGetApp().m_boolUseRTS, wxGetApp().m_boolRTSPos, wxGetApp().m_boolUseDTR, wxGetApp().m_boolDTRPos);
 
         if(wxGetApp().m_boolRTSPos) // RTS cleared LOW
-            m_serialPort->ClrLineState(ctb::LinestateRts);
+            m_serialPort->setRTS(false);
         else                        // RTS cleared HIGH
-            m_serialPort->SetLineState(ctb::LinestateRts);
+            m_serialPort->setRTS(true);
 
         if(wxGetApp().m_boolDTRPos) // DTR cleared LOW
-            m_serialPort->ClrLineState(ctb::LinestateDtr);
+            m_serialPort->setDTR(false);
         else                        // DTR cleared HIGH
-            m_serialPort->SetLineState(ctb::LinestateDtr);
+            m_serialPort->setDTR(true);
 }
 
 //----------------------------------------------------------------
@@ -3140,10 +3138,9 @@ void MainFrame::CloseSerialPort(void)
 
         SerialPTTRx();
 
-        if((m_serialPort != NULL) && m_serialPort->IsOpen()) {
-            m_serialPort->Close();
+        if((m_serialPort != NULL) && m_serialPort->isOpen()) {
+            m_serialPort->close();
             m_serialPort = NULL;
-            m_device     = NULL;
         }
     }
 }

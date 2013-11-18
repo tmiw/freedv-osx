@@ -1,0 +1,5 @@
+*.o
+src/freedv
+src/freedv.dSYM
+src/codec2-dev
+src/FreeDV.app

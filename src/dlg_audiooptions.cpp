@@ -292,7 +292,7 @@ AudioOptsDialog::AudioOptsDialog(wxWindow* parent, wxWindowID id, const wxString
 
     bSizer6->Add(m_sdbSizer1, 1, wxALIGN_CENTER_VERTICAL, 2);
     mainSizer->Add(bSizer6, 0, wxEXPAND, 2);
-    this->SetSizer(mainSizer);
+    this->SetSizerAndFit(mainSizer);
     this->Layout();
     this->Centre(wxBOTH);
 //    this->Centre(wxBOTH);

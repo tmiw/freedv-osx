@@ -1,0 +1,92 @@
+# src/Makefile.osx
+# Mooneer Salem 28 Dec 2012
+#
+# Makefile for OSX - assumes MacPorts for some libraries and builds the others locally.
+# Note: dependencies must be installed with universal binary support due to the use of Carbon by portaudio and others.
+#       (Carbon is officially deprecated by Apple and does not have 64-bit support.)
+#
+# $ sudo port install wxWidgets30 +aui +universal portaudio +universal sox +universal libsndfile +universal libsamplerate +universal hamlib +universal dylibbundler
+# $ make -f Makefile.osx
+
+SVN_REVISION = $(shell svnversion)
+MACPORTS_FOLDER = /opt/local
+
+# Codec 2 -----------------------------------------------
+
+CODEC2 = codec2-dev
+CODEC2_INC = -I$(CODEC2)/src
+CODEC2_LIB = $(CODEC2)/src/.libs/libcodec2.a
+
+# FreeDV ------------------------------------------------
+
+WXCONFIG = /opt/local/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.0/lib/wx/config/osx_cocoa-unicode-static-3.0
+WXCONFIGLIBS := $(shell $(WXCONFIG) --libs all)
+WXCONFIGLIBS := $(WXCONFIGLIBS:-lpng=$(MACPORTS_FOLDER)/lib/libpng.a)
+WXCONFIGLIBS := $(WXCONFIGLIBS:-lz=$(MACPORTS_FOLDER)/lib/libz.a)
+WXCONFIGLIBS := $(WXCONFIGLIBS:-ljpeg=$(MACPORTS_FOLDER)/lib/libjpeg.a)
+WXCONFIGLIBS := $(WXCONFIGLIBS:-ltiff=$(MACPORTS_FOLDER)/lib/libtiff.a)
+WXCONFIGLIBS := $(WXCONFIGLIBS:-liconv=$(MACPORTS_FOLDER)/lib/libiconv.a)
+
+HAMLIB = /Users/mooneer/hamlib/lib/libhamlib.a  -lusb /opt/local/lib/libltdl.a #/opt/local/lib/hamlib/hamlib-*.a
+#/Users/mooneer/hamlib/lib/libhamlib.a 
+
+CPPFLAGS = -D_NO_AUTOTOOLS_ -I$(MACPORTS_FOLDER)/include `$(WXCONFIG) --cppflags` $(CODEC2_INC) -I. -g -Wall -O3 -DSVN_REVISION=\"$(SVN_REVISION)\"
+FREEDV_LIBS = -L$(MACPORTS_FOLDER)/lib $(WXCONFIGLIBS) -lportaudio $(CODEC2_LIB) -lm -lpthread -lsndfile -lsamplerate -lsox $(HAMLIB) $(MACPORTS_FOLDER)/lib/liblzma.a
+
+OBJS = topFrame.o \
+fdmdv2_main.o \
+fdmdv2_plot.o \
+fdmdv2_plot_scalar.o \
+fdmdv2_plot_scatter.o \
+fdmdv2_plot_spectrum.o \
+fdmdv2_plot_waterfall.o \
+fdmdv2_pa_wrapper.o \
+dlg_audiooptions.o \
+dlg_ptt.o \
+dlg_filter.o \
+dlg_options.o \
+hamlib.o \
+varicode.o \
+sox_biquad.o \
+serialport.o \
+codec2-dev/src/golay23.c
+
+HDRS = ../version.h dlg_about.h dlg_audiooptions.h dlg_comports.h dlg_filter.h fdmdv2_main.h fdmdv2_defines.h fdmdv2_plot.h fdmdv2_plot_scalar.h fdmdv2_plot_waterfall_linux.h fdmdv2_plot_scatter.h fdmdv2_plot_spectrum.h fdmdv2_pa_wrapper.h topFrame.h varicode.h serialport.h hamlib.h dlg_options.h
+
+all: $(CODEC2)/.built freedv
+
+freedv: $(OBJS)
+	g++ -o freedv $(OBJS) $(CPPFLAGS) $(FREEDV_LIBS)
+
+FreeDV.app: info.plist freedv
+	-mkdir -p $@/Contents/MacOS
+	-mkdir -p $@/Contents/Resources/English.lproj
+	cp info.plist $@/Contents
+	cp freedv.icns $@/Contents/Resources
+	echo -n "APPL????" > $@/Contents/PkgInfo
+	cp freedv $@/Contents/MacOS/FreeDV
+	dylibbundler -od -b -x FreeDV.app/Contents/MacOS/FreeDV -d FreeDV.app/Contents/libs -p @executable_path/../libs/
+	
+%.o: %.cpp $(HDRS)
+	g++ $(CPPFLAGS) -c $< -o $@
+
+sox_biquad.o: sox_biquad.c
+	gcc $(CPPFLAGS) -c sox_biquad.c -o sox_biquad.o
+
+varicode.o: varicode.c
+	cc $(CPPFLAGS) -c varicode.c -o varicode.o
+
+clean:
+	rm -f *.o fdmdv2 
+	rm -rf FreeDV.app/
+	
+clean-lib: clean
+	rm -Rf $(CODEC2)
+ 
+# Codec 2 ----------------------------------------------------------
+
+$(CODEC2)/.built: $(CODEC2)
+	cd $(CODEC2) && ./configure && make && touch .built
+
+$(CODEC2):
+	svn co https://freetel.svn.sourceforge.net/svnroot/freetel/codec2-dev

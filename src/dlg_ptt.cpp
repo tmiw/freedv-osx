@@ -89,13 +89,13 @@ ComPortsDlg::ComPortsDlg(wxWindow* parent, wxWindowID id, const wxString& title,
     wxStaticBoxSizer* staticBoxSizer31 = new wxStaticBoxSizer( new wxStaticBox(this, wxID_ANY, _("PTT Port")), wxVERTICAL);
     staticBoxSizer17->Add(staticBoxSizer31, 1, wxEXPAND, 5);
 
-#ifdef __WXMSW__
+#if defined(__WXMSW__) || defined(__WXMAC__)
     m_ckUseSerialPTT = new wxCheckBox(this, wxID_ANY, _("Use Serial Port PTT"), wxDefaultPosition, wxSize(-1,-1), 0);
     m_ckUseSerialPTT->SetValue(false);
     staticBoxSizer31->Add(m_ckUseSerialPTT, 0, wxALIGN_LEFT, 20);
 
     wxArrayString m_listCtrlPortsArr;
-    m_listCtrlPorts = new wxListBox(this, wxID_ANY, wxDefaultPosition, wxSize(-1,45), m_listCtrlPortsArr, wxLB_SINGLE | wxLB_SORT);
+    m_listCtrlPorts = new wxListBox(this, wxID_ANY, wxDefaultPosition, wxSize(250,45), m_listCtrlPortsArr, wxLB_SINGLE | wxLB_SORT);
     staticBoxSizer31->Add(m_listCtrlPorts, 1, wxALIGN_CENTER, 0);
 #endif
 
@@ -209,10 +209,11 @@ void ComPortsDlg::OnInitDialog(wxInitDialogEvent& event)
 //-------------------------------------------------------------------------
 void ComPortsDlg::populatePortList()
 {
-#ifdef __WXMSW__
+#if defined(__WXMSW__) || defined(__WXMAC__)
     m_listCtrlPorts->Clear();
     m_cbSerialPort->Clear();
     wxArrayString aStr;
+#ifdef __WXMSW__
     wxRegKey key(wxRegKey::HKLM, _T("HARDWARE\\DEVICEMAP\\SERIALCOMM"));
     if(!key.Exists())
     {
@@ -248,6 +249,22 @@ void ComPortsDlg::populatePortList()
             key.GetNextValue(key_name, el);
         }
     }
+#else
+    DIR *dir;
+    struct dirent *ent;
+    if ((dir = opendir ("/dev/")) != NULL) 
+    {
+        while ((ent = readdir (dir)) != NULL) 
+        {
+            if (!strncmp("tty.", ent->d_name, 4))
+            {
+                std::string fullName = std::string("/dev/") + ent->d_name;
+                aStr.Add(fullName.c_str(), 1);
+            }
+        }
+        closedir(dir);
+    }
+#endif
     m_listCtrlPorts->Append(aStr);
     m_cbSerialPort->Append(aStr);
 #endif
@@ -286,8 +303,20 @@ void ComPortsDlg::ExchangeData(int inout)
 
         m_ckUseSerialPTT->SetValue(wxGetApp().m_boolUseSerialPTT);
         str = wxGetApp().m_strRigCtrlPort;
-#ifdef __WXMSW__
-        m_listCtrlPorts->SetStringSelection(str);
+#if defined(__WXMSW__) || defined(__WXMAC__)
+        // Mooneer Salem 2013-11-16: SetStringSelection() _should_ work 
+        // but on OSX an assertion window appears. We'll need to select
+        // the correct item by hand.
+        //m_listCtrlPorts->SetStringSelection(str);
+        for (int index = 0; index < m_listCtrlPorts->GetCount(); index++)
+        {
+            wxString currentItem = m_listCtrlPorts->GetString(index);
+            if (currentItem == str)
+            {
+                m_listCtrlPorts->SetSelection(index);
+                break;
+            }
+        }
 #endif
 #ifdef __WXGTK__
         m_txtCtlDevicePath->SetValue(str);
@@ -315,7 +344,7 @@ void ComPortsDlg::ExchangeData(int inout)
         /* Serial settings */
 
         wxGetApp().m_boolUseSerialPTT           = m_ckUseSerialPTT->IsChecked();
-#ifdef __WXMSW__
+#if defined(__WXMSW__) || defined(__WXMAC__)
         wxGetApp().m_strRigCtrlPort             = m_listCtrlPorts->GetStringSelection();
 #endif
 #ifdef __WXGTK__
