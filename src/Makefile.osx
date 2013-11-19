@@ -101,4 +101,4 @@ $(CODEC2)/.built: $(CODEC2)
 	cd $(CODEC2) && ./configure && make && touch .built
 
 $(CODEC2):
-	svn co https://freetel.svn.sourceforge.net/svnroot/freetel/codec2-dev
+	svn co https://svn.code.sf.net/p/freetel/code/codec2-dev
