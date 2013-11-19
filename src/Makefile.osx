@@ -7,7 +7,8 @@
 #
 # (Copy port/graphics/wxWidgets-3.0-devel port into your MacPorts installation.)
 # $ sudo port install wxWidgets-3.0-devel +chojin portaudio +universal sox +universal libsndfile +universal libsamplerate +universal dylibbundler
-# (build and install static hamlib from https://github.com/N0NB/hamlib and modify paths below accordingly)
+# (build and install static hamlib from https://github.com/N0NB/hamlib and modify paths below accordingly. Use 
+#  the following configure line: CFLAGS=-mmacosx-version-min=10.6 CPPFLAGS=-mmacosx-version-min=10.6 LDFLAGS=-mmacosx-version-min=10.6 ./configure --disable-shared --disable-winradio --prefix=/Users/[your username]/hamlib)
 # $ make -f Makefile.osx
 
 SVN_REVISION = $(shell git show -s --pretty=format:%h)
@@ -33,7 +34,7 @@ WXCONFIGCPPFLAGS := $(shell $(WXCONFIG) --cppflags)
 
 HAMLIB = $(HAMLIB_FOLDER)/lib/libhamlib.a -lusb $(MACPORTS_FOLDER)/lib/libltdl.a 
 
-CPPFLAGS = -D_NO_AUTOTOOLS_ -I$(HAMLIB_FOLDER)/include -I$(MACPORTS_FOLDER)/include $(WXCONFIGCPPFLAGS) $(CODEC2_INC) -I. -g -Wall -O3 -DSVN_REVISION=\"$(SVN_REVISION)\"
+CPPFLAGS = -mmacosx-version-min=10.6 -D_NO_AUTOTOOLS_ -I$(HAMLIB_FOLDER)/include -I$(MACPORTS_FOLDER)/include $(WXCONFIGCPPFLAGS) $(CODEC2_INC) -I. -g -Wall -O3 -DSVN_REVISION=\"$(SVN_REVISION)\"
 FREEDV_LIBS = -L$(MACPORTS_FOLDER)/lib $(WXCONFIGLIBS) -lportaudio $(CODEC2_LIB) -lm -lpthread -lsndfile -lsamplerate -lsox $(HAMLIB) $(MACPORTS_FOLDER)/lib/liblzma.a
 
 OBJS = topFrame.o \
@@ -98,7 +99,7 @@ clean-lib: clean
 # Codec 2 ----------------------------------------------------------
 
 $(CODEC2)/.built: $(CODEC2)
-	cd $(CODEC2) && ./configure && make && touch .built
+	cd $(CODEC2) && CFLAGS=-mmacosx-version-min=10.6 LDFLAGS=-mmacosx-version-min=10.6 ./configure && make && touch .built
 
 $(CODEC2):
 	svn co https://svn.code.sf.net/p/freetel/code/codec2-dev
