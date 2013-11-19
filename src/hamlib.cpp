@@ -110,5 +110,7 @@ bool Hamlib::ptt(bool press) {
 void Hamlib::close(void) {
     rig_close(m_rig);
     rig_cleanup(m_rig);
+#ifndef __APPLE__
     free(m_rig);
+#endif
 }
