@@ -62,7 +62,7 @@ all: $(CODEC2)/.built freedv
 freedv: $(OBJS)
 	g++ -o freedv $(OBJS) $(CPPFLAGS) $(FREEDV_LIBS)
 
-FreeDV.app: info.plist freedv
+FreeDV.app: info.plist all
 	-mkdir -p $@/Contents/MacOS
 	-mkdir -p $@/Contents/Resources/English.lproj
 	cp info.plist $@/Contents
@@ -73,6 +73,7 @@ FreeDV.app: info.plist freedv
 
 dist: FreeDV.app
 	if [ -e dist_tmp/ ]; then rm -rf dist_tmp/; fi
+	if [ -e FreeDV.dmg ]; then rm -f FreeDV.dmg; fi
 	mkdir dist_tmp
 	cp -r FreeDV.app dist_tmp
 	hdiutil create -srcfolder dist_tmp/ -volname FreeDV -format UDZO ./FreeDV.dmg
