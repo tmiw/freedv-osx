@@ -134,7 +134,7 @@ AboutDlg::AboutDlg( wxWindow* parent,
     wxString svnLatestRev("Can't determine latest SVN revision.");
 
     // Try to determine current SVN revision from the Internet
-    wxURL url(wxT("http://freetel.svn.sourceforge.net/svnroot/freetel/fdmdv2/"));
+    wxURL url(wxT("http://svn.code.sf.net/p/freetel/code/fdmdv2/"));
     
     if(url.GetError() == wxURL_NOERR)
     {
@@ -148,7 +148,7 @@ AboutDlg::AboutDlg( wxWindow* parent,
             in->Read(html_stream);
             //wxLogDebug(htmldata);
  
-            wxString s("<h2>freetel - Revision ");
+            wxString s("<h2>p/freetel/code - Revision ");
             int startIndex = htmldata.find(s) + s.Length();
             int endIndex = htmldata.find(wxT(": /fdmdv2</h2>"));
             svnLatestRev = wxT("Latest svn revision: ") + htmldata.SubString(startIndex, endIndex-1);

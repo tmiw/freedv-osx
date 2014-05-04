@@ -52,7 +52,12 @@
 #include <samplerate.h>
 
 #include <hamlib.h> 
-#include "serialport.h"
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <termios.h>
+#include <sys/ioctl.h>
+#endif
 
 #include "codec2.h"
 #include "codec2_fdmdv.h"
@@ -93,6 +98,14 @@ enum {
 
 #define EXCHANGE_DATA_IN    0
 #define EXCHANGE_DATA_OUT   1
+
+#ifdef _WIN32
+#define COM_HANDLE_INVALID			INVALID_HANDLE_VALUE
+typedef HANDLE      com_handle_t;
+#else
+#define COM_HANDLE_INVALID			-1
+typedef int         com_handle_t;
+#endif
 
 extern int                 g_nSoundCards;
 extern int                 g_soundCard1InDeviceNum;
@@ -372,7 +385,19 @@ class MainFrame : public TopFrame
 
     protected:
 
-        SerialPort*             m_serialPort;
+#ifdef _WIN32
+#define COM_HANDLE_INVALID			INVALID_HANDLE_VALUE
+        com_handle_t  com_handle;
+#else
+#define COM_HANDLE_INVALID			-1
+        com_handle_t  com_handle;
+#endif
+        void raiseDTR(void);
+        void lowerDTR(void);
+        void raiseRTS(void);
+        void lowerRTS(void);
+        bool openComPort(const char *port);
+        void closeComPort(void);
 
         void setsnrBeta(bool snrSlow);
 

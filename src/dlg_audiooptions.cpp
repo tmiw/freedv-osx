@@ -923,12 +923,13 @@ void AudioOptsDialog::OnTxOutDeviceSelect(wxListEvent& evt)
 //-------------------------------------------------------------------------
 void AudioOptsDialog::plotDeviceInputForAFewSecs(int devNum, PlotScalar *plotScalar) {
     PaStreamParameters  inputParameters;
+    const PaDeviceInfo *deviceInfo = NULL;
     PaStream           *stream = NULL;
     PaError             err;
     short               in48k_stereo_short[2*TEST_BUF_SIZE];
     short               in48k_short[TEST_BUF_SIZE];
     short               in8k_short[TEST_BUF_SIZE];
-    int                 numDevices, nBufs, i, j, src_error;
+    int                 numDevices, nBufs, i, j, src_error,inputChannels;
     float               t;
     SRC_STATE          *src;
     FIFO               *fifo;
@@ -944,14 +945,28 @@ void AudioOptsDialog::plotDeviceInputForAFewSecs(int devNum, PlotScalar *plotSca
     fifo = fifo_create((int)(DT*TEST_WAVEFORM_PLOT_FS*2)); assert(fifo != NULL);
     src = src_new(SRC_SINC_FASTEST, 1, &src_error); assert(src != NULL);
 
+    // work out how many input channels this device supports.
+
+    deviceInfo = Pa_GetDeviceInfo(devNum);
+    if (deviceInfo == NULL) {
+        wxMessageBox(wxT("Couldn't get device info from Port Audio for Sound Card "), wxT("Error"), wxOK);
+        return;
+    }
+    if (deviceInfo->maxInputChannels == 1)
+        inputChannels = 1;
+    else
+        inputChannels = 2;
+
+    // open device
+
     inputParameters.device = devNum;
-    inputParameters.channelCount = 2;
+    inputParameters.channelCount = inputChannels;
     inputParameters.sampleFormat = paInt16;
     inputParameters.suggestedLatency = Pa_GetDeviceInfo( inputParameters.device )->defaultHighInputLatency;
     inputParameters.hostApiSpecificStreamInfo = NULL;
 
     nBufs = TEST_WAVEFORM_PLOT_TIME*TEST_FS/TEST_BUF_SIZE;
-    printf("nBufs %d\n", nBufs);
+    printf("inputChannels: %d nBufs %d\n", inputChannels, nBufs);
 
     err = Pa_OpenStream(
               &stream,
@@ -975,8 +990,14 @@ void AudioOptsDialog::plotDeviceInputForAFewSecs(int devNum, PlotScalar *plotSca
 
     for(i=0, t=0.0; i<nBufs; i++, t+=(float)TEST_BUF_SIZE/TEST_FS) {
         Pa_ReadStream(stream, in48k_stereo_short, TEST_BUF_SIZE);
-        for(j=0; j<TEST_BUF_SIZE; j++)
-            in48k_short[j] = in48k_stereo_short[2*j]; // left channel only
+        if (inputChannels == 2) {
+            for(j=0; j<TEST_BUF_SIZE; j++)
+                in48k_short[j] = in48k_stereo_short[2*j]; // left channel only
+        }
+        else {
+            for(j=0; j<TEST_BUF_SIZE; j++)
+                in48k_short[j] = in48k_stereo_short[j]; 
+        }
         int n8k = resample(src, in8k_short, in48k_short, 8000, TEST_FS, TEST_BUF_SIZE, TEST_BUF_SIZE);
         resample_for_plot(fifo, in8k_short, n8k);
 
@@ -1014,12 +1035,13 @@ void AudioOptsDialog::plotDeviceInputForAFewSecs(int devNum, PlotScalar *plotSca
 //-------------------------------------------------------------------------
 void AudioOptsDialog::plotDeviceOutputForAFewSecs(int devNum, PlotScalar *plotScalar) {
     PaStreamParameters  outputParameters;
+    const PaDeviceInfo *deviceInfo = NULL;
     PaStream           *stream = NULL;
     PaError             err;
     short               out48k_stereo_short[2*TEST_BUF_SIZE];
     short               out48k_short[TEST_BUF_SIZE];
     short               out8k_short[TEST_BUF_SIZE];
-    int                 numDevices, nBufs, i, j, src_error, n;
+    int                 numDevices, nBufs, i, j, src_error, n, outputChannels;
     float               t;
     SRC_STATE          *src;
     FIFO               *fifo;
@@ -1034,8 +1056,22 @@ void AudioOptsDialog::plotDeviceOutputForAFewSecs(int devNum, PlotScalar *plotSc
     fifo = fifo_create((int)(DT*TEST_WAVEFORM_PLOT_FS*2)); assert(fifo != NULL);
     src = src_new(SRC_SINC_FASTEST, 1, &src_error); assert(src != NULL);
 
+    // work out how many output channels this device supports.
+
+    deviceInfo = Pa_GetDeviceInfo(devNum);
+    if (deviceInfo == NULL) {
+        wxMessageBox(wxT("Couldn't get device info from Port Audio for Sound Card "), wxT("Error"), wxOK);
+        return;
+    }
+    if (deviceInfo->maxOutputChannels == 1)
+        outputChannels = 1;
+    else
+        outputChannels = 2;
+
+    printf("outputChannels: %d\n", outputChannels);
+
     outputParameters.device = devNum;
-    outputParameters.channelCount = 2;
+    outputParameters.channelCount = outputChannels;
     outputParameters.sampleFormat = paInt16;
     outputParameters.suggestedLatency = Pa_GetDeviceInfo( outputParameters.device )->defaultHighOutputLatency;
     outputParameters.hostApiSpecificStreamInfo = NULL;
@@ -1065,8 +1101,13 @@ void AudioOptsDialog::plotDeviceOutputForAFewSecs(int devNum, PlotScalar *plotSc
     for(i=0, t=0.0, n=0; i<nBufs; i++, t+=(float)TEST_BUF_SIZE/TEST_FS) {
         for(j=0; j<TEST_BUF_SIZE; j++,n++) {
             out48k_short[j] = 2000.0*cos(6.2832*(n++)*400.0/TEST_FS);
-            out48k_stereo_short[2*j] = out48k_short[j];   // left channel
-            out48k_stereo_short[2*j+1] = out48k_short[j]; // right channel
+            if (outputChannels == 2) {
+                out48k_stereo_short[2*j] = out48k_short[j];   // left channel
+                out48k_stereo_short[2*j+1] = out48k_short[j]; // right channel
+            }
+            else {
+                out48k_stereo_short[j] = out48k_short[j];     // mono
+            }
         }
         Pa_WriteStream(stream, out48k_stereo_short, TEST_BUF_SIZE);
 

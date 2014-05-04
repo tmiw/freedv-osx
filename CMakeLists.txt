@@ -13,6 +13,11 @@ cmake_minimum_required(VERSION 2.8)
 # files manually.
 set(CMAKE_DISABLE_SOURCE_CHANGES ON)
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
+  message(FATAL_ERROR "In-source builds in ${CMAKE_BINARY_DIR} are not "   
+   "allowed, please remove ./CMakeCache.txt and ./CMakeFiles/, create a "
+   "separate build directory and run cmake from there.")
+endif("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
 
 project(FreeDV)
 
@@ -39,8 +44,25 @@ endif(NOT CMAKE_BUILD_TYPE)
 message(STATUS "FreeDV version: ${FREEDV_VERSION}")
 
 # Work around for not using a svn working copy.
-add_definitions(-DSVN_REVISION="Unversioned directory")
 add_definitions(-D_NO_AUTOTOOLS_)
+find_program(SVNVERSION_PATH svnversion)
+if(SVNVERSION_PATH)
+    execute_process(COMMAND ${SVNVERSION_PATH} .
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        RESULT_VARIABLE SVN_REVISION_RESULT
+        OUTPUT_VARIABLE SVN_CURRENT_REVISION
+        ERROR_QUIET
+    )
+else()
+    set(SVN_REVISION_RESULT 1)
+endif()
+if(SVN_REVISION_RESULT EQUAL 0)
+string(STRIP ${SVN_CURRENT_REVISION} SVN_REVISION)
+add_definitions(-DSVN_REVISION="${SVN_REVISION}")
+else()
+add_definitions(-DSVN_REVISION="Unversioned directory")
+endif()
+    
 
 
 # Set default build flags.
@@ -59,27 +81,16 @@ set(USE_STATIC_SAMPLERATE FALSE CACHE BOOL
     "Download and build static samplerate instead of the system library.")
 set(USE_STATIC_SOX FALSE CACHE BOOL
     "Download and build static sox instead of the system library.")
-set(USE_STATIC_LIBCTB FALSE CACHE BOOL
-    "Download and build static libctb instead of the system library.")
 set(USE_STATIC_CODEC2 FALSE CACHE BOOL
     "Download and build static codec2 instead of the system library.")
 set(BOOTSTRAP_WXWIDGETS FALSE CACHE BOOL
     "Download and build static wxWidgets instead of the system library.")
-# If we're bootstrapping wxWidgets then this must be set true.
-if(BOOTSTRAP_WXWIDGETS)
-    set(USE_STATIC_WXWIDGETS TRUE CACHE BOOL
-    "Perform bootstrap build of wxWidgets, see README.cmake for more details.")
-else(BOOTSTRAP_WXWIDGETS)
-    set(USE_STATIC_WXWIDGETS FALSE CACHE BOOL
-    "Perform bootstrap build of wxWidgets, see README.cmake for more details.")
-endif(BOOTSTRAP_WXWIDGETS)
 
 if(USE_STATIC_DEPS)
     set(USE_STATIC_PORTAUDIO TRUE FORCE)
     set(USE_STATIC_SNDFILE TRUE FORCE)
     set(USE_STATIC_SAMPLERATE TRUE FORCE)
     set(USE_STATIC_SOX TRUE FORCE)
-    set(USE_STATIC_LIBCTB TRUE FORCE)
     set(USE_STATIC_CODEC2 TRUE FORCE)
 endif(USE_STATIC_DEPS)
 
@@ -87,19 +98,20 @@ endif(USE_STATIC_DEPS)
 # Pull in external wxWidgets target if performing static build.
 #
 if(BOOTSTRAP_WXWIDGETS)
+    message(STATUS "Adding wxWidgets build target...")
     include(cmake/BuildWxWidgets.cmake)
 endif(BOOTSTRAP_WXWIDGETS)
 
 #
 # Perform bootstrap build of wxWidgets
 #
-if(BOOTSTRAP_WXWIDGETS AND NOT TARGET wxWidgets)
+if(BOOTSTRAP_WXWIDGETS AND NOT EXISTS ${WXCONFIG})
     message(STATUS "Will perform bootstrap build of wxWidgets.
    After make step completes, re-run cmake and make again to perform FreeDV build.")
 #
 # Continue normal build if not bootstrapping wxWidgets or already built it.
 #
-else(BOOTSTRAP_WXWIDGETS AND NOT TARGET wxWidgets)
+else(BOOTSTRAP_WXWIDGETS AND NOT EXISTS ${WXCONFIG})
 
 # Setup empty list to append to.
 set(FREEDV_LINK_LIBS "")
@@ -133,9 +145,9 @@ if(MINGW)
         libsndfile-1.dll
         libsamplerate-0.dll
         libcodec2.dll
+        libpng16-16.dll
         libportaudio-2.dll
         libportaudiocpp-0.dll
-        libctb-0.16.dll
         libsox-2.dll
         zlib1.dll
         libusb0.dll
@@ -209,8 +221,8 @@ message(STATUS "Threads library flags: ${CMAKE_THREAD_LIBS_INIT}")
 #
 if(NOT USE_STATIC_PORTAUDIO)
     message(STATUS "Looking for portaudio...")
-    find_library(PORTAUDIO_LIBS NAMES libportaudio-2.dll portaudio)
-    find_path(PORTAUDIO_INCLUDE_DIR portaudio.h)
+    find_library(PORTAUDIO_LIBS NAMES libportaudio-2.dll portaudio HINTS /usr/local/lib/portaudio2)
+    find_path(PORTAUDIO_INCLUDE_DIR portaudio.h HINTS /usr/local/include/portaudio2)
     message(STATUS "  portaudio library: ${PORTAUDIO_LIBS}")
     message(STATUS "  portaudio headers: ${PORTAUDIO_INCLUDE_DIR}")
     if(PORTAUDIO_LIBS AND PORTAUDIO_INCLUDE_DIR)
@@ -305,6 +317,28 @@ else(NOT USE_STATIC_SNDFILE)
     include(cmake/BuildSndfile.cmake)
 endif(NOT USE_STATIC_SNDFILE)
 
+# msalem 2014-05-04: Need to add OSX specific libraries to 
+# make build finish successfully.
+if(APPLE)
+    message(STATUS "Adding OSX specific libraries...")
+    find_library(LIBUSB usb)
+    find_library(LIBLTDL ltdl)
+    message(STATUS "  libusb library: ${LIBUSB}")
+    message(STATUS "  libltdl library: ${LIBLTDL}")
+    if(LIBUSB AND LIBLTDL)
+        list(APPEND FREEDV_LINK_LIBS ${LIBUSB})
+        list(APPEND FREEDV_LINK_LIBS ${LIBLTDL})
+    else(LIBUSB AND LIBLTDL)
+        message(FATAL_ERROR "required libraries not found")
+    endif(LIBUSB AND LIBLTDL)
+
+    # wxWidgets bootstrap uses gcc/g++ vs. clang for FreeDV itself, 
+    # so we need to use the same.
+    include(CMakeForceCompiler)
+    CMAKE_FORCE_C_COMPILER(/usr/bin/gcc gcc)
+    CMAKE_FORCE_CXX_COMPILER(/usr/bin/g++ gcc)
+endif(APPLE)
+
 #
 # Find sox library
 #
@@ -333,14 +367,15 @@ endif(NOT USE_STATIC_SOX)
 #
 # Find wxWidgets
 #
-set(WXCONFIG "" CACHE FILEPATH "Location of wx-config binary.")
-set(WXRC "" CACHE FILEPATH "Location of wxrc binary.")
-if(USE_STATIC_WXWIDGETS)
-    set(WXCONFIG "${CMAKE_BINARY_DIR}/external/dist/bin/wx-config")
-    set(WXRC "${CMAKE_BINARY_DIR}/external/dist/bin/wxrc")
-    #set(wxWidgets_CONFIG_OPTIONS --linkdeps)
-    list(APPEND FREEDV_STATIC_DEPS wxWidgets)
-endif(USE_STATIC_WXWIDGETS)
+if(NOT BOOTSTRAP_WXWIDGETS)
+    set(WXCONFIG "" CACHE FILEPATH "Location of wx-config binary.")
+    set(WXRC "" CACHE FILEPATH "Location of wxrc binary.")
+endif(NOT BOOTSTRAP_WXWIDGETS)
+#if(BOOTSTRAP_WXWIDGETS)
+#    set(WXCONFIG "${CMAKE_BINARY_DIR}/external/dist/bin/wx-config")
+#    set(WXRC "${CMAKE_BINARY_DIR}/external/dist/bin/wxrc")
+#    list(APPEND FREEDV_STATIC_DEPS wxWidgets)
+#endif(BOOTSTRAP_WXWIDGETS)
 message(STATUS "Looking for wxWidgets...")
 if(WXCONFIG)
     message(STATUS "wx-config: ${WXCONFIG}")
@@ -350,7 +385,7 @@ if(WXRC)
     message(STATUS "wxrc: ${WXRC}")
     set(wxWidgets_wxrc_EXECUTABLE ${WXRC})
 endif(WXRC)
-set(WX_VERSION_MIN 2.9.0)
+set(WX_VERSION_MIN 3.0.0)
 find_package(wxWidgets REQUIRED core base aui html net adv)
 execute_process(COMMAND sh "${wxWidgets_CONFIG_EXECUTABLE}" --version
     OUTPUT_VARIABLE WX_VERSION)
@@ -396,46 +431,6 @@ else(NOT USE_STATIC_CODEC2)
     include(cmake/BuildCodec2.cmake)
 endif(NOT USE_STATIC_CODEC2)
 
-#
-# Find libctb. Assumes version 0.16
-#
-if(NOT USE_STATIC_LIBCTB)
-    message(STATUS "Looking for libctb...")
-    find_path(LIBCTB_INCLUDE_DIR NAMES ctb.h ctb-0.16/ctb.h)
-    find_library(LIBCTB_LIBRARY NAMES ctb ctb-0.16)
-    message(STATUS "  libctb library: ${LIBCTB_LIBRARY}")
-    message(STATUS "  libctb headers: ${LIBCTB_INCLUDE_DIR}")
-    if(LIBCTB_LIBRARY AND LIBCTB_INCLUDE_DIR)
-        set(CMAKE_REQUIRED_LIBRARIES ${LIBCTB_LIBRARY})
-        if(NOT CMAKE_CROSSCOMPILING)
-            # Check to make sure linking with libctb works.
-            include(CheckCXXSourceCompiles)
-            check_cxx_source_compiles("
-                #include <ctb-0.16/ctb.h>
-                int main() {
-                ctb::SerialPort*        m_serialPort;
-                m_serialPort = new ctb::SerialPort();
-                };"
-                LIBCTB_LINKS)
-            if(NOT LIBCTB_LINKS)
-                message(FATAL_ERROR "Linking libctb failed.")
-            endif(NOT LIBCTB_LINKS)
-        endif(NOT CMAKE_CROSSCOMPILING)
-    else(LIBCTB_LIBRARY AND LIBCTB_INCLUDE_DIR)
-        message(FATAL_ERROR "libctb not found.
-Linux:
-  libctb may not be available in your distribution. Either build and install or use the cmake option to build statically.
-Windws:
-It's easiest to use the cmake option: USE_STATIC_LIBCTB"
-            )
-    endif(LIBCTB_LIBRARY AND LIBCTB_INCLUDE_DIR)
-else(NOT USE_STATIC_LIBCTB)
-    include(cmake/BuildLibctb.cmake)
-endif(NOT USE_STATIC_LIBCTB)
-
-include_directories(${LIBCTB_INCLUDE_DIR})
-list(APPEND FREEDV_LINK_LIBS ${LIBCTB_LIBRARY})
-
 
 # Freedv 
 add_subdirectory(src)
@@ -471,4 +466,4 @@ if(WIN32)
     include(CPack)
 endif(WIN32)
 
-endif(BOOTSTRAP_WXWIDGETS AND NOT TARGET wxWidgets)
+endif(BOOTSTRAP_WXWIDGETS AND NOT EXISTS ${WXCONFIG})

@@ -85,7 +85,8 @@ void sox_biquad_filter(void *sbq, short out[], short in[], int n)
     sox_effect_t *e = (sox_effect_t *)sbq;
     sox_sample_t ibuf[N_MAX];
     sox_sample_t obuf[N_MAX];
-    unsigned int isamp, osamp, clips;
+    size_t isamp, osamp;
+    unsigned int clips;
     SOX_SAMPLE_LOCALS; 
     int i;
 

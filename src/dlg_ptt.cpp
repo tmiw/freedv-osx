@@ -25,6 +25,10 @@
 #ifdef __WIN32__
 #include <wx/msw/registry.h>
 #endif
+#ifdef __FreeBSD__
+#include <glob.h>
+#include <string.h>
+#endif
 
 #include <sstream>
 
@@ -113,8 +117,8 @@ ComPortsDlg::ComPortsDlg(wxWindow* parent, wxWindowID id, const wxString& title,
     m_staticText12->Wrap(-1);
     gridSizer200->Add(m_staticText12, 1,wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 2);
 
-    m_txtCtlDevicePath = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0);
-    gridSizer200->Add(m_txtCtlDevicePath, 1, wxEXPAND|wxALIGN_CENTER|wxALIGN_RIGHT, 2);
+    m_cbCtlDevicePath = new wxComboBox(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(140, -1), 0, NULL, wxCB_DROPDOWN);
+    gridSizer200->Add(m_cbCtlDevicePath, 1, wxEXPAND|wxALIGN_CENTER|wxALIGN_RIGHT, 2);
     
     bSizer83->Add(gridSizer200, 0, wxALIGN_CENTER_VERTICAL | wxALIGN_LEFT | wxALL, 2);
     staticBoxSizer31->Add(bSizer83, 1, wxALIGN_CENTER_VERTICAL|wxALL, 1);
@@ -319,7 +323,7 @@ void ComPortsDlg::ExchangeData(int inout)
         }
 #endif
 #ifdef __WXGTK__
-        m_txtCtlDevicePath->SetValue(str);
+        m_cbCtlDevicePath->SetValue(str);
 #endif
         m_rbUseRTS->SetValue(wxGetApp().m_boolUseRTS);
         m_ckRTSPos->SetValue(wxGetApp().m_boolRTSPos);
@@ -348,7 +352,7 @@ void ComPortsDlg::ExchangeData(int inout)
         wxGetApp().m_strRigCtrlPort             = m_listCtrlPorts->GetStringSelection();
 #endif
 #ifdef __WXGTK__
-        wxGetApp().m_strRigCtrlPort             = m_txtCtlDevicePath->GetValue();
+        wxGetApp().m_strRigCtrlPort             = m_cbCtlDevicePath->GetValue();
 #endif
         wxGetApp().m_boolUseRTS                 = m_rbUseRTS->GetValue();
         wxGetApp().m_boolRTSPos                 = m_ckRTSPos->IsChecked();

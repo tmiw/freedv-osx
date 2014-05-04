@@ -42,9 +42,13 @@ Hamlib::Hamlib() : m_rig(NULL) {
 
     /* Reset debug output. */
     rig_set_debug(RIG_DEBUG_VERBOSE);
+
+	m_rig = NULL;
 }
 
 Hamlib::~Hamlib() {
+	if(m_rig)
+		close();
 }
 
 static int build_list(const struct rig_caps *rig, rig_ptr_t rigList) {
@@ -85,6 +89,11 @@ bool Hamlib::connect(unsigned int rig_index, const char *serial_port) {
     printf("rig: %s %s (%d)\n", m_rigList[rig_index]->mfg_name,
             m_rigList[rig_index]->model_name, m_rigList[rig_index]->rig_model);
 
+	if(m_rig) {
+		printf("Closing old hamlib instance!\n");
+		close();
+	}
+
     /* Initialise, configure and open. */
     m_rig = rig_init(m_rigList[rig_index]->rig_model);
     /* TODO: Also use baud rate from the screen. */
@@ -101,6 +110,8 @@ bool Hamlib::connect(unsigned int rig_index, const char *serial_port) {
 }
 
 bool Hamlib::ptt(bool press) {
+	if(!m_rig)
+		return false;
     /* TODO(Joel): make ON_DATA and ON configurable. */
     ptt_t on = press ? RIG_PTT_ON : RIG_PTT_OFF;
     /* TODO(Joel): what should the VFO option be? */
@@ -108,9 +119,9 @@ bool Hamlib::ptt(bool press) {
 }
 
 void Hamlib::close(void) {
-    rig_close(m_rig);
-    rig_cleanup(m_rig);
-#ifndef __APPLE__
-    free(m_rig);
-#endif
+	if(m_rig) {
+		rig_close(m_rig);
+		rig_cleanup(m_rig);
+		m_rig = NULL;
+	}
 }

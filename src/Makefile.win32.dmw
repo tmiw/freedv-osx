@@ -40,11 +40,10 @@ dlg_audiooptions.o \
 dlg_comports.o \
 dlg_filter.o \
 varicode.o \
-sox_biquad.o \
-serialport.o
+sox_biquad.o
 
 
-HDRS = ../version.h fdmdv2_main.h fdmdv2_defines.h fdmdv2_plot.h fdmdv2_plot_scalar.h fdmdv2_plot_waterfall_linux.h fdmdv2_plot_scatter.h fdmdv2_plot_spectrum.h fdmdv2_pa_wrapper.h topFrame.h dlg_audiooptions.h serialport.h
+HDRS = ../version.h fdmdv2_main.h fdmdv2_defines.h fdmdv2_plot.h fdmdv2_plot_scalar.h fdmdv2_plot_waterfall_linux.h fdmdv2_plot_scatter.h fdmdv2_plot_spectrum.h fdmdv2_pa_wrapper.h topFrame.h dlg_audiooptions.h
 
 all: freedv
 
