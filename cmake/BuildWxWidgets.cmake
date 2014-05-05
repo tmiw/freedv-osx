@@ -5,7 +5,11 @@ ExternalProject_Add(wxWidgets
     URL http://downloads.sourceforge.net/wxwindows/${WXWIDGETS_TARBALL}.tar.bz2
     BUILD_IN_SOURCE 1
     INSTALL_DIR external/dist
-    CONFIGURE_COMMAND ./configure --disable-shared --prefix=${CMAKE_BINARY_DIR}/external/dist
+
+    # msalem 2014-05-04: necessary until 3.0.1 is officially released.
+    PATCH_COMMAND patch -p0 < ${CMAKE_CURRENT_SOURCE_DIR}/src/ports/graphics/wxWidgets-3.0-devel/files/patch-gauge.diff
+
+    CONFIGURE_COMMAND ./configure --disable-shared --enable-std_iostreams --prefix=${CMAKE_BINARY_DIR}/external/dist
     BUILD_COMMAND $(MAKE)
     INSTALL_COMMAND $(MAKE) install
 )

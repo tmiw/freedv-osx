@@ -331,12 +331,10 @@ if(APPLE)
     else(LIBUSB AND LIBLTDL)
         message(FATAL_ERROR "required libraries not found")
     endif(LIBUSB AND LIBLTDL)
-
-    # wxWidgets bootstrap uses gcc/g++ vs. clang for FreeDV itself, 
-    # so we need to use the same.
-    include(CMakeForceCompiler)
-    CMAKE_FORCE_C_COMPILER(/usr/bin/gcc gcc)
-    CMAKE_FORCE_CXX_COMPILER(/usr/bin/g++ gcc)
+	
+	set(OSX_COMPILE_FLAGS "-mmacosx-version-min=10.5 -L/opt/local/lib")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OSX_COMPILE_FLAGS}")
+	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OSX_COMPILE_FLAGS}")
 endif(APPLE)
 
 #
