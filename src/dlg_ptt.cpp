@@ -51,7 +51,7 @@ ComPortsDlg::ComPortsDlg(wxWindow* parent, wxWindowID id, const wxString& title,
     m_ckHalfDuplex->SetToolTip(_("Should be checked for VOX operated Tx/Rx switching"));
     staticBoxSizer28->Add(m_ckHalfDuplex, 0, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
     mainSizer->Add(staticBoxSizer28, 0, wxEXPAND, 5);
-
+    
     //----------------------------------------------------------------------
     // Hamlib for CAT PTT
     //----------------------------------------------------------------------
@@ -99,7 +99,11 @@ ComPortsDlg::ComPortsDlg(wxWindow* parent, wxWindowID id, const wxString& title,
     staticBoxSizer31->Add(m_ckUseSerialPTT, 0, wxALIGN_LEFT, 20);
 
     wxArrayString m_listCtrlPortsArr;
+#ifdef __WXMAC__    
     m_listCtrlPorts = new wxListBox(this, wxID_ANY, wxDefaultPosition, wxSize(250,45), m_listCtrlPortsArr, wxLB_SINGLE | wxLB_SORT);
+#else
+    m_listCtrlPorts = new wxListBox(this, wxID_ANY, wxDefaultPosition, wxSize(-1,45), m_listCtrlPortsArr, wxLB_SINGLE | wxLB_SORT);
+#endif
     staticBoxSizer31->Add(m_listCtrlPorts, 1, wxALIGN_CENTER, 0);
 #endif
 
@@ -123,7 +127,6 @@ ComPortsDlg::ComPortsDlg(wxWindow* parent, wxWindowID id, const wxString& title,
     bSizer83->Add(gridSizer200, 0, wxALIGN_CENTER_VERTICAL | wxALIGN_LEFT | wxALL, 2);
     staticBoxSizer31->Add(bSizer83, 1, wxALIGN_CENTER_VERTICAL|wxALL, 1);
 #endif
-
     wxBoxSizer* boxSizer19 = new wxBoxSizer(wxVERTICAL);
     staticBoxSizer17->Add(boxSizer19, 1, wxEXPAND, 5);
     wxStaticBoxSizer* staticBoxSizer16 = new wxStaticBoxSizer( new wxStaticBox(this, wxID_ANY, _("Signal polarity")), wxHORIZONTAL);
@@ -213,11 +216,10 @@ void ComPortsDlg::OnInitDialog(wxInitDialogEvent& event)
 //-------------------------------------------------------------------------
 void ComPortsDlg::populatePortList()
 {
-#if defined(__WXMSW__) || defined(__WXMAC__)
+#ifdef __WXMSW__
     m_listCtrlPorts->Clear();
     m_cbSerialPort->Clear();
     wxArrayString aStr;
-#ifdef __WXMSW__
     wxRegKey key(wxRegKey::HKLM, _T("HARDWARE\\DEVICEMAP\\SERIALCOMM"));
     if(!key.Exists())
     {
@@ -253,12 +255,16 @@ void ComPortsDlg::populatePortList()
             key.GetNextValue(key_name, el);
         }
     }
-#else
+    m_listCtrlPorts->Append(aStr);
+    m_cbSerialPort->Append(aStr);
+#endif
+#ifdef __WXMAC__
     DIR *dir;
     struct dirent *ent;
+    wxArrayString aStr;
     if ((dir = opendir ("/dev/")) != NULL) 
     {
-        while ((ent = readdir (dir)) != NULL) 
+        while ((ent = readdir (dir)) != NULL)
         {
             if (!strncmp("tty.", ent->d_name, 4))
             {
@@ -268,24 +274,50 @@ void ComPortsDlg::populatePortList()
         }
         closedir(dir);
     }
-#endif
     m_listCtrlPorts->Append(aStr);
     m_cbSerialPort->Append(aStr);
 #endif
 #ifdef __WXGTK__
-    /* TODO(Joel): http://stackoverflow.com/questions/2530096/how-to-find-all-serial-devices-ttys-ttyusb-on-linux-without-opening-them */
     m_cbSerialPort->Clear();
+    m_cbCtlDevicePath->Clear();
+#ifdef __FreeBSD__
+	glob_t	gl;
+	if(glob("/dev/tty*", GLOB_MARK, NULL, &gl)==0) {
+		for(unsigned int i=0; i<gl.gl_pathc; i++) {
+			if(gl.gl_pathv[i][strlen(gl.gl_pathv[i])-1]=='/')
+				continue;
+				
+			/* Exclude pseudo TTYs */
+			if(gl.gl_pathv[i][8] >= 'l' && gl.gl_pathv[i][8] <= 's')
+				continue;
+			if(gl.gl_pathv[i][8] >= 'L' && gl.gl_pathv[i][8] <= 'S')
+				continue;
+
+			/* Exclude virtual TTYs */
+			if(gl.gl_pathv[i][8] == 'v')
+				continue;
+
+			/* Exclude initial-state and lock-state devices */
+			if(strchr(gl.gl_pathv[i], '.') != NULL)
+				continue;
+
+			m_cbSerialPort->Append(gl.gl_pathv[i]);
+			m_cbCtlDevicePath->Append(gl.gl_pathv[i]);
+		}
+		globfree(&gl);
+	}
+#else
+    /* TODO(Joel): http://stackoverflow.com/questions/2530096/how-to-find-all-serial-devices-ttys-ttyusb-on-linux-without-opening-them */
     m_cbSerialPort->Append("/dev/ttyUSB0");
     m_cbSerialPort->Append("/dev/ttyUSB1");
     m_cbSerialPort->Append("/dev/ttyS0");
     m_cbSerialPort->Append("/dev/ttyS1");
-    /*
-    m_txtCtlDevicePath->Clear();
-    m_txtCtlDevicePath->Append("/dev/ttyUSB0");
-    m_txtCtlDevicePath->Append("/dev/ttyUSB1");
-    m_txtCtlDevicePath->Append("/dev/ttyS0");
-    m_txtCtlDevicePath->Append("/dev/ttyS1");
-    */
+    m_cbCtlDevicePath->Clear();
+    m_cbCtlDevicePath->Append("/dev/ttyUSB0");
+    m_cbCtlDevicePath->Append("/dev/ttyUSB1");
+    m_cbCtlDevicePath->Append("/dev/ttyS0");
+    m_cbCtlDevicePath->Append("/dev/ttyS1");
+#endif
 #endif
 }
 
@@ -307,20 +339,8 @@ void ComPortsDlg::ExchangeData(int inout)
 
         m_ckUseSerialPTT->SetValue(wxGetApp().m_boolUseSerialPTT);
         str = wxGetApp().m_strRigCtrlPort;
-#if defined(__WXMSW__) || defined(__WXMAC__)
-        // Mooneer Salem 2013-11-16: SetStringSelection() _should_ work 
-        // but on OSX an assertion window appears. We'll need to select
-        // the correct item by hand.
-        //m_listCtrlPorts->SetStringSelection(str);
-        for (int index = 0; index < m_listCtrlPorts->GetCount(); index++)
-        {
-            wxString currentItem = m_listCtrlPorts->GetString(index);
-            if (currentItem == str)
-            {
-                m_listCtrlPorts->SetSelection(index);
-                break;
-            }
-        }
+#ifdef __WXMSW__
+        m_listCtrlPorts->SetStringSelection(str);
 #endif
 #ifdef __WXGTK__
         m_cbCtlDevicePath->SetValue(str);
@@ -348,7 +368,7 @@ void ComPortsDlg::ExchangeData(int inout)
         /* Serial settings */
 
         wxGetApp().m_boolUseSerialPTT           = m_ckUseSerialPTT->IsChecked();
-#if defined(__WXMSW__) || defined(__WXMAC__)
+#ifdef __WXMSW__
         wxGetApp().m_strRigCtrlPort             = m_listCtrlPorts->GetStringSelection();
 #endif
 #ifdef __WXGTK__
