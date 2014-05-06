@@ -83,6 +83,8 @@ set(USE_STATIC_SOX FALSE CACHE BOOL
     "Download and build static sox instead of the system library.")
 set(USE_STATIC_CODEC2 FALSE CACHE BOOL
     "Download and build static codec2 instead of the system library.")
+set(USE_STATIC_HAMLIB FALSE CACHE BOOL
+    "Download and build static hamlib instead of the system library.")
 set(BOOTSTRAP_WXWIDGETS FALSE CACHE BOOL
     "Download and build static wxWidgets instead of the system library.")
 
@@ -91,6 +93,7 @@ if(USE_STATIC_DEPS)
     set(USE_STATIC_SNDFILE TRUE FORCE)
     set(USE_STATIC_SAMPLERATE TRUE FORCE)
     set(USE_STATIC_SOX TRUE FORCE)
+    set(USE_STATIC_HAMLIB TRUE FORCE)
     set(USE_STATIC_CODEC2 TRUE FORCE)
 endif(USE_STATIC_DEPS)
 
@@ -250,23 +253,27 @@ endif(PORTAUDIOCPP)
 #
 # Hamlib library
 #
-message(STATUS "Looking for hamlib...")
-find_path(HAMLIB_INCLUDE_DIR hamlib/rig.h)
-find_library(HAMLIB_LIBRARY hamlib)
-message(STATUS "Hamlib library: ${HAMLIB_LIBRARY}")
-message(STATUS "Hamlib headers: ${HAMLIB_INCLUDE_DIR}")
-if(HAMLIB_LIBRARY AND HAMLIB_INCLUDE_DIR)
-    message(STATUS "Hamlib library found.")
-    include_directories(${HAMLIB_INCLUDE_DIR})
-    list(APPEND FREEDV_LINK_LIBS ${HAMLIB_LIBRARY})
-else(HAMLIB_LIBRARY AND HAMLIB_INCLUDE_DIR)
-    message(FATAL_ERROR "hamlib not found.
+if(NOT USE_STATIC_HAMLIB)
+    message(STATUS "Looking for hamlib...")
+    find_path(HAMLIB_INCLUDE_DIR hamlib/rig.h)
+    find_library(HAMLIB_LIBRARY hamlib)
+    message(STATUS "Hamlib library: ${HAMLIB_LIBRARY}")
+    message(STATUS "Hamlib headers: ${HAMLIB_INCLUDE_DIR}")
+    if(HAMLIB_LIBRARY AND HAMLIB_INCLUDE_DIR)
+        message(STATUS "Hamlib library found.")
+        include_directories(${HAMLIB_INCLUDE_DIR})
+        list(APPEND FREEDV_LINK_LIBS ${HAMLIB_LIBRARY})
+    else(HAMLIB_LIBRARY AND HAMLIB_INCLUDE_DIR)
+        message(FATAL_ERROR "hamlib not found.
 On Linux systems try installing:
     hamlib-devel  (RPM based systems)
     libhamlib-dev (DEB based systems)"
     )
-endif(HAMLIB_LIBRARY AND HAMLIB_INCLUDE_DIR)
-
+    endif(HAMLIB_LIBRARY AND HAMLIB_INCLUDE_DIR)
+else(NOT USE_STATIC_HAMLIB)
+    message(STATUS "Will attempt static build of hamlib.")
+    include(cmake/BuildHamlib.cmake)
+endif(NOT USE_STATIC_HAMLIB)
 
 #
 # Samplerate Library
