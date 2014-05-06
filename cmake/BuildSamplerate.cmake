@@ -6,6 +6,7 @@ ExternalProject_Add(samplerate
     BUILD_IN_SOURCE 1
     INSTALL_DIR external/dist
     CONFIGURE_COMMAND ./configure --prefix=${CMAKE_BINARY_DIR}/external/dist
+    PATCH_COMMAND patch -p0 < ${CMAKE_CURRENT_SOURCE_DIR}/cmake/samplerate-osx-combined.patch
     BUILD_COMMAND $(MAKE)
     INSTALL_COMMAND $(MAKE) install
 )

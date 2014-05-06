@@ -1,25 +1,26 @@
 set(SOX_TARBALL "sox-14.4.1")
 
 # required linking libraries on linux. Not sure about windows.
-find_library(ALSA_LIBRARIES asound)
-find_library(AO_LIBRARIES ao)
+if(NOT APPLE)
+    find_library(ALSA_LIBRARIES asound)
+    find_library(AO_LIBRARIES ao)
 
-if(UNIX AND NOT ALSA_LIBRARIES)
-    message(ERROR "Could not find alsa library.
+    if(UNIX AND NOT ALSA_LIBRARIES)
+        message(ERROR "Could not find alsa library.
 On Linux systems try installing:
     alsa-lib-devel  (RPM based systems)
     libasound2-dev  (DEB based systems)"
-    )
-endif(UNIX AND NOT ALSA_LIBRARIES)
+        )
+    endif(UNIX AND NOT ALSA_LIBRARIES)
 
-if(UNIX AND NOT AO_LIBRARIES)
-    message(ERROR "Could not find libao.
+    if(UNIX AND NOT AO_LIBRARIES)
+        message(ERROR "Could not find libao.
 On Linux systems try installing:
     libao-devel  (RPM based systems)
     libao-dev    (DEB based systems)"
-    )
-endif(UNIX AND NOT AO_LIBRARIES)
-
+        )
+    endif(UNIX AND NOT AO_LIBRARIES)
+endif(NOT APPLE)
 
 include(ExternalProject)
 ExternalProject_Add(sox
@@ -34,11 +35,17 @@ if(WIN32)
     set(SOX_LIBRARIES
         ${CMAKE_BINARY_DIR}/external/dist/lib/sox.lib)
 else(WIN32)
-    set(SOX_LIBRARIES
-        ${CMAKE_BINARY_DIR}/external/dist/lib/libsox.a
-        ${ALSA_LIBRARIES}
-        ${AO_LIBRARIES}
-    )
+    if(APPLE)
+        set(SOX_LIBRARIES
+            ${CMAKE_BINARY_DIR}/external/dist/lib/libsox.a
+        )
+    else(APPLE)
+        set(SOX_LIBRARIES
+            ${CMAKE_BINARY_DIR}/external/dist/lib/libsox.a
+            ${ALSA_LIBRARIES}
+            ${AO_LIBRARIES}
+        )
+    endif(APPLE)
 endif(WIN32)
 include_directories(${CMAKE_BINARY_DIR}/external/dist/include)
 list(APPEND FREEDV_LINK_LIBS ${SOX_LIBRARIES})

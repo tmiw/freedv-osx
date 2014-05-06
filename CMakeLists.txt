@@ -332,9 +332,9 @@ if(APPLE)
         message(FATAL_ERROR "required libraries not found")
     endif(LIBUSB AND LIBLTDL)
 	
-	set(OSX_COMPILE_FLAGS "-mmacosx-version-min=10.5 -L/opt/local/lib")
+	set(OSX_COMPILE_FLAGS "-mmacosx-version-min=10.6")
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OSX_COMPILE_FLAGS}")
-	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OSX_COMPILE_FLAGS}")
+	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OSX_COMPILE_FLAGS} -framework AudioUnit -framework  CoreAudio -L/opt/local/lib")
 endif(APPLE)
 
 #
